@@ -1,0 +1,86 @@
+{
+  "name": "Haninge Grävtjänst AB",
+  "shortName": "Haninge Grävtjänst",
+  "url": "https://haningegravab.se",
+  "locale": "sv_SE",
+  "language": "sv-SE",
+  "description": "Haninge Grävtjänst AB utför mark- och anläggningsarbeten i Stockholm och Haninge — dränering, plattsättning, husgrunder och finplanering för privatpersoner, företag och BRF:er.",
+  "tagline": "[TODO: riktig tagline från kund]",
+  "phone": "[TODO: telefonnummer]",
+  "phoneHref": "tel:+46000000000",
+  "email": "[TODO: e-postadress]",
+  "orgNumber": "[TODO: organisationsnummer]",
+  "foundedYear": null,
+  "address": {
+    "streetAddress": "[TODO: gatuadress]",
+    "postalCode": "[TODO: postnummer]",
+    "addressLocality": "Haninge",
+    "addressRegion": "Stockholms län",
+    "addressCountry": "SE"
+  },
+  "geo": {
+    "latitude": null,
+    "longitude": null
+  },
+  "openingHours": "[TODO: öppettider från kund]",
+  "sameAs": [],
+  "priceRange": "$$",
+
+  "primaryLocation": "Stockholm",
+  "homeBase": "Haninge",
+  "areasServed": [
+    "Haninge",
+    "Bromma",
+    "Enskede",
+    "Farsta",
+    "Hägersten",
+    "Kungsholmen",
+    "Liljeholmen",
+    "Norrmalm",
+    "Östermalm",
+    "Södermalm",
+    "Vasastan"
+  ],
+
+  "trustSignals": {
+    "fSkatt": {
+      "label": "F-skattsedel",
+      "value": "Innehar F-skattsedel",
+      "verified": false,
+      "note": "[TODO: bekräfta och länka ev. till Skatteverkets register]"
+    },
+    "insurance": {
+      "label": "Ansvarsförsäkring",
+      "value": "[TODO: försäkringsbolag och omfattning från kund]",
+      "verified": false
+    },
+    "certifications": [
+      "[TODO: branschcertifiering 1 — t.ex. Säker Vatten / BKMA]",
+      "[TODO: branschcertifiering 2]"
+    ],
+    "projectsCompleted": null,
+    "yearsExperience": null,
+    "reviews": {
+      "count": null,
+      "averageRating": null,
+      "source": "[TODO: Google/Reco/annan recensionskälla]"
+    }
+  },
+
+  "services": [
+    { "slug": "dranering", "name": "Dränering", "shortName": "Dränering", "icon": "fa-water", "hasPage": true },
+    { "slug": "plattsattning-stensattning", "name": "Plattsättning & Stensättning", "shortName": "Plattsättning", "icon": "fa-border-all", "hasPage": false },
+    { "slug": "markarbeten", "name": "Grävfirma – Markarbeten", "shortName": "Markarbeten", "icon": "fa-truck-monster", "hasPage": false },
+    { "slug": "husgrunder-markanlaggning", "name": "Husgrunder & Markanläggning", "shortName": "Husgrunder", "icon": "fa-house-chimney", "hasPage": false },
+    { "slug": "innergardsrenovering-finplanering", "name": "Innergårdsrenovering & Finplanering", "shortName": "Innergårdsrenovering", "icon": "fa-tree", "hasPage": false },
+    { "slug": "asfaltering-kantsten", "name": "Asfaltering & Kantsten", "shortName": "Asfaltering", "icon": "fa-road", "hasPage": false },
+    { "slug": "gravtjanst", "name": "Grävtjänst", "shortName": "Grävtjänst", "icon": "fa-shovel", "hasPage": false }
+  ],
+
+  "nav": [
+    { "label": "Hem", "href": "/" },
+    { "label": "Tjänster", "href": "/tjanster" },
+    { "label": "Om oss", "href": "/om-oss" },
+    { "label": "Kontakt", "href": "/kontakt" }
+  ]
+}

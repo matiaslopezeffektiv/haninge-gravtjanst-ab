@@ -1,0 +1,51 @@
+{
+  "slug": "dranering",
+  "name": "Dränering",
+  "targetLocation": "Stockholm",
+  "h1": "Dränering Stockholm",
+  "metaTitle": "Dränering Stockholm — Haninge Grävtjänst AB",
+  "metaDescription": "Professionell dränering i Stockholm och Haninge. Vi utför dränering av husgrund, källare och tomt — fukt- och vattensäkert, med garanti på utfört arbete. [TODO: verifiera påstående om garanti]",
+  "shortDescription": "[TODO: riktig kort beskrivning från kund] Dränering av husgrund, källare och tomtmark i Stockholmsområdet.",
+  "longDescription": [
+    "[TODO: riktig text från kund] Haninge Grävtjänst AB utför dränering åt privatpersoner, företag och BRF:er i hela Stockholm, med Haninge som hemort.",
+    "[TODO: riktig text från kund] En fungerande dränering skyddar husgrunden mot fukt- och vatteninträngning och förlänger fastighetens livslängd. Vi hjälper till med allt från nydränering till renovering av äldre dräneringssystem.",
+    "[TODO: riktig text från kund] Beskriv arbetsprocess, material (dräneringsrör, makadam, dräneringsmatta), och eventuell dokumentation/garanti som lämnas efter avslutat arbete."
+  ],
+  "icon": "fa-water",
+  "heroImage": null,
+  "heroImageAlt": "[TODO: bild på pågående dräneringsarbete från kund]",
+
+  "benefits": [
+    "[TODO: fördel 1 — t.ex. fukt- och vattensäker husgrund]",
+    "[TODO: fördel 2 — t.ex. förlängd livslängd på fastigheten]",
+    "[TODO: fördel 3 — t.ex. dokumenterat arbete enligt branschstandard]",
+    "[TODO: fördel 4]"
+  ],
+
+  "process": [
+    { "step": 1, "title": "Kostnadsfri besiktning", "description": "[TODO: riktig text] Vi besöker platsen och bedömer omfattning och behov." },
+    { "step": 2, "title": "Offert", "description": "[TODO: riktig text] Du får en tydlig offert utan bindningstid." },
+    { "step": 3, "title": "Utförande", "description": "[TODO: riktig text] Grävning, dränering och återställning av mark." },
+    { "step": 4, "title": "Slutbesiktning", "description": "[TODO: riktig text] Genomgång och ev. dokumentation/garanti överlämnas." }
+  ],
+
+  "faq": [
+    {
+      "question": "Vad kostar dränering i Stockholm?",
+      "answer": "[TODO: riktigt svar från kund] Priset beror på tomtens storlek, grundtyp och tillgänglighet. Kontakta oss för en kostnadsfri bedömning."
+    },
+    {
+      "question": "Hur vet jag om huset behöver dräneras om?",
+      "answer": "[TODO: riktigt svar från kund] Vanliga tecken är fuktlukt i källaren, synlig fukt på väggar eller att den befintliga dräneringen är äldre än 30 år."
+    },
+    {
+      "question": "Hur lång tid tar en dränering?",
+      "answer": "[TODO: riktigt svar från kund] Beror på omfattning, men ange en typisk tidsram här."
+    }
+  ],
+
+  "referenceProjects": [],
+
+  "_orterSchemaNote": "Ort-objekt (stödjande stadsdelssidor under denna tjänst) läggs till här i ett senare steg — endast för stadsdelar med bekräftad sökefterfrågan (se data/site.json areasServed). Varje ort-objekt ska följa formen: { slug, name, parentService: 'dranering', intro (unikt, ej mall-genererat), referenceProjects: [] }. Se lib/types.js för det formella schemat. Lämnas tom tills genuint unikt innehåll per ort finns.",
+  "orter": []
+}

@@ -54,7 +54,7 @@ function renderHeader(site, activePath) {
         <button class="close-btn" aria-label="Stäng meny"><i class="fal fa-times"></i></button>
       </div>
       <div class="tpoffcanvas__logo mb-30">
-        <a href="/"><img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" style="height:46px;width:auto;"></a>
+        <a href="/"><img src="/assets/img/logo/haninge-logo-color.svg" alt="${escapeAttr(site.name)}" style="height:40px;width:auto;"></a>
       </div>
       <div class="tp-offcanvas-menu mb-30">
         <nav><ul>${navLinks}</ul></nav>
@@ -80,7 +80,7 @@ function renderHeader(site, activePath) {
         <div class="col-xl-2 col-lg-3 col-6">
           <div class="tplogo">
             <a href="/" style="display:inline-block;">
-              <img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" style="height:52px;width:auto;display:block;">
+              <img src="/assets/img/logo/haninge-logo-white.svg" alt="${escapeAttr(site.name)}" style="height:38px;width:auto;display:block;">
               <span style="display:block;width:34px;height:3px;background:#F5B400;border-radius:2px;margin:4px auto 0;"></span>
             </a>
           </div>
@@ -93,10 +93,10 @@ function renderHeader(site, activePath) {
           </div>
         </div>
         <div class="col-xl-2 col-lg-2 col-6 d-flex justify-content-end align-items-center gap-3">
-          ${isPlaceholder(site.phone) ? '' : `<a href="${escapeAttr(site.phoneHref)}" class="d-none d-xxl-inline-flex align-items-center" style="color:#1A1A1A;font-weight:700;font-size:.92rem;white-space:nowrap;text-decoration:none;"><i class="fas fa-phone" style="color:#D99A00;margin-right:6px;"></i>${escapeHtml(site.phone)}</a>`}
+          ${isPlaceholder(site.phone) ? '' : `<a href="${escapeAttr(site.phoneHref)}" class="d-none d-xxl-inline-flex align-items-center" style="color:#fff;font-weight:700;font-size:.92rem;white-space:nowrap;text-decoration:none;"><i class="fas fa-phone" style="color:#F5B400;margin-right:6px;"></i>${escapeHtml(site.phone)}</a>`}
           <a href="/kontakt" class="tp-btn d-none d-lg-inline-flex">Begär offert</a>
           <button class="tp-offcanvas-open-btn tp-menu-bar d-lg-none" aria-label="Öppna meny">
-            <i class="fas fa-bars" style="font-size:1.4rem;color:#1A1A1A;"></i>
+            <i class="fas fa-bars" style="font-size:1.4rem;color:#fff;"></i>
           </button>
         </div>
       </div>

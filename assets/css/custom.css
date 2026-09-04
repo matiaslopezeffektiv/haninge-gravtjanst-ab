@@ -128,8 +128,10 @@ html, body {
 .tpoffcanvas .tpoffcanvas__contact-info a { color: var(--nt-navy) !important; text-decoration: none; }
 .tpoffcanvas .tpoffcanvas__contact-info a:hover { color: var(--nt-orange-dark) !important; }
 
+/* Mörk header — låter den ljusa loggan (haninge-logo-white.svg) och det gula
+   varumärkesaccenten synas tydligt istället för att drunkna mot vit botten. */
 .tpheader {
-  background-color: var(--nt-white) !important;
+  background-color: var(--nt-navy) !important;
 }
 /* budgeto's default sticky-header entrance (main.css: headerSlideDown) animates
    margin-top from -150px to 0 over ~1s. Since the header is only ~90px tall, for
@@ -138,18 +140,18 @@ html, body {
    until it finishes settling. Swap it for a plain fade so it never looks clipped. */
 @keyframes ntHeaderStickyIn { from { opacity: 0; } to { opacity: 1; } }
 .tpheader.header-sticky {
-  background-color: var(--nt-white) !important;
-  box-shadow: 0 2px 20px rgba(28,46,74,0.12);
+  background-color: var(--nt-navy) !important;
+  box-shadow: 0 2px 24px rgba(0,0,0,0.35);
   animation: ntHeaderStickyIn .3s ease both;
 }
 .main-menu ul li a {
-  color: var(--nt-navy) !important;
+  color: var(--nt-white) !important;
 }
 .main-menu ul li a:hover {
-  color: var(--nt-orange-dark) !important;
+  color: var(--nt-orange) !important;
 }
 .main-menu ul li.active > a {
-  color: var(--nt-navy) !important;
+  color: var(--nt-white) !important;
   box-shadow: inset 0 -2px 0 var(--nt-orange);
   padding-bottom: 4px;
 }

@@ -239,7 +239,7 @@ function renderHomePage(site, tjansterBySlug) {
     <div class="container-fluid p-0">
       <div class="row gx-0 align-items-stretch">
         <div class="col-lg-5 d-none d-lg-block">
-          <img src="/assets/img/hero/varfor-oss.jpeg" alt="Grävmaskin i arbete" style="width:100%;height:100%;min-height:100%;object-fit:cover;display:block;">
+          <img src="/assets/img/hero/varfor-oss.webp" alt="Grävmaskin i arbete" width="1600" height="1067" loading="lazy" style="width:100%;height:100%;min-height:100%;object-fit:cover;display:block;">
         </div>
         <div class="col-lg-7">
           <div class="p-relative" style="background:var(--nt-navy);padding:100px 8% 90px;">

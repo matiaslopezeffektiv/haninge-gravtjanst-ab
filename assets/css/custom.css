@@ -64,7 +64,7 @@ html, body {
 }
 
 /* --- Override Budgeto primary/theme colors --- */
-/* `.tp-btn` is a Next Team class (not a budgeto one), so it needs its own
+/* `.tp-btn` is a class from the original reference template (not a budgeto one), so it needs its own
    geometry as well as its colour — otherwise it renders as bare text on a block. */
 .tp-btn,
 .tp-btn-2 {
@@ -445,7 +445,7 @@ html, body {
   letter-spacing: 0.05em;
 }
 
-/* --- USP / Varför Next Team --- */
+/* --- USP / Varför oss --- */
 .nt-usp-section {
   background-color: var(--nt-navy);
   padding: 80px 0;
@@ -692,7 +692,7 @@ html, body {
   --tp-border-2: rgba(0, 0, 0, 0.12);
 }
 
-/* Budgeto renders CTA buttons in the primary colour; Next Team's
+/* Budgeto renders CTA buttons in the primary colour; the reference template's
    call-to-action colour is orange. Target buttons only (elements),
    so large `tp-bg-theme-primary` section panels stay navy. */
 a[class*="tp-btn-"].tp-bg-theme-primary,
@@ -765,7 +765,7 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 .nt-eyebrow-light { color: rgba(255,255,255,0.65); }
 
 /* ============================================================
-   NEXT TEAM SECTION HELPERS (budgeto layouts, brand skin)
+   REFERENCE-TEMPLATE SECTION HELPERS (budgeto layouts, brand skin)
    ============================================================ */
 
 /* Dark band used for hero/CTA/breadcrumb, painted with the

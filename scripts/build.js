@@ -122,6 +122,40 @@ function buildRobots(site) {
   return `User-agent: *\nAllow: /\n\nSitemap: ${site.url}/sitemap.xml\n`;
 }
 
+// Generated from data/site.json rather than hand-written so it can't drift
+// from the real service/area list. No adoption guarantee by any AI crawler
+// today — cheap to provide, not a launch blocker.
+function buildLlmsTxt(site, tjanster) {
+  const serviceLines = tjanster.map((t) => `- [${t.name}](${site.url}/tjanster/${t.slug})`).join('\n');
+  const areaNames = site.areasServed.map((a) => a.name).join(', ');
+  const t = site.trustSignals;
+  return `# ${site.name}
+
+> ${site.description}
+
+## Tjänster
+${serviceLines}
+
+## Områden
+- [Alla områden](${site.url}/omraden) — ${areaNames}
+
+## Om företaget
+- [Om oss](${site.url}/om-oss)
+- [Kontakt](${site.url}/kontakt)
+- Org.nr: ${site.orgNumber}
+- Telefon: ${site.phone} · E-post: ${site.email}
+- ${t.reviews.averageRating}/5 snittbetyg på Reco.se (${t.reviews.count} recensioner)
+
+## Guider & Blogg
+- [Guider](${site.url}/guider)
+- [Blogg](${site.url}/blogg)
+
+## Verifiering
+- [Kontrollera företaget hos Skatteverket](${t.fSkatt.verifyUrl})
+- [Recensioner på Reco.se](${t.reviews.url})
+`;
+}
+
 function main() {
   console.log('Rensar dist/ ...');
   fs.rmSync(DIST, { recursive: true, force: true });
@@ -223,6 +257,7 @@ function main() {
   console.log('Genererar sitemap.xml och robots.txt ...');
   writeFile('sitemap.xml', buildSitemap(site, routes));
   writeFile('robots.txt', buildRobots(site));
+  writeFile('llms.txt', buildLlmsTxt(site, tjanster));
 
   console.log(`\nKlart. ${tjanster.length} tjänst(er), ${omraden.length} område(n), ${allOrtMatches.length} tjänst×ort-sida(or), ${guider.length} guide(r), ${bloggPosts.length} blogginlägg, ${routes.length} sidor i sitemap.`);
 }

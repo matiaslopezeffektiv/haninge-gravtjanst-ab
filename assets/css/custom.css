@@ -1262,3 +1262,22 @@ a[class*="tp-btn-"]:focus-visible {
     font-size: .85rem;
   }
 }
+
+/* --- "Scrolla upp"-knappen hamnade bakom "Ring nu" ---
+   Båda är fixed-positionerade i samma hörn (höger/nederkant) och överlappar
+   varandra; eftersom "Ring nu" har högre z-index (måste ligga över allt
+   annat innehåll) doldes scrolla-upp-knappen bakom den. Lösning: stapla
+   scrolla-upp-knappen ovanför "Ring nu" istället för att dela samma yta,
+   och flytta upp den ytterligare när cookie-bannern också är synlig
+   (samma mönster som redan används för .nt-floating-call). */
+.back-to-top-wrapper.back-to-top-btn-show {
+  bottom: 90px;
+}
+body:has(#nt-cookie-banner.nt-show) .back-to-top-wrapper.back-to-top-btn-show {
+  bottom: 170px;
+}
+@media (max-width: 767px) {
+  body:has(#nt-cookie-banner.nt-show) .back-to-top-wrapper.back-to-top-btn-show {
+    bottom: 200px;
+  }
+}

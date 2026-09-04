@@ -35,19 +35,24 @@ function renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extra
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap">
+  <!-- Webfont CSS already carries display=swap, so text paints in a fallback
+       font immediately either way — no need to block rendering on this
+       cross-origin request too. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap"></noscript>
 
   <link rel="stylesheet" href="/assets/css/bootstrap.css">
-  <link rel="stylesheet" href="/assets/css/animate.css">
   <link rel="stylesheet" href="/assets/css/spacing.css">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/custom.css">
   ${extraStyles}
 
-  <!-- Icon font is decorative and not needed for first paint; load it
-       without blocking rendering (icons pop in a beat later instead). -->
+  <!-- Icon font and scroll-entrance animations are decorative and not
+       needed for first paint; load both without blocking rendering. -->
   <link rel="preload" href="/assets/css/font-awesome-pro.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/assets/css/font-awesome-pro.css"></noscript>
+  <link rel="preload" href="/assets/css/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/css/animate.css"></noscript>
 
   ${schemaHtml}
 </head><body class="tp-bg-common-white-2">

@@ -28,6 +28,10 @@ function renderFooter(site) {
             <ul class="tpfooter__link">
               <li><a href="/">Hem</a></li>
               <li><a href="/tjanster">Tjänster</a></li>
+              <li><a href="/omraden">Områden</a></li>
+              <li><a href="/brf">BRF</a></li>
+              <li><a href="/guider">Guider</a></li>
+              <li><a href="/blogg">Blogg</a></li>
               <li><a href="/om-oss">Om oss</a></li>
               <li><a href="/kontakt">Kontakt</a></li>
               <li><a href="/integritetspolicy">Integritetspolicy</a></li>

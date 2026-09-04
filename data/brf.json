@@ -1,0 +1,71 @@
+{
+  "h1": "Mark- och anläggningsarbete för bostadsrättsföreningar",
+  "metaTitle": "Mark- och anläggningsarbete för BRF — Haninge Grävtjänst AB",
+  "metaDescription": "Dränering, innergårdsrenovering och markarbete åt bostadsrättsföreningar i Stockholm. Tydlig offert, samordning med styrelsen och etappindelat arbete.",
+  "intro": [
+    "Att driva ett mark- eller anläggningsprojekt som bostadsrättsförening skiljer sig från ett privat villaprojekt — fler personer berörs, styrelsen behöver ett tydligt beslutsunderlag, och arbetet ska helst inte störa de boende mer än nödvändigt. Haninge Grävtjänst AB utför dränering, innergårdsrenovering, markanläggning och markarbete åt bostadsrättsföreningar och samfälligheter i hela Stockholmsområdet.",
+    "Vi är vana vid att lämna tydliga, skriftliga offerter som en styrelse kan ta beslut kring, presentera förslag inför en stämma vid behov, och planera arbetet i etapper när det underlättar för både budget och boende. Oavsett om det gäller en enskild insats som omdränering av grunden eller en större gårdsrenovering hjälper vi föreningen genom hela processen."
+  ],
+  "painPoints": [
+    "Otydliga offerter som gör det svårt att jämföra leverantörer eller få stämman att fatta beslut",
+    "Arbete som drar ut på tiden och stänger av gården eller uppfarten längre än nödvändigt",
+    "Osäkerhet kring vem som ansvarar om något går sönder eller skadas under arbetets gång",
+    "Svårt att få en leverantör att engagera sig i en mindre insats, inte bara stora totalentreprenader"
+  ],
+  "relevantServices": [
+    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av gemensamma innergårdar — den vanligaste typen av markprojekt hos våra BRF-kunder." },
+    { "slug": "dranering", "blurb": "Omdränering av flerbostadshus, ofta aktuellt när äldre fastigheter börjar få fuktproblem i källaren." },
+    { "slug": "markanlaggning-kantsten", "blurb": "Kantsten och markanläggning för gemensamma uppfarter, parkeringsytor och gångar." },
+    { "slug": "markarbeten", "blurb": "Schaktning och ledningsgrävning i tät bebyggelse, med hänsyn till åtkomst och grannar." }
+  ],
+  "process": [
+    { "step": 1, "title": "Första kontakt", "description": "Styrelsen eller förvaltaren berättar om behovet — vi bokar ett kostnadsfritt platsbesök." },
+    { "step": 2, "title": "Tydlig offert", "description": "Ni får en skriftlig offert med omfattning, tidsplan och pris, som går att ta med till styrelsen eller stämman." },
+    { "step": 3, "title": "Planering med hänsyn till boende", "description": "Vi planerar arbetet så att gården eller uppfarten är tillgänglig så mycket som möjligt, och delar gärna upp arbetet i etapper vid behov." },
+    { "step": 4, "title": "Utförande och avstämning", "description": "Vi håller styrelsen eller förvaltaren uppdaterad under arbetets gång och stämmer av eventuella ändringar innan de görs." },
+    { "step": 5, "title": "Slutbesiktning", "description": "Gemensam genomgång av det färdiga arbetet med styrelsen eller förvaltaren." }
+  ],
+  "faq": [
+    {
+      "question": "Behöver vi ta in flera offerter innan vi kan anlita er?",
+      "answer": "Det är upp till er förening, men många styrelser vill jämföra ett par alternativ innan beslut — det stödjer vi gärna genom att lämna en tydlig, skriftlig offert som är enkel att jämföra mot andra."
+    },
+    {
+      "question": "Kan ni presentera vårt förslag på en stämma?",
+      "answer": "Ja, vid större projekt kan vi vid behov ta fram underlag eller delta för att svara på frågor inför en stämma, så att medlemmarna får ett tydligt beslutsunderlag."
+    },
+    {
+      "question": "Hur fungerar fakturering till en bostadsrättsförening?",
+      "answer": "Vi fakturerar föreningen enligt de villkor som avtalas i offerten, precis som vid andra företagskunder. Hör av er om ni har särskilda krav på fakturaunderlag från er förvaltare."
+    },
+    {
+      "question": "Kan arbetet delas upp i etapper om budgeten är begränsad?",
+      "answer": "Ja, det är vanligt och går ofta bra att lösa — till exempel genom att prioritera den mest akuta delen av en gårdsrenovering ett år och resten senare. Vi planerar gärna in etapper tillsammans med er."
+    },
+    {
+      "question": "Vem ansvarar om något skadas under arbetets gång, till exempel en ledning eller plantering?",
+      "answer": "Vi har ansvarsförsäkring som täcker eventuella fel eller skador som uppstår i vårt arbete. Vid grävning nära befintlig infrastruktur gör vi alltid en ledningskoll i förväg för att minska risken."
+    },
+    {
+      "question": "Hur mycket påverkas gården eller uppfarten under arbetets gång?",
+      "answer": "Det beror på projektets omfattning, men vi planerar alltid arbetet för att hålla ytan så tillgänglig som möjligt — till exempel genom att arbeta i sektioner av en gård istället för att stänga av allt samtidigt."
+    },
+    {
+      "question": "Tar ni även mindre uppdrag, eller bara stora totalentreprenader?",
+      "answer": "Vi tar gärna både mindre insatser, som att åtgärda en enskild dräneringsskada, och större sammanhållna gårdsrenoveringar. Omfattningen avgör inte om vi tar uppdraget."
+    },
+    {
+      "question": "Kan ni samordna med vår fastighetsförvaltare?",
+      "answer": "Ja, vi är vana vid att kommunicera både direkt med styrelsen och via en extern förvaltare, beroende på hur er förening är organiserad."
+    },
+    {
+      "question": "Ger ROT-avdraget rabatt även för bostadsrättsföreningars gemensamma ytor?",
+      "answer": "Reglerna för ROT-avdrag på gemensamma ytor i en bostadsrättsförening skiljer sig från reglerna för privatpersoner och är mer begränsade. Vi rekommenderar att stämma av med föreningens ekonom eller Skatteverket vad som gäller för just ert projekt."
+    },
+    {
+      "question": "Hur lång tid innan säsong bör vi boka in en gårdsrenovering?",
+      "answer": "Vår och sommar är högsäsong för utomhusprojekt, så vi rekommenderar att höra av sig i god tid — gärna under vintern eller tidig vår — om ni vill vara säkra på en tid som passar föreningens tidsplan."
+    }
+  ],
+  "sourceKeys": ["skatteverketRot", "ledningskollen", "reco"]
+}

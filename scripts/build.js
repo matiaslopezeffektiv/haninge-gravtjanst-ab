@@ -19,6 +19,11 @@ const { renderTjanstPage } = require('../templates/pages/tjanst');
 const { renderOrtPage } = require('../templates/pages/ort');
 const { renderOmradePage } = require('../templates/pages/omrade');
 const { renderOmradenHubPage } = require('../templates/pages/omradenHub');
+const { renderBrfPage } = require('../templates/pages/brf');
+const { renderGuidePage } = require('../templates/pages/guide');
+const { renderGuiderHubPage } = require('../templates/pages/guiderHub');
+const { renderBlogPostPage } = require('../templates/pages/blogPost');
+const { renderBloggHubPage } = require('../templates/pages/bloggHub');
 const { renderOmOssPage } = require('../templates/pages/omOss');
 const { renderIntegritetspolicyPage } = require('../templates/pages/integritetspolicy');
 
@@ -72,6 +77,14 @@ function loadOmraden() {
     });
 }
 
+function loadJsonDir(dirName) {
+  const dir = path.join(ROOT, 'data', dirName);
+  if (!fs.existsSync(dir)) return [];
+  return fs.readdirSync(dir)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => readJson(path.join(dir, f)));
+}
+
 function buildSitemap(site, routes) {
   const lastmod = new Date().toISOString().slice(0, 10);
   const urls = routes.map(({ loc, priority, changefreq }) => `  <url>
@@ -96,6 +109,9 @@ function main() {
   const tjanster = loadTjanster();
   const tjansterBySlug = Object.fromEntries(tjanster.map((t) => [t.slug, t]));
   const omraden = loadOmraden();
+  const brf = readJson(path.join(ROOT, 'data', 'brf.json'));
+  const guider = loadJsonDir('guider');
+  const bloggPosts = loadJsonDir('blogg').sort((a, b) => (a.publishDate < b.publishDate ? 1 : -1));
 
   // Bygger en global lista över alla tjänst×ort-kombinationer (från tjanst.orter)
   // så att omrade.js kan länka en stadsdels "vanliga behov"-kort direkt till
@@ -118,6 +134,9 @@ function main() {
   writePage('om-oss.html', site, '/om-oss', renderOmOssPage(site));
   writePage('integritetspolicy.html', site, '/integritetspolicy', renderIntegritetspolicyPage(site));
   writePage('omraden.html', site, '/omraden', renderOmradenHubPage(site, omraden));
+  writePage('brf.html', site, '/brf', renderBrfPage(site, brf));
+  writePage('guider.html', site, '/guider', renderGuiderHubPage(site, guider));
+  writePage('blogg.html', site, '/blogg', renderBloggHubPage(site, bloggPosts));
 
   // integritetspolicy.html är noindex (se templates/pages/integritetspolicy.js) och
   // ska därför INTE ligga i sitemap.xml — en noindexad URL i sitemapen är en
@@ -126,9 +145,22 @@ function main() {
     { loc: '/', priority: '1.0', changefreq: 'weekly' },
     { loc: '/tjanster', priority: '0.9', changefreq: 'weekly' },
     { loc: '/omraden', priority: '0.8', changefreq: 'weekly' },
+    { loc: '/brf', priority: '0.7', changefreq: 'monthly' },
+    { loc: '/guider', priority: '0.6', changefreq: 'monthly' },
+    { loc: '/blogg', priority: '0.6', changefreq: 'weekly' },
     { loc: '/om-oss', priority: '0.6', changefreq: 'monthly' },
     { loc: '/kontakt', priority: '0.7', changefreq: 'monthly' },
   ];
+
+  for (const guide of guider) {
+    writePage(`guider/${guide.slug}.html`, site, `/guider/${guide.slug}`, renderGuidePage(site, guide));
+    routes.push({ loc: `/guider/${guide.slug}`, priority: '0.6', changefreq: 'yearly' });
+  }
+
+  for (const post of bloggPosts) {
+    writePage(`blogg/${post.slug}.html`, site, `/blogg/${post.slug}`, renderBlogPostPage(site, post));
+    routes.push({ loc: `/blogg/${post.slug}`, priority: '0.5', changefreq: 'yearly' });
+  }
 
   for (const svc of site.services) {
     if (!svc.hasPage) continue;
@@ -167,7 +199,7 @@ function main() {
   writeFile('sitemap.xml', buildSitemap(site, routes));
   writeFile('robots.txt', buildRobots(site));
 
-  console.log(`\nKlart. ${tjanster.length} tjänst(er), ${omraden.length} område(n), ${allOrtMatches.length} tjänst×ort-sida(or), ${routes.length} sidor i sitemap.`);
+  console.log(`\nKlart. ${tjanster.length} tjänst(er), ${omraden.length} område(n), ${allOrtMatches.length} tjänst×ort-sida(or), ${guider.length} guide(r), ${bloggPosts.length} blogginlägg, ${routes.length} sidor i sitemap.`);
 }
 
 main();

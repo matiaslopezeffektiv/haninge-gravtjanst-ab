@@ -1,0 +1,82 @@
+{
+  "slug": "bygglov-marklov",
+  "title": "Bygglov och marklov för markarbete",
+  "h1": "Bygglov och marklov för markarbete – vad gäller?",
+  "metaTitle": "Bygglov och marklov för markarbete — Haninge Grävtjänst AB",
+  "metaDescription": "Guide till bygglov och marklov för dränering, husgrund och markarbete i Stockholm och Haninge — när krävs tillstånd och vem beslutar?",
+  "updated": "2026-09-04",
+  "intro": [
+    "Många markarbeten kräver inget tillstånd alls, medan andra kräver marklov eller ingår i ett bygglov för en annan åtgärd. Den här guiden reder ut skillnaden mellan bygglov och marklov, och vad som brukar gälla för dränering, husgrundsarbete, markanläggning och liknande projekt i Stockholmsområdet.",
+    "Reglerna varierar mellan kommuner, och det är alltid din kommun som gör den formella bedömningen — se den här guiden som en översikt, inte ett facit för ditt specifika projekt."
+  ],
+  "sections": [
+    {
+      "heading": "Skillnaden mellan bygglov och marklov",
+      "body": [
+        "Bygglov krävs för att uppföra, bygga till eller väsentligt ändra en byggnad. Marklov krävs istället specifikt för att ändra marknivån genom schaktning eller fyllning, inom ett område med detaljplan. Ett markarbete kan alltså kräva marklov även om ingen byggnad alls är inblandad — till exempel om du fyller upp eller schaktar bort en stor mängd jord på tomten."
+      ]
+    },
+    {
+      "heading": "När krävs marklov?",
+      "body": [
+        "Marklov kan krävas i följande fall, men kontrollera alltid med din kommun om du är osäker:"
+      ],
+      "list": [
+        "Vid schaktning eller fyllning som ändrar marknivån med mer än 0,5 meter inom detaljplanerat område",
+        "Vid större terrasseringar av en sluttande tomt",
+        "I vissa fall vid trädfällning inom detaljplanerat område (varierar mellan kommuner)"
+      ]
+    },
+    {
+      "heading": "När ingår markarbetet i ett bygglov istället?",
+      "body": [
+        "Om markarbetet är en förberedelse inför en bygglovspliktig åtgärd — till exempel en ny tillbyggnad eller ett nytt garage — prövas oftast markarbetet inom samma bygglov, istället för som ett separat marklov. Mindre schaktning i samband med normalt trädgårdsarbete, till exempel för en dränering eller en mindre uppfart, kräver oftast varken bygglov eller marklov."
+      ]
+    },
+    {
+      "heading": "Bygglov och marklov i Stockholms stad och Haninge kommun",
+      "body": [
+        "Stockholms stad och Haninge kommun har egna e-tjänster för att söka bygglov och marklov, samt egen information om vad som gäller lokalt. Vi rekommenderar att alltid kontrollera med din kommun innan ett större markarbete påbörjas — <a href=\"https://stockholm.se/ByggBo/Bygglov\" target=\"_blank\" rel=\"noopener\">Stockholms stads bygglovssida</a> och <a href=\"https://www.haninge.se/sjalvservice/bygglov-och-anmalan--ansok-som-privatperson/\" target=\"_blank\" rel=\"noopener\">Haninge kommuns bygglovssida</a> är bra utgångspunkter."
+      ]
+    },
+    {
+      "heading": "Vad händer om jag gräver utan lov när det krävs?",
+      "body": [
+        "Om ett marklovspliktigt arbete utförs utan lov kan kommunen kräva att marken återställs, och det kan tillkomma en byggsanktionsavgift. Är du osäker på om ditt projekt kräver lov, kontrollera med kommunen innan arbetet påbörjas — vi hjälper gärna till att reda ut vad som brukar gälla inför en offert."
+      ]
+    },
+    {
+      "heading": "Glöm inte Ledningskollen",
+      "body": [
+        "Oavsett om marklov krävs eller inte är det alltid klokt att göra en kostnadsfri kontroll via <a href=\"https://www.ledningskollen.se/\" target=\"_blank\" rel=\"noopener\">Ledningskollen</a> innan grävning, för att undvika att gräva av kablar, vatten- eller avloppsledningar."
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "question": "Behöver jag marklov för att dränera om huset?",
+      "answer": "Normalt sett nej — omdränering räknas oftast som en mindre schaktning som inte ändrar marknivån nämnvärt. Vid osäkerhet, kontrollera med din kommun."
+    },
+    {
+      "question": "Krävs marklov för en ny uppfart?",
+      "answer": "Det beror på hur mycket marknivån behöver ändras. En mindre uppfart utan större schaktning kräver oftast inte marklov, men en uppfart som kräver stor fyllning eller schaktning kan göra det."
+    },
+    {
+      "question": "Vem ansöker om marklov, jag eller entreprenören?",
+      "answer": "Det är fastighetsägaren som ansöker om marklov, men en entreprenör kan hjälpa till att ta fram det underlag som behövs för ansökan."
+    },
+    {
+      "question": "Hur lång tid tar det att få marklov?",
+      "answer": "Handläggningstiden varierar mellan kommuner, men räkna med flera veckor. Kontrollera med din kommun för en aktuell tidsuppskattning."
+    },
+    {
+      "question": "Kan jag börja gräva medan jag väntar på beslut om marklov?",
+      "answer": "Nej, du bör vänta tills lovet är beviljat innan arbetet påbörjas, för att undvika sanktionsavgift eller krav på återställning."
+    },
+    {
+      "question": "Skiljer sig reglerna mellan Stockholms stad och Haninge kommun?",
+      "answer": "Grundprinciperna i plan- och bygglagen är desamma, men handläggning och lokala tillämpningar kan skilja sig något. Kontrollera alltid med den kommun där fastigheten ligger."
+    }
+  ],
+  "sourceKeys": ["boverketMarklov", "stockholmBygglov", "haningeBygglov", "ledningskollen"]
+}

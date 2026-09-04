@@ -1,0 +1,115 @@
+const { buildMetaTags } = require('../../lib/metadata');
+const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
+const { escapeHtml, escapeAttr } = require('../../lib/html');
+const { renderCtaBand } = require('../partials/ctaBand');
+
+function formatDate(iso) {
+  const [y, m, d] = iso.split('-');
+  const months = ['januari', 'februari', 'mars', 'april', 'maj', 'juni', 'juli', 'augusti', 'september', 'oktober', 'november', 'december'];
+  return `${parseInt(d, 10)} ${months[parseInt(m, 10) - 1]} ${y}`;
+}
+
+function bodySection(s) {
+  return `
+          ${s.heading ? `<h2 class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">${escapeHtml(s.heading)}</h2>` : ''}
+          ${s.paragraphs.map((p) => `<p style="color:var(--nt-gray);line-height:1.8;" class="mb-20">${p}</p>`).join('')}`;
+}
+
+function relatedServiceLink(site, slug) {
+  const svc = site.services.find((s) => s.slug === slug);
+  if (!svc) return '';
+  return `
+        <a href="/tjanster/${svc.slug}" class="nt-related-card">
+          <span class="nt-related-card__icon"><i class="fas ${svc.icon}"></i></span>
+          <span>
+            <span class="nt-related-card__label">Relaterad tjänst</span>
+            <span class="nt-related-card__name">${escapeHtml(svc.name)}</span>
+          </span>
+          <i class="fas fa-arrow-right nt-related-card__arrow"></i>
+        </a>`;
+}
+
+/**
+ * @param {object} site - data/site.json
+ * @param {object} post - data/blogg/[slug].json
+ */
+function renderBlogPostPage(site, post) {
+  const metaHtml = buildMetaTags({
+    site,
+    title: post.metaTitle,
+    description: post.metaDescription,
+    path: `/blogg/${post.slug}`,
+    image: post.heroImage,
+  });
+
+  const schemaHtml = renderSchemaGraph([
+    buildLocalBusinessSchema(site),
+    {
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.metaDescription,
+      image: `${site.url}${post.heroImage}`,
+      datePublished: post.publishDate,
+      dateModified: post.publishDate,
+      author: { '@type': 'Organization', name: site.name, '@id': `${site.url}/#organization` },
+      publisher: { '@type': 'Organization', name: site.name, '@id': `${site.url}/#organization` },
+      mainEntityOfPage: `${site.url}/blogg/${post.slug}`,
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
+        { '@type': 'ListItem', position: 2, name: 'Blogg', item: `${site.url}/blogg` },
+        { '@type': 'ListItem', position: 3, name: post.title },
+      ],
+    },
+  ]);
+
+  const relatedLinks = (post.relatedServiceSlugs || []).map((slug) => relatedServiceLink(site, slug)).join('');
+
+  // post.body[].paragraphs renderas orenat — se motsvarande kommentar i templates/pages/tjanst.js.
+  const bodyContent = `
+  <!-- =============== BREADCRUMB =============== -->
+  <div class="tp-breadcrumb-area tp-breadcrumb-spacing nt-dark-band pt-180 pb-90"${post.heroImage ? ` style="background-image:url('${escapeAttr(post.heroImage)}');"` : ''}>
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10">
+          <div class="tp-breadcrumb-content">
+            <span class="nt-eyebrow nt-eyebrow-light" style="margin-bottom:14px;">${escapeHtml(formatDate(post.publishDate))}</span>
+            <h1 class="tp-breadcrumb-title fw-600 fs-52 fs-xs-32 ls-m-3 tp-text-common-white lh-1 mb-20">${escapeHtml(post.title)}</h1>
+            <div class="tp-breadcrumb-dvdr"><ul><li><a href="/">Hem</a></li><li class="dvdr">/</li><li><a href="/blogg">Blogg</a></li><li class="dvdr">/</li><li>${escapeHtml(post.title)}</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- =============== /BREADCRUMB =============== -->
+
+  <!-- =============== ARTIKELINNEHÅLL =============== -->
+  <div class="pt-100 pb-60" style="background:var(--nt-white);">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          ${post.body.map(bodySection).join('')}
+
+          ${relatedLinks ? `
+          <div class="mt-50 pt-40" style="border-top:1px solid var(--nt-border, #e5e5e5);">
+            <span class="nt-eyebrow">Läs mer</span>
+            <div class="d-flex flex-wrap gap-3 mt-15">${relatedLinks}</div>
+          </div>` : ''}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- =============== /ARTIKELINNEHÅLL =============== -->
+
+  ${renderCtaBand(site, {
+    eyebrow: 'Behöver du hjälp?',
+    heading: 'Berätta om ditt projekt',
+    subtext: 'Kontakta oss för en kostnadsfri bedömning och offert.',
+  })}`;
+
+  return { metaHtml, schemaHtml, bodyContent };
+}
+
+module.exports = { renderBlogPostPage };

@@ -297,7 +297,7 @@ function renderHomePage(site, tjansterBySlug) {
         <div class="col-xl-7 text-center">
           <span class="nt-eyebrow" style="justify-content:center;">Vanliga frågor</span>
           <h2 class="mb-20 fs-xl-40 fs-sm-36">Bra att veta innan ni kontaktar oss</h2>
-          <p style="color:var(--nt-gray);line-height:1.8;">Vanliga frågor om oss som företag och hur vi arbetar. Fler frågor specifika för respektive tjänst hittar du på <a href="/tjanster">tjänstesidorna</a>.</p>
+          <p style="color:var(--nt-gray);line-height:1.8;">Vanliga frågor om oss som företag och hur vi arbetar. Fler frågor specifika för respektive tjänst hittar du på <a href="/tjanster">tjänstesidorna</a>, och fördjupning kring ROT-avdrag och bygglov i våra <a href="/guider">guider</a>.</p>
         </div>
       </div>
       <div class="row justify-content-center">

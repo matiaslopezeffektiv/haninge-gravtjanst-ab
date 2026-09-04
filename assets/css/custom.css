@@ -921,12 +921,11 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
   margin-bottom: 22px;
 }
 .nt-side-card--navy { background: var(--nt-navy); }
-.nt-side-card h5 { color: var(--nt-navy); font-weight: 700; margin-bottom: 16px; font-size: 1.05rem; }
-/* Högre specificitet (två klasser) än ".nt-side-card h5" ovan, så den vinner
-   oavsett källordning — .nt-side-card--navy h5 hade samma specificitet som
-   .nt-side-card h5 och förlorade eftersom den kom först i filen. */
-.nt-side-card.nt-side-card--navy h5,
-.nt-side-card.nt-side-card--navy h4 { color: var(--nt-white); }
+.nt-side-card h3 { color: var(--nt-navy); font-weight: 700; margin-bottom: 16px; font-size: 1.05rem; }
+/* Högre specificitet (två klasser) än ".nt-side-card h3" ovan, så den vinner
+   oavsett källordning — .nt-side-card--navy h3 hade samma specificitet som
+   .nt-side-card h3 och förlorade eftersom den kom först i filen. */
+.nt-side-card.nt-side-card--navy h3 { color: var(--nt-white); }
 .nt-side-nav { list-style: none; padding: 0; margin: 0; }
 .nt-side-nav li { margin-bottom: 2px; }
 .nt-side-nav li a {
@@ -957,7 +956,7 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
   font-size: 1.05rem;
   margin-bottom: 14px;
 }
-.nt-highlight h5 { color: var(--nt-navy); font-weight: 700; margin-bottom: 8px; }
+.nt-highlight h3 { color: var(--nt-navy); font-weight: 700; margin-bottom: 8px; font-size: 1rem; }
 .nt-highlight p { color: var(--nt-gray); margin: 0; }
 
 /* Accordion (FAQ) — brand skin over bootstrap */
@@ -1128,7 +1127,7 @@ body:has(#nt-cookie-banner.nt-show) .nt-floating-call { bottom: 100px; }
   border-top: 1px solid #e6eaf0;
   padding-top: 22px;
 }
-.nt-sources h6 {
+.nt-sources h3 {
   font-size: .82rem;
   font-weight: 700;
   color: var(--nt-gray);

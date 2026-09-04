@@ -10,7 +10,7 @@ function renderSidebarNav(site, currentSlug) {
       <li class="${svc.slug === currentSlug ? 'is-active' : ''}"><a href="/tjanster/${svc.slug}">${escapeHtml(svc.name)} <i class="fas fa-arrow-right"></i></a></li>`).join('');
   return `
         <div class="nt-side-card">
-          <h5>Alla tjänster</h5>
+          <h3>Alla tjänster</h3>
           <ul class="nt-side-nav">${items}
           </ul>
         </div>`;
@@ -19,7 +19,7 @@ function renderSidebarNav(site, currentSlug) {
 function renderSidebarContact(site) {
   return `
         <div class="nt-side-card nt-side-card--navy">
-          <h5>Kontakta oss direkt</h5>
+          <h3>Kontakta oss direkt</h3>
           <p style="color:rgba(255,255,255,.65);font-size:.85rem;margin-bottom:4px;">Ring oss</p>
           <a href="${escapeAttr(site.phoneHref)}" style="color:#F5B400;font-weight:700;font-size:1.3rem;display:block;margin-bottom:16px;text-decoration:none;">${escapeHtml(site.phone)}</a>
           <p style="color:rgba(255,255,255,.65);font-size:.85rem;margin-bottom:4px;">E-post</p>
@@ -31,7 +31,7 @@ function renderSidebarWhyUs(site) {
   const t = site.trustSignals;
   return `
         <div class="nt-side-card">
-          <h5>Varför Haninge Grävtjänst?</h5>
+          <h3>Varför Haninge Grävtjänst?</h3>
           <div class="tp-about-bottom-feature" style="margin:0;"><ul>
             <li><i class="fa-sharp fa-solid fa-check"></i> ${escapeHtml(t.fSkatt.value)}</li>
             <li><i class="fa-sharp fa-solid fa-check"></i> Ansvarsförsäkring och garanti på utfört arbete</li>

@@ -56,7 +56,7 @@ function renderOrtPage(site, tjanst, ort, omrade) {
           <div class="nt-icon-card" style="padding:0;overflow:hidden;">
             ${p.image ? `<img src="${escapeAttr(p.image)}" alt="${escapeAttr(p.title)}" style="width:100%;height:200px;object-fit:cover;display:block;">` : ''}
             <div style="padding:24px 26px;">
-              <h4>${escapeHtml(p.title)}</h4>
+              <h3>${escapeHtml(p.title)}</h3>
               <p>${escapeHtml(p.description)}</p>
             </div>
           </div>

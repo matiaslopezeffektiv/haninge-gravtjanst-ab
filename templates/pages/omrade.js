@@ -11,7 +11,7 @@ function serviceGridCard(site, svc, tjansterBySlug) {
         <div class="col-xl-4 col-md-6">
           <div class="nt-icon-card position-relative">
             <div class="nt-icon-card__icon"><i class="fas ${svc.icon}"></i></div>
-            <h4><a href="/tjanster/${svc.slug}">${escapeHtml(svc.name)}</a></h4>
+            <h3><a href="/tjanster/${svc.slug}">${escapeHtml(svc.name)}</a></h3>
             <p>${escapeHtml(shortDescription)}</p>
             <a class="nt-icon-card__link" href="/tjanster/${svc.slug}">Läs mer <i class="fas fa-arrow-right"></i></a>
           </div>
@@ -28,7 +28,7 @@ function relevantServiceCard(site, item, ortMatches) {
         <div class="col-md-4">
           <div class="nt-highlight h-100">
             <span class="nt-highlight__icon"><i class="fas ${svc.icon}"></i></span>
-            <h5>${escapeHtml(svc.name)}</h5>
+            <h3>${escapeHtml(svc.name)}</h3>
             <p style="color:var(--nt-gray);font-size:.92rem;line-height:1.7;margin:8px 0 12px;">${escapeHtml(item.blurb)}</p>
             <a href="${href}" style="color:var(--nt-navy);font-weight:600;font-size:.9rem;text-decoration:underline;">${escapeHtml(linkLabel)} <i class="fas fa-arrow-right" style="margin-left:4px;"></i></a>
           </div>

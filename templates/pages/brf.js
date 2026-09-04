@@ -18,7 +18,7 @@ function relevantServiceCard(site, item) {
         <div class="col-md-6">
           <div class="nt-highlight h-100">
             <span class="nt-highlight__icon"><i class="fas ${svc.icon}"></i></span>
-            <h5>${escapeHtml(svc.name)}</h5>
+            <h3>${escapeHtml(svc.name)}</h3>
             <p style="color:var(--nt-gray);font-size:.92rem;line-height:1.7;margin:8px 0 12px;">${escapeHtml(item.blurb)}</p>
             <a href="/tjanster/${item.slug}" style="color:var(--nt-navy);font-weight:600;font-size:.9rem;text-decoration:underline;">Läs mer om ${svc.name.toLowerCase()} <i class="fas fa-arrow-right" style="margin-left:4px;"></i></a>
           </div>

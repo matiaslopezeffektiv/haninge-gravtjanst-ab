@@ -67,7 +67,7 @@ function renderTjanstPage(site, tjanst) {
           <div class="nt-icon-card" style="padding:0;overflow:hidden;">
             ${p.image ? `<img src="${escapeAttr(p.image)}" alt="${escapeAttr(p.title)}" style="width:100%;height:200px;object-fit:cover;display:block;">` : ''}
             <div style="padding:24px 26px;">
-              <h4>${escapeHtml(p.title)}</h4>
+              <h3>${escapeHtml(p.title)}</h3>
               <p>${escapeHtml(p.description)}</p>
               ${p.location ? `<p style="color:var(--nt-gray);font-size:.85rem;margin-top:8px;"><i class="fas fa-location-dot"></i> ${escapeHtml(p.location)}</p>` : ''}
             </div>
@@ -132,13 +132,13 @@ function renderTjanstPage(site, tjanst) {
             <div class="col-md-6">
               <div class="nt-highlight h-100">
                 <span class="nt-highlight__icon"><i class="fas fa-shield-check"></i></span>
-                <h5>${escapeHtml(tjanst.benefits[0] || '')}</h5>
+                <h3>${escapeHtml(tjanst.benefits[0] || '')}</h3>
               </div>
             </div>
             <div class="col-md-6">
               <div class="nt-highlight h-100">
                 <span class="nt-highlight__icon"><i class="fas fa-circle-check"></i></span>
-                <h5>${escapeHtml(tjanst.benefits[1] || '')}</h5>
+                <h3>${escapeHtml(tjanst.benefits[1] || '')}</h3>
               </div>
             </div>
           </div>

@@ -23,7 +23,7 @@ function renderSourceLinks(site, resourceKeys) {
   <div class="pt-10 pb-60" style="background:var(--nt-white);">
     <div class="container">
       <div class="nt-sources">
-        <h6>Källor och läsvärt</h6>
+        <h3>Källor och läsvärt</h3>
         <ul>${items}
         </ul>
       </div>

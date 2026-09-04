@@ -1239,3 +1239,26 @@ a[class*="tp-btn-"]:focus-visible {
   font-size: .88rem;
   margin-bottom: 18px;
 }
+
+/* --- Trygghetspunkter (F-skatt/försäkring/erfarenhet) på tablet/mobil ---
+   Temats standard (main.css) staplar ikon ovanför text (flex-direction:column)
+   på ALLA bredder under 1400px, vilket ger stora, oproportionerliga cirklar
+   och konstig vitrymd på tablet/mobil. Vi behåller ikon+text i rad istället,
+   och krymper bara cirkeln på riktigt smala skärmar. */
+@media (max-width: 1399.98px) {
+  .tp-feature-3-wrap {
+    flex-direction: row !important;
+    align-items: center;
+  }
+  .tp-feature-3-wrap span {
+    margin-bottom: 0 !important;
+  }
+}
+@media (max-width: 574.98px) {
+  .tp-feature-3-wrap span {
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    font-size: .85rem;
+  }
+}

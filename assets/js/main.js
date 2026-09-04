@@ -37,7 +37,13 @@
 
 	////////////////////////////////////////////////////
 	// 02. nice-select Js
-	$('.select').niceSelect();
+	// nice-select.js är inte inläst (ingen .select-markup finns i det här
+	// projektet) — skyddar mot att ett borttaget/saknat vendor-bibliotek
+	// kastar ett fel som stoppar resten av filen (skedde tidigare och
+	// bröt bl.a. mobilmenyn, se punkt 04 nedan).
+	if ($('.select').length > 0 && typeof $.fn.niceSelect === 'function') {
+		$('.select').niceSelect();
+	}
 
 	///////////////////////////////////////////////////
 	// 03. Sticky Header Js
@@ -99,12 +105,15 @@
 
 	////////////////////////////////////////////////////
 	// 07. Counter Js
-	new PureCounter();
-	new PureCounter({
-		filesizing: true,
-		selector: ".filesizecount",
-		pulse: 2,
-	});
+	// purecounter.js är inte inläst (samma skäl som punkt 02 ovan).
+	if (typeof PureCounter === 'function') {
+		new PureCounter();
+		new PureCounter({
+			filesizing: true,
+			selector: ".filesizecount",
+			pulse: 2,
+		});
+	}
 	
 	////////////////////////////////////////////////////
 	// 08. Wow Js
@@ -113,9 +122,12 @@
 
 	////////////////////////////////////////////////////
 	// 09. magnificPopup video view
-	$(".popup-video").magnificPopup({
-		type: "iframe",
-	});
+	// magnific-popup.js är inte inläst (samma skäl som punkt 02 ovan).
+	if ($(".popup-video").length > 0 && typeof $.fn.magnificPopup === 'function') {
+		$(".popup-video").magnificPopup({
+			type: "iframe",
+		});
+	}
 
 
 	////////////////////////////////////////////////////
@@ -125,14 +137,16 @@
 
 	////////////////////////////////////////////////////
 	// 11. magnific-Popup-image-active
-	$('.popup-image').magnificPopup({
-		type: 'image',
-		gallery: {
-			enabled: true
-		},
-		mainClass: 'mfp-with-zoom',
-		removalDelay: 500,
-	});
+	if ($('.popup-image').length > 0 && typeof $.fn.magnificPopup === 'function') {
+		$('.popup-image').magnificPopup({
+			type: 'image',
+			gallery: {
+				enabled: true
+			},
+			mainClass: 'mfp-with-zoom',
+			removalDelay: 500,
+		});
+	}
 
 
 	////////////////////////////////////////////////////

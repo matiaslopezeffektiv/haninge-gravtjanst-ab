@@ -220,7 +220,7 @@ function renderHomePage(site, tjansterBySlug) {
         <div class="col-lg-7">
           <div style="border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(28,46,74,.12);">
             <iframe
-              src="https://www.google.com/maps?q=Stockholm,Sverige&z=10&output=embed"
+              src="https://www.google.com/maps?q=${site.geo.latitude},${site.geo.longitude}&z=10&output=embed"
               width="100%" height="420" style="border:0;display:block;"
               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
               title="Karta över Haninge Grävtjänsts arbetsområde i Stockholm">

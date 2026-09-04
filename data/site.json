@@ -117,7 +117,7 @@
     },
     {
       "question": "Behöver jag ansöka om bygglov eller marklov för markarbeten?",
-      "answer": "Det beror på typ av arbete. Markarbete som förberedelse inför ett bygglovspliktigt bygge prövas oftast inom bygglovet, medan större schaktning eller fyllning som ändrar marknivån med mer än 0,5 meter kan kräva ett separat marklov. Vi hjälper till att bedöma vad som gäller för just ditt projekt, men den formella prövningen görs alltid av din kommun."
+      "answer": "Det beror på typ av arbete. Markarbete som förberedelse inför ett bygglovspliktigt bygge prövas oftast inom bygglovet, medan större schaktning eller fyllning som ändrar marknivån med mer än 0,5 meter kan kräva ett separat marklov. Vi hjälper till att bedöma vad som gäller för just ditt projekt, men den formella prövningen görs alltid av din kommun. Läs mer i vår <a href=\"/guider/bygglov-marklov\">guide till bygglov och marklov</a>."
     },
     {
       "question": "Hur lång tid tar ett projekt?",
@@ -129,7 +129,7 @@
     },
     {
       "question": "Kan jag få ROT-avdrag på arbetet?",
-      "answer": "Det beror på vilken typ av arbete det gäller. Reparation och underhåll av en befintlig del av bostaden — till exempel omdränering av en husgrund eller reparation av en gammal uppfart — kan ge rätt till ROT-avdrag på arbetskostnaden. Nyanläggning, till exempel en helt ny uteplats eller trädgårdsanläggning, räknas normalt som trädgårds-/markarbete och ger inte rätt till avdraget. Vi berättar vad som gäller för ditt projekt vid offert, men det slutgiltiga avgörandet görs alltid av Skatteverket."
+      "answer": "Det beror på vilken typ av arbete det gäller. Reparation och underhåll av en befintlig del av bostaden — till exempel omdränering av en husgrund eller reparation av en gammal uppfart — kan ge rätt till ROT-avdrag på arbetskostnaden. Nyanläggning, till exempel en helt ny uteplats eller trädgårdsanläggning, räknas normalt som trädgårds-/markarbete och ger inte rätt till avdraget. Vi berättar vad som gäller för ditt projekt vid offert, men det slutgiltiga avgörandet görs alltid av Skatteverket. Läs mer i vår <a href=\"/guider/rot-avdrag\">guide till ROT-avdrag</a>."
     },
     {
       "question": "Kostar det något att få en offert?",
@@ -164,6 +164,8 @@
     { "label": "Hem", "href": "/" },
     { "label": "Tjänster", "href": "/tjanster" },
     { "label": "Områden", "href": "/omraden" },
+    { "label": "Guider", "href": "/guider" },
+    { "label": "Blogg", "href": "/blogg" },
     { "label": "Om oss", "href": "/om-oss" },
     { "label": "Kontakt", "href": "/kontakt" }
   ]

@@ -8,11 +8,12 @@ const { renderPromiseBlock } = require('../partials/promiseBlock');
 const { renderSatelliteLink } = require('../partials/satelliteLink');
 const { renderTestimonials } = require('../partials/testimonials');
 
+// item.answer renderas orenat, se lib/schema-fria kommentaren i tjanst.js.
 function faqItem(item) {
   return `
         <details class="nt-faq-item">
           <summary>${escapeHtml(item.question)}</summary>
-          <p>${escapeHtml(item.answer)}</p>
+          <p>${item.answer}</p>
         </details>`;
 }
 
@@ -297,7 +298,7 @@ function renderHomePage(site, tjansterBySlug) {
         <div class="col-xl-7 text-center">
           <span class="nt-eyebrow" style="justify-content:center;">Vanliga frågor</span>
           <h2 class="mb-20 fs-xl-40 fs-sm-36">Bra att veta innan ni kontaktar oss</h2>
-          <p style="color:var(--nt-gray);line-height:1.8;">Vanliga frågor om oss som företag och hur vi arbetar. Fler frågor specifika för respektive tjänst hittar du på <a href="/tjanster">tjänstesidorna</a>, och fördjupning kring ROT-avdrag och bygglov i våra <a href="/guider">guider</a>.</p>
+          <p style="color:var(--nt-gray);line-height:1.8;">Vanliga frågor om oss som företag och hur vi arbetar. Fler frågor specifika för respektive tjänst hittar du på <a href="/tjanster">tjänstesidorna</a>, fördjupning kring ROT-avdrag och bygglov i våra <a href="/guider">guider</a>, och tips och kunskap på vår <a href="/blogg">blogg</a>.</p>
         </div>
       </div>
       <div class="row justify-content-center">

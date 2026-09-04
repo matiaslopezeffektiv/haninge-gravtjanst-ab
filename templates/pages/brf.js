@@ -25,11 +25,12 @@ function relevantServiceCard(site, item) {
         </div>`;
 }
 
+// item.answer renderas orenat, se lib/schema-fria kommentaren i tjanst.js.
 function faqItem(item) {
   return `
         <details class="nt-faq-item">
           <summary>${escapeHtml(item.question)}</summary>
-          <p>${escapeHtml(item.answer)}</p>
+          <p>${item.answer}</p>
         </details>`;
 }
 

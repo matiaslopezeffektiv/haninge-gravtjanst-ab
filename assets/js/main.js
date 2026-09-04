@@ -170,9 +170,10 @@
 
 	////////////////////////////////////////////////////
 	// 13. mobile menu Js
-	var tpMenuWrap = $('.tp-mobile-menu-active > ul').clone();
+	// header.js renderar redan offcanvas-menyns <ul> server-side (samma
+	// navLinks som desktop-menyn) — temats originalversion klonade istället
+	// desktop-menyn hit med JS, vilket nu skulle ge en DUBBEL menylista.
 	var tpSideMenu = $('.tp-offcanvas-menu nav');
-	tpSideMenu.append(tpMenuWrap);
 	if ($(tpSideMenu).find('.tp-submenu').length != 0) {
 		$(tpSideMenu).find('.tp-submenu').parent().append('<button class="tp-menu-close"><i class="far fa-chevron-right"></i></button>');
 	}

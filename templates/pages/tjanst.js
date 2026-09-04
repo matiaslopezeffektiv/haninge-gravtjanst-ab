@@ -15,11 +15,13 @@ function checkList(items) {
   return `<div class="tp-about-bottom-feature"><ul>${items.map(checkItem).join('')}</ul></div>`;
 }
 
+// item.answer renderas orenat — se motsvarande kommentar för longDescription
+// nedan. Gör att FAQ-svar kan länka internt (t.ex. till /guider/rot-avdrag).
 function faqItem(item) {
   return `
         <details class="nt-faq-item">
           <summary>${escapeHtml(item.question)}</summary>
-          <p>${escapeHtml(item.answer)}</p>
+          <p>${item.answer}</p>
         </details>`;
 }
 

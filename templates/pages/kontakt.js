@@ -1,25 +1,11 @@
 const { buildMetaTags } = require('../../lib/metadata');
 const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
-const { escapeHtml, escapeAttr, isPlaceholder } = require('../../lib/html');
+const { escapeHtml, escapeAttr, isPlaceholder, serviceOptions } = require('../../lib/html');
 const { renderTrustBadges } = require('../partials/trustBadges');
 const { renderProcessSteps } = require('../partials/processSteps');
 const { renderCtaBand } = require('../partials/ctaBand');
 
 const CONTACT_FORM_STYLES = `<style>
-    .nt-contact-form input,
-    .nt-contact-form select,
-    .nt-contact-form textarea {
-      width: 100%; border: 1.5px solid #dde2ea; border-radius: 8px;
-      padding: 13px 16px; font-size: .95rem; color: #1A1A1A;
-      margin-bottom: 18px; outline: none; transition: border-color .2s; background: #fff;
-    }
-    .nt-contact-form input:focus,
-    .nt-contact-form select:focus,
-    .nt-contact-form textarea:focus { border-color: #D99A00; }
-    .nt-contact-form textarea { height: 130px; resize: vertical; }
-    .nt-contact-form label { font-size: .88rem; font-weight: 600; color: #1A1A1A; margin-bottom: 6px; display: block; }
-    .nt-contact-form input[type="file"] { padding: 10px 14px; }
-    .nt-contact-form .nt-file-hint { font-size: .78rem; color: var(--nt-gray); margin: -12px 0 18px; display: block; }
     .nt-contact-info-box {
       background: #fff; border: 1px solid #e6eaf0; border-radius: 12px;
       padding: 28px 26px; margin-bottom: 18px; display: flex; align-items: flex-start; gap: 16px;
@@ -42,11 +28,6 @@ const CONTACT_FORM_STYLES = `<style>
     .nt-phone-cta a { color: #F5B400; }
     .nt-phone-cta a:hover { color: #fff; }
   </style>`;
-
-function serviceOptions(services) {
-  return services.map((s) => `<option value="${escapeAttr(s.name)}">${escapeHtml(s.name)}</option>`).join('') +
-    `<option value="Övrigt / Vet ej">Övrigt / Vet ej</option>`;
-}
 
 /**
  * @param {object} site - data/site.json

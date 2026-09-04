@@ -1,6 +1,6 @@
 const { buildMetaTags } = require('../../lib/metadata');
 const { buildLocalBusinessSchema, buildFaqSchema, renderSchemaGraph } = require('../../lib/schema');
-const { escapeHtml, escapeAttr } = require('../../lib/html');
+const { escapeHtml, escapeAttr, serviceOptions } = require('../../lib/html');
 const { renderTrustBadges } = require('../partials/trustBadges');
 const { renderProcessSteps } = require('../partials/processSteps');
 const { renderCtaBand } = require('../partials/ctaBand');
@@ -82,19 +82,12 @@ function renderHomePage(site, tjansterBySlug) {
   <!-- =============== HERO =============== -->
   <section class="nt-hero-static" style="background-image:url('${escapeHtml(site.heroImage)}');" role="img" aria-label="${escapeHtml(site.heroImageAlt)}">
     <div class="container nt-hero-content">
-      <div class="row">
-        <div class="col-xl-8 col-lg-10">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
           <span class="nt-eyebrow nt-eyebrow-light">Mark &amp; anläggning i ${escapeHtml(site.primaryLocation)}</span>
           <h1>Grävfirma i <span>${escapeHtml(site.primaryLocation)}</span> — från dränering till färdig mark</h1>
           <p>${escapeHtml(site.tagline)}. ${escapeHtml(site.name)} utför mark- och anläggningsarbeten åt privatpersoner, företag och BRF:er i hela ${escapeHtml(site.primaryLocation)}, med ${escapeHtml(site.homeBase)} som hemort.</p>
           <div class="d-flex flex-wrap gap-3 mb-45">
-            <a href="/kontakt" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500">
-              <span class="d-flex align-items-center justify-content-center">
-                <span class="btn-text">Begär offert</span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-              </span>
-            </a>
             <a href="/tjanster" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-common-white ls-0 tp-btn-switch-animation fw-500">
               <span class="d-flex align-items-center justify-content-center">
                 <span class="btn-text">Se våra tjänster</span>
@@ -107,6 +100,27 @@ function renderHomePage(site, tjansterBySlug) {
             <span><i class="fas fa-file-invoice"></i> F-skattsedel</span>
             <span><i class="fas fa-shield-check"></i> Ansvarsförsäkrat</span>
             <span><i class="fas fa-location-dot"></i> Hemort ${escapeHtml(site.homeBase)}</span>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="nt-hero-form-card nt-hides-floating-call">
+            <span class="nt-eyebrow">Vill du diskutera ditt projekt?</span>
+            <h3>Kontakta oss</h3>
+            <p>Fyll i dina uppgifter så ringer vi upp dig — helt kostnadsfritt och utan förpliktelser.</p>
+            <form class="nt-contact-form" id="hero-contact-form">
+              <label for="hero-name">Namn</label>
+              <input type="text" id="hero-name" name="name" required placeholder="Ditt namn">
+              <label for="hero-phone">Telefon</label>
+              <input type="tel" id="hero-phone" name="phone" required placeholder="070-123 45 67">
+              <label for="hero-service">Önskad tjänst</label>
+              <select id="hero-service" name="service" required>
+                <option value="">— Välj tjänst —</option>${serviceOptions(site.services)}
+              </select>
+              <button type="submit" class="tp-btn-xl d-block w-100 lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500" style="border:none;padding:16px;">
+                Kontakta oss &rarr;
+              </button>
+              <div class="nt-form-message"></div>
+            </form>
           </div>
         </div>
       </div>
@@ -315,7 +329,9 @@ function renderHomePage(site, tjansterBySlug) {
     subtext: 'Kontakta oss idag och få ett skräddarsytt förslag — snabbt och enkelt.',
   })}`;
 
-  return { metaHtml, schemaHtml, bodyContent };
+  const extraScripts = '<script src="/assets/js/hero-contact-form.js"></script>';
+
+  return { metaHtml, schemaHtml, bodyContent, extraScripts };
 }
 
 module.exports = { renderHomePage };

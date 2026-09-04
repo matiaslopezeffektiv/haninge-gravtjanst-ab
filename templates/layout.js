@@ -56,6 +56,7 @@ function renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extra
   <script src="/assets/js/wow.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/cookie-consent.js"></script>
+  <script src="/assets/js/floating-call-visibility.js"></script>
   ${extraScripts}
 </body>
 </html>

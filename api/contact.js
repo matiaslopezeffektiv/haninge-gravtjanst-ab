@@ -16,10 +16,13 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const { name, phone, email, address, service, message, imageBase64, imageFilename, imageType } = req.body || {};
+  const { name, phone, email, address, service, message, imageBase64, imageFilename, imageType, source } = req.body || {};
 
-  if (!name || !email || !phone || !address || !message) {
-    res.status(400).json({ error: 'Namn, telefon, e-post, adress/område och beskrivning krävs.' });
+  // Namn + telefon krävs alltid. E-post/adress/beskrivning krävs bara för det
+  // fullständiga kontaktformuläret — hero-minformuläret (namn/telefon/tjänst)
+  // skickar till samma endpoint men utan dessa fält.
+  if (!name || !phone) {
+    res.status(400).json({ error: 'Namn och telefon krävs.' });
     return;
   }
 
@@ -28,16 +31,17 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const subject = `Ny offertförfrågan — ${service || 'Ospecificerad tjänst'}`;
+  const subjectPrefix = source === 'hero' ? 'Snabb förfrågan (hero)' : 'Ny offertförfrågan';
+  const subject = `${subjectPrefix} — ${service || 'Ospecificerad tjänst'}`;
 
   const html = `
-    <h2>Ny offertförfrågan</h2>
+    <h2>${escapeHtml(subjectPrefix)}</h2>
     <p><strong>Namn:</strong> ${escapeHtml(name)}</p>
     <p><strong>Telefon:</strong> ${escapeHtml(phone)}</p>
-    <p><strong>E-post:</strong> ${escapeHtml(email)}</p>
-    <p><strong>Adress/område:</strong> ${escapeHtml(address)}</p>
+    ${email ? `<p><strong>E-post:</strong> ${escapeHtml(email)}</p>` : ''}
+    ${address ? `<p><strong>Adress/område:</strong> ${escapeHtml(address)}</p>` : ''}
     ${service ? `<p><strong>Tjänst:</strong> ${escapeHtml(service)}</p>` : ''}
-    <p><strong>Beskrivning:</strong><br>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
+    ${message ? `<p><strong>Beskrivning:</strong><br>${escapeHtml(message).replace(/\n/g, '<br>')}</p>` : ''}
     ${imageBase64 ? '<p><em>Se bifogad bild.</em></p>' : ''}
   `;
 
@@ -58,7 +62,7 @@ module.exports = async (req, res) => {
     const { error } = await resend.emails.send({
       from: process.env.RESEND_FROM || 'Haninge Grävtjänst AB <no-reply@effektivmedia.nu>',
       to: toEmails,
-      reply_to: email,
+      reply_to: email || undefined,
       subject,
       html,
       attachments: attachments.length ? attachments : undefined,

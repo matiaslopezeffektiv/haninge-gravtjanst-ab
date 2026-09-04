@@ -33,7 +33,7 @@ function renderOmOssPage(site) {
       <div class="row">
         <div class="col-xl-8 col-lg-9">
           <div class="tp-breadcrumb-content">
-            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Om oss</h1>
+            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Om ${escapeHtml(site.name)}</h1>
             <div class="tp-breadcrumb-dvdr"><ul><li><a href="/">Hem</a></li><li class="dvdr">/</li><li>Om oss</li></ul></div>
           </div>
         </div>
@@ -47,7 +47,7 @@ function renderOmOssPage(site) {
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <span class="nt-eyebrow">Om ${escapeHtml(site.shortName)}</span>
-          <h2 class="mb-30 fs-xl-40 fs-sm-36">${escapeHtml(site.name)}</h2>
+          <h2 class="mb-30 fs-xl-40 fs-sm-36">Din lokala grävfirma i ${escapeHtml(site.primaryLocation)}</h2>
           <p class="mb-20">${escapeHtml(site.name)} är en grävfirma baserad i ${escapeHtml(site.address.addressLocality)} i ${escapeHtml(site.homeBase)} kommun, med över ${escapeHtml(String(t.yearsExperience))} års erfarenhet av mark- och anläggningsarbete. Vi utför uppdrag i hela Stockholmsområdet — från villaträdgårdar i innerstaden till större markarbeten och BRF-gårdar i förorten.</p>
           <p class="mb-20">Med ${escapeHtml(String(t.projectsCompleted))}+ genomförda projekt har vi byggt upp praktisk erfarenhet av de flesta markförhållanden som förekommer i regionen — lerjord, morän och berg — och vet vad som krävs för att ett arbete ska hålla över tid, inte bara se bra ut vid leverans.</p>
           <p class="mb-20">Vi arbetar med dränering, plattsättning & stensättning, husgrunder & markanläggning, finplanering & innergårdsrenovering, markanläggning & kantsten, asfaltering och grävtjänster/markarbeten — åt privatpersoner, företag och bostadsrättsföreningar. Läs mer om <a href="/tjanster">våra tjänster</a>.</p>

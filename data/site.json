@@ -26,6 +26,7 @@
   "sameAs": [
     "https://www.reco.se/haninge-gravtjanst-ab-vasterhaninge"
   ],
+  "_sameAsNote": "TODO: lägg till Google Business Profile-länken här när kunden delar den (Maps > profilen > Dela) — gick inte att verifiera säkert via sökning, och en gissad länk (fel Place ID) skulle vara värre än ingen alls i LocalBusiness-schemat.",
   "priceRange": "$$",
 
   "primaryLocation": "Stockholm",

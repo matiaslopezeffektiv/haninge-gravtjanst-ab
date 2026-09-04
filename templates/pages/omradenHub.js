@@ -8,7 +8,7 @@ function areaCard(omrade) {
           <a href="/omraden/${escapeAttr(omrade.slug)}" class="nt-icon-card position-relative" style="display:block;">
             <div class="nt-icon-card__icon"><i class="fas fa-location-dot"></i></div>
             <span class="nt-eyebrow" style="margin-bottom:6px;">${escapeHtml(omrade.region)}</span>
-            <h4>${escapeHtml(omrade.name)}</h4>
+            <h2>${escapeHtml(omrade.name)}</h2>
             <p>${escapeHtml(omrade.shortDescription)}</p>
             <span class="nt-icon-card__link">Läs mer <i class="fas fa-arrow-right"></i></span>
           </a>
@@ -44,7 +44,7 @@ function renderOmradenHubPage(site, omraden) {
       <div class="row">
         <div class="col-xl-8 col-lg-9">
           <div class="tp-breadcrumb-content">
-            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Områden vi jobbar i</h1>
+            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Områden vi jobbar i — hela ${escapeHtml(site.primaryLocation)}</h1>
             <div class="tp-breadcrumb-dvdr"><ul><li><a href="/">Hem</a></li><li class="dvdr">/</li><li>Områden</li></ul></div>
           </div>
         </div>

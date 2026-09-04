@@ -64,7 +64,7 @@ function renderKontaktPage(site) {
       <div class="row">
         <div class="col-xl-8 col-lg-9">
           <div class="tp-breadcrumb-content">
-            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Kontakta oss</h1>
+            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Kontakta ${escapeHtml(site.name)}</h1>
             <div class="tp-breadcrumb-dvdr"><ul><li><a href="/">Hem</a></li><li class="dvdr">/</li><li>Kontakt</li></ul></div>
           </div>
         </div>
@@ -120,7 +120,7 @@ function renderKontaktPage(site) {
           <div class="nt-contact-info-box">
             <div class="icon"><i class="fas fa-envelope"></i></div>
             <div>
-              <h5>E-post</h5>
+              <h3>E-post</h3>
               ${emailBlock}
             </div>
           </div>
@@ -128,7 +128,7 @@ function renderKontaktPage(site) {
           <div class="nt-contact-info-box">
             <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
             <div>
-              <h5>Plats</h5>
+              <h3>Plats</h3>
               <p>${escapeHtml(site.address.addressLocality)}, ${escapeHtml(site.address.addressRegion)}</p>
               <p style="font-size:.85rem;">Vi utför uppdrag i hela ${escapeHtml(site.primaryLocation)}</p>
             </div>
@@ -137,7 +137,7 @@ function renderKontaktPage(site) {
           <div class="nt-contact-info-box" style="border:1.5px solid #F5B400;">
             <div class="icon" style="background:#F5B400;"><i class="fas fa-file-invoice" style="color:#1A1A1A;"></i></div>
             <div>
-              <h5 style="color:#1A1A1A;">F-skatt &amp; ansvarsförsäkring</h5>
+              <h3 style="color:#1A1A1A;">F-skatt &amp; ansvarsförsäkring</h3>
               <p>${escapeHtml(site.trustSignals.fSkatt.value)}. ${escapeHtml(site.trustSignals.insurance.value)}</p>
               <a href="${escapeAttr(site.trustSignals.fSkatt.verifyUrl)}" target="_blank" rel="noopener" style="font-size:.85rem;">${escapeHtml(site.trustSignals.fSkatt.verifyLabel)} →</a>
             </div>

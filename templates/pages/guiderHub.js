@@ -7,7 +7,7 @@ function guideCard(guide) {
         <div class="col-md-6">
           <a href="/guider/${escapeAttr(guide.slug)}" class="nt-icon-card position-relative" style="display:block;">
             <div class="nt-icon-card__icon"><i class="fas fa-book-open"></i></div>
-            <h4>${escapeHtml(guide.title)}</h4>
+            <h2>${escapeHtml(guide.title)}</h2>
             <p>${escapeHtml(guide.metaDescription)}</p>
             <span class="nt-icon-card__link">Läs guiden <i class="fas fa-arrow-right"></i></span>
           </a>
@@ -42,7 +42,7 @@ function renderGuiderHubPage(site, guider) {
       <div class="row">
         <div class="col-xl-8 col-lg-9">
           <div class="tp-breadcrumb-content">
-            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Guider</h1>
+            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Guider om ROT-avdrag, bygglov och markarbete</h1>
             <div class="tp-breadcrumb-dvdr"><ul><li><a href="/">Hem</a></li><li class="dvdr">/</li><li>Guider</li></ul></div>
           </div>
         </div>

@@ -15,7 +15,7 @@ function postCard(post) {
             <img src="${escapeAttr(post.heroImage)}" alt="${escapeAttr(post.heroImageAlt)}" style="width:100%;height:180px;object-fit:cover;display:block;">
             <div style="padding:26px;">
               <span style="color:var(--nt-gray);font-size:.82rem;">${escapeHtml(formatDate(post.publishDate))}</span>
-              <h4 class="mt-8">${escapeHtml(post.title)}</h4>
+              <h2 class="mt-8">${escapeHtml(post.title)}</h2>
               <p>${escapeHtml(post.excerpt)}</p>
               <span class="nt-icon-card__link">Läs mer <i class="fas fa-arrow-right"></i></span>
             </div>
@@ -51,7 +51,7 @@ function renderBloggHubPage(site, posts) {
       <div class="row">
         <div class="col-xl-8 col-lg-9">
           <div class="tp-breadcrumb-content">
-            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Blogg</h1>
+            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Blogg — dränering, markarbete och ROT-avdrag</h1>
             <div class="tp-breadcrumb-dvdr"><ul><li><a href="/">Hem</a></li><li class="dvdr">/</li><li>Blogg</li></ul></div>
           </div>
         </div>

@@ -819,12 +819,12 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
   background: var(--nt-orange);
   color: var(--nt-navy);
 }
-.nt-icon-card h3, .nt-icon-card h4 {
+.nt-icon-card h2, .nt-icon-card h3, .nt-icon-card h4 {
   font-size: 1.15rem; font-weight: 700;
   color: var(--nt-navy); margin-bottom: 10px;
 }
-.nt-icon-card h3 a, .nt-icon-card h4 a { color: inherit; text-decoration: none; }
-.nt-icon-card h3 a:hover, .nt-icon-card h4 a:hover { text-decoration: underline; }
+.nt-icon-card h2 a, .nt-icon-card h3 a, .nt-icon-card h4 a { color: inherit; text-decoration: none; }
+.nt-icon-card h2 a:hover, .nt-icon-card h3 a:hover, .nt-icon-card h4 a:hover { text-decoration: underline; }
 .nt-icon-card p { color: var(--nt-gray); font-size: .95rem; margin-bottom: 0; }
 .nt-icon-card__link {
   display: inline-flex; align-items: center; gap: 8px;
@@ -921,6 +921,10 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
   margin-bottom: 22px;
 }
 .nt-side-card--navy { background: var(--nt-navy); }
+/* These were <h5> before the heading-order fix; the theme never styled
+   them explicitly (they just inherited h5's small UA-default size), so
+   the switch to <h3> needs an explicit size to avoid ballooning. */
+.nt-contact-info-box h3 { font-size: 1.05rem; font-weight: 700; color: var(--nt-navy); margin-bottom: 4px; }
 .nt-side-card h3 { color: var(--nt-navy); font-weight: 700; margin-bottom: 16px; font-size: 1.05rem; }
 /* Högre specificitet (två klasser) än ".nt-side-card h3" ovan, så den vinner
    oavsett källordning — .nt-side-card--navy h3 hade samma specificitet som

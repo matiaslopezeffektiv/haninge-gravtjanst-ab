@@ -11,7 +11,7 @@ function serviceCard(site, svc, tjansterBySlug) {
         <div class="col-xl-4 col-md-6">
           <div class="nt-icon-card position-relative">
             <div class="nt-icon-card__icon"><i class="fas ${svc.icon}"></i></div>
-            <h4><a href="/tjanster/${svc.slug}">${escapeHtml(svc.name)}</a></h4>
+            <h2><a href="/tjanster/${svc.slug}">${escapeHtml(svc.name)}</a></h2>
             <p>${escapeHtml(shortDescription)}</p>
             <a class="nt-icon-card__link" href="/tjanster/${svc.slug}">Läs mer <i class="fas fa-arrow-right"></i></a>
             ${renderSatelliteLink(site, svc.slug)}
@@ -23,7 +23,7 @@ function serviceCard(site, svc, tjansterBySlug) {
           <div class="nt-icon-card position-relative" style="opacity:.6;">
             <span class="nt-coming-soon__badge" style="position:absolute;top:20px;right:20px;">Kommer snart</span>
             <div class="nt-icon-card__icon"><i class="fas ${svc.icon}"></i></div>
-            <h4>${escapeHtml(svc.name)}</h4>
+            <h2>${escapeHtml(svc.name)}</h2>
             <p>[TODO: kort beskrivning från kund]</p>
           </div>
         </div>`;
@@ -56,7 +56,7 @@ function renderTjansterHubPage(site, tjansterBySlug) {
       <div class="row">
         <div class="col-xl-8 col-lg-9">
           <div class="tp-breadcrumb-content">
-            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Våra tjänster</h1>
+            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Våra tjänster — mark- och anläggningsarbete i ${escapeHtml(site.primaryLocation)}</h1>
             <div class="tp-breadcrumb-dvdr"><ul><li><a href="/">Hem</a></li><li class="dvdr">/</li><li>Tjänster</li></ul></div>
           </div>
         </div>

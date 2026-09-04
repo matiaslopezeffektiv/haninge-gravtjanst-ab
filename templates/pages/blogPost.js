@@ -50,7 +50,7 @@ function renderBlogPostPage(site, post) {
       description: post.metaDescription,
       image: `${site.url}${post.heroImage}`,
       datePublished: post.publishDate,
-      dateModified: post.publishDate,
+      dateModified: post.updatedDate || post.publishDate,
       author: { '@type': 'Organization', name: site.name, '@id': `${site.url}/#organization` },
       publisher: { '@type': 'Organization', name: site.name, '@id': `${site.url}/#organization` },
       mainEntityOfPage: `${site.url}/blogg/${post.slug}`,

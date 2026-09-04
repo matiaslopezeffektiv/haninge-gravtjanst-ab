@@ -6,6 +6,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const ROOT = path.join(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
@@ -85,14 +86,35 @@ function loadJsonDir(dirName) {
     .map((f) => readJson(path.join(dir, f)));
 }
 
+// changefreq/priority intentionally omitted — Google has stated for years it
+// ignores both, so hardcoded values per route were pure boilerplate that
+// looked like signal without being any. lastmod is derived from each route's
+// source JSON file's last git commit date (falling back to today for routes
+// with no single source file, or if git history isn't available) instead of
+// the build timestamp — a value that's "today" on every deploy regardless of
+// whether content changed is worse than no lastmod at all, and filesystem
+// mtime isn't reliable here either since a fresh `git clone`/checkout (e.g.
+// on Vercel) stamps every file with the checkout time, not its real history.
+const today = new Date().toISOString().slice(0, 10);
+function lastCommitDate(file) {
+  try {
+    // Relative to ROOT, not absolute — git can fail to resolve an absolute
+    // path against its toplevel when the repo path contains accented
+    // characters (macOS's filesystem APIs return them NFD-decomposed, which
+    // doesn't byte-match the NFC form in this source file).
+    const relFile = path.relative(ROOT, file);
+    const iso = execFileSync('git', ['log', '-1', '--format=%cI', '--', relFile], { cwd: ROOT, encoding: 'utf8' }).trim();
+    return iso ? iso.slice(0, 10) : today;
+  } catch {
+    return today;
+  }
+}
+
 function buildSitemap(site, routes) {
-  const lastmod = new Date().toISOString().slice(0, 10);
-  const urls = routes.map(({ loc, priority, changefreq }) => `  <url>
-    <loc>${site.url}${loc}</loc>
-    <lastmod>${lastmod}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
-  </url>`).join('\n');
+  const urls = routes.map(({ loc, file }) => {
+    const lastmod = file ? lastCommitDate(file) : today;
+    return `  <url>\n    <loc>${site.url}${loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`;
+  }).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
@@ -141,25 +163,27 @@ function main() {
   // integritetspolicy.html är noindex (se templates/pages/integritetspolicy.js) och
   // ska därför INTE ligga i sitemap.xml — en noindexad URL i sitemapen är en
   // motsägande signal till Google och slösar crawlbudget.
+  const siteJsonFile = path.join(ROOT, 'data', 'site.json');
+  const brfJsonFile = path.join(ROOT, 'data', 'brf.json');
   const routes = [
-    { loc: '/', priority: '1.0', changefreq: 'weekly' },
-    { loc: '/tjanster', priority: '0.9', changefreq: 'weekly' },
-    { loc: '/omraden', priority: '0.8', changefreq: 'weekly' },
-    { loc: '/brf', priority: '0.7', changefreq: 'monthly' },
-    { loc: '/guider', priority: '0.6', changefreq: 'monthly' },
-    { loc: '/blogg', priority: '0.6', changefreq: 'weekly' },
-    { loc: '/om-oss', priority: '0.6', changefreq: 'monthly' },
-    { loc: '/kontakt', priority: '0.7', changefreq: 'monthly' },
+    { loc: '/', file: siteJsonFile },
+    { loc: '/tjanster', file: siteJsonFile },
+    { loc: '/omraden', file: siteJsonFile },
+    { loc: '/brf', file: brfJsonFile },
+    { loc: '/guider', file: siteJsonFile },
+    { loc: '/blogg', file: siteJsonFile },
+    { loc: '/om-oss', file: siteJsonFile },
+    { loc: '/kontakt', file: siteJsonFile },
   ];
 
   for (const guide of guider) {
     writePage(`guider/${guide.slug}.html`, site, `/guider/${guide.slug}`, renderGuidePage(site, guide));
-    routes.push({ loc: `/guider/${guide.slug}`, priority: '0.6', changefreq: 'yearly' });
+    routes.push({ loc: `/guider/${guide.slug}`, file: path.join(ROOT, 'data', 'guider', `${guide.slug}.json`) });
   }
 
   for (const post of bloggPosts) {
     writePage(`blogg/${post.slug}.html`, site, `/blogg/${post.slug}`, renderBlogPostPage(site, post));
-    routes.push({ loc: `/blogg/${post.slug}`, priority: '0.5', changefreq: 'yearly' });
+    routes.push({ loc: `/blogg/${post.slug}`, file: path.join(ROOT, 'data', 'blogg', `${post.slug}.json`) });
   }
 
   for (const svc of site.services) {
@@ -168,8 +192,9 @@ function main() {
     if (!tjanst) {
       throw new Error(`site.json listar tjänsten "${svc.slug}" som hasPage:true men data/tjanster/${svc.slug}.json saknas`);
     }
+    const tjanstFile = path.join(ROOT, 'data', 'tjanster', `${tjanst.slug}.json`);
     writePage(`tjanster/${tjanst.slug}.html`, site, `/tjanster/${tjanst.slug}`, renderTjanstPage(site, tjanst));
-    routes.push({ loc: `/tjanster/${tjanst.slug}`, priority: '0.9', changefreq: 'monthly' });
+    routes.push({ loc: `/tjanster/${tjanst.slug}`, file: tjanstFile });
 
     for (const ort of tjanst.orter) {
       const omradeForOrt = omraden.find((o) => o.slug === ort.slug);
@@ -179,7 +204,7 @@ function main() {
         `/tjanster/${tjanst.slug}/${ort.slug}`,
         renderOrtPage(site, tjanst, ort, omradeForOrt),
       );
-      routes.push({ loc: `/tjanster/${tjanst.slug}/${ort.slug}`, priority: '0.7', changefreq: 'monthly' });
+      routes.push({ loc: `/tjanster/${tjanst.slug}/${ort.slug}`, file: tjanstFile });
     }
   }
 
@@ -192,7 +217,7 @@ function main() {
       `/omraden/${omrade.slug}`,
       renderOmradePage(site, omrade, tjansterBySlug, ortMatches, otherOmraden),
     );
-    routes.push({ loc: `/omraden/${omrade.slug}`, priority: '0.6', changefreq: 'monthly' });
+    routes.push({ loc: `/omraden/${omrade.slug}`, file: path.join(ROOT, 'data', 'omraden', `${omrade.slug}.json`) });
   }
 
   console.log('Genererar sitemap.xml och robots.txt ...');

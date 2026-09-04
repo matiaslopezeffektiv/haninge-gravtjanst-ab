@@ -72,7 +72,7 @@ function renderHomePage(site, tjansterBySlug) {
 
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
-    { '@type': 'WebSite', name: site.name, url: site.url, inLanguage: site.language },
+    { '@type': 'WebSite', '@id': `${site.url}/#website`, name: site.name, url: site.url, inLanguage: site.language, publisher: { '@id': `${site.url}/#organization` } },
     buildFaqSchema(site.faq),
   ]);
 

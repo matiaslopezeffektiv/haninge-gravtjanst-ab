@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildServiceSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr } = require('../../lib/html');
 const { renderTrustBadges } = require('../partials/trustBadges');
 const { renderCtaBand } = require('../partials/ctaBand');
@@ -52,8 +52,20 @@ function renderOmradePage(site, omrade, tjansterBySlug, ortMatches, otherOmraden
     path: `/omraden/${omrade.slug}`,
   });
 
+  const areaServiceSchemas = omrade.relevantServices
+    .map((item) => tjansterBySlug && tjansterBySlug[item.slug])
+    .filter(Boolean)
+    .map((tjanst) => {
+      const match = ortMatches.find((m) => m.tjanstSlug === tjanst.slug);
+      return buildServiceSchema(site, tjanst, {
+        areaName: omrade.name,
+        url: match ? `${site.url}/tjanster/${tjanst.slug}/${match.ortSlug}` : undefined,
+      });
+    });
+
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
+    ...areaServiceSchemas,
     {
       '@type': 'BreadcrumbList',
       itemListElement: [

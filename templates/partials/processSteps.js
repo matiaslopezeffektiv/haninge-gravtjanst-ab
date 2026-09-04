@@ -14,7 +14,7 @@ function renderProcessSteps({ eyebrow, heading, steps }) {
         <div class="col-xl-3 col-md-6">
           <div class="nt-step h-100">
             <span class="nt-step__num">0${step.step}</span>
-            <h4>${escapeHtml(step.title)}</h4>
+            <h3>${escapeHtml(step.title)}</h3>
             <p>${escapeHtml(step.description)}</p>
           </div>
         </div>`).join('');

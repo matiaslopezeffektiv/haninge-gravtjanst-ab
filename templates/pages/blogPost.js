@@ -109,7 +109,7 @@ function renderBlogPostPage(site, post) {
     subtext: 'Kontakta oss för en kostnadsfri bedömning och offert.',
   })}`;
 
-  return { metaHtml, schemaHtml, bodyContent };
+  return { metaHtml, schemaHtml, bodyContent, preloadImage: post.heroImage };
 }
 
 module.exports = { renderBlogPostPage };

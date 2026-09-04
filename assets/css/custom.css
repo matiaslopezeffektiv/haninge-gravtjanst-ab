@@ -480,7 +480,7 @@ html, body {
   color: var(--nt-orange);
   font-size: 1.2rem;
 }
-.nt-usp-text h5 {
+.nt-usp-text h3 {
   color: var(--nt-white);
   font-size: 1rem;
   font-weight: 600;
@@ -852,7 +852,7 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
   font-weight: 700; font-size: 1.05rem;
   box-shadow: 0 8px 20px rgba(245,180,0,0.35);
 }
-.nt-step h4 { color: var(--nt-navy); font-weight: 700; font-size: 1.1rem; margin: 14px 0 10px; }
+.nt-step h3 { color: var(--nt-navy); font-weight: 700; font-size: 1.1rem; margin: 14px 0 10px; }
 .nt-step p { color: var(--nt-gray); font-size: .93rem; margin: 0; }
 
 /* Media panel with image + navy wash */
@@ -875,9 +875,11 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 .nt-stat h3 span { color: var(--nt-orange); }
 .nt-stat p { color: rgba(255,255,255,0.65); margin: 0; font-size: .93rem; }
 
-/* Stat block on a light background */
+/* Stat block on a light background. The brand orange (#F5B400) only reaches
+   ~1.5:1 against this section's light-gray background — far under the 3:1
+   WCAG AA minimum for large bold text — so the numbers stay navy here; the
+   icon above each stat already carries the orange accent on a navy circle. */
 .nt-stat-light h3 { color: var(--nt-navy); font-size: clamp(2rem,4vw,3rem); font-weight: 700; margin-bottom: 4px; line-height: 1; }
-.nt-stat-light h3 span { color: var(--nt-orange); }
 .nt-stat-light p { color: var(--nt-gray); margin: 0; font-size: .93rem; }
 
 /* Checklist */
@@ -906,7 +908,7 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
   display: flex; align-items: center; justify-content: center;
   font-weight: 700; font-size: .95rem; flex-shrink: 0;
 }
-.nt-quote__author h6 { margin: 0; color: var(--nt-navy); font-weight: 700; font-size: .95rem; }
+.nt-quote__author .nt-quote__author-name { margin: 0; color: var(--nt-navy); font-weight: 700; font-size: .95rem; line-height: normal; }
 .nt-quote__author span { color: var(--nt-gray); font-size: .85rem; }
 
 /* Sticky sidebar card used on service detail pages */
@@ -1011,6 +1013,13 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 .tp-navy-bg { background-color: var(--nt-navy) !important; }
 a { color: var(--nt-navy); }
 a:hover { color: var(--nt-orange-dark); }
+
+/* Inline text links (inside body copy) need a non-color cue too — navy text
+   on the surrounding gray body copy only reaches ~2:1, under the 3:1 WCAG AA
+   minimum, so color alone doesn't distinguish them. Nav links, buttons and
+   cards style their own links and aren't inside a <p>, so this stays scoped
+   to prose. */
+p a { text-decoration: underline; text-underline-offset: 2px; }
 
 /* Back to top */
 .back-to-top-btn {
@@ -1317,7 +1326,7 @@ body:has(#nt-cookie-banner.nt-show) .back-to-top-wrapper.back-to-top-btn-show {
   box-shadow: 0 30px 70px rgba(0,0,0,.35);
 }
 .nt-hero-form-card .nt-eyebrow { justify-content: flex-start; }
-.nt-hero-form-card h3 { color: var(--nt-navy); font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
+.nt-hero-form-card h2 { color: var(--nt-navy); font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
 .nt-hero-form-card > p { color: var(--nt-gray); font-size: .92rem; margin-bottom: 22px; }
 .nt-hero-form-card .nt-contact-form input,
 .nt-hero-form-card .nt-contact-form select { margin-bottom: 14px; }

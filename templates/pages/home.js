@@ -25,9 +25,9 @@ function serviceCard(site, svc, tjansterBySlug) {
         <div class="col-xl-4 col-md-6">
           <div class="nt-icon-card position-relative">
             <div class="nt-icon-card__icon"><i class="fas ${svc.icon}"></i></div>
-            <h4><a href="/tjanster/${svc.slug}">${escapeHtml(svc.name)}</a></h4>
+            <h3><a href="/tjanster/${svc.slug}">${escapeHtml(svc.name)}</a></h3>
             <p>${escapeHtml(shortDescription)}</p>
-            <a class="nt-icon-card__link" href="/tjanster/${svc.slug}">Läs mer <i class="fas fa-arrow-right"></i></a>
+            <a class="nt-icon-card__link" href="/tjanster/${svc.slug}">Läs mer<span class="visually-hidden"> om ${escapeHtml(svc.name)}</span> <i class="fas fa-arrow-right"></i></a>
             ${renderSatelliteLink(site, svc.slug)}
           </div>
         </div>`;
@@ -37,7 +37,7 @@ function serviceCard(site, svc, tjansterBySlug) {
           <div class="nt-icon-card position-relative" style="opacity:.6;">
             <span class="nt-coming-soon__badge" style="position:absolute;top:20px;right:20px;">Kommer snart</span>
             <div class="nt-icon-card__icon"><i class="fas ${svc.icon}"></i></div>
-            <h4>${escapeHtml(svc.name)}</h4>
+            <h3>${escapeHtml(svc.name)}</h3>
             <p>[TODO: kort beskrivning från kund]</p>
           </div>
         </div>`;
@@ -105,7 +105,7 @@ function renderHomePage(site, tjansterBySlug) {
         <div class="col-lg-5">
           <div class="nt-hero-form-card nt-hides-floating-call">
             <span class="nt-eyebrow">Vill du diskutera ditt projekt?</span>
-            <h3>Kontakta oss</h3>
+            <h2>Kontakta oss</h2>
             <p>Fyll i dina uppgifter så ringer vi upp dig — helt kostnadsfritt och utan förpliktelser.</p>
             <form class="nt-contact-form" id="hero-contact-form">
               <label for="hero-name">Namn</label>
@@ -249,28 +249,28 @@ function renderHomePage(site, tjansterBySlug) {
             <div class="nt-usp-item">
               <div class="nt-usp-icon"><i class="fas fa-file-invoice"></i></div>
               <div class="nt-usp-text">
-                <h5>${escapeHtml(t.fSkatt.label)}</h5>
+                <h3>${escapeHtml(t.fSkatt.label)}</h3>
                 <p>${escapeHtml(t.fSkatt.value)}</p>
               </div>
             </div>
             <div class="nt-usp-item">
               <div class="nt-usp-icon"><i class="fas fa-shield-check"></i></div>
               <div class="nt-usp-text">
-                <h5>${escapeHtml(t.insurance.label)}</h5>
+                <h3>${escapeHtml(t.insurance.label)}</h3>
                 <p>${escapeHtml(t.insurance.value)}</p>
               </div>
             </div>
             <div class="nt-usp-item">
               <div class="nt-usp-icon"><i class="fas fa-location-dot"></i></div>
               <div class="nt-usp-text">
-                <h5>Lokal förankring</h5>
+                <h3>Lokal förankring</h3>
                 <p>Hemort i ${escapeHtml(site.homeBase)}, verksamma i hela ${escapeHtml(site.primaryLocation)}.</p>
               </div>
             </div>
             <div class="nt-usp-item">
               <div class="nt-usp-icon"><i class="fas fa-star"></i></div>
               <div class="nt-usp-text">
-                <h5>${escapeHtml(String(t.reviews.averageRating))} av 5 på ${escapeHtml(t.reviews.source)}</h5>
+                <h3>${escapeHtml(String(t.reviews.averageRating))} av 5 på ${escapeHtml(t.reviews.source)}</h3>
                 <p>Baserat på ${escapeHtml(String(t.reviews.count))} recensioner från riktiga kunder. <a href="${escapeAttr(t.reviews.url)}" target="_blank" rel="noopener" style="color:#F5B400;text-decoration:underline;">Läs recensionerna</a>.</p>
               </div>
             </div>
@@ -331,7 +331,7 @@ function renderHomePage(site, tjansterBySlug) {
 
   const extraScripts = '<script src="/assets/js/hero-contact-form.js"></script>';
 
-  return { metaHtml, schemaHtml, bodyContent, extraScripts };
+  return { metaHtml, schemaHtml, bodyContent, extraScripts, preloadImage: site.heroImage };
 }
 
 module.exports = { renderHomePage };

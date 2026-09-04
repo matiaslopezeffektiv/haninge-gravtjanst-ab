@@ -51,8 +51,8 @@ function writeFile(relPath, content) {
   console.log('  wrote', relPath);
 }
 
-function writePage(relPath, site, activePath, { metaHtml, schemaHtml, bodyContent, extraStyles, extraScripts }) {
-  writeFile(relPath, renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extraStyles, extraScripts }));
+function writePage(relPath, site, activePath, { metaHtml, schemaHtml, bodyContent, extraStyles, extraScripts, preloadImage }) {
+  writeFile(relPath, renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extraStyles, extraScripts, preloadImage }));
 }
 
 function loadTjanster() {

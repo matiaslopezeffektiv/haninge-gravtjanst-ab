@@ -54,7 +54,7 @@ function renderHeader(site, activePath) {
         <button class="close-btn" aria-label="Stäng meny"><i class="fal fa-times"></i></button>
       </div>
       <div class="tpoffcanvas__logo mb-30">
-        <a href="/"><img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" style="height:46px;width:auto;"></a>
+        <a href="/"><img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" width="92" height="46" style="height:46px;width:auto;"></a>
       </div>
       <div class="tp-offcanvas-menu mb-30">
         <nav><ul>${navLinks}</ul></nav>
@@ -80,7 +80,7 @@ function renderHeader(site, activePath) {
         <div class="col-xl-2 col-lg-3 col-6">
           <div class="tplogo">
             <a href="/" style="display:inline-block;">
-              <img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" class="nt-logo-on-dark" style="height:52px;width:auto;display:block;">
+              <img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" class="nt-logo-on-dark" width="104" height="52" style="height:52px;width:auto;display:block;">
               <span style="display:block;width:34px;height:3px;background:#F5B400;border-radius:2px;margin:4px auto 0;"></span>
             </a>
           </div>

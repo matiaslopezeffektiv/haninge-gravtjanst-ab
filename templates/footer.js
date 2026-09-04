@@ -17,14 +17,14 @@ function renderFooter(site) {
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="tpfooter-widget mb-40">
             <div class="tpfooter__logo mb-25">
-              <a href="/"><img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" class="nt-logo-on-dark" style="height:50px;width:auto;"></a>
+              <a href="/"><img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" class="nt-logo-on-dark" width="100" height="50" style="height:50px;width:auto;"></a>
             </div>
             <p style="color:rgba(255,255,255,0.65);line-height:1.7;">${escapeHtml(site.description)}</p>
           </div>
         </div>
         <div class="col-xl-2 col-lg-2 col-md-6">
           <div class="tpfooter-widget mb-40">
-            <h4 class="tpfooter-widget__title mb-25">Snabblänkar</h4>
+            <h3 class="tpfooter-widget__title mb-25">Snabblänkar</h3>
             <ul class="tpfooter__link">
               <li><a href="/">Hem</a></li>
               <li><a href="/tjanster">Tjänster</a></li>
@@ -40,13 +40,13 @@ function renderFooter(site) {
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6">
           <div class="tpfooter-widget mb-40">
-            <h4 class="tpfooter-widget__title mb-25">Våra tjänster</h4>
+            <h3 class="tpfooter-widget__title mb-25">Våra tjänster</h3>
             <ul class="tpfooter__link">${site.services.map(footerServiceLink).join('')}</ul>
           </div>
         </div>
         <div class="col-xl-3 col-lg-3 col-md-6">
           <div class="tpfooter-widget mb-40">
-            <h4 class="tpfooter-widget__title mb-25">Kontakt</h4>
+            <h3 class="tpfooter-widget__title mb-25">Kontakt</h3>
             <ul class="tpfooter__link">
               <li><i class="fas fa-phone" style="color:#F5B400;margin-right:8px;"></i>${contactLinkOrTodo(site.phone, site.phoneHref)}</li>
               <li><i class="fas fa-envelope" style="color:#F5B400;margin-right:8px;"></i>${contactLinkOrTodo(site.email, `mailto:${site.email}`)}</li>

@@ -16,7 +16,7 @@ function renderTestimonials(site) {
             <div class="nt-quote__author">
               <div class="nt-quote__avatar">${escapeHtml(q.author.charAt(0))}</div>
               <div>
-                <h6>${escapeHtml(q.author)}</h6>
+                <p class="nt-quote__author-name">${escapeHtml(q.author)}</p>
                 <span>Reco.se</span>
               </div>
             </div>

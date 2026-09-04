@@ -17,8 +17,9 @@ const { escapeAttr } = require('../lib/html');
  * @param {string} params.bodyContent
  * @param {string} [params.extraStyles] - sidspecifik <style>-block
  * @param {string} [params.extraScripts] - sidspecifika <script>-taggar före </body>
+ * @param {string} [params.preloadImage] - sidans LCP-bild (hero/breadcrumb-bakgrund), preloadas i <head>
  */
-function renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extraStyles = '', extraScripts = '' }) {
+function renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extraStyles = '', extraScripts = '', preloadImage = '' }) {
   return `<!doctype html>
 <html class="no-js" lang="${escapeAttr(site.language)}">
 <head>
@@ -30,17 +31,23 @@ function renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extra
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon-180.png">
 
+  ${preloadImage ? `<link rel="preload" as="image" href="${escapeAttr(preloadImage)}" fetchpriority="high">` : ''}
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap">
 
   <link rel="stylesheet" href="/assets/css/bootstrap.css">
   <link rel="stylesheet" href="/assets/css/animate.css">
-  <link rel="stylesheet" href="/assets/css/font-awesome-pro.css">
   <link rel="stylesheet" href="/assets/css/spacing.css">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="stylesheet" href="/assets/css/custom.css">
   ${extraStyles}
+
+  <!-- Icon font is decorative and not needed for first paint; load it
+       without blocking rendering (icons pop in a beat later instead). -->
+  <link rel="preload" href="/assets/css/font-awesome-pro.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/assets/css/font-awesome-pro.css"></noscript>
 
   ${schemaHtml}
 </head><body class="tp-bg-common-white-2">

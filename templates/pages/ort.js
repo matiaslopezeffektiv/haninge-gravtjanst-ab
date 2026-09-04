@@ -134,7 +134,7 @@ function renderOrtPage(site, tjanst, ort, omrade) {
     subtext: 'Berätta om ditt projekt så återkommer vi med en kostnadsfri bedömning och offert.',
   })}`;
 
-  return { metaHtml, schemaHtml, bodyContent };
+  return { metaHtml, schemaHtml, bodyContent, preloadImage: tjanst.heroImage };
 }
 
 module.exports = { renderOrtPage };

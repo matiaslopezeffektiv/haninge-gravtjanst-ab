@@ -1321,3 +1321,14 @@ body:has(#nt-cookie-banner.nt-show) .back-to-top-wrapper.back-to-top-btn-show {
 @media (max-width: 991.98px) {
   .nt-hero-form-card { margin-top: 40px; }
 }
+
+/* --- Riktiga loggan (haninge.png) på mörk botten ---
+   Loggan är en enfärgad grå PNG (#C0C0C0 på transparent botten) gjord för
+   ljus bakgrund. Istället för att ersätta den med en påhittad logotyp när
+   header/footer blev mörka, återger vi SAMMA fil vit via ett CSS-filter —
+   filtret fungerar rent här eftersom loggan bara har en enda gråton (ingen
+   färgåtergivning att förvränga): brightness(0) gör allt icke-transparent
+   svart, invert(1) vänder svart till vitt. */
+.nt-logo-on-dark {
+  filter: brightness(0) invert(1);
+}

@@ -66,6 +66,7 @@ function renderGuidePage(site, guide) {
       <div class="row">
         <div class="col-lg-9">
           <span class="nt-eyebrow">Guide &middot; Uppdaterad ${escapeHtml(guide.updated)}</span>
+          <h2 class="mb-25 fs-xl-40 fs-sm-36" style="color:var(--nt-navy);">${escapeHtml(guide.title)}</h2>
           ${guide.intro.map((p) => `<p style="color:var(--nt-gray);line-height:1.8;" class="mb-20">${p}</p>`).join('')}
           ${guide.sections.map(section).join('')}
         </div>

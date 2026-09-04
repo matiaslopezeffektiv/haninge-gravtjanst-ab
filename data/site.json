@@ -113,7 +113,7 @@
     },
     {
       "question": "Arbetar ni i hela Stockholm?",
-      "answer": "Ja, vi arbetar i hela Stockholmsområdet med Haninge som hemort — bland annat i Bromma, Enskede, Farsta, Hägersten, Kungsholmen, Liljeholmen, Norrmalm, Östermalm, Södermalm och Vasastan."
+      "answer": "Ja, vi arbetar i hela Stockholmsområdet med <a href=\"/omraden/haninge\">Haninge</a> som hemort — bland annat i <a href=\"/omraden/bromma\">Bromma</a>, <a href=\"/omraden/enskede\">Enskede</a>, <a href=\"/omraden/farsta\">Farsta</a>, <a href=\"/omraden/hagersten\">Hägersten</a>, <a href=\"/omraden/kungsholmen\">Kungsholmen</a>, <a href=\"/omraden/liljeholmen\">Liljeholmen</a>, <a href=\"/omraden/norrmalm\">Norrmalm</a>, <a href=\"/omraden/ostermalm\">Östermalm</a>, <a href=\"/omraden/sodermalm\">Södermalm</a> och <a href=\"/omraden/vasastan\">Vasastan</a>. Se <a href=\"/omraden\">alla områden vi jobbar i</a>."
     },
     {
       "question": "Behöver jag ansöka om bygglov eller marklov för markarbeten?",

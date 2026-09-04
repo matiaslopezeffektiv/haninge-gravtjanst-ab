@@ -1,20 +1,23 @@
 const { buildMetaTags } = require('../../lib/metadata');
 const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr, isPlaceholder } = require('../../lib/html');
+const { renderTrustBadges } = require('../partials/trustBadges');
+const { renderProcessSteps } = require('../partials/processSteps');
+const { renderCtaBand } = require('../partials/ctaBand');
 
 const CONTACT_FORM_STYLES = `<style>
     .nt-contact-form input,
     .nt-contact-form select,
     .nt-contact-form textarea {
       width: 100%; border: 1.5px solid #dde2ea; border-radius: 8px;
-      padding: 13px 16px; font-size: .95rem; color: #1C2E4A;
+      padding: 13px 16px; font-size: .95rem; color: #1A1A1A;
       margin-bottom: 18px; outline: none; transition: border-color .2s; background: #fff;
     }
     .nt-contact-form input:focus,
     .nt-contact-form select:focus,
-    .nt-contact-form textarea:focus { border-color: #F47C20; }
+    .nt-contact-form textarea:focus { border-color: #D99A00; }
     .nt-contact-form textarea { height: 130px; resize: vertical; }
-    .nt-contact-form label { font-size: .88rem; font-weight: 600; color: #1C2E4A; margin-bottom: 6px; display: block; }
+    .nt-contact-form label { font-size: .88rem; font-weight: 600; color: #1A1A1A; margin-bottom: 6px; display: block; }
     .nt-contact-form input[type="file"] { padding: 10px 14px; }
     .nt-contact-form .nt-file-hint { font-size: .78rem; color: var(--nt-gray); margin: -12px 0 18px; display: block; }
     .nt-contact-info-box {
@@ -22,19 +25,21 @@ const CONTACT_FORM_STYLES = `<style>
       padding: 28px 26px; margin-bottom: 18px; display: flex; align-items: flex-start; gap: 16px;
       transition: box-shadow .3s ease, border-color .3s ease;
     }
-    .nt-contact-info-box:hover { border-color: #F47C20; box-shadow: 0 12px 30px rgba(28,46,74,.10); }
+    .nt-contact-info-box:hover { border-color: #D99A00; box-shadow: 0 12px 30px rgba(0,0,0,.10); }
     .nt-contact-info-box .icon {
-      width: 50px; height: 50px; background: rgba(244,124,32,.12); border-radius: 12px;
+      width: 50px; height: 50px; background: #FFF4D6; border-radius: 12px;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .nt-contact-info-box .icon i { color: #F47C20; font-size: 1.1rem; }
-    .nt-contact-info-box h5 { color: #1C2E4A; font-weight: 700; margin-bottom: 4px; font-size: 1rem; }
-    .nt-contact-info-box p, .nt-contact-info-box a { color: #6c757d; margin: 0; font-size: .95rem; text-decoration: none; }
-    .nt-contact-info-box a:hover { color: #F47C20; }
-    .nt-phone-cta { background: #1C2E4A; border-radius: 12px; padding: 34px 30px; text-align: center; margin-bottom: 18px; }
+    /* Mörk ikon på ljus gul tint — ren gul ikonfärg syns knappt mot en gul bakgrundston. */
+    .nt-contact-info-box .icon i { color: #1A1A1A; font-size: 1.1rem; }
+    .nt-contact-info-box h5 { color: #1A1A1A; font-weight: 700; margin-bottom: 4px; font-size: 1rem; }
+    .nt-contact-info-box p, .nt-contact-info-box a { color: #4A4A4A; margin: 0; font-size: .95rem; text-decoration: none; }
+    .nt-contact-info-box a:hover { color: #D99A00; }
+    .nt-phone-cta { background: #1A1A1A; border-radius: 12px; padding: 34px 30px; text-align: center; margin-bottom: 18px; }
     .nt-phone-cta p { color: rgba(255,255,255,.7); margin-bottom: 8px; }
     .nt-phone-cta a, .nt-phone-cta .nt-todo { font-size: 1.6rem; font-weight: 700; text-decoration: none; display: block; }
-    .nt-phone-cta a { color: #F47C20; }
+    /* Gul text funkar här — botten är mörk antracit (~9.5:1 kontrast), inte vit. */
+    .nt-phone-cta a { color: #F5B400; }
     .nt-phone-cta a:hover { color: #fff; }
   </style>`;
 
@@ -93,9 +98,9 @@ function renderKontaktPage(site) {
       <div class="row g-5">
 
         <div class="col-lg-7">
-          <div style="background:#fff;border-radius:14px;padding:48px 44px;box-shadow:0 18px 50px rgba(28,46,74,.08);">
+          <div style="background:#fff;border-radius:14px;padding:48px 44px;box-shadow:0 18px 50px rgba(0,0,0,.08);">
             <span class="nt-eyebrow">Begär offert</span>
-            <h2 class="mb-15 fs-xl-40 fs-sm-36 wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.2s">Berätta vad du behöver hjälp med</h2>
+            <h2 class="mb-15 fs-xl-40 fs-sm-36">Berätta vad du behöver hjälp med</h2>
             <p style="color:var(--nt-gray);margin-bottom:36px;">Fyll i formuläret så återkommer vi med en kostnadsfri bedömning och offert.</p>
 
             <form class="nt-contact-form" id="contact-form">
@@ -126,9 +131,9 @@ function renderKontaktPage(site) {
 
         <div class="col-lg-5">
           <div class="nt-phone-cta">
-            <p><i class="fas fa-phone-alt" style="color:#F47C20;margin-right:6px;"></i> Snabbaste vägen — ring oss direkt</p>
+            <p><i class="fas fa-phone-alt" style="color:#F5B400;margin-right:6px;"></i> Snabbaste vägen — ring oss direkt</p>
             ${phoneBlock}
-            <p style="margin-top:10px;font-size:.85rem;">${isPlaceholder(site.openingHours) ? `<b class="nt-todo">${escapeHtml(site.openingHours)}</b>` : escapeHtml(site.openingHours)}</p>
+            <p style="margin-top:10px;font-size:.85rem;">Vi återkommer så snart vi kan.</p>
           </div>
 
           <div class="nt-contact-info-box">
@@ -148,11 +153,12 @@ function renderKontaktPage(site) {
             </div>
           </div>
 
-          <div class="nt-contact-info-box" style="border:1.5px solid #F47C20;">
-            <div class="icon" style="background:#F47C20;"><i class="fas fa-file-invoice" style="color:#fff;"></i></div>
+          <div class="nt-contact-info-box" style="border:1.5px solid #F5B400;">
+            <div class="icon" style="background:#F5B400;"><i class="fas fa-file-invoice" style="color:#1A1A1A;"></i></div>
             <div>
-              <h5 style="color:#F47C20;">F-skatt &amp; ansvarsförsäkring</h5>
-              <p>${escapeHtml(site.trustSignals.fSkatt.value)}. <b class="nt-todo">${escapeHtml(site.trustSignals.insurance.value)}</b></p>
+              <h5 style="color:#1A1A1A;">F-skatt &amp; ansvarsförsäkring</h5>
+              <p>${escapeHtml(site.trustSignals.fSkatt.value)}. ${escapeHtml(site.trustSignals.insurance.value)}</p>
+              <a href="${escapeAttr(site.trustSignals.fSkatt.verifyUrl)}" target="_blank" rel="noopener" style="font-size:.85rem;">${escapeHtml(site.trustSignals.fSkatt.verifyLabel)} →</a>
             </div>
           </div>
         </div>
@@ -160,7 +166,17 @@ function renderKontaktPage(site) {
       </div>
     </div>
   </div>
-  <!-- =============== /KONTAKT =============== -->`;
+  <!-- =============== /KONTAKT =============== -->
+
+  ${renderTrustBadges(site)}
+
+  ${renderProcessSteps({ eyebrow: 'Så går det till', heading: 'Från förfrågan till färdigt arbete', steps: site.process })}
+
+  ${renderCtaBand(site, {
+    eyebrow: 'Redo att börja?',
+    heading: 'Hellre ett samtal än ett formulär?',
+    subtext: `Ring oss så pratar vi igenom ditt projekt direkt.`,
+  })}`;
 
   const extraScripts = '<script src="/assets/js/contact-form.js"></script>';
 

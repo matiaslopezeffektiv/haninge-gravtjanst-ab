@@ -1,0 +1,19 @@
+{
+  "slug": "kungsholmen",
+  "name": "Kungsholmen",
+  "region": "Innerstaden",
+  "h1": "Mark- och anläggningsarbeten på Kungsholmen",
+  "metaTitle": "Mark- och anläggningsarbeten Kungsholmen — Haninge Grävtjänst AB",
+  "metaDescription": "Innergårdsrenovering, markarbeten och kantsten på Kungsholmen — anpassat efter öns täta bebyggelse och BRF-gårdar. Kostnadsfri bedömning.",
+  "shortDescription": "Tät ö-bebyggelse med nästan uteslutande flerbostadshus och BRF-gårdar.",
+  "intro": [
+    "Kungsholmen är till stor del uppbyggt av flerbostadshus och bostadsrättsföreningar, med få privata trädgårdar men desto fler gemensamma innergårdar. Arbete på Kungsholmen handlar därför oftast om att flera boende och en styrelse ska vara nöjda med resultatet, inte bara en enskild fastighetsägare.",
+    "Vi utför innergårdsrenovering, markarbeten och markanläggning åt BRF:er på Kungsholmen, och är vana vid den samordning och det tålamod som krävs när arbetet sker mitt i en tät stadsmiljö."
+  ],
+  "whyUs": "Vi har erfarenhet av att arbeta åt bostadsrättsföreningar i tät innerstadsmiljö, med allt vad det innebär av samordning med styrelser och hänsyn till boende under arbetets gång.",
+  "relevantServices": [
+    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av gemensamma innergårdar är den vanligaste formen av markprojekt på Kungsholmen." },
+    { "slug": "markarbeten", "blurb": "Schaktning och ledningsgrävning i en tät stadsmiljö med begränsad åtkomst för maskiner." },
+    { "slug": "markanlaggning-kantsten", "blurb": "Kantsten och markanläggning för gemensamma gårdar och gångar mellan fastigheter." }
+  ]
+}

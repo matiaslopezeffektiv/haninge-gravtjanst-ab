@@ -1,13 +1,17 @@
 const { buildMetaTags } = require('../../lib/metadata');
 const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
-const { escapeHtml } = require('../../lib/html');
+const { escapeHtml, escapeAttr } = require('../../lib/html');
+const { renderTrustBadges } = require('../partials/trustBadges');
+const { renderCtaBand } = require('../partials/ctaBand');
+const { renderTestimonials } = require('../partials/testimonials');
 
 /**
  * @param {object} site - data/site.json
  */
 function renderOmOssPage(site) {
+  const t = site.trustSignals;
   const title = `Om oss — ${site.name}`;
-  const description = `Lär känna ${site.name} — mark- och anläggningsföretag i ${site.primaryLocation} med ${site.homeBase} som hemort.`;
+  const description = `${site.name} — grävfirma med över ${t.yearsExperience} års erfarenhet och ${t.projectsCompleted}+ genomförda projekt i Stockholm, med ${site.homeBase} som hemort.`;
 
   const metaHtml = buildMetaTags({ site, title, description, path: '/om-oss' });
 
@@ -38,19 +42,20 @@ function renderOmOssPage(site) {
   </div>
   <!-- =============== /BREADCRUMB =============== -->
 
-  <div class="pt-130 pb-130" style="background:var(--nt-white);">
+  <div class="pt-130 pb-100" style="background:var(--nt-white);">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <span class="nt-eyebrow">Om ${escapeHtml(site.shortName)}</span>
-          <h2 class="mb-30 fs-xl-40 fs-sm-36 wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.2s">${escapeHtml(site.name)}</h2>
-          <div class="nt-todo-block">
-            [TODO: riktig text från kund] Den här sidan ska innehålla företagets historia, erfarenhet, ägare/team och vad som gör ${escapeHtml(site.shortName)} till rätt val för mark- och anläggningsarbete i ${escapeHtml(site.primaryLocation)}.
-          </div>
+          <h2 class="mb-30 fs-xl-40 fs-sm-36">${escapeHtml(site.name)}</h2>
+          <p class="mb-20">${escapeHtml(site.name)} är en grävfirma baserad i ${escapeHtml(site.address.addressLocality)} i ${escapeHtml(site.homeBase)} kommun, med över ${escapeHtml(String(t.yearsExperience))} års erfarenhet av mark- och anläggningsarbete. Vi utför uppdrag i hela Stockholmsområdet — från villaträdgårdar i innerstaden till större markarbeten och BRF-gårdar i förorten.</p>
+          <p class="mb-20">Med ${escapeHtml(String(t.projectsCompleted))}+ genomförda projekt har vi byggt upp praktisk erfarenhet av de flesta markförhållanden som förekommer i regionen — lerjord, morän och berg — och vet vad som krävs för att ett arbete ska hålla över tid, inte bara se bra ut vid leverans.</p>
+          <p class="mb-20">Vi arbetar med dränering, plattsättning & stensättning, husgrunder & markanläggning, finplanering & innergårdsrenovering, markanläggning & kantsten, asfaltering och grävtjänster/markarbeten — åt privatpersoner, företag och bostadsrättsföreningar. Läs mer om <a href="/tjanster">våra tjänster</a>.</p>
           <ul class="tp-about-bottom-feature mt-30">
-            <li><i class="fa-sharp fa-solid fa-check"></i> ${escapeHtml(site.trustSignals.fSkatt.value)}</li>
-            <li><i class="fa-sharp fa-solid fa-check"></i> <b class="nt-todo">${escapeHtml(site.trustSignals.insurance.value)}</b></li>
+            <li><i class="fa-sharp fa-solid fa-check"></i> ${escapeHtml(t.fSkatt.value)}</li>
+            <li><i class="fa-sharp fa-solid fa-check"></i> ${escapeHtml(t.insurance.value)}</li>
             <li><i class="fa-sharp fa-solid fa-check"></i> Verksamma i hela ${escapeHtml(site.primaryLocation)}, hemort ${escapeHtml(site.homeBase)}</li>
+            <li><i class="fa-sharp fa-solid fa-check"></i> ${escapeHtml(String(t.reviews.averageRating))}/5 i snittbetyg på <a href="${escapeAttr(t.reviews.url)}" target="_blank" rel="noopener">Reco</a> (${escapeHtml(String(t.reviews.count))} recensioner)</li>
           </ul>
           <a href="/kontakt" class="tp-btn-xl mt-30 d-inline-block lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500">
             <span class="d-flex align-items-center justify-content-center">
@@ -62,7 +67,17 @@ function renderOmOssPage(site) {
         </div>
       </div>
     </div>
-  </div>`;
+  </div>
+
+  ${renderTrustBadges(site)}
+
+  ${renderTestimonials(site)}
+
+  ${renderCtaBand(site, {
+    eyebrow: 'Redo att börja?',
+    heading: 'Berätta vad du behöver hjälp med',
+    subtext: 'Kontakta oss idag och få ett skräddarsytt förslag — snabbt och enkelt.',
+  })}`;
 
   return { metaHtml, schemaHtml, bodyContent };
 }

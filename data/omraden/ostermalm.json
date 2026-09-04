@@ -1,0 +1,19 @@
+{
+  "slug": "ostermalm",
+  "name": "Östermalm",
+  "region": "Innerstaden",
+  "h1": "Mark- och anläggningsarbeten på Östermalm",
+  "metaTitle": "Mark- och anläggningsarbeten Östermalm — Haninge Grävtjänst AB",
+  "metaDescription": "Innergårdsrenovering, husgrundsarbete och markanläggning på Östermalm — anpassat efter äldre, påkostade fastigheter. Kostnadsfri bedömning.",
+  "shortDescription": "Påkostade sekelskiftesfastigheter med gemensamma gårdar av hög standard.",
+  "intro": [
+    "Östermalm kännetecknas av äldre, ofta påkostade fastigheter med gemensamma innergårdar som förvaltas noggrant av respektive bostadsrättsförening. Markprojekt här ställer höga krav på både utförande och hur arbetsplatsen sköts under tiden.",
+    "Vi utför innergårdsrenovering, husgrundsarbete och markanläggning åt fastighetsägare och BRF:er på Östermalm, med den kvalitetsnivå och det tålamod som stadsdelens fastigheter förtjänar."
+  ],
+  "whyUs": "Vi är vana vid att hålla en hög standard genom hela arbetet, vilket är en förutsättning när man arbetar med de äldre, välskötta fastigheterna som är vanliga på Östermalm.",
+  "relevantServices": [
+    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av representativa innergårdar mellan äldre, påkostade fastigheter." },
+    { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete vid renovering av äldre fastigheter, med försiktig hantering av befintlig grund." },
+    { "slug": "markanlaggning-kantsten", "blurb": "Markanläggning och kantsten anpassad efter stadsdelens höga standard." }
+  ]
+}

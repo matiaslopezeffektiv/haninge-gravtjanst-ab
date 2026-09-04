@@ -1,0 +1,161 @@
+{
+  "slug": "finplanering-innergardsrenovering",
+  "name": "Finplanering & Innergårdsrenovering",
+  "targetLocation": "Stockholm",
+  "h1": "Finplanering & Innergårdsrenovering Stockholm",
+  "metaTitle": "Finplanering & Innergårdsrenovering Stockholm — Haninge Grävtjänst AB",
+  "metaDescription": "Finplanering och innergårdsrenovering i Stockholm — stensättning, gräsytor, plantering, belysning och avvattning, utfört av en grävfirma med över 10 års erfarenhet.",
+  "shortDescription": "Finplanering och renovering av innergårdar i Stockholm, för både privatpersoner och BRF:er.",
+  "longDescription": [
+    "Finplanering är det sista steget i ett markprojekt — det som gör att en tomt eller gård faktiskt blir klar att använda. Haninge Grävtjänst AB utför finplanering och innergårdsrenovering åt privatpersoner, företag och BRF:er i hela Stockholm.",
+    "Arbetet kan omfatta <a href=\"/tjanster/plattsattning-stensattning\">stensättning</a>, gräsytor, plantering, belysning, <a href=\"/tjanster/markanlaggning-kantsten\">kantsten</a> och avvattning — allt som knyter ihop en yta efter grävning eller byggnation. Innergårdsrenovering handlar om samma typ av arbete men i en tätare miljö, där tillgänglighet och säkerhet ofta är extra viktigt.",
+    "Vi har genomfört 200+ mark- och anläggningsprojekt i Stockholmsområdet, däribland innergårdar åt bostadsrättsföreningar och radhusföreningar, och vet vad som krävs för att en gemensam yta ska fungera för alla — från barnvagnar och rullatorer till cykelparkering och belysning. <a href=\"/kontakt\">Kontakta oss</a> för en kostnadsfri bedömning av er gård eller tomt."
+  ],
+  "icon": "fa-tree",
+  "heroImage": "/assets/img/hero/finplanering-projekt-1.webp",
+  "heroImageAlt": "Finplanering med stensatt gångväg genom nyanlagd jord vid villa",
+  "introImage": "/assets/img/hero/finplanering-projekt-3.webp",
+  "introImageAlt": "Markförberedelse med grus inför finplanering vid husfasad",
+
+  "benefits": [
+    "Helhetslösning — stensättning, gräsytor, plantering, belysning och avvattning i samma projekt",
+    "Erfarenhet av innergårdar i tätbebyggda miljöer, med hänsyn till tillgänglighet och säkerhet",
+    "Tydlig tidsplan så gården eller tomten inte står som en byggarbetsplats längre än nödvändigt",
+    "200+ genomförda mark- och anläggningsprojekt i Stockholmsområdet"
+  ],
+
+  "inclusions": [
+    "Markarbete och avvattning",
+    "Stensättning av gångar och ytor",
+    "Iordningställande av gräsytor",
+    "Plantering enligt önskemål",
+    "Belysning och kantsten",
+    "Slutstädning av ytan"
+  ],
+
+  "signs": {
+    "heading": "Tecken på att det är dags att rusta upp gården",
+    "intro": "Ofta byggs slitaget upp gradvis under flera år innan det märks tydligt. Vanliga tecken att hålla utkik efter är:",
+    "items": [
+      "Ojämna eller trasiga gångar och ytor",
+      "Dålig avvattning — vatten blir stående",
+      "Gammal eller obefintlig belysning",
+      "Svårt att ta sig fram med barnvagn, rullator eller rullstol",
+      "Gården känns sliten och ostrukturerad"
+    ],
+    "image": "/assets/img/hero/finplanering-projekt-2.webp",
+    "imageAlt": "Markförberedelse inför finplanering av rabatt längs husgrund"
+  },
+
+  "whyImportant": [
+    "Finplanering är det som avgör om ett markprojekt faktiskt känns färdigt eller bara ser ihopgrävt ut. En gård eller tomt utan ordentlig avslutning — dålig avvattning, ojämna gångar, saknad belysning — blir snabbt en källa till irritation och i värsta fall olycksfallsrisk, särskilt på vintern.",
+    "I flerbostadshus och BRF-gårdar, vanligt i Stockholms innerstad och närförort, handlar finplanering också om att en gemensam yta faktiskt fungerar för alla som bor där — barnfamiljer, äldre och rörelsehindrade har olika behov av en och samma gård."
+  ],
+
+  "whyUs": {
+    "intro": "En lyckad gårdsrenovering handlar om helhet snarare än enskilda moment — det är därför vi prioriterar följande:",
+    "items": [
+      "Vi tar hela kedjan från markarbete till färdig finplanering, så du slipper samordna flera olika entreprenörer",
+      "Erfarenhet av BRF-gårdar och radhusföreningar, där hänsyn till tillgänglighet och gemensam användning är extra viktigt",
+      "Vi planerar avvattningen som en del av finplaneringen, inte som en eftertanke",
+      "200+ genomförda mark- och anläggningsprojekt i Stockholmsområdet"
+    ]
+  },
+
+  "considerations": {
+    "intro": "Några beslut är enklare att ta innan arbetet startar än att ändra i efterhand:",
+    "items": [
+      "Bestäm tidigt vilken belysning som behövs — det är enklare och billigare att dra kabel innan ytskikten läggs",
+      "Tänk på tillgänglighet för barnvagnar, rullatorer och rullstolar redan i planeringen, särskilt vid gemensamma gårdar",
+      "Vid BRF-projekt: förankra omfattning och budget med styrelsen innan arbetet startar för att undvika omtag",
+      "Välj växter som klarar Stockholmsområdets klimat och som passar skötselnivån ni faktiskt kan hålla över tid"
+    ]
+  },
+
+  "process": [
+    { "step": 1, "title": "Kostnadsfri bedömning", "description": "Vi besöker platsen och går igenom vad som ska ingå i finplaneringen." },
+    { "step": 2, "title": "Offert", "description": "Du får en tydlig offert och tidsplan, utan bindningstid." },
+    { "step": 3, "title": "Utförande", "description": "Markarbete, stensättning, plantering och övriga moment enligt plan." },
+    { "step": 4, "title": "Slutbesiktning", "description": "Genomgång av den färdiga ytan tillsammans med dig." }
+  ],
+
+  "faq": [
+    {
+      "question": "Vad ingår i finplanering?",
+      "answer": "Vanligtvis stensättning eller plattläggning, gräsytor, plantering, belysning, kantsten och avvattning — men omfattningen anpassas alltid efter projektet och vad som redan finns på plats."
+    },
+    {
+      "question": "Vad påverkar priset för renovering av en innergård?",
+      "answer": "Priset beror på gårdens storlek, befintligt skick och vilka moment som ingår (stensättning, plantering, belysning med mera). Vi ger en kostnadsfri bedömning innan vi lämnar offert."
+    },
+    {
+      "question": "Kan ni ta hela projektet för en BRF-gård, från grävning till färdig yta?",
+      "answer": "Ja, vi tar gärna hela kedjan från markarbete och dränering till färdig finplanering, så föreningen slipper samordna flera olika entreprenörer."
+    },
+    {
+      "question": "Ger innergårdsrenovering rätt till ROT-avdrag?",
+      "answer": "Reparation och underhåll av en befintlig gård kan ge rätt till ROT-avdrag på arbetskostnaden. Nyanläggning av planteringar eller helt nya ytor räknas normalt som trädgårdsarbete och omfattas inte av avdraget. Observera också att ROT-avdrag för bostadsrättsföreningars gemensamma ytor har särskilda regler — vi rekommenderar att stämma av med Skatteverket eller föreningens ekonom."
+    },
+    {
+      "question": "Hur involverad behöver styrelsen vara under projektet?",
+      "answer": "Vi sköter det praktiska arbetet och stämmer av viktiga beslut löpande, men styrelsen behöver normalt bara vara delaktig vid uppstart och vid eventuella ändringar av omfattningen."
+    },
+    {
+      "question": "Kan ni fasa projektet så gården inte stängs av helt?",
+      "answer": "Ja, vid större gårdsprojekt går det ofta att dela upp arbetet i etapper så att delar av gården hålls tillgängliga under tiden. Vi planerar det tillsammans med er vid offert."
+    },
+    {
+      "question": "Vilka växter fungerar bäst för finplantering i Stockholmsområdet?",
+      "answer": "Vi rekommenderar normalt växter som klarar svenska vintrar utan extra skydd och som passar den skötselnivå ni faktiskt kan hålla — perenner och buskar som är vanliga i svenska trädgårdar brukar vara ett säkert val. Vid skuggiga innergårdar mellan flerbostadshus, vanligt i tätbebyggda delar av Stockholm, väljer vi växter som klarar mindre solljus."
+    },
+    {
+      "question": "Hur lång tid tar en innergårdsrenovering?",
+      "answer": "En mindre villaträdgård kan vara klar på en till två veckor, medan en större BRF-gård ofta tar flera veckor beroende på omfattning. Ni får en konkret tidsplan i offerten."
+    },
+    {
+      "question": "Behöver vi bygglov för att rusta upp en innergård?",
+      "answer": "Vanlig finplanering (stensättning, plantering, belysning) kräver oftast inte bygglov, men större förändringar av marknivån kan i vissa fall kräva marklov. Vi hjälper till att reda ut vad som gäller för just ert projekt."
+    },
+    {
+      "question": "Kan finplanering göras samtidigt som andra renoveringar av fastigheten?",
+      "answer": "Ja, det är vanligt att samordna finplanering med till exempel fasadrenovering eller stambyte, särskilt i flerbostadshus. Vi planerar gärna in vårt arbete i en större renoveringstidsplan."
+    }
+  ],
+
+  "referenceProjects": [
+    {
+      "title": "Finplanering med stensatt gångväg",
+      "description": "Gångväg av stenplattor genom nyanlagd jord vid entré.",
+      "image": "/assets/img/hero/finplanering-projekt-1.webp"
+    },
+    {
+      "title": "Markförberedelse längs husfasad",
+      "description": "Dränering och makadambädd inför finplanering av rabatt längs husgrund.",
+      "image": "/assets/img/hero/finplanering-projekt-2.webp"
+    }
+  ],
+
+  "sourceKeys": ["skatteverketRot", "boverketMarklov", "reco"],
+
+  "orter": [
+    {
+      "slug": "haninge",
+      "name": "Haninge",
+      "parentService": "finplanering-innergardsrenovering",
+      "h1": "Finplanering & Innergårdsrenovering i Haninge",
+      "metaTitle": "Finplanering & Innergårdsrenovering i Haninge — Haninge Grävtjänst AB",
+      "metaDescription": "Finplanering och innergårdsrenovering i Haninge — stensättning, gräsytor och belysning utfört av den lokala grävfirman. Kostnadsfri bedömning.",
+      "intro": [
+        "Med vår bas i Tungelsta är Haninge kommun där vi utför flest finplaneringsprojekt — allt från villaträdgårdar i Västerhaninge och Vendelsö till gemensamma gårdar åt bostadsrättsföreningar och radhusföreningar i kommunen.",
+        "Vi utför <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering och innergårdsrenovering</a> i hela Haninge och tar gärna hela kedjan från markarbete till färdig yta, med god kännedom om de markförhållanden som är vanliga i kommunens olika delar."
+      ],
+      "localPoints": [
+        "Kort startsträcka och god lokalkännedom om Haninges olika bostadsområden",
+        "Erfarenhet av både privata villaträdgårdar och gemensamma gårdar åt BRF:er och radhusföreningar",
+        "Vi planerar avvattningen som en del av finplaneringen, viktigt i kommunens mer lerhaltiga områden",
+        "Vi hjälper till att välja växter som klarar de lokala vinterförhållandena i Haninge"
+      ],
+      "referenceProjects": []
+    }
+  ]
+}

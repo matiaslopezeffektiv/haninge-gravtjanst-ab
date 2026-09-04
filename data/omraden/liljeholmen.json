@@ -1,0 +1,19 @@
+{
+  "slug": "liljeholmen",
+  "name": "Liljeholmen",
+  "region": "Söderort",
+  "h1": "Mark- och anläggningsarbeten i Liljeholmen",
+  "metaTitle": "Mark- och anläggningsarbeten i Liljeholmen — Haninge Grävtjänst AB",
+  "metaDescription": "Husgrundsarbete, finplanering och markanläggning i Liljeholmen — anpassat efter områdets nybyggda BRF-fastigheter. Kostnadsfri bedömning.",
+  "shortDescription": "Tidigare industriområde, kraftigt omvandlat med mycket nybyggda flerbostadshus.",
+  "intro": [
+    "Liljeholmen har genomgått en stor omvandling från industriområde till ett av Stockholms tätare bostadsområden, med många nybyggda flerbostadshus och bostadsrättsföreningar. Marken i området har på flera håll tidigare använts industriellt, vilket är bra att känna till vid grundarbete och markanläggning.",
+    "Vi utför husgrundsarbete, finplanering och markanläggning åt BRF:er och fastighetsägare i Liljeholmen, ofta i samband med nyare byggprojekt eller upprustning av gemensamma ytor kring relativt nybyggda fastigheter."
+  ],
+  "whyUs": "Vi känner till de särskilda förutsättningar som gäller vid markarbete på tidigare industrimark, vilket är vanligt i Liljeholmens nyare bostadsområden.",
+  "relevantServices": [
+    { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete som tar hänsyn till att marken i delar av Liljeholmen tidigare använts industriellt." },
+    { "slug": "finplanering-innergardsrenovering", "blurb": "Finplanering av nyanlagda gårdar och gemensamma ytor kring nybyggda flerbostadshus." },
+    { "slug": "markanlaggning-kantsten", "blurb": "Markanläggning och kantsten för uppfarter och gårdar i områdets nyare bebyggelse." }
+  ]
+}

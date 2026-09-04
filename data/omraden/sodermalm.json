@@ -1,0 +1,19 @@
+{
+  "slug": "sodermalm",
+  "name": "Södermalm",
+  "region": "Innerstaden",
+  "h1": "Mark- och anläggningsarbeten på Södermalm",
+  "metaTitle": "Mark- och anläggningsarbeten Södermalm — Haninge Grävtjänst AB",
+  "metaDescription": "Markarbeten, finplanering och kantsten på Södermalm — anpassat efter innerstadens berggrund och trånga innergårdar. Kostnadsfri bedömning.",
+  "shortDescription": "Höglänt innerstadsdel med mycket berg i dagen — kräver rätt maskinval och tålamod.",
+  "intro": [
+    "Södermalm är en av Stockholms mest höglänta stadsdelar, med berg i dagen på flera håll och en tät, äldre bebyggelse där gator och gårdar sällan är byggda för stora maskiner. Det ställer särskilda krav på både utrustning och planering vid schaktning och markarbete.",
+    "Vi utför <a href=\"/tjanster/markarbeten/sodermalm\">markarbeten</a> samt finplanering och markanläggning på Södermalm, och är vana vid att arbeta i trånga innergårdar och på begränsad yta där hänsyn till grannar och åtkomst är en del av planeringen från start."
+  ],
+  "whyUs": "Vi är vana vid innerstadens utmaningar — trånga passager, berg i dagen och BRF-gårdar där flera parter behöver samordnas — och planerar arbetet så att störningarna blir så små som möjligt.",
+  "relevantServices": [
+    { "slug": "markarbeten", "blurb": "Schaktning och ledningsgrävning anpassad efter Södermalms bergiga mark och trånga innerstadsmiljö." },
+    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av gemensamma innergårdar åt BRF:er, med hänsyn till tillgänglighet i en tätbebyggd stadsdel." },
+    { "slug": "markanlaggning-kantsten", "blurb": "Kantsten och markanläggning för gårdar och gångar där utrymmet är begränsat men kraven på hållbarhet desamma." }
+  ]
+}

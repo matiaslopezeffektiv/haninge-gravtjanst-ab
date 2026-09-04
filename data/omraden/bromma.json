@@ -1,0 +1,19 @@
+{
+  "slug": "bromma",
+  "name": "Bromma",
+  "region": "Västerort",
+  "h1": "Mark- och anläggningsarbeten i Bromma",
+  "metaTitle": "Mark- och anläggningsarbeten i Bromma — Haninge Grävtjänst AB",
+  "metaDescription": "Dränering, husgrundsarbete och plattsättning i Bromma — anpassat efter de äldre villaområdenas markförhållanden. Kostnadsfri bedömning.",
+  "shortDescription": "Etablerad villastadsdel med hus från 1930–50-talet — vanligt med äldre dränering.",
+  "intro": [
+    "Bromma är en av Stockholms mer etablerade villastadsdelar, med områden som Åkeshov och Riksby där många hus byggdes under 1930-, 40- och 50-talet. En stor del av det ursprungliga dräneringssystemet i dessa hus börjar nu närma sig 70–80 år, vilket är betydligt längre än vad ett dräneringssystem normalt är dimensionerat för.",
+    "Vi hjälper villaägare i Bromma med allt från dränering och husgrundsarbete till plattsättning av uppfarter och gångar, med utgångspunkt i den mark och de grundtyper som är vanliga i området."
+  ],
+  "whyUs": "Vi har god erfarenhet av äldre villagrunder av den typ som är vanlig i Bromma, och vet vad som brukar behöva åtgärdas när ett hus närmar sig 70–80 år.",
+  "relevantServices": [
+    { "slug": "dranering", "blurb": "Många villor i Bromma har originaldränering från 1930–50-talet som passerat sin förväntade livslängd." },
+    { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete inför tillbyggnad eller renovering av äldre husgrunder, vanligt i Brommas etablerade villaområden." },
+    { "slug": "plattsattning-stensattning", "blurb": "Uppfarter och gångar anpassade efter tomtens ålder och befintliga bärlager." }
+  ]
+}

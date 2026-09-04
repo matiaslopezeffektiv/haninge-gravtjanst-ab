@@ -1,0 +1,217 @@
+{
+  "slug": "markarbeten",
+  "name": "Grävfirma – Markarbeten",
+  "targetLocation": "Stockholm",
+  "h1": "Grävfirma Stockholm — Markarbeten",
+  "metaTitle": "Grävfirma Stockholm — Markarbeten | Haninge Grävtjänst AB",
+  "metaDescription": "Grävfirma i Stockholm med över 10 års erfarenhet — schaktning, ledningsgrävning och markförberedelse inför bygg-, dränerings- och anläggningsprojekt.",
+  "shortDescription": "Grävfirma för markarbeten, schaktning och ledningsgrävning i Stockholm och Haninge.",
+  "longDescription": [
+    "Haninge Grävtjänst AB är en grävfirma som utför markarbeten i hela Stockholm — allt från mindre schaktningsjobb till förberedande markarbete inför större bygg- och anläggningsprojekt.",
+    "Markarbete är ofta grunden som våra andra tjänster (<a href=\"/tjanster/dranering\">dränering</a>, <a href=\"/tjanster/husgrunder-markanlaggning\">husgrund</a>, <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering</a>, <a href=\"/tjanster/markanlaggning-kantsten\">kantsten</a>, <a href=\"/tjanster/asfaltering\">asfaltering</a>) bygger på. Behöver du bara gräva — till exempel för en ledning, en pool eller en enklare schaktning — hjälper vi till med det också, utan att det behöver vara del av ett större projekt.",
+    "Med över 10 års erfarenhet och 200+ genomförda projekt i Stockholmsområdet har vi den maskinpark och kunskap om lokala markförhållanden som krävs för att arbetet ska gå säkert och effektivt, oavsett om det gäller lera, morän eller berg. <a href=\"/kontakt\">Kontakta oss</a> för en kostnadsfri bedömning av ditt projekt."
+  ],
+  "icon": "fa-truck-monster",
+  "heroImage": "/assets/img/hero/markarbeten-projekt-1.webp",
+  "heroImageAlt": "Grävarbete vid schakt längs husgrund",
+  "introImage": "/assets/img/hero/markarbeten-projekt-3.jpeg",
+  "introImageAlt": "Grävmaskin i arbete vid solnedgång",
+
+  "benefits": [
+    "Tar både fristående grävjobb och markarbete som del av ett större projekt",
+    "Egen maskinpark för schaktning och materialhantering",
+    "Erfarenhet av markförhållanden i Stockholmsområdet",
+    "Över 10 års erfarenhet och 200+ genomförda projekt"
+  ],
+
+  "inclusions": [
+    "Schaktning för ledningar, pooler eller mindre byggprojekt",
+    "Markförberedelse inför dränering, grund eller anläggning",
+    "Bortforsling av schaktmassor",
+    "Återfyllning och grovplanering",
+    "Ledningskoll och samordning inför grävning nära befintliga kablar/rör"
+  ],
+
+  "signs": {
+    "heading": "Vanliga anledningar att anlita en grävfirma",
+    "intro": "Behovet av markarbete dyker sällan upp av sig självt — oftast är det en del av ett större projekt eller ett konkret behov som måste lösas. Vanliga anledningar är:",
+    "items": [
+      "Ny ledningsdragning (el, vatten, avlopp eller bredband)",
+      "Grävning inför pool, förråd eller garage",
+      "Förberedande markarbete inför ett byggprojekt",
+      "Schaktning inför dränering eller ny husgrund",
+      "Bortforsling av jord- eller schaktmassor"
+    ],
+    "image": "/assets/img/hero/markarbeten-projekt-4.jpeg",
+    "imageAlt": "Nedgrävda rörledningar i schakt"
+  },
+
+  "whyImportant": [
+    "Markarbete är den del av nästan alla mark- och byggprojekt som sker först och syns minst — men fel utfört blir det dyrt att rätta till i efterhand, särskilt om en ledning grävts av eller om schaktningen inte tagit hänsyn till markens bärighet.",
+    "Många av våra andra tjänster — <a href=\"/tjanster/dranering\">dränering</a>, <a href=\"/tjanster/husgrunder-markanlaggning\">husgrund</a>, <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering</a> — bygger på att markarbetet är korrekt utfört från början. Ett bra grävjobb är osynligt i slutresultatet, men det är det som avgör om resten av projektet blir bra."
+  ],
+
+  "whyUs": {
+    "intro": "Ett grävjobb ska gå säkert, effektivt och utan överraskningar — det är vad vi styr mot i varje uppdrag:",
+    "items": [
+      "Egen maskinpark, vilket gör att vi kan ta både mindre fristående jobb och delar av större projekt",
+      "Vi gör alltid en ledningskoll inför grävning nära befintlig infrastruktur",
+      "Erfarenhet av varierande markförhållanden i Stockholmsområdet — lera, morän och berg",
+      "Över 10 års erfarenhet och 200+ genomförda projekt"
+    ]
+  },
+
+  "considerations": {
+    "intro": "Inför en grävning är följande bra att ha koll på:",
+    "items": [
+      "Gör alltid en ledningskoll via Ledningskollen innan grävning nära kablar, vatten- eller avloppsledningar",
+      "Bestäm i förväg om schaktmassorna ska återanvändas på tomten eller forslas bort — det påverkar både pris och tidsplan",
+      "Vid grävning nära tomtgräns, informera gärna grannen i förväg",
+      "Kontrollera om ditt projekt kräver marklov innan större schaktning påbörjas"
+    ]
+  },
+
+  "process": [
+    { "step": 1, "title": "Kostnadsfri bedömning", "description": "Vi besöker platsen och bedömer vad grävningen kräver." },
+    { "step": 2, "title": "Offert", "description": "Du får en tydlig offert utan bindningstid." },
+    { "step": 3, "title": "Utförande", "description": "Schaktning och markarbete enligt överenskommen omfattning." },
+    { "step": 4, "title": "Återställning", "description": "Återfyllning och grovplanering av marken efter grävningen." }
+  ],
+
+  "faq": [
+    {
+      "question": "Tar ni mindre grävjobb, eller bara stora projekt?",
+      "answer": "Vi tar båda delarna — allt från en enskild schaktning eller ledningsgrävning till markarbete som del av ett större bygg- eller anläggningsprojekt."
+    },
+    {
+      "question": "Vad påverkar priset för markarbete?",
+      "answer": "Priset beror på omfattning, markförhållanden (till exempel lera, morän eller berg) och tillgänglighet för maskiner. Vi ger en kostnadsfri bedömning innan vi lämnar offert."
+    },
+    {
+      "question": "Behöver jag ansöka om tillstånd innan ni gräver?",
+      "answer": "Det beror på vad grävningen gäller — större schaktning kan kräva marklov, och innan grävning i närheten av kablar och rörledningar bör man alltid göra en ledningskoll via Ledningskollen för att undvika avgrävningar. Vi hjälper till att reda ut vad som gäller för ditt jobb."
+    },
+    {
+      "question": "Kan ni gräva för pool eller förråd på egen hand, utan annan entreprenör?",
+      "answer": "Ja, det gör vi gärna som ett fristående uppdrag. Vi schaktar enligt de mått du eller din leverantör anger och forslar bort överskottsmassor."
+    },
+    {
+      "question": "Vad är skillnaden mellan en grävfirma och en markentreprenör?",
+      "answer": "I praktiken glider begreppen ihop mycket — en grävfirma fokuserar ofta på själva schaktningen, medan en markentreprenör kan ta ett bredare ansvar för hela markprojektet. Vi arbetar med båda delarna, från ren grävning till kompletta markanläggningsprojekt."
+    },
+    {
+      "question": "Vad gör ni med jordmassorna som grävs upp?",
+      "answer": "Vi kan antingen återanvända massorna på tomten för återfyllning och grovplanering, eller forsla bort dem — det bestämmer vi tillsammans utifrån projektets behov."
+    },
+    {
+      "question": "Skiljer sig markförhållandena mycket inom Stockholmsområdet?",
+      "answer": "Ja, betydligt. Vissa delar av regionen har berg nära ytan medan andra har djup lerjord eller morän — det påverkar både vilka maskiner som krävs och hur schaktningen behöver läggas upp. Vi bedömer alltid markförhållandena på plats innan vi lämnar offert."
+    },
+    {
+      "question": "Kan ni gräva på en tomt med begränsad åtkomst, till exempel i tät innerstadsmiljö?",
+      "answer": "Ja, vi har erfarenhet av att arbeta på trånga tomter i tätbebyggda delar av Stockholm och anpassar maskinval efter vad som får plats och vilken åtkomst som finns."
+    },
+    {
+      "question": "Hur snabbt kan ni komma ut för ett fristående grävjobb?",
+      "answer": "Det beror på vår aktuella beläggning, men vi försöker alltid ge besked så snabbt som möjligt efter första kontakt. Hör av dig så återkommer vi med en tidsuppskattning."
+    },
+    {
+      "question": "Krävs det alltid marklov för att gräva på egen tomt?",
+      "answer": "Nej, vanlig schaktning i mindre skala kräver oftast inte marklov. Det är först vid större ingrepp — till exempel om marknivån ändras med mer än 0,5 meter inom detaljplanerat område — som marklov kan krävas. Vi hjälper till att bedöma vad som gäller för ditt projekt."
+    }
+  ],
+
+  "referenceProjects": [
+    {
+      "title": "Schaktning längs husgrund",
+      "description": "Grävarbete inför dränering och grundarbete.",
+      "image": "/assets/img/hero/markarbeten-projekt-1.webp"
+    },
+    {
+      "title": "Ledningsgrävning",
+      "description": "Nedgrävning av rörledningar i schakt inför anslutning.",
+      "image": "/assets/img/hero/markarbeten-projekt-4.jpeg"
+    }
+  ],
+
+  "sourceKeys": ["boverketMarklov", "ledningskollen", "stockholmBygglov", "skatteverketFSkatt"],
+
+  "orter": [
+    {
+      "slug": "haninge",
+      "name": "Haninge",
+      "parentService": "markarbeten",
+      "h1": "Grävfirma i Haninge — Markarbeten",
+      "metaTitle": "Grävfirma i Haninge — Haninge Grävtjänst AB",
+      "metaDescription": "Markarbeten, schaktning och ledningsgrävning i Haninge — utfört av den lokala grävfirman med hemort i kommunen. Kostnadsfri bedömning.",
+      "intro": [
+        "Som lokal grävfirma med hemort i Tungelsta är Haninge kommun där vi utför flest markarbeten — allt från mindre schaktningsjobb åt privatpersoner till förberedande markarbete inför större bygg- och anläggningsprojekt.",
+        "Vi utför <a href=\"/tjanster/markarbeten\">markarbeten</a> i hela kommunen, från villaområden som Västerhaninge och Jordbro till fastigheter närmare skärgården, och känner till var i kommunen marken är lera, morän eller berg."
+      ],
+      "localPoints": [
+        "Kort startsträcka och egen maskinpark redo att rycka ut i hela kommunen",
+        "God kännedom om Haninges varierande markförhållanden, från lera till berg",
+        "Vi tar både fristående grävjobb och markarbete som del av större projekt",
+        "Erfarenhet av ledningsgrävning i både äldre och nyare bostadsområden i kommunen"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "sodermalm",
+      "name": "Södermalm",
+      "parentService": "markarbeten",
+      "h1": "Grävfirma på Södermalm — Markarbeten",
+      "metaTitle": "Grävfirma på Södermalm — Haninge Grävtjänst AB",
+      "metaDescription": "Markarbeten och schaktning på Södermalm — anpassat efter innerstadens berggrund och trånga innergårdar. Kostnadsfri bedömning.",
+      "intro": [
+        "Södermalm är en av Stockholms mest höglänta stadsdelar, med berg i dagen på flera håll. Det påverkar direkt hur ett markarbete behöver planeras — schaktning i berg kräver andra maskiner och en annan tidsplan än schaktning i lösare jordarter.",
+        "Vi utför <a href=\"/tjanster/markarbeten\">markarbeten</a> på Södermalm, från ledningsgrävning till förberedande arbete inför renovering, och är vana vid de trånga innergårdar och smala gator som är typiska för stadsdelen."
+      ],
+      "localPoints": [
+        "Erfarenhet av schaktning i berggrund, vanligt förekommande på Södermalm",
+        "Vana vid trånga innergårdar och begränsad åtkomst för maskiner",
+        "Vi gör alltid en ledningskoll innan grävning nära befintlig infrastruktur i tät stadsmiljö",
+        "Vi planerar arbetet med hänsyn till grannar och gemensamma utrymmen i BRF-fastigheter"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "farsta",
+      "name": "Farsta",
+      "parentService": "markarbeten",
+      "h1": "Grävfirma i Farsta — Markarbeten",
+      "metaTitle": "Grävfirma i Farsta — Haninge Grävtjänst AB",
+      "metaDescription": "Markarbeten och schaktning i Farsta — för villaägare och BRF:er. Kostnadsfri bedömning av en lokal grävfirma.",
+      "intro": [
+        "Farsta rymmer både villaområden som Farsta strand och Larsboda och flerbostadshus kring Farsta centrum, vilket gör att vi lika ofta utför mindre grävjobb åt en villaägare som markarbete inför en större gårdsrenovering åt en BRF.",
+        "Vi utför <a href=\"/tjanster/markarbeten\">markarbeten</a> i Farsta, från schaktning inför pool eller förråd till förberedande arbete inför dränering eller ny husgrund."
+      ],
+      "localPoints": [
+        "Erfarenhet av både villaprojekt och gemensamma ytor åt bostadsrättsföreningar",
+        "Vi gör alltid en ledningskoll innan grävning nära kablar eller rörledningar",
+        "Vanligt med schaktning inför dränering i de äldre villaområdena kring Farsta strand",
+        "Vi hjälper till med bortforsling eller återanvändning av schaktmassor efter behov"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "enskede",
+      "name": "Enskede",
+      "parentService": "markarbeten",
+      "h1": "Grävfirma i Enskede — Markarbeten",
+      "metaTitle": "Grävfirma i Enskede — Haninge Grävtjänst AB",
+      "metaDescription": "Markarbeten och schaktning i Enskede — anpassat efter trädgårdsstadens smala tomter. Kostnadsfri bedömning av en lokal grävfirma.",
+      "intro": [
+        "Enskedes trädgårdsstad har smala tomter och tätt bebyggda kvarter, vilket gör tillgängligheten till den viktigaste frågan vid nästan varje markarbete i området — hur kommer maskinen fram, och var kan massor lagras tillfälligt.",
+        "Vi utför <a href=\"/tjanster/markarbeten\">markarbeten</a> i Enskede, från ledningsgrävning till schaktning inför dränering eller nya ytor, med utrustning anpassad efter de begränsade utrymmen som är typiska för området."
+      ],
+      "localPoints": [
+        "Vana vid att arbeta på de smala tomter och tätt bebyggda kvarter som är typiska för Enskede",
+        "Vi planerar tillfällig upplagsplats för massor innan arbetet påbörjas",
+        "Vanligt med schaktning inför omdränering av de äldre husen i området",
+        "Vi informerar gärna grannar i förväg när arbetet sker nära tomtgräns i tät bebyggelse"
+      ],
+      "referenceProjects": []
+    }
+  ]
+}

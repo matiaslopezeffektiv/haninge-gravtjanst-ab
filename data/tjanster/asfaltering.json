@@ -1,0 +1,141 @@
+{
+  "slug": "asfaltering",
+  "name": "Asfaltering",
+  "targetLocation": "Stockholm",
+  "h1": "Asfaltering Stockholm",
+  "metaTitle": "Asfaltering Stockholm — Haninge Grävtjänst AB",
+  "metaDescription": "Asfaltering av uppfarter, gångar, gårdar och parkeringsytor i Stockholm av en grävfirma med över 10 års erfarenhet — från markförberedelse till färdig yta.",
+  "shortDescription": "Asfaltering av uppfarter, gångar, gårdar och parkeringsytor i Stockholm och Haninge.",
+  "longDescription": [
+    "Haninge Grävtjänst AB utför asfaltering av uppfarter, gångar, innergårdar och parkeringsytor i hela Stockholm — från planering till färdig yta.",
+    "En asfaltyta är bara så bra som underlaget den läggs på. Vi förbereder marken med rätt bärlager, <a href=\"/tjanster/dranering\">dränering</a> och lutning innan asfalten läggs, så ytan håller över tid istället för att spricka eller sätta sig. Beroende på ytans användning lägger vi tunnare asfalt för gångytor eller kraftigare uppbyggnad för ytor som ska klara biltrafik.",
+    "Med över 10 års erfarenhet av markarbete i Stockholmsområdet vet vi vad som krävs för att en asfaltyta ska klara både svenska vintrar och tjällossning utan att spricka upp. Föredrar du en annan ytbeläggning kan vi också hjälpa till med <a href=\"/tjanster/plattsattning-stensattning\">stensättning</a> eller grusade ytor — <a href=\"/kontakt\">kontakta oss</a> för en kostnadsfri bedömning."
+  ],
+  "icon": "fa-road",
+  "heroImage": "/assets/img/hero/asfaltering-projekt-1.webp",
+  "heroImageAlt": "Nyanlagd asfaltyta med kantsten vid villa",
+  "introImage": "/assets/img/hero/asfaltering-projekt-2.webp",
+  "introImageAlt": "Vält packar nylagd asfalt",
+
+  "benefits": [
+    "Markförberedelse med rätt bärlager och lutning innan asfalten läggs",
+    "Både hand- och maskinläggning beroende på ytans form och storlek",
+    "Asfalttjocklek anpassad efter belastning — gångyta eller körbar yta",
+    "Över 10 års erfarenhet och 200+ genomförda mark- och anläggningsprojekt"
+  ],
+
+  "inclusions": [
+    "Schaktning och bortforsling av gammal yta vid behov",
+    "Uppbyggnad av bärlager anpassat efter belastning",
+    "Packning och kontroll av underlag",
+    "Asfaltläggning med hand eller maskin beroende på ytans form",
+    "Kantavslutning mot kantsten, gräsmatta eller fasad"
+  ],
+
+  "signs": {
+    "heading": "Tecken på att asfalten behöver läggas om",
+    "intro": "Skador i en asfaltyta byggs oftast upp gradvis, säsong efter säsong, innan de blir allvarliga. Vanliga varningstecken är:",
+    "items": [
+      "Sprickor som växer, särskilt efter vintern",
+      "Gropar och sättningar i ytan",
+      "Vatten blir stående istället för att rinna undan",
+      "Ytan är äldre än 20–25 år",
+      "Kanterna mot gräsmatta eller kantsten har börjat vittra sönder"
+    ],
+    "image": "/assets/img/hero/asfaltering-projekt-1.webp",
+    "imageAlt": "Nyanlagd asfaltyta med kantsten vid villa"
+  },
+
+  "whyImportant": [
+    "En asfaltyta ser enkel ut på ytan, men det är underlaget som avgör om den håller. Asfalt som läggs direkt på ett dåligt bärlager spricker ofta redan efter en eller två vintrar, medan en yta med rätt uppbyggnad kan klara decennier av svenska årstidsväxlingar.",
+    "Just tjällossning är en av de vanligaste orsakerna till att asfaltytor spricker upp i Stockholmsområdet — vatten som tränger in i marken under asfalten fryser och expanderar, vilket trycker upp och spräcker ytan om dräneringen inte är korrekt utförd från början."
+  ],
+
+  "whyUs": {
+    "intro": "En asfaltyta som klarar svenska vintrar kräver rätt uppbyggnad från start — det här är vad vi utgår ifrån:",
+    "items": [
+      "Vi bygger alltid upp bärlagret efter ytans faktiska användning, inte en standardlösning för alla ytor",
+      "Både hand- och maskinläggning, vilket gör att vi kan ta både små gångar och större parkeringsytor",
+      "Erfarenhet av hur svenska vintrar och tjällossning påverkar asfaltytor i Stockholmsregionen",
+      "Över 10 års erfarenhet och 200+ genomförda mark- och anläggningsprojekt"
+    ]
+  },
+
+  "considerations": {
+    "intro": "Några saker är bra att tänka igenom innan asfalteringen bokas in:",
+    "items": [
+      "Bestäm om ytan ska klara biltrafik — det avgör asfalttjocklek och bärlager, och går inte att ändra i efterhand utan omläggning",
+      "Undvik att parkera på exakt samma fläck den första tiden efter läggning, särskilt i varmt väder",
+      "Planera asfaltering under den varmare säsongen — kvaliteten blir bättre när massan får rätt temperatur vid läggning",
+      "Tänk på avvattningen vid kanterna mot hus, garage eller kantsten så att vatten inte leds fel"
+    ]
+  },
+
+  "process": [
+    { "step": 1, "title": "Kostnadsfri bedömning", "description": "Vi besöker platsen och bedömer underlag och omfattning." },
+    { "step": 2, "title": "Offert", "description": "Du får en tydlig offert och tidsplan, utan bindningstid." },
+    { "step": 3, "title": "Markförberedelse och asfaltering", "description": "Bärlager, packning och asfaltläggning enligt plan." },
+    { "step": 4, "title": "Slutbesiktning", "description": "Genomgång av den färdiga ytan tillsammans med dig." }
+  ],
+
+  "faq": [
+    {
+      "question": "Går det att asfaltera direkt ovanpå en gammal uppfart?",
+      "answer": "Det beror på det befintliga underlagets skick. I vissa fall går det att asfaltera ovanpå, i andra fall behöver den gamla ytan grävas bort först. Vi bedömer det på plats."
+    },
+    {
+      "question": "Vad påverkar priset för asfaltering?",
+      "answer": "Priset beror på ytans storlek, underlagets skick och tillgänglighet för maskiner. Vi ger en kostnadsfri bedömning innan vi lämnar offert."
+    },
+    {
+      "question": "Hur lång tid innan man kan köra på den nya asfalten?",
+      "answer": "En nylagd asfaltyta går normalt att gå och köra försiktigt på efter ett dygn, men asfalten fortsätter härda i flera veckor. Vi rekommenderar att undvika skarpa svängar och att parkera på exakt samma fläck den första tiden, särskilt vid varmt väder."
+    },
+    {
+      "question": "Ger asfaltering rätt till ROT-avdrag?",
+      "answer": "Omläggning eller reparation av en befintlig asfaltyta kan ge rätt till ROT-avdrag på arbetskostnaden. Att asfaltera en yta som inte varit hårdgjord tidigare räknas normalt som nyanläggning och ger inte rätt till avdraget."
+    },
+    {
+      "question": "Vilken tid på året går det att asfaltera?",
+      "answer": "Asfaltering görs normalt under den varmare delen av året, ungefär april till oktober i Stockholmsområdet, eftersom asfaltmassan behöver en viss temperatur för att packas och härda korrekt."
+    },
+    {
+      "question": "Hur länge håller en asfaltyta?",
+      "answer": "Med rätt bärlager och underhåll håller en asfaltyta ofta 20–25 år innan den behöver läggas om helt. Mindre sprickor kan lagas löpande för att förlänga livslängden."
+    },
+    {
+      "question": "Varför spricker asfalt ofta upp efter vintern i Stockholmsområdet?",
+      "answer": "Det beror oftast på tjällossning — vatten som trängt in i marken under asfalten fryser och expanderar, vilket trycker upp ytan underifrån. Rätt dränering och bärlager vid anläggningen minskar risken betydligt."
+    },
+    {
+      "question": "Kan ni asfaltera en gemensam parkeringsyta åt en BRF?",
+      "answer": "Ja, vi tar gärna gemensamma ytor åt bostadsrättsföreningar och samfälligheter, vilket är vanligt i flerbostadsområden runt om i Stockholm."
+    },
+    {
+      "question": "Vad är skillnaden mellan asfalt och grus för en uppfart?",
+      "answer": "Asfalt kräver större investering initialt men är underhållsfritt och håller formen väl, medan grus är billigare från start men behöver fyllas på och jämnas till regelbundet. Vi hjälper dig väga alternativen mot varandra."
+    },
+    {
+      "question": "Kan man laga enskilda sprickor istället för att lägga om hela ytan?",
+      "answer": "Ja, mindre sprickor och gropar går ofta att laga lokalt för att förlänga ytans livslängd. Är skadorna mer omfattande eller återkommande är det oftast mer ekonomiskt att lägga om hela ytan på en gång."
+    }
+  ],
+
+  "referenceProjects": [
+    {
+      "title": "Nyanlagd uppfart",
+      "description": "Ny asfaltyta med gjuten kantsten vid villa.",
+      "image": "/assets/img/hero/asfaltering-projekt-1.webp"
+    },
+    {
+      "title": "Asfaltläggning och packning",
+      "description": "Vält packar nylagd asfaltmassa för en jämn och hållbar yta.",
+      "image": "/assets/img/hero/asfaltering-projekt-2.webp"
+    }
+  ],
+
+  "sourceKeys": ["skatteverketRot", "skatteverketFSkatt", "reco"],
+
+  "_orterSchemaNote": "Ort-objekt läggs till i nästa omgång — endast för stadsdelar med bekräftad sökefterfrågan (se data/site.json areasServed).",
+  "orter": []
+}

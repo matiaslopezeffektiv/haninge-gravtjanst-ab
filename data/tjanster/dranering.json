@@ -4,48 +4,182 @@
   "targetLocation": "Stockholm",
   "h1": "Dränering Stockholm",
   "metaTitle": "Dränering Stockholm — Haninge Grävtjänst AB",
-  "metaDescription": "Professionell dränering i Stockholm och Haninge. Vi utför dränering av husgrund, källare och tomt — fukt- och vattensäkert, med garanti på utfört arbete. [TODO: verifiera påstående om garanti]",
-  "shortDescription": "[TODO: riktig kort beskrivning från kund] Dränering av husgrund, källare och tomtmark i Stockholmsområdet.",
+  "metaDescription": "Dränering i Stockholm och Haninge av erfaren grävfirma — över 10 års erfarenhet och 200+ genomförda projekt. Fukt- och vattensäker husgrund, med garanti på utfört arbete.",
+  "shortDescription": "Dränering av husgrund, källare och tomtmark i Stockholm — fukt- och vattensäkert, utfört av en grävfirma med över 10 års erfarenhet.",
   "longDescription": [
-    "[TODO: riktig text från kund] Haninge Grävtjänst AB utför dränering åt privatpersoner, företag och BRF:er i hela Stockholm, med Haninge som hemort.",
-    "[TODO: riktig text från kund] En fungerande dränering skyddar husgrunden mot fukt- och vatteninträngning och förlänger fastighetens livslängd. Vi hjälper till med allt från nydränering till renovering av äldre dräneringssystem.",
-    "[TODO: riktig text från kund] Beskriv arbetsprocess, material (dräneringsrör, makadam, dräneringsmatta), och eventuell dokumentation/garanti som lämnas efter avslutat arbete."
+    "Haninge Grävtjänst AB utför dränering åt privatpersoner, företag och BRF:er i hela Stockholm, med Haninge som hemort. Med över 10 års erfarenhet och 200+ genomförda projekt vet vi vad som krävs för att en dränering ska hålla över tid, oavsett grundtyp eller markförhållanden.",
+    "En fungerande dränering skyddar husgrunden mot fukt- och vatteninträngning och förlänger fastighetens livslängd väsentligt. Vi hjälper till med allt från nydränering på nybyggda hus till renovering av äldre dräneringssystem som slutat fungera. Dränering görs ofta i samband med annat <a href=\"/tjanster/markarbeten\">markarbete</a> eller vid renovering av äldre <a href=\"/tjanster/husgrunder-markanlaggning\">husgrunder</a>.",
+    "Arbetet utförs i tydliga steg: schaktning ner till grundens botten, rengöring av grundmuren, montering av dräneringsskiva eller motsvarande fuktskydd, nedläggning av dräneringsrör i ett makadamlager med rätt fall mot brunn eller utlopp, och slutligen återfyllning. Vi lämnar garanti på utfört arbete — <a href=\"/kontakt\">kontakta oss</a> för en kostnadsfri bedömning."
   ],
   "icon": "fa-water",
-  "heroImage": null,
-  "heroImageAlt": "[TODO: bild på pågående dräneringsarbete från kund]",
+  "heroImage": "/assets/img/hero/dranering-membran.webp",
+  "heroImageAlt": "Dräneringsskiva monteras längs husgrund inför återfyllning",
+  "introImage": "/assets/img/hero/dranering-arbete.webp",
+  "introImageAlt": "Person i varselkläder monterar dräneringsduk och dräneringsrör i schakt",
 
   "benefits": [
-    "[TODO: fördel 1 — t.ex. fukt- och vattensäker husgrund]",
-    "[TODO: fördel 2 — t.ex. förlängd livslängd på fastigheten]",
-    "[TODO: fördel 3 — t.ex. dokumenterat arbete enligt branschstandard]",
-    "[TODO: fördel 4]"
+    "Fukt- och vattensäker husgrund som skyddar källare och grund på lång sikt",
+    "Förlängd livslängd på fastigheten och minskad risk för kostsamma fuktskador",
+    "Dräneringsrör, makadam och dräneringsskiva av beprövad kvalitet",
+    "Över 10 års erfarenhet och 200+ genomförda projekt i Stockholmsområdet"
   ],
 
+  "inclusions": [
+    "Schaktning ner till grundens botten",
+    "Rengöring och kontroll av grundmuren",
+    "Montering av dräneringsskiva eller motsvarande fuktisolering",
+    "Dräneringsrör i makadambädd med rätt fall",
+    "Anslutning till befintlig brunn eller nytt utlopp",
+    "Återfyllning och grovplanering av marken"
+  ],
+
+  "signs": {
+    "heading": "Tecken på att din husgrund behöver dräneras om",
+    "intro": "Många väntar för länge med att åtgärda en trasig dränering eftersom problemen först syns inomhus, långt efter att skadan i marken redan uppstått. Håll utkik efter följande tecken:",
+    "items": [
+      "Fuktlukt eller synlig fukt i källaren",
+      "Vita saltutfällningar (kalkutfällningar) på källarväggarna",
+      "Mögel eller flagnande färg vid grunden",
+      "Den befintliga dräneringen är äldre än 25–30 år",
+      "Vatten blir stående nära husgrunden efter regn eller snösmältning"
+    ],
+    "image": "/assets/img/hero/dranering-rorlaggning.webp",
+    "imageAlt": "Installation av dräneringsrör i makadambädd"
+  },
+
+  "whyImportant": [
+    "Fukt som tränger in genom en dålig eller utsliten dränering är en av de vanligaste orsakerna till dyra skador på hus — mögel, röta i bjälklag och skadade ytskikt i källaren är ofta ett resultat av att vatten fått stå still mot grunden år efter år istället för att ledas bort.",
+    "I Stockholmsområdet varierar markförhållandena kraftigt — från lerjord i lägre liggande områden till berg i dagen på höjderna — vilket gör att en dränering som fungerar bra på en tomt kan vara helt fel utformad på en annan. En dränering anpassad efter de faktiska förutsättningarna på just din tomt är det som avgör om den håller i 30 år eller ger problem redan efter några säsonger. Är du osäker på vad som gäller för din fastighet, <a href=\"/kontakt\">hör av dig</a> för en kostnadsfri bedömning."
+  ],
+
+  "whyUs": {
+    "intro": "Dränering är inget vi tar lätt på — här är vad som skiljer oss åt:",
+    "items": [
+      "Erfarenhet av de äldre husgrunder och dräneringssystem som är vanliga i Stockholms villaområden",
+      "Vi använder dräneringsmaterial och metoder som är beprövade för svenskt klimat, med tjäle och kraftig snösmältning",
+      "Vi lämnar garanti på utfört arbete, inte bara på materialet",
+      "Vi hjälper till att återställa mark, rabatter och gångar kring huset efter avslutat arbete"
+    ]
+  },
+
+  "considerations": {
+    "intro": "Innan arbetet startar är det några saker som är bra att ha koll på:",
+    "items": [
+      "Tänk igenom om buskar, staket eller andra fasta installationer nära grunden behöver flyttas tillfälligt",
+      "Be om en tydlig beskrivning av vilket material som används och vilken garantitid som gäller — helst skriftligt i offerten",
+      "Om tomtgränsen ligger nära grannens fastighet kan det vara bra att informera grannen innan arbetet startar",
+      "Räkna med att gräsmattan eller rabatter närmast huset kan behöva återetableras efter att arbetet är klart"
+    ]
+  },
+
   "process": [
-    { "step": 1, "title": "Kostnadsfri besiktning", "description": "[TODO: riktig text] Vi besöker platsen och bedömer omfattning och behov." },
-    { "step": 2, "title": "Offert", "description": "[TODO: riktig text] Du får en tydlig offert utan bindningstid." },
-    { "step": 3, "title": "Utförande", "description": "[TODO: riktig text] Grävning, dränering och återställning av mark." },
-    { "step": 4, "title": "Slutbesiktning", "description": "[TODO: riktig text] Genomgång och ev. dokumentation/garanti överlämnas." }
+    { "step": 1, "title": "Kostnadsfri besiktning", "description": "Vi besöker platsen, bedömer husgrundens skick och går igenom vad en omdränering skulle innebära." },
+    { "step": 2, "title": "Offert", "description": "Du får en tydlig offert med omfattning och tidsplan, utan bindningstid." },
+    { "step": 3, "title": "Utförande", "description": "Schaktning, montering av dräneringsskiva och dräneringsrör, samt återfyllning med makadam och jordmassor." },
+    { "step": 4, "title": "Slutbesiktning", "description": "Vi går igenom det färdiga arbetet tillsammans med dig innan vi lämnar platsen." }
   ],
 
   "faq": [
     {
-      "question": "Vad kostar dränering i Stockholm?",
-      "answer": "[TODO: riktigt svar från kund] Priset beror på tomtens storlek, grundtyp och tillgänglighet. Kontakta oss för en kostnadsfri bedömning."
+      "question": "Vad påverkar priset för dränering i Stockholm?",
+      "answer": "Priset beror främst på tomtens storlek och tillgänglighet, husgrundens djup och skick samt hur mycket av den befintliga dräneringen som behöver bytas. Vi ger alltid en kostnadsfri bedömning på plats innan vi lämnar offert."
     },
     {
       "question": "Hur vet jag om huset behöver dräneras om?",
-      "answer": "[TODO: riktigt svar från kund] Vanliga tecken är fuktlukt i källaren, synlig fukt på väggar eller att den befintliga dräneringen är äldre än 30 år."
+      "answer": "Vanliga tecken är fuktlukt eller synlig fukt i källaren, saltutfällningar på källarväggar, eller att den befintliga dräneringen är äldre än 25–30 år. Är du osäker gör vi en kostnadsfri bedömning av grunden."
     },
     {
       "question": "Hur lång tid tar en dränering?",
-      "answer": "[TODO: riktigt svar från kund] Beror på omfattning, men ange en typisk tidsram här."
+      "answer": "Ett normalstort villahus tar oftast mellan en och två veckor beroende på grundens storlek, markförhållanden och väder. Du får en konkret tidsplan i samband med offerten."
+    },
+    {
+      "question": "Kan jag få ROT-avdrag för dränering?",
+      "answer": "Ja — om dräneringen gäller reparation eller omdränering av en befintlig husgrund räknas det normalt som ROT-arbete, och du kan få skattereduktion på arbetskostnaden. Läs mer om hur ROT-avdraget fungerar på Skatteverkets webbplats."
+    },
+    {
+      "question": "Kan jag dränera själv, eller bör jag anlita en firma?",
+      "answer": "Dränering är fysiskt tungt och tekniskt känsligt — fel lutning eller fel material kan göra att vatten leds mot huset istället för bort från det. De flesta väljer att anlita en firma med rätt maskiner och erfarenhet av lokala markförhållanden."
+    },
+    {
+      "question": "Vilken tid på året passar bäst för dränering?",
+      "answer": "Vår, sommar och tidig höst är oftast enklast rent praktiskt, men vi utför dränering under större delen av året så länge marken inte är tjälad. Vi berättar vad som passar bäst för ditt projekt vid bedömningen."
+    },
+    {
+      "question": "Skiljer sig dräneringsarbetet åt beroende på var i Stockholm man bor?",
+      "answer": "Ja, en del. Områden med lerjord, vanligt i flera lägre liggande delar av Stockholm, kräver ofta noggrannare hantering av vatten under arbetets gång än tomter på fastare mark eller berg, som är vanligare på höjderna. Vi anpassar alltid metod och material efter de markförhållanden som faktiskt finns på din tomt."
+    },
+    {
+      "question": "Vad händer om ni hittar mer omfattande skador än väntat när ni gräver fram grunden?",
+      "answer": "Det förekommer ibland, till exempel sprickor i grundmuren som inte syntes vid besiktningen. Då stannar vi upp, visar dig vad vi hittat och kommer överens om hur vi går vidare innan vi fortsätter — du blir aldrig fakturerad för tilläggsarbete du inte känner till."
+    },
+    {
+      "question": "Behöver jag informera grannen om arbetet sker nära tomtgränsen?",
+      "answer": "Det finns inget lagkrav på det vid vanligt dräneringsarbete på egen tomt, men vi tycker det är god sed att säga till grannen i förväg om maskiner eller upplag kommer stå nära gränsen, särskilt i tätbebyggda områden i innerstan."
+    },
+    {
+      "question": "Vad är skillnaden mellan dränering och att bara gräva om marken runt huset?",
+      "answer": "Att gräva om marken är bara första steget. Dränering handlar specifikt om att leda bort vatten från grunden med rätt lutning, dräneringsrör och fuktskydd — utan det arbetet löser en omgrävning i sig inte fuktproblemen, den skapar bara förutsättningarna för att göra det rätt."
     }
   ],
 
-  "referenceProjects": [],
+  "referenceProjects": [
+    {
+      "title": "Dränering av husgrund",
+      "description": "Schaktning längs husgrund inför installation av dräneringsskiva och återfyllning med makadam.",
+      "image": "/assets/img/hero/dranering-membran.webp"
+    },
+    {
+      "title": "Grävning för dräneringsledning",
+      "description": "Nedgrävning av dräneringsrör och membran längs grundmur.",
+      "image": "/assets/img/hero/dranering-schakt.webp"
+    },
+    {
+      "title": "Dräneringsrör och makadam",
+      "description": "Installation av dräneringsrör i makadambädd inför återfyllning.",
+      "image": "/assets/img/hero/dranering-rorlaggning.webp"
+    }
+  ],
 
-  "_orterSchemaNote": "Ort-objekt (stödjande stadsdelssidor under denna tjänst) läggs till här i ett senare steg — endast för stadsdelar med bekräftad sökefterfrågan (se data/site.json areasServed). Varje ort-objekt ska följa formen: { slug, name, parentService: 'dranering', intro (unikt, ej mall-genererat), referenceProjects: [] }. Se lib/types.js för det formella schemat. Lämnas tom tills genuint unikt innehåll per ort finns.",
-  "orter": []
+  "sourceKeys": ["skatteverketRot", "skatteverketFSkatt", "reco"],
+
+  "orter": [
+    {
+      "slug": "haninge",
+      "name": "Haninge",
+      "parentService": "dranering",
+      "h1": "Dränering i Haninge",
+      "metaTitle": "Dränering i Haninge — Haninge Grävtjänst AB",
+      "metaDescription": "Dränering av husgrund i Haninge — utfört av den lokala grävfirman med hemort i kommunen. Fukt- och vattensäker grund, kostnadsfri bedömning.",
+      "intro": [
+        "Som vår hemort är Haninge kommun där vi har mest samlad erfarenhet av dränering. Kommunen rymmer allt från äldre villor i Västerhaninge och Vendelsö till nyare bebyggelse närmare skärgården, och markförhållandena varierar därefter — från lerjord i lägre liggande partier till morän och berg på höjderna.",
+        "En stor del av de äldre villorna i Haninge har originaldränering som är 30–40 år eller äldre — långt förbi vad ett dräneringssystem normalt är dimensionerat för att hålla. Vi bedömer skicket kostnadsfritt och berättar ärligt om vad som faktiskt behöver åtgärdas innan vi lämnar offert. Läs mer om <a href=\"/tjanster/dranering\">dränering</a> och hela processen på vår huvudsida för tjänsten."
+      ],
+      "localPoints": [
+        "Kort startsträcka eftersom vi har vår bas i Tungelsta, mitt i kommunen",
+        "Erfarenhet av både lerjord i lägre liggande delar och morän/berg på höjderna i Haninge",
+        "Vanligt med omdränering av villor byggda på 1970–80-talet i områden som Vendelsö och Jordbro",
+        "Vi hjälper även till med anslutning till kommunalt dagvatten där det är aktuellt"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "enskede",
+      "name": "Enskede",
+      "parentService": "dranering",
+      "h1": "Dränering i Enskede",
+      "metaTitle": "Dränering i Enskede — Haninge Grävtjänst AB",
+      "metaDescription": "Dränering av husgrund i Enskede — anpassat efter trädgårdsstadens täta tomter och äldre husgrunder. Kostnadsfri bedömning.",
+      "intro": [
+        "Enskede är en av Stockholms klassiska trädgårdsstäder, med hus byggda främst under 1910- och 1930-talet på förhållandevis små tomter. Många av dessa hus har kvar sin ursprungliga dränering, eller ett system som lagts om en gång för länge sedan.",
+        "Vi utför <a href=\"/tjanster/dranering\">dränering</a> i Enskede med hänsyn till de täta tomterna — det är sällan mycket plats att röra sig på, vilket kräver rätt maskinval och noggrann planering av var massor kan lagras tillfälligt under arbetet."
+      ],
+      "localPoints": [
+        "Vana vid de begränsade ytorna som är typiska för trädgårdsstadens tomter",
+        "Många hus i Enskede är 90–100 år gamla — originaldräneringen är i regel uttjänt",
+        "Vi planerar arbetet så att grannars tillgänglighet påverkas så lite som möjligt",
+        "Anpassning efter äldre, ofta putsade grundmurar som kräver försiktig hantering"
+      ],
+      "referenceProjects": []
+    }
+  ]
 }

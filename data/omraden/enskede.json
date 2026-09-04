@@ -1,0 +1,19 @@
+{
+  "slug": "enskede",
+  "name": "Enskede",
+  "region": "Söderort",
+  "h1": "Mark- och anläggningsarbeten i Enskede",
+  "metaTitle": "Mark- och anläggningsarbeten i Enskede — Haninge Grävtjänst AB",
+  "metaDescription": "Plattsättning, markarbeten och dränering i Enskede — anpassat efter trädgårdsstadens täta tomter och äldre husgrunder. Kostnadsfri bedömning.",
+  "shortDescription": "Trädgårdsstaden med täta tomter — vi anpassar maskinval och arbetssätt därefter.",
+  "intro": [
+    "Enskede är en av Stockholms klassiska trädgårdsstäder, med småhus och radhus som i stora delar byggdes under 1910- och 1930-talet. Tomterna är ofta mindre och tätt placerade, vilket ställer andra krav på både maskinval och planering än på en stor villatomt.",
+    "Vi utför <a href=\"/tjanster/plattsattning-stensattning/enskede\">plattsättning</a>, <a href=\"/tjanster/markarbeten/enskede\">markarbeten</a> och <a href=\"/tjanster/dranering/enskede\">dränering</a> i Enskede och har erfarenhet av att arbeta på just den här typen av begränsade ytor, där tillgänglighet för maskiner ofta är den avgörande faktorn för hur arbetet planeras."
+  ],
+  "whyUs": "Vi är vana vid trädgårdsstadens täta tomter och äldre husgrunder, och planerar alltid arbetet utifrån vad som faktiskt får plats — inte en standardlösning för en villatomt dubbelt så stor.",
+  "relevantServices": [
+    { "slug": "plattsattning-stensattning", "blurb": "Gångar, uteplatser och entréer på Enskedes ofta kompakta tomter, med rätt bärlager trots begränsat utrymme." },
+    { "slug": "markarbeten", "blurb": "Schaktning och grävning anpassad efter de smala tomter och tätt bebyggda kvarter som är typiska för trädgårdsstaden." },
+    { "slug": "dranering", "blurb": "Många hus i Enskede är byggda på 1910–30-talet — originaldräneringen är i regel långt förbi sin livslängd." }
+  ]
+}

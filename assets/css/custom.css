@@ -1,21 +1,50 @@
 /* ============================================
-   NEXT TEAM — Custom CSS
-   Färger: Navy #1C2E4A | Orange #F47C20
+   HANINGE GRÄVTJÄNST AB — Custom CSS
+   Färger: Antracit #1A1A1A | Grävmaskinsgult #F5B400
+   Variabelnamnen (--nt-navy/--nt-orange) är kvar från den ursprungliga
+   mallen av historiska skäl, men pekar nu på den nya profilen — bytte inte
+   namn för att undvika att röra om i alla inline-stilar i /templates.
+   VIKTIGT (kundkrav, WCAG-verifierat): mörk text (#1A1A1A) på gul bakgrund
+   ger ~9.5:1 kontrast — vit text på gult klarar INTE AA-kravet. Gult text-
+   på-ljus-botten är också ett problem (#F5B400 på vitt ≈ 1.8:1, långt under
+   AA), så gult används bara till bakgrunder/kanter/ikoner/hover — aldrig
+   som textfärg på ljus botten. Se längre ner var textfärg därför pekar på
+   --nt-navy (mörk) istället för --nt-orange på ljusa sektioner.
    ============================================ */
 
 /* --- CSS Variables / Brand Colors --- */
 :root {
-  --nt-navy:        #1C2E4A;
-  --nt-navy-dark:   #152238;
-  --nt-navy-light:  #243a5e;
-  --nt-orange:      #F47C20;
-  --nt-orange-dark: #d96a10;
-  --nt-orange-light:#f9a05a;
+  --nt-navy:        #1A1A1A; /* antracit — rubriker, brödtext, header/footer-bakgrund */
+  --nt-navy-dark:   #0F0F0F; /* mörkare antracit, för gradient-variation */
+  --nt-navy-light:  #333333; /* ljusare antracit, för gradient-variation */
+  --nt-orange:      #F5B400; /* grävmaskinsgult — CTA, highlights, ikoner, hover */
+  --nt-orange-dark: #D99A00; /* hover/active på gula element */
+  --nt-orange-light:#FFF4D6; /* ljus gul tint — bakgrundstoner, badges, ljus text på mörk botten */
   --nt-white:       #ffffff;
-  --nt-gray-light:  #F5F6F8;
-  --nt-gray:        #6c757d;
-  --nt-text:        #1C2E4A;
+  --nt-gray-light:  #E5E5E5; /* kantlinjer, sektionsbakgrunder, kort */
+  --nt-gray:        #4A4A4A; /* sekundär text */
+  --nt-text:        #1A1A1A;
 }
+
+/* --- Typografi ---
+   Bytt ut budgeto-mallens DM Sans/DM Serif Display (generisk SaaS-look) mot
+   Archivo (rubriker — robust, kantig grotesk med industriell karaktär) och
+   Barlow (brödtext — stadig, lättläst, inte trendig/rundad). Definierar en
+   medveten typskala med tydliga vikter istället för bara bold/normal. */
+:root {
+  --tp-ff-body: 'Barlow', sans-serif;
+  --tp-ff-heading: 'Archivo', sans-serif;
+  --tp-ff-dm: 'Archivo', sans-serif;
+  --tp-ff-p: 'Barlow', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 { font-family: var(--tp-ff-heading); letter-spacing: -0.01em; }
+h1 { font-weight: 800; }
+h2 { font-weight: 800; }
+h3, h4 { font-weight: 700; }
+h5, h6 { font-weight: 600; }
+body, p, a, li, input, textarea, select, button { font-family: var(--tp-ff-body); }
+.nt-eyebrow { font-family: var(--tp-ff-body); font-weight: 700; }
+.nt-step__num { font-family: var(--tp-ff-heading); }
 
 /* Bootstrap rows with large gutters (`g-5`) are wider than their container by half
    the gutter on each side, which produced ~9px of horizontal scroll on phones.
@@ -55,14 +84,15 @@ html, body {
   transition: background-color .25s ease, transform .25s ease, box-shadow .25s ease;
   background-color: var(--nt-orange) !important;
   border-color: var(--nt-orange) !important;
-  color: var(--nt-white) !important;
+  color: var(--nt-navy) !important;
 }
 .tp-btn:hover,
 .tp-btn-2:hover {
   background-color: var(--nt-orange-dark) !important;
   border-color: var(--nt-orange-dark) !important;
+  color: var(--nt-navy) !important;
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(244,124,32,0.30);
+  box-shadow: 0 10px 24px rgba(245,180,0,0.35);
 }
 
 /* Secondary / outline button */
@@ -82,13 +112,21 @@ html, body {
 .tp-main-menu > nav > ul > li > a,
 .tpoffcanvas .tp-offcanvas-menu a { text-transform: none !important; }
 
-/* Off-canvas (mobile) menu links: navy by default, orange for active/hover */
+/* Off-canvas (mobile) menu links: dark by default. Yellow text on the white
+   off-canvas background fails WCAG AA (~1.8:1), so hover uses the darker
+   accent shade and the persistent "active" state stays dark with a yellow
+   underline instead of switching the text itself to yellow. */
 .tpoffcanvas .tp-offcanvas-menu nav ul li a { color: var(--nt-navy) !important; }
-.tpoffcanvas .tp-offcanvas-menu nav ul li a:hover,
-.tpoffcanvas .tp-offcanvas-menu nav ul li.active > a { color: var(--nt-orange) !important; }
+.tpoffcanvas .tp-offcanvas-menu nav ul li a:hover { color: var(--nt-orange-dark) !important; }
+.tpoffcanvas .tp-offcanvas-menu nav ul li.active > a {
+  color: var(--nt-navy) !important;
+  font-weight: 700;
+  box-shadow: inset 3px 0 0 var(--nt-orange);
+  padding-left: 10px;
+}
 .tpoffcanvas .tpoffcanvas__contact-info ul { list-style: none; padding-left: 0; }
 .tpoffcanvas .tpoffcanvas__contact-info a { color: var(--nt-navy) !important; text-decoration: none; }
-.tpoffcanvas .tpoffcanvas__contact-info a:hover { color: var(--nt-orange) !important; }
+.tpoffcanvas .tpoffcanvas__contact-info a:hover { color: var(--nt-orange-dark) !important; }
 
 .tpheader {
   background-color: var(--nt-white) !important;
@@ -107,9 +145,13 @@ html, body {
 .main-menu ul li a {
   color: var(--nt-navy) !important;
 }
-.main-menu ul li a:hover,
+.main-menu ul li a:hover {
+  color: var(--nt-orange-dark) !important;
+}
 .main-menu ul li.active > a {
-  color: var(--nt-orange) !important;
+  color: var(--nt-navy) !important;
+  box-shadow: inset 0 -2px 0 var(--nt-orange);
+  padding-bottom: 4px;
 }
 .tp-header-btn .tp-btn {
   background-color: var(--nt-orange) !important;
@@ -174,7 +216,7 @@ html, body {
 .nt-megamenu__col a i {
   width: 16px;
   text-align: center;
-  color: var(--nt-orange);
+  color: var(--nt-orange-dark);
   font-size: .85rem;
   flex-shrink: 0;
 }
@@ -291,22 +333,35 @@ html, body {
   margin-bottom: 36px;
 }
 
-/* --- Hero utan video (Haninge Grävtjänst har ingen film ännu) ---
-   Återanvänder .nt-hero-content för textstilar, men utan logo-intro/fade-
-   sekvensen som är byggd kring videons uppspelningstajming. */
+/* --- Hero med riktigt projektfoto som bakgrund (background-image sätts
+   inline per sida via site-data) — ingen film ännu, men ett äkta foto
+   istället för en generisk gradient. Mörk gradient-overlay håller texten
+   läsbar oavsett vilket foto som används. */
 .nt-hero-static {
   position: relative;
   min-height: 78vh;
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--nt-navy) 0%, var(--nt-navy-dark) 100%);
+  background-color: var(--nt-navy);
+  background-size: cover;
+  background-position: center;
+}
+.nt-hero-static::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, rgba(15,15,15,.94) 0%, rgba(15,15,15,.82) 45%, rgba(15,15,15,.55) 100%);
 }
 .nt-hero-static .nt-hero-content {
-  opacity: 1;
-  animation: none;
   padding-top: 170px;
   padding-bottom: 90px;
+  opacity: 0;
+  animation: heroFadeUp .7s ease-out .1s forwards;
+}
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 @media (max-width: 767px) {
   .nt-hero-static { min-height: auto; }
@@ -620,19 +675,19 @@ html, body {
    BUDGETO THEME REMAP
    main.css ships budgeto's demo palette (teal #1F3130 /
    peach #F8D0B3) as CSS variables. Re-point those variables at
-   the Next Team brand so every budgeto component class picks up
-   our colours without per-element overrides.
+   the Haninge Grävtjänst brand so every budgeto component class
+   picks up our colours without per-element overrides.
    ============================================================ */
 :root {
-  --tp-theme-primary:   #1C2E4A;   /* was #1f3130 teal   -> navy   */
-  --tp-theme-secondary: #FDE4CE;   /* was #f8d0b3 peach  -> orange tint */
-  --tp-grey-1: #6c757d;
+  --tp-theme-primary:   #1A1A1A;   /* was #1f3130 teal -> antracit */
+  --tp-theme-secondary: #FFF4D6;   /* was #f8d0b3 peach -> ljus gul tint */
+  --tp-grey-1: #4A4A4A;
   --tp-grey-2: #4a5568;
   --tp-grey-3: #e9edf3;
-  --tp-grey-4: #F5F6F8;
-  --tp-common-white-2: #F5F6F8;
-  --tp-border-1: rgba(28, 46, 74, 0.10);
-  --tp-border-2: rgba(28, 46, 74, 0.12);
+  --tp-grey-4: #E5E5E5;
+  --tp-common-white-2: #E5E5E5;
+  --tp-border-1: rgba(0, 0, 0, 0.10);
+  --tp-border-2: rgba(0, 0, 0, 0.12);
 }
 
 /* Budgeto renders CTA buttons in the primary colour; Next Team's
@@ -641,12 +696,12 @@ html, body {
 a[class*="tp-btn-"].tp-bg-theme-primary,
 button[class*="tp-btn-"].tp-bg-theme-primary {
   background-color: var(--nt-orange) !important;
-  color: var(--nt-white) !important;
+  color: var(--nt-navy) !important;
 }
 a[class*="tp-btn-"].tp-bg-theme-primary:hover,
 button[class*="tp-btn-"].tp-bg-theme-primary:hover {
   background-color: var(--nt-orange-dark) !important;
-  color: var(--nt-white) !important;
+  color: var(--nt-navy) !important;
 }
 /* Outlined buttons */
 a[class*="tp-btn-"].border-full-1 {
@@ -662,13 +717,13 @@ a[class*="tp-btn-"].border-full-1:hover {
 a[class*="tp-btn-"].tp-bg-common-white { color: var(--nt-navy) !important; }
 a[class*="tp-btn-"].tp-bg-common-white:hover {
   background-color: var(--nt-orange) !important;
-  color: var(--nt-white) !important;
+  color: var(--nt-navy) !important;
 }
-/* Soft orange-tint accent button */
+/* Soft yellow-tint accent button */
 a[class*="tp-btn-"].tp-bg-theme-secondary { color: var(--nt-navy) !important; }
 a[class*="tp-btn-"].tp-bg-theme-secondary:hover {
   background-color: var(--nt-orange) !important;
-  color: var(--nt-white) !important;
+  color: var(--nt-navy) !important;
 }
 
 /* Budgeto's serif italic accent inside headings -> brand orange */
@@ -695,14 +750,17 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 .tp-counter-wrap h2, .tp-about-4-count-item h2 { color: var(--nt-navy) !important; }
 
 /* Section eyebrow label */
+/* Gult som brödtextfärg på ljus botten klarar inte WCAG AA (~1.8:1) — eyebrow-
+   labels på ljusa sektioner får därför mörk text, med en gul accentprick
+   framför för att fortfarande signalera varumärkesfärgen. */
 .nt-eyebrow {
-  font-weight: 500;
-  font-size: 16px;
-  color: var(--nt-orange);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--nt-gray);
   display: inline-block;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
-.nt-eyebrow-light { color: var(--nt-orange-light); }
+.nt-eyebrow-light { color: rgba(255,255,255,0.65); }
 
 /* ============================================================
    NEXT TEAM SECTION HELPERS (budgeto layouts, brand skin)
@@ -710,12 +768,12 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 
 /* Dark band used for hero/CTA/breadcrumb, painted with the
    recoloured budgeto texture set in assets/img/ */
-.nt-dark-band { background-color: var(--nt-navy); position: relative; }
+.nt-dark-band { background-color: var(--nt-navy); background-size: cover; background-position: center; position: relative; }
 .nt-dark-band::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(21,34,56,0.92) 0%, rgba(21,34,56,0.72) 55%, rgba(21,34,56,0.55) 100%);
+  background: linear-gradient(90deg, rgba(15,15,15,0.92) 0%, rgba(15,15,15,0.75) 55%, rgba(15,15,15,0.6) 100%);
 }
 .nt-dark-band > * { position: relative; z-index: 2; }
 
@@ -744,8 +802,8 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 .nt-icon-card__icon {
   width: 58px; height: 58px;
   border-radius: 14px;
-  background: rgba(244,124,32,0.12);
-  color: var(--nt-orange);
+  background: var(--nt-orange-light);
+  color: var(--nt-navy);
   display: flex; align-items: center; justify-content: center;
   font-size: 1.4rem;
   margin-bottom: 22px;
@@ -753,22 +811,22 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 }
 .nt-icon-card:hover .nt-icon-card__icon {
   background: var(--nt-orange);
-  color: var(--nt-white);
+  color: var(--nt-navy);
 }
 .nt-icon-card h3, .nt-icon-card h4 {
   font-size: 1.15rem; font-weight: 700;
   color: var(--nt-navy); margin-bottom: 10px;
 }
 .nt-icon-card h3 a, .nt-icon-card h4 a { color: inherit; text-decoration: none; }
-.nt-icon-card h3 a:hover, .nt-icon-card h4 a:hover { color: var(--nt-orange); }
+.nt-icon-card h3 a:hover, .nt-icon-card h4 a:hover { text-decoration: underline; }
 .nt-icon-card p { color: var(--nt-gray); font-size: .95rem; margin-bottom: 0; }
 .nt-icon-card__link {
   display: inline-flex; align-items: center; gap: 8px;
   margin-top: 18px; font-weight: 600; font-size: .9rem;
-  color: var(--nt-orange); text-decoration: none;
+  color: var(--nt-navy); text-decoration: none;
 }
-.nt-icon-card__link:hover { color: var(--nt-navy); }
-.nt-icon-card__link i { transition: transform .25s ease; }
+.nt-icon-card__link:hover { text-decoration: underline; }
+.nt-icon-card__link i { color: var(--nt-orange-dark); transition: transform .25s ease; }
 .nt-icon-card__link:hover i { transform: translateX(4px); }
 
 /* Numbered step (process / how it works) */
@@ -783,10 +841,10 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 .nt-step__num {
   position: absolute; top: -22px; left: 30px;
   width: 46px; height: 46px; border-radius: 50%;
-  background: var(--nt-orange); color: var(--nt-white);
+  background: var(--nt-orange); color: var(--nt-navy);
   display: flex; align-items: center; justify-content: center;
   font-weight: 700; font-size: 1.05rem;
-  box-shadow: 0 8px 20px rgba(244,124,32,0.35);
+  box-shadow: 0 8px 20px rgba(245,180,0,0.35);
 }
 .nt-step h4 { color: var(--nt-navy); font-weight: 700; font-size: 1.1rem; margin: 14px 0 10px; }
 .nt-step p { color: var(--nt-gray); font-size: .93rem; margin: 0; }
@@ -846,6 +904,8 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 .nt-quote__author span { color: var(--nt-gray); font-size: .85rem; }
 
 /* Sticky sidebar card used on service detail pages */
+.nt-side-sticky { position: sticky; top: 110px; }
+@media (max-width: 991.98px) { .nt-side-sticky { position: static; } }
 .nt-side-card {
   background: var(--nt-gray-light);
   border-radius: 12px;
@@ -853,8 +913,12 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
   margin-bottom: 22px;
 }
 .nt-side-card--navy { background: var(--nt-navy); }
-.nt-side-card--navy h5, .nt-side-card--navy h4 { color: var(--nt-white); }
 .nt-side-card h5 { color: var(--nt-navy); font-weight: 700; margin-bottom: 16px; font-size: 1.05rem; }
+/* Högre specificitet (två klasser) än ".nt-side-card h5" ovan, så den vinner
+   oavsett källordning — .nt-side-card--navy h5 hade samma specificitet som
+   .nt-side-card h5 och förlorade eftersom den kom först i filen. */
+.nt-side-card.nt-side-card--navy h5,
+.nt-side-card.nt-side-card--navy h4 { color: var(--nt-white); }
 .nt-side-nav { list-style: none; padding: 0; margin: 0; }
 .nt-side-nav li { margin-bottom: 2px; }
 .nt-side-nav li a {
@@ -875,6 +939,15 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
   border-left: 4px solid var(--nt-orange);
   border-radius: 10px;
   padding: 28px 30px;
+}
+.nt-highlight__icon {
+  width: 42px; height: 42px;
+  border-radius: 10px;
+  background: var(--nt-orange-light);
+  color: var(--nt-navy);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.05rem;
+  margin-bottom: 14px;
 }
 .nt-highlight h5 { color: var(--nt-navy); font-weight: 700; margin-bottom: 8px; }
 .nt-highlight p { color: var(--nt-gray); margin: 0; }
@@ -930,7 +1003,7 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 .tp-theme-color { color: var(--nt-orange) !important; }
 .tp-theme-bg { background-color: var(--nt-orange) !important; }
 .tp-navy-bg { background-color: var(--nt-navy) !important; }
-a { color: var(--nt-orange); }
+a { color: var(--nt-navy); }
 a:hover { color: var(--nt-orange-dark); }
 
 /* Back to top */
@@ -981,11 +1054,170 @@ a:hover { color: var(--nt-orange-dark); }
 .nt-faq-item summary::after {
   content: '+';
   float: right;
-  color: var(--nt-orange);
+  color: var(--nt-navy);
   font-weight: 700;
 }
 .nt-faq-item[open] summary::after { content: '\2212'; }
 .nt-faq-item p { color: var(--nt-gray); margin: 14px 0 0; line-height: 1.7; }
+
+/* --- Flytande "Ring nu"-knapp ---
+   Cirkel med bara ikon på mobil (där den gör mest nytta — folk ringer
+   hellre än fyller i formulär), utökas till pill med text på större skärmar. */
+.nt-floating-call {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--nt-orange);
+  color: var(--nt-navy) !important;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 10px 28px rgba(0,0,0,.28);
+  transition: transform .2s ease, box-shadow .2s ease, width .2s ease, border-radius .2s ease;
+}
+.nt-floating-call i { font-size: 1.15rem; flex-shrink: 0; }
+.nt-floating-call__text { display: none; white-space: nowrap; }
+.nt-floating-call:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,0,0,.32);
+  color: var(--nt-navy) !important;
+}
+@media (min-width: 576px) {
+  .nt-floating-call {
+    width: auto;
+    height: auto;
+    padding: 14px 22px;
+    border-radius: 30px;
+  }
+  .nt-floating-call__text { display: inline; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nt-floating-call { transition: none; }
+}
+/* Undvik att knappen hamnar bakom cookie-bannern medan den visas. */
+body:has(#nt-cookie-banner.nt-show) .nt-floating-call { bottom: 100px; }
+@media (max-width: 767px) {
+  body:has(#nt-cookie-banner.nt-show) .nt-floating-call { bottom: 130px; }
+}
+
+/* --- Källor och läsvärt (E-E-A-T, utlänkar till myndigheter m.fl.) --- */
+.nt-sources {
+  border-top: 1px solid #e6eaf0;
+  padding-top: 22px;
+}
+.nt-sources h6 {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--nt-gray);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-bottom: 12px;
+}
+.nt-sources ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 8px 24px; }
+.nt-sources a {
+  font-size: .88rem;
+  color: var(--nt-gray);
+  text-decoration: underline;
+}
+.nt-sources a:hover { color: var(--nt-navy); }
+
+/* --- Statistik-block (siffror på startsidan) — centrerat med ikon ovanför --- */
+.nt-stat-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.nt-stat-block__icon {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--nt-navy);
+  color: var(--nt-orange);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+/* --- "Vad ingår i tjänsten?" --- */
+.nt-inclusion {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--nt-gray-light);
+  border-radius: 10px;
+  padding: 16px 20px;
+  height: 100%;
+}
+.nt-inclusion i { color: var(--nt-orange-dark); margin-top: 3px; flex-shrink: 0; }
+.nt-inclusion span { color: var(--nt-navy); font-weight: 500; }
+
+/* --- Relaterade tjänster --- */
+.nt-related-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 22px;
+  border: 1px solid #e6eaf0;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: border-color .2s ease, background .2s ease;
+}
+.nt-related-card:hover { border-color: var(--nt-orange-dark); background: var(--nt-gray-light); }
+.nt-related-card__icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  background: var(--nt-orange-light); color: var(--nt-navy);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 1.1rem;
+}
+.nt-related-card__label { display: block; font-size: .78rem; color: var(--nt-gray); }
+.nt-related-card__name { display: block; font-weight: 700; color: var(--nt-navy); font-size: 1rem; }
+.nt-related-card__arrow { margin-left: auto; color: var(--nt-gray); flex-shrink: 0; }
+
+/* --- Satellitdomän-länk (tjänstekort) --- */
+.nt-satellite-link {
+  font-size: .82rem;
+  color: var(--nt-gray) !important;
+  margin: 10px 0 0 !important;
+}
+.nt-satellite-link i { margin-right: 5px; font-size: .78rem; }
+.nt-satellite-link a { color: var(--nt-gray) !important; text-decoration: underline; }
+.nt-satellite-link a:hover { color: var(--nt-navy) !important; }
+
+/* --- Tillgänglighet --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #1A1A1A;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.tp-btn:focus-visible,
+.tp-btn-2:focus-visible,
+a[class*="tp-btn-"]:focus-visible {
+  outline: 3px solid #1A1A1A;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .nt-hero-content, .wow { opacity: 1 !important; transform: none !important; }
+}
 
 /* --- TODO-placeholder-markering (tas bort när riktigt innehåll finns) --- */
 .nt-todo {

@@ -1,16 +1,20 @@
 const { buildMetaTags } = require('../../lib/metadata');
 const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml } = require('../../lib/html');
+const { renderSatelliteLink } = require('../partials/satelliteLink');
 
-function serviceCard(svc) {
+function serviceCard(site, svc, tjansterBySlug) {
   if (svc.hasPage) {
+    const tjanst = tjansterBySlug && tjansterBySlug[svc.slug];
+    const shortDescription = tjanst ? tjanst.shortDescription : '[TODO: kort beskrivning från kund]';
     return `
         <div class="col-xl-4 col-md-6">
-          <div class="nt-icon-card position-relative wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".9s">
+          <div class="nt-icon-card position-relative">
             <div class="nt-icon-card__icon"><i class="fas ${svc.icon}"></i></div>
             <h4><a href="/tjanster/${svc.slug}">${escapeHtml(svc.name)}</a></h4>
-            <p>[TODO: kort beskrivning från kund]</p>
+            <p>${escapeHtml(shortDescription)}</p>
             <a class="nt-icon-card__link" href="/tjanster/${svc.slug}">Läs mer <i class="fas fa-arrow-right"></i></a>
+            ${renderSatelliteLink(site, svc.slug)}
           </div>
         </div>`;
   }
@@ -28,9 +32,9 @@ function serviceCard(svc) {
 /**
  * @param {object} site - data/site.json
  */
-function renderTjansterHubPage(site) {
-  const title = `Tjänster — Mark- och anläggningsarbete i ${site.primaryLocation} | ${site.name}`;
-  const description = `Se alla tjänster hos ${site.name}: dränering, plattsättning, markarbeten, husgrunder, finplanering, asfaltering och grävtjänst i ${site.primaryLocation} och ${site.homeBase}.`;
+function renderTjansterHubPage(site, tjansterBySlug) {
+  const title = `Våra tjänster — ${site.name}`;
+  const description = `Dränering, plattsättning, husgrundsarbete, finplanering, markanläggning, asfaltering och markarbeten — alla våra tjänster i ${site.primaryLocation} och ${site.homeBase}.`;
 
   const metaHtml = buildMetaTags({ site, title, description, path: '/tjanster' });
 
@@ -68,7 +72,7 @@ function renderTjansterHubPage(site) {
           <p style="color:var(--nt-gray);font-size:1.05rem;">${escapeHtml(site.name)} utför mark- och anläggningsarbete i hela ${escapeHtml(site.primaryLocation)}, med ${escapeHtml(site.homeBase)} som hemort. Varje tjänst har en egen sida med mer information — övriga tjänster publiceras löpande.</p>
         </div>
       </div>
-      <div class="row g-4">${site.services.map(serviceCard).join('')}
+      <div class="row g-4">${site.services.map((svc) => serviceCard(site, svc, tjansterBySlug)).join('')}
       </div>
     </div>
   </div>`;

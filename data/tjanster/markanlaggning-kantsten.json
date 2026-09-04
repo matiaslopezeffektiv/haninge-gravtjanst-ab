@@ -1,0 +1,141 @@
+{
+  "slug": "markanlaggning-kantsten",
+  "name": "Markanläggning & Kantsten",
+  "targetLocation": "Stockholm",
+  "h1": "Markanläggning & Kantsten Stockholm",
+  "metaTitle": "Markanläggning & Kantsten Stockholm — Haninge Grävtjänst AB",
+  "metaDescription": "Markanläggning och kantstenssättning i Stockholm av en grävfirma med över 10 års erfarenhet — för nybyggnation, upprustning av utemiljö och BRF:er.",
+  "shortDescription": "Markanläggning och kantstenssättning för privatpersoner, företag och BRF:er i Stockholm.",
+  "longDescription": [
+    "Kantsten och markanläggning ger en yta struktur — den avgränsar gångar, planteringar och uppfarter, håller kvar bärlager och gör en tomt eller gård lättare att sköta. Haninge Grävtjänst AB utför markanläggning och kantstenssättning i hela Stockholm.",
+    "Vi arbetar både med nybyggnationsprojekt och med upprustning av befintliga utemiljöer, samt med BRF:er som vill strukturera upp gemensamma ytor. Rätt bärighet, <a href=\"/tjanster/dranering\">dränering</a> och lutning i marken under är lika viktigt som själva kantstenen.",
+    "Med 200+ genomförda projekt och över 10 års erfarenhet väljer vi kantsten och uppbyggnad utifrån var ytan ligger och hur den belastas — en gjuten kantsten vid en bilburen uppfart har andra krav än kantsten runt en rabatt. Arbetet passar också bra att kombinera med <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering</a> av de omkringliggande ytorna — <a href=\"/kontakt\">kontakta oss</a> för en kostnadsfri bedömning."
+  ],
+  "icon": "fa-ruler-combined",
+  "heroImage": "/assets/img/hero/markanlaggning-projekt-1.webp",
+  "heroImageAlt": "Grusad markyta med ny uppfart vid villa",
+  "introImage": "/assets/img/hero/markanlaggning-projekt-2.webp",
+  "introImageAlt": "Nyanlagd grusyta vid vit villa",
+
+  "benefits": [
+    "Rätt bärighet, dränering och lutning i marken under kantstenen",
+    "Både nyanläggning och upprustning av befintliga ytor",
+    "Erfarenhet av BRF-projekt med gemensamma ytor",
+    "200+ genomförda mark- och anläggningsprojekt i Stockholmsområdet"
+  ],
+
+  "inclusions": [
+    "Schaktning och bärlager anpassat efter belastning",
+    "Dränering och rätt lutning i marken",
+    "Sättning av kantsten (betong, granit eller GA-kantsten)",
+    "Anpassning mot gräsytor och planteringar",
+    "Ytskikt av grus, sten eller asfalt enligt önskemål"
+  ],
+
+  "signs": {
+    "heading": "Tecken på att marken behöver ses över",
+    "intro": "En markyta utan fungerande kantsten och bärlager rör sig ofta gradvis, år för år, snarare än plötsligt. Vanliga tecken att hålla utkik efter:",
+    "items": [
+      "Grus eller bärlager \"vandrar\" ut på gräsmattan",
+      "Uppfarten sjunker eller blir ojämn",
+      "Vatten samlas på fel ställen efter regn",
+      "Kantstenen är sprucken, lutar eller saknas helt",
+      "Ytan ser ostrukturerad och sliten ut"
+    ],
+    "image": "/assets/img/hero/plattsattning-projekt-3.webp",
+    "imageAlt": "Kantsten och trappsteg vid ny uteplats"
+  },
+
+  "whyImportant": [
+    "Kantsten gör mer nytta än den syns för. Utan den vandrar bärlagret i en grusad uppfart sakta ut på gräsmattan, gräs och ogräs tränger in från sidorna, och gränsen mellan olika ytor suddas ut år för år. Med rätt kantsten håller markanläggningen sin form betydligt längre.",
+    "En genomtänkt markanläggning handlar i grunden om avvattning och struktur — utan rätt lutning och bärighet i marken spelar det ingen roll hur fin kantstenen är, ytan kommer ändå att röra sig eller samla vatten fel."
+  ],
+
+  "whyUs": {
+    "intro": "En markanläggning som håller bygger på samma grundprinciper varje gång — det är dem vi aldrig avviker från:",
+    "items": [
+      "Vi bedömer alltid bärighet, dränering och lutning innan vi rekommenderar typ av kantsten",
+      "Erfarenhet av både nyanläggning och upprustning av äldre, redan hårdgjorda ytor",
+      "Vi tar gärna hela projekt åt BRF:er som vill strukturera upp gemensamma ytor",
+      "200+ genomförda mark- och anläggningsprojekt i Stockholmsområdet"
+    ]
+  },
+
+  "considerations": {
+    "intro": "Inför beställning av markanläggning och kantsten är följande bra att ha klart för sig:",
+    "items": [
+      "Bestäm om ytan innanför kantstenen ska bära biltrafik — det avgör hur kraftig kantstenen och bärlagret behöver vara",
+      "Tänk igenom var vatten ska ledas vid kraftigt regn innan arbetet påbörjas",
+      "Vid BRF-projekt: kartlägg vilka ytor som är gemensamma och vilka som tillhör enskilda lägenheter innan ni beställer arbetet",
+      "Räkna med att intilliggande gräsytor eller planteringar kan behöva justeras när kantstenen sätts"
+    ]
+  },
+
+  "process": [
+    { "step": 1, "title": "Kostnadsfri bedömning", "description": "Vi besöker platsen och bedömer omfattning och markförhållanden." },
+    { "step": 2, "title": "Offert", "description": "Du får en tydlig offert utan bindningstid." },
+    { "step": 3, "title": "Markarbete och kantstenssättning", "description": "Schaktning, bärlager och sättning av kantsten enligt plan." },
+    { "step": 4, "title": "Slutbesiktning", "description": "Genomgång av den färdiga ytan tillsammans med dig." }
+  ],
+
+  "faq": [
+    {
+      "question": "Vad påverkar priset för kantsten och markanläggning?",
+      "answer": "Priset beror på typ av kantsten, markförhållanden och sträckans längd. Vi ger en kostnadsfri bedömning innan vi lämnar offert."
+    },
+    {
+      "question": "Vad ingår i markanläggning?",
+      "answer": "Det beror på projektet, men vanligtvis schaktning, bärlager, dränering, kantsten och den slutliga ytan (grus, sten eller asfalt). Vi går igenom vad som behövs för just din tomt eller gård."
+    },
+    {
+      "question": "Kan ni hjälpa vår BRF att rusta upp gårdens ytor?",
+      "answer": "Ja, vi tar gärna hela projekt åt bostadsrättsföreningar — från markarbete och kantsten till färdig yta."
+    },
+    {
+      "question": "Krävs marklov för att lägga om ytor och kantsten?",
+      "answer": "Vanlig upprustning av redan hårdgjorda ytor kräver oftast inte marklov, men större schaktning eller höjdändringar av tomten kan göra det. Kontrollera med din kommun vad som gäller för ditt projekt."
+    },
+    {
+      "question": "Vilken typ av kantsten passar bäst?",
+      "answer": "Betongkantsten är kostnadseffektiv och vanlig vid uppfarter, medan granitkantsten är mer slitstark och ofta används vid gemensamma ytor eller där utseendet väger tyngre. Vi rekommenderar utifrån användning och budget."
+    },
+    {
+      "question": "Kan ni bara sätta kantsten utan att göra om hela ytan?",
+      "answer": "Ja, det går bra. Vi bedömer alltid det befintliga bärlagret runt kantstenen först, eftersom en ny kantsten sällan håller länge på ett dåligt underlag."
+    },
+    {
+      "question": "Är markförhållandena olika beroende på var i Stockholm tomten ligger?",
+      "answer": "Ja, tomter med lerjord (vanligt i vissa lägre liggande delar av Stockholm) rör sig mer med årstiderna än tomter på fastare mark eller berg. Det påverkar hur kantstenen behöver fundamenteras för att inte lossna eller luta över tid."
+    },
+    {
+      "question": "Hur lång tid tar markanläggning med kantsten?",
+      "answer": "En normalstor uppfart tar oftast några dagar upp till en vecka, medan större gemensamma ytor kan ta längre tid. Ni får en konkret tidsplan i offerten."
+    },
+    {
+      "question": "Behöver vi göra om hela gården på en gång, eller går det att dela upp i etapper?",
+      "answer": "Det går ofta bra att dela upp arbetet, till exempel uppfart ena året och gångar/planteringar ett annat. Vi planerar gärna in etapper om budget eller tid gör det lämpligare."
+    },
+    {
+      "question": "Vad är skillnaden mellan markanläggning och finplanering?",
+      "answer": "Markanläggning handlar om den strukturella uppbyggnaden — bärlager, dränering, kantsten och ytskikt. Finplanering är steget efter, med sådant som gräsytor, plantering och belysning. Många projekt kombinerar båda, men de går också att beställa separat."
+    }
+  ],
+
+  "referenceProjects": [
+    {
+      "title": "Ny grusad uppfart",
+      "description": "Markanläggning med ny grusad uppfart och parkeringsyta vid villa.",
+      "image": "/assets/img/hero/markanlaggning-projekt-1.webp"
+    },
+    {
+      "title": "Kantsten och trappa vid uteplats",
+      "description": "Gjuten kantsten och trappsteg i anslutning till ny uteplats.",
+      "image": "/assets/img/hero/plattsattning-projekt-3.webp"
+    }
+  ],
+
+  "sourceKeys": ["boverketMarklov", "haningeBygglov", "skatteverketFSkatt"],
+
+  "_orterSchemaNote": "Ort-objekt läggs till i nästa omgång — endast för stadsdelar med bekräftad sökefterfrågan (se data/site.json areasServed).",
+  "orter": []
+}

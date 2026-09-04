@@ -1,0 +1,19 @@
+{
+  "slug": "norrmalm",
+  "name": "Norrmalm",
+  "region": "Innerstaden",
+  "h1": "Mark- och anläggningsarbeten på Norrmalm",
+  "metaTitle": "Mark- och anläggningsarbeten Norrmalm — Haninge Grävtjänst AB",
+  "metaDescription": "Innergårdsrenovering, dränering och markanläggning på Norrmalm — anpassat efter äldre sekelskiftesfastigheter. Kostnadsfri bedömning.",
+  "shortDescription": "Central stenstad med äldre sekelskiftesfastigheter och gemensamma innergårdar.",
+  "intro": [
+    "Norrmalm är en av Stockholms mest centrala stadsdelar, präglad av tät stenstadsbebyggelse med fastigheter från sekelskiftet och framåt. De flesta markprojekt här handlar om gemensamma innergårdar snarare än privata trädgårdar, och äldre källare och grundmurar är vanliga.",
+    "Vi utför innergårdsrenovering, dränering och markanläggning åt bostadsrättsföreningar och fastighetsägare på Norrmalm, med den försiktighet som krävs kring äldre byggnader i tät stadsmiljö."
+  ],
+  "whyUs": "Vi har erfarenhet av äldre sekelskiftesfastigheter och de källar- och fuktproblem som ofta hör till dem, samt av att samordna arbete i trånga innergårdar mitt i city.",
+  "relevantServices": [
+    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av gemensamma innergårdar mellan äldre fastigheter, med hänsyn till begränsat utrymme." },
+    { "slug": "markanlaggning-kantsten", "blurb": "Markanläggning och kantsten för gårdar och gångar i den centrala stenstaden." },
+    { "slug": "dranering", "blurb": "Äldre källare i sekelskiftesfastigheter har ofta bristfällig eller obefintlig ursprunglig dränering." }
+  ]
+}

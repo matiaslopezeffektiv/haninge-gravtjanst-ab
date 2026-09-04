@@ -1,16 +1,33 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
-const { escapeHtml, escapeAttr, isPlaceholder } = require('../../lib/html');
+const { buildLocalBusinessSchema, buildFaqSchema, renderSchemaGraph } = require('../../lib/schema');
+const { escapeHtml, escapeAttr } = require('../../lib/html');
+const { renderTrustBadges } = require('../partials/trustBadges');
+const { renderProcessSteps } = require('../partials/processSteps');
+const { renderCtaBand } = require('../partials/ctaBand');
+const { renderPromiseBlock } = require('../partials/promiseBlock');
+const { renderSatelliteLink } = require('../partials/satelliteLink');
+const { renderTestimonials } = require('../partials/testimonials');
 
-function serviceCard(svc) {
+function faqItem(item) {
+  return `
+        <details class="nt-faq-item">
+          <summary>${escapeHtml(item.question)}</summary>
+          <p>${escapeHtml(item.answer)}</p>
+        </details>`;
+}
+
+function serviceCard(site, svc, tjansterBySlug) {
   if (svc.hasPage) {
+    const tjanst = tjansterBySlug && tjansterBySlug[svc.slug];
+    const shortDescription = tjanst ? tjanst.shortDescription : '[TODO: kort beskrivning från kund]';
     return `
         <div class="col-xl-4 col-md-6">
-          <div class="nt-icon-card position-relative wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".9s">
+          <div class="nt-icon-card position-relative">
             <div class="nt-icon-card__icon"><i class="fas ${svc.icon}"></i></div>
             <h4><a href="/tjanster/${svc.slug}">${escapeHtml(svc.name)}</a></h4>
-            <p>[TODO: kort beskrivning från kund]</p>
+            <p>${escapeHtml(shortDescription)}</p>
             <a class="nt-icon-card__link" href="/tjanster/${svc.slug}">Läs mer <i class="fas fa-arrow-right"></i></a>
+            ${renderSatelliteLink(site, svc.slug)}
           </div>
         </div>`;
   }
@@ -25,27 +42,14 @@ function serviceCard(svc) {
         </div>`;
 }
 
-function trustBadge(icon, label, value) {
-  const valueHtml = isPlaceholder(value) ? `<b class="nt-todo">${escapeHtml(value)}</b>` : escapeHtml(value);
-  return `
-          <div class="col-lg-4 col-md-6 tp-counter-3-border">
-            <div class="tp-feature-3-wrap tpshake-wrap d-flex md-space wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".9s">
-              <span class="mr-25 nt-icon-card__icon" style="margin-bottom:0;flex-shrink:0;"><i class="fas ${icon}"></i></span>
-              <div>
-                <h3 class="fs-24 fw-600 mb-10" style="color:var(--nt-navy);">${escapeHtml(label)}</h3>
-                <p style="color:var(--nt-gray);margin:0;">${valueHtml}</p>
-              </div>
-            </div>
-          </div>`;
-}
-
-function statBlock(label, value) {
+function statBlock(icon, label, value) {
   const valueHtml = value == null
     ? '<b class="nt-todo">TODO</b>'
     : `<span>${escapeHtml(String(value))}</span>`;
   return `
         <div class="col-xl-3 col-lg-6 col-md-6">
-          <div class="tp-counter-wrap d-flex align-items-center mb-30 wow fadeInUp" data-wow-delay=".1s" data-wow-duration=".9s">
+          <div class="tp-counter-wrap nt-stat-block mb-30">
+            <span class="nt-stat-block__icon"><i class="fas ${icon}"></i></span>
             <div class="nt-stat-light">
               <h3>${valueHtml}</h3>
               <p>${escapeHtml(label)}</p>
@@ -57,30 +61,31 @@ function statBlock(label, value) {
 /**
  * @param {object} site - data/site.json
  */
-function renderHomePage(site) {
+function renderHomePage(site, tjansterBySlug) {
   const metaHtml = buildMetaTags({
     site,
-    title: `${site.name} — Mark- & anläggningsarbeten i Stockholm`,
-    description: site.description,
+    title: `Grävfirma i ${site.primaryLocation} — ${site.name}`,
+    description: `${site.name} utför dränering, plattsättning, husgrunder och finplanering i ${site.primaryLocation} och ${site.homeBase}. Över ${site.trustSignals.yearsExperience} års erfarenhet, ${site.trustSignals.projectsCompleted}+ projekt.`,
     path: '/',
   });
 
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
     { '@type': 'WebSite', name: site.name, url: site.url, inLanguage: site.language },
+    buildFaqSchema(site.faq),
   ]);
 
   const t = site.trustSignals;
 
   const bodyContent = `
   <!-- =============== HERO =============== -->
-  <section class="nt-hero-static">
+  <section class="nt-hero-static" style="background-image:url('${escapeHtml(site.heroImage)}');" role="img" aria-label="${escapeHtml(site.heroImageAlt)}">
     <div class="container nt-hero-content">
       <div class="row">
         <div class="col-xl-8 col-lg-10">
           <span class="nt-eyebrow nt-eyebrow-light">Mark &amp; anläggning i ${escapeHtml(site.primaryLocation)}</span>
           <h1>Grävfirma i <span>${escapeHtml(site.primaryLocation)}</span> — från dränering till färdig mark</h1>
-          <p>${escapeHtml(site.name)} utför mark- och anläggningsarbeten åt privatpersoner, företag och BRF:er i hela ${escapeHtml(site.primaryLocation)}, med ${escapeHtml(site.homeBase)} som hemort. <b class="nt-todo">[TODO: riktig text från kund]</b></p>
+          <p>${escapeHtml(site.tagline)}. ${escapeHtml(site.name)} utför mark- och anläggningsarbeten åt privatpersoner, företag och BRF:er i hela ${escapeHtml(site.primaryLocation)}, med ${escapeHtml(site.homeBase)} som hemort.</p>
           <div class="d-flex flex-wrap gap-3 mb-45">
             <a href="/kontakt" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500">
               <span class="d-flex align-items-center justify-content-center">
@@ -108,34 +113,23 @@ function renderHomePage(site) {
   </section>
   <!-- =============== /HERO =============== -->
 
-  <!-- =============== TRYGGHETSPUNKTER =============== -->
-  <div class="tp-feature-area tp-feature-4-wrap pt-90 pb-60 fix" style="background:var(--nt-white);">
-    <div class="container">
-      <div class="tp-border-bottom pb-30">
-        <div class="row gx-60">
-          ${trustBadge('fa-file-invoice', t.fSkatt.label, t.fSkatt.value)}
-          ${trustBadge('fa-shield-check', t.insurance.label, t.insurance.value)}
-          ${trustBadge('fa-certificate', 'Branschcertifiering', t.certifications[0])}
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- =============== /TRYGGHETSPUNKTER =============== -->
+  ${renderTrustBadges(site)}
 
   <!-- =============== OM OSS =============== -->
   <div class="tp-about-area pt-130 pb-110">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-6 mb-40">
-          <div class="p-relative mr-50" style="min-height:340px;border-radius:14px;background:linear-gradient(135deg,var(--nt-navy) 0%,var(--nt-navy-light) 100%);display:flex;align-items:center;justify-content:center;">
-            <b class="nt-todo" style="font-size:1rem;">[TODO: bild från kund — pågående markarbete]</b>
+          <div class="p-relative mr-50" style="min-height:340px;border-radius:14px;overflow:hidden;">
+            <img src="/assets/img/hero/plattsattning-projekt-1.webp" alt="Färdigställd stensättning vid villa" style="width:100%;height:100%;min-height:340px;object-fit:cover;display:block;">
           </div>
         </div>
         <div class="col-lg-6 mb-40">
           <div class="tp-about-2-content tp-about-4-content ml-30">
             <span class="nt-eyebrow">Om ${escapeHtml(site.shortName)}</span>
-            <h2 class="mb-25 fs-xl-40 fs-sm-36 wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.2s">Lokal grävfirma med ${escapeHtml(site.primaryLocation)} som arbetsfält</h2>
-            <p class="mb-20 nt-todo-block">[TODO: riktig text från kund] Beskriv företagets historia, erfarenhet och specialisering inom mark- och anläggningsarbete.</p>
+            <h2 class="mb-25 fs-xl-40 fs-sm-36">Lokal grävfirma med ${escapeHtml(site.primaryLocation)} som arbetsfält</h2>
+            <p class="mb-20">Med över ${escapeHtml(String(t.yearsExperience))} års erfarenhet och ${escapeHtml(String(t.projectsCompleted))}+ genomförda projekt har vi sett de flesta typer av markförhållanden som Stockholmsområdet har att erbjuda — från lerjord i lägre liggande områden till berg i dagen på höjderna. Vi specialiserar oss på <a href="/tjanster/dranering">dränering</a>, mark- och anläggningsarbete, och tar hela projekt från första spadtag till färdig yta.</p>
+            <p class="mb-20">Som lokal grävfirma med hemort i ${escapeHtml(site.homeBase)} känner vi till de markförhållanden som är vanliga i olika delar av regionen, vilket gör att vi kan planera rätt uppbyggnad — bärlager, dränering och lutning — redan från start istället för att behöva göra om arbetet i efterhand. Vi tar både fristående uppdrag och helhetsprojekt där flera <a href="/tjanster">tjänster</a> kombineras, till exempel dränering i samband med ny finplanering.</p>
             <div class="tp-about-bottom-feature mb-40 mt-30"><ul>
               <li><i class="fa-sharp fa-solid fa-check"></i> F-skattsedel och ansvarsförsäkring på plats</li>
               <li><i class="fa-sharp fa-solid fa-check"></i> Arbetar i hela ${escapeHtml(site.primaryLocation)}, hemort ${escapeHtml(site.homeBase)}</li>
@@ -161,7 +155,8 @@ function renderHomePage(site) {
       <div class="row align-items-end mb-60">
         <div class="col-lg-8">
           <span class="nt-eyebrow">Våra tjänster</span>
-          <h2 class="fs-xl-40 fs-sm-36 wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.2s">Mark- och anläggningsarbete från grund till finplanering</h2>
+          <h2 class="mb-20 fs-xl-40 fs-sm-36">Mark- och anläggningsarbete från grund till finplanering</h2>
+          <p style="color:var(--nt-gray);line-height:1.8;max-width:640px;">Vi tar hela kedjan i ett mark- eller anläggningsprojekt — från <a href="/tjanster/markarbeten">schaktning och grävning</a> och <a href="/tjanster/dranering">dränering</a> av husgrunden, till <a href="/tjanster/plattsattning-stensattning">stensättning</a>, <a href="/tjanster/markanlaggning-kantsten">kantsten</a> och <a href="/tjanster/finplanering-innergardsrenovering">finplanering</a> av den färdiga ytan. Behöver du bara en av delarna hjälper vi till med det också.</p>
         </div>
         <div class="col-lg-4">
           <div class="text-lg-end mt-25">
@@ -175,67 +170,67 @@ function renderHomePage(site) {
           </div>
         </div>
       </div>
-      <div class="row g-4">${site.services.map(serviceCard).join('')}
+      <div class="row g-4">${site.services.map((svc) => serviceCard(site, svc, tjansterBySlug)).join('')}
       </div>
     </div>
   </div>
   <!-- =============== /TJÄNSTER =============== -->
 
-  <!-- =============== SÅ GÅR DET TILL =============== -->
-  <div class="tp-process-area bg-position pt-130 pb-130" style="background-color:#FDF3EA;">
+  <!-- =============== UPPTAGNINGSOMRÅDE =============== -->
+  <div class="pt-100 pb-100" style="background:var(--nt-gray-light);">
     <div class="container">
-      <div class="row justify-content-center mb-70">
-        <div class="col-xl-7 text-center">
-          <span class="nt-eyebrow">Så går det till</span>
-          <h2 class="fs-xl-40 fs-sm-36 wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.2s">Från förfrågan till färdigt arbete</h2>
-        </div>
-      </div>
-      <div class="row g-4 gy-5">
-        <div class="col-xl-3 col-md-6">
-          <div class="nt-step h-100 wow fadeInUp" data-wow-delay=".1s" data-wow-duration=".9s">
-            <span class="nt-step__num">01</span>
-            <h4>Du hör av dig</h4>
-            <p>Ring, mejla eller fyll i formuläret. Berätta vad du behöver hjälp med och var fastigheten ligger.</p>
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <span class="nt-eyebrow">Var vi jobbar</span>
+          <h2 class="mb-20 fs-xl-40 fs-sm-36" style="color:var(--nt-navy);">Verksamma i hela Stockholm</h2>
+          <p style="color:var(--nt-gray);line-height:1.8;" class="mb-20">Med ${escapeHtml(site.homeBase)} som hemort tar vi uppdrag i hela Stockholmsområdet, bland annat i:</p>
+          <div class="tp-about-bottom-feature"><ul>${site.areasServed.map((a) => `<li><i class="fa-sharp fa-solid fa-check"></i> <a href="/omraden/${escapeAttr(a.slug)}" style="color:inherit;">${escapeHtml(a.name)}</a></li>`).join('')}</ul></div>
+          <div class="d-flex flex-wrap gap-3 mt-20">
+            <a href="/omraden" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500">
+              <span class="d-flex align-items-center justify-content-center">
+                <span class="btn-text">Se alla områden</span>
+                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+              </span>
+            </a>
+            <a href="/kontakt" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-common-white ls-0 tp-btn-switch-animation fw-500">
+              <span class="d-flex align-items-center justify-content-center">
+                <span class="btn-text">Kontakta oss</span>
+                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+              </span>
+            </a>
           </div>
         </div>
-        <div class="col-xl-3 col-md-6">
-          <div class="nt-step h-100 wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".9s">
-            <span class="nt-step__num">02</span>
-            <h4>Kostnadsfri bedömning</h4>
-            <p>Vi bedömer omfattningen — vid behov besöker vi platsen — och tar fram en offert.</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-          <div class="nt-step h-100 wow fadeInUp" data-wow-delay=".3s" data-wow-duration=".9s">
-            <span class="nt-step__num">03</span>
-            <h4>Vi utför arbetet</h4>
-            <p>[TODO: riktig text från kund] Genomförande enligt överenskommen tidsplan och offert.</p>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-          <div class="nt-step h-100 wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".9s">
-            <span class="nt-step__num">04</span>
-            <h4>Slutbesiktning</h4>
-            <p>[TODO: riktig text från kund] Genomgång av utfört arbete, ev. dokumentation lämnas.</p>
+        <div class="col-lg-7">
+          <div style="border-radius:14px;overflow:hidden;box-shadow:0 20px 50px rgba(28,46,74,.12);">
+            <iframe
+              src="https://www.google.com/maps?q=Stockholm,Sverige&z=10&output=embed"
+              width="100%" height="420" style="border:0;display:block;"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Karta över Haninge Grävtjänsts arbetsområde i Stockholm">
+            </iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- =============== /SÅ GÅR DET TILL =============== -->
+  <!-- =============== /UPPTAGNINGSOMRÅDE =============== -->
+
+  ${renderProcessSteps({ eyebrow: 'Så går det till', heading: 'Från förfrågan till färdigt arbete', steps: site.process })}
 
   <!-- =============== VARFÖR OSS =============== -->
   <div class="tp-chose-area p-relative">
     <div class="container-fluid p-0">
       <div class="row gx-0 align-items-stretch">
         <div class="col-lg-5 d-none d-lg-block">
-          <div class="h-100" style="min-height:100%;background:linear-gradient(135deg,var(--nt-navy-dark) 0%,var(--nt-navy) 100%);"></div>
+          <img src="/assets/img/hero/varfor-oss.jpeg" alt="Grävmaskin i arbete" style="width:100%;height:100%;min-height:100%;object-fit:cover;display:block;">
         </div>
         <div class="col-lg-7">
           <div class="p-relative" style="background:var(--nt-navy);padding:100px 8% 90px;">
             <span class="nt-eyebrow nt-eyebrow-light">Varför ${escapeHtml(site.shortName)}</span>
-            <h2 class="mb-20 fs-xl-40 fs-sm-36 tp-text-common-white wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.2s">Trygghet och lokal kännedom — samlat på ett ställe</h2>
-            <p class="mb-45" style="color:rgba(255,255,255,0.75);max-width:560px;">[TODO: riktig text från kund]</p>
+            <h2 class="mb-20 fs-xl-40 fs-sm-36 tp-text-common-white">Trygghet och lokal kännedom — samlat på ett ställe</h2>
+            <p class="mb-45" style="color:rgba(255,255,255,0.75);max-width:560px;">Vi är inte bara en grävfirma — vi är en lokal partner som känner Stockholmsområdets mark, tar ansvar för hela projektet och finns kvar om något behöver justeras efteråt. <a href="/om-oss" style="color:#F5B400;text-decoration:underline;">Läs mer om oss</a> och hur vi arbetar.</p>
             <div class="nt-usp-item">
               <div class="nt-usp-icon"><i class="fas fa-file-invoice"></i></div>
               <div class="nt-usp-text">
@@ -247,7 +242,7 @@ function renderHomePage(site) {
               <div class="nt-usp-icon"><i class="fas fa-shield-check"></i></div>
               <div class="nt-usp-text">
                 <h5>${escapeHtml(t.insurance.label)}</h5>
-                <p class="nt-todo">${escapeHtml(t.insurance.value)}</p>
+                <p>${escapeHtml(t.insurance.value)}</p>
               </div>
             </div>
             <div class="nt-usp-item">
@@ -258,10 +253,10 @@ function renderHomePage(site) {
               </div>
             </div>
             <div class="nt-usp-item">
-              <div class="nt-usp-icon"><i class="fas fa-certificate"></i></div>
+              <div class="nt-usp-icon"><i class="fas fa-star"></i></div>
               <div class="nt-usp-text">
-                <h5>Branschcertifiering</h5>
-                <p class="nt-todo">${escapeHtml(t.certifications[0])}</p>
+                <h5>${escapeHtml(String(t.reviews.averageRating))} av 5 på ${escapeHtml(t.reviews.source)}</h5>
+                <p>Baserat på ${escapeHtml(String(t.reviews.count))} recensioner från riktiga kunder. <a href="${escapeAttr(t.reviews.url)}" target="_blank" rel="noopener" style="color:#F5B400;text-decoration:underline;">Läs recensionerna</a>.</p>
               </div>
             </div>
             <a href="/kontakt" class="tp-btn-xl mt-20 d-inline-block lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500">
@@ -282,58 +277,42 @@ function renderHomePage(site) {
   <div class="tp-counter-area pt-90 pb-60" style="background:var(--nt-gray-light);">
     <div class="container">
       <div class="row">
-        ${statBlock('Genomförda projekt', t.projectsCompleted)}
-        ${statBlock('Tjänsteområden', site.services.length)}
-        ${statBlock('Års erfarenhet', t.yearsExperience)}
-        ${statBlock('Betyg i kundrecensioner', t.reviews.averageRating)}
+        ${statBlock('fa-diagram-project', 'Genomförda projekt', `${t.projectsCompleted}+`)}
+        ${statBlock('fa-list-check', 'Tjänsteområden', site.services.length)}
+        ${statBlock('fa-award', 'Års erfarenhet', `${t.yearsExperience}+`)}
+        ${statBlock('fa-star', 'Betyg på Reco', `${t.reviews.averageRating}/5`)}
       </div>
     </div>
   </div>
   <!-- =============== /SIFFROR =============== -->
 
-  <!-- =============== KUNDRECENSIONER =============== -->
-  <div class="pt-100 pb-100" style="background:var(--nt-white);">
-    <div class="container text-center">
-      <span class="nt-eyebrow">Kundrecensioner</span>
-      <h2 class="fs-xl-40 fs-sm-36 mb-30 wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.2s">Vad våra kunder säger</h2>
-      <div class="nt-todo-block d-inline-block" style="max-width:520px;">
-        [TODO: riktiga kundrecensioner läggs in här när kunden tillhandahåller dem. Strukturen för Review/AggregateRating-schema är förberedd i lib/schema/review.js.]
-      </div>
-    </div>
-  </div>
-  <!-- =============== /KUNDRECENSIONER =============== -->
+  ${renderPromiseBlock(site)}
 
-  <!-- =============== CTA =============== -->
-  <div class="tp-cta-area nt-dark-band pt-120 pb-120" style="background:var(--nt-navy-dark);">
+  ${renderTestimonials(site)}
+
+  <!-- =============== FAQ =============== -->
+  <div class="pt-30 pb-130" style="background:var(--nt-white);">
     <div class="container">
-      <div class="row">
-        <div class="col-xl-8 col-lg-10">
-          <span class="nt-eyebrow nt-eyebrow-light">Redo att börja?</span>
-          <h2 class="mb-15 fs-xl-40 fs-sm-36 tp-text-common-white wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.2s">Berätta vad du behöver hjälp med</h2>
-          <p class="mb-40" style="color:rgba(255,255,255,0.78);font-size:1.05rem;max-width:620px;">Kontakta oss idag och få ett skräddarsytt förslag — snabbt och enkelt.</p>
-          <div class="d-flex flex-wrap align-items-center gap-4">
-            <a href="/kontakt" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500">
-              <span class="d-flex align-items-center justify-content-center">
-                <span class="btn-text">Begär offert</span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-              </span>
-            </a>
-            <span class="d-inline-flex align-items-center gap-3">
-              <span style="width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,0.12);display:flex;align-items:center;justify-content:center;">
-                <i class="fas fa-phone" style="color:#F47C20;"></i>
-              </span>
-              <span>
-                <span style="display:block;color:rgba(255,255,255,0.6);font-size:.8rem;">Ring oss direkt</span>
-                <span style="display:block;color:#fff;font-weight:700;font-size:1.05rem;">${isPlaceholder(site.phone) ? `<b class="nt-todo">${escapeHtml(site.phone)}</b>` : `<a href="${escapeAttr(site.phoneHref)}" style="color:#fff;">${escapeHtml(site.phone)}</a>`}</span>
-              </span>
-            </span>
-          </div>
+      <div class="row justify-content-center mb-50">
+        <div class="col-xl-7 text-center">
+          <span class="nt-eyebrow" style="justify-content:center;">Vanliga frågor</span>
+          <h2 class="mb-20 fs-xl-40 fs-sm-36">Bra att veta innan ni kontaktar oss</h2>
+          <p style="color:var(--nt-gray);line-height:1.8;">Vanliga frågor om oss som företag och hur vi arbetar. Fler frågor specifika för respektive tjänst hittar du på <a href="/tjanster">tjänstesidorna</a>.</p>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-9">${site.faq.map(faqItem).join('')}
         </div>
       </div>
     </div>
   </div>
-  <!-- =============== /CTA =============== -->`;
+  <!-- =============== /FAQ =============== -->
+
+  ${renderCtaBand(site, {
+    eyebrow: 'Redo att börja?',
+    heading: 'Berätta vad du behöver hjälp med',
+    subtext: 'Kontakta oss idag och få ett skräddarsytt förslag — snabbt och enkelt.',
+  })}`;
 
   return { metaHtml, schemaHtml, bodyContent };
 }

@@ -4,42 +4,44 @@
   "url": "https://haningegravab.se",
   "locale": "sv_SE",
   "language": "sv-SE",
-  "description": "Haninge Grävtjänst AB utför mark- och anläggningsarbeten i Stockholm och Haninge — dränering, plattsättning, husgrunder och finplanering för privatpersoner, företag och BRF:er.",
-  "tagline": "[TODO: riktig tagline från kund]",
-  "phone": "[TODO: telefonnummer]",
-  "phoneHref": "tel:+46000000000",
-  "email": "[TODO: e-postadress]",
-  "orgNumber": "[TODO: organisationsnummer]",
-  "foundedYear": null,
+  "description": "Haninge Grävtjänst AB utför mark- och anläggningsarbeten i Stockholm och Haninge — dränering, plattsättning, husgrunder och finplanering för privatpersoner, företag och BRF:er. Över 10 års erfarenhet och 200+ genomförda projekt.",
+  "tagline": "Din pålitliga partner för grävning i Stockholmsområdet",
+  "heroImage": "/assets/img/hero/dranering-projekt-1.webp",
+  "heroImageAlt": "Dräneringsarbete på fastighet i Stockholmsområdet — dräneringsskiva installeras längs husgrund",
+  "phone": "070-727 63 27",
+  "phoneHref": "tel:+46707276327",
+  "email": "info@haningegravab.se",
+  "secondaryEmail": "niklas@haningegravtjanstab.se",
+  "_secondaryEmailNote": "Ägarens/kontaktpersonens e-post, annan domän än den publika sajten (haningegravtjanstab.se vs haningegravab.se). Används som extra mottagare för offertförfrågningar (se CONTACT_TO_EMAIL i api/contact.js), visas inte publikt på sajten.",
+  "orgNumber": "556917-7909",
   "address": {
-    "streetAddress": "[TODO: gatuadress]",
-    "postalCode": "[TODO: postnummer]",
-    "addressLocality": "Haninge",
+    "streetAddress": "Fornminnesvägen 5",
+    "postalCode": "137 55",
+    "addressLocality": "Tungelsta",
     "addressRegion": "Stockholms län",
     "addressCountry": "SE"
   },
-  "geo": {
-    "latitude": null,
-    "longitude": null
-  },
-  "openingHours": "[TODO: öppettider från kund]",
-  "sameAs": [],
+  "_addressNote": "Tungelsta är en tätort inom Haninge kommun — den fysiska/juridiska adressen (LocalBusiness-schema) anger Tungelsta, medan 'homeBase' nedan används i marknadsföringstext ('Haninge' är mer igenkännbart för målgruppen än Tungelsta).",
+  "geo": { "latitude": 59.1084265, "longitude": 18.0516218 },
+  "sameAs": [
+    "https://www.reco.se/haninge-gravtjanst-ab-vasterhaninge"
+  ],
   "priceRange": "$$",
 
   "primaryLocation": "Stockholm",
   "homeBase": "Haninge",
   "areasServed": [
-    "Haninge",
-    "Bromma",
-    "Enskede",
-    "Farsta",
-    "Hägersten",
-    "Kungsholmen",
-    "Liljeholmen",
-    "Norrmalm",
-    "Östermalm",
-    "Södermalm",
-    "Vasastan"
+    { "name": "Haninge", "slug": "haninge" },
+    { "name": "Bromma", "slug": "bromma" },
+    { "name": "Enskede", "slug": "enskede" },
+    { "name": "Farsta", "slug": "farsta" },
+    { "name": "Hägersten", "slug": "hagersten" },
+    { "name": "Kungsholmen", "slug": "kungsholmen" },
+    { "name": "Liljeholmen", "slug": "liljeholmen" },
+    { "name": "Norrmalm", "slug": "norrmalm" },
+    { "name": "Östermalm", "slug": "ostermalm" },
+    { "name": "Södermalm", "slug": "sodermalm" },
+    { "name": "Vasastan", "slug": "vasastan" }
   ],
 
   "trustSignals": {
@@ -47,39 +49,121 @@
       "label": "F-skattsedel",
       "value": "Innehar F-skattsedel",
       "verified": false,
-      "note": "[TODO: bekräfta och länka ev. till Skatteverkets register]"
+      "verifyUrl": "https://skatteverket.se/hamtaforetagsinfo",
+      "verifyLabel": "Kontrollera vårt företag hos Skatteverket"
     },
     "insurance": {
       "label": "Ansvarsförsäkring",
-      "value": "[TODO: försäkringsbolag och omfattning från kund]",
+      "value": "Ansvarsförsäkring och garantier som täcker eventuella fel i vårt arbete.",
       "verified": false
     },
-    "certifications": [
-      "[TODO: branschcertifiering 1 — t.ex. Säker Vatten / BKMA]",
-      "[TODO: branschcertifiering 2]"
-    ],
-    "projectsCompleted": null,
-    "yearsExperience": null,
+    "projectsCompleted": 200,
+    "yearsExperience": 10,
     "reviews": {
-      "count": null,
-      "averageRating": null,
-      "source": "[TODO: Google/Reco/annan recensionskälla]"
+      "count": 6,
+      "averageRating": 4.8,
+      "source": "Reco.se",
+      "url": "https://www.reco.se/haninge-gravtjanst-ab-vasterhaninge"
     }
   },
 
-  "services": [
-    { "slug": "dranering", "name": "Dränering", "shortName": "Dränering", "icon": "fa-water", "hasPage": true },
-    { "slug": "plattsattning-stensattning", "name": "Plattsättning & Stensättning", "shortName": "Plattsättning", "icon": "fa-border-all", "hasPage": false },
-    { "slug": "markarbeten", "name": "Grävfirma – Markarbeten", "shortName": "Markarbeten", "icon": "fa-truck-monster", "hasPage": false },
-    { "slug": "husgrunder-markanlaggning", "name": "Husgrunder & Markanläggning", "shortName": "Husgrunder", "icon": "fa-house-chimney", "hasPage": false },
-    { "slug": "innergardsrenovering-finplanering", "name": "Innergårdsrenovering & Finplanering", "shortName": "Innergårdsrenovering", "icon": "fa-tree", "hasPage": false },
-    { "slug": "asfaltering-kantsten", "name": "Asfaltering & Kantsten", "shortName": "Asfaltering", "icon": "fa-road", "hasPage": false },
-    { "slug": "gravtjanst", "name": "Grävtjänst", "shortName": "Grävtjänst", "icon": "fa-shovel", "hasPage": false }
+  "testimonials": [
+    { "author": "Ka A", "date": "2025-05-15", "text": "Arbetet utfördes snabbt, noggrant och med stor respekt för både tidsplan och budget." },
+    { "author": "Patrik A", "date": "2025-03-25", "text": "Snabba, tillmötesgående, kunniga!! Super nöjda!" },
+    { "author": "Brf H", "date": "2025-03-26", "text": "De har skött våra arbeten utomhus jättebra. Det har fixats med sten framför port..." },
+    { "author": "Bks A", "date": "2025-03-25", "text": "Ett företag som levererar det de lovar! Bra och professionell personal." },
+    { "author": "Gauffin Thomas G", "date": "2025-03-26", "text": "Funkade bra, chefen var lättatt nå och om inte var han snabb att återkomma." },
+    { "author": "Effektiv Media", "date": "2025-04-06", "text": "Ett bra företag som kan sitt jobb." }
   ],
+  "_testimonialsNote": "Verkliga recensioner hämtade från Reco.se (https://www.reco.se/haninge-gravtjanst-ab-vasterhaninge), 4.8/5 snitt över 6 recensioner. Reco anger inte enskilda stjärnbetyg per recension i det publika gränssnittet, så AggregateRating i schema bygger på det totala snittet — inga enskilda Review-noder med påhittade betyg.",
+
+  "externalResources": {
+    "skatteverketFSkatt": { "label": "Kontrollera företag hos Skatteverket", "url": "https://skatteverket.se/hamtaforetagsinfo" },
+    "skatteverketRot": { "label": "Så fungerar ROT-avdraget (Skatteverket)", "url": "https://www.skatteverket.se/privat/fastigheterochbostad/rotarbeteochrutarbete/safungerarrotavdraget.4.5947400c11f47f7f9dd80004014.html" },
+    "boverketMarklov": { "label": "Marklov – vad gäller? (Boverket)", "url": "https://www.boverket.se/sv/PBL-kunskapsbanken/lov--byggande/anmalningsplikt/marklov/" },
+    "stockholmBygglov": { "label": "Bygglov i Stockholms stad", "url": "https://stockholm.se/ByggBo/Bygglov" },
+    "haningeBygglov": { "label": "Sök bygglov eller marklov i Haninge kommun", "url": "https://www.haninge.se/sjalvservice/bygglov-och-anmalan--ansok-som-privatperson/" },
+    "ledningskollen": { "label": "Ledningskollen – kolla ledningar innan grävning", "url": "https://www.ledningskollen.se/" },
+    "reco": { "label": "Läs alla recensioner på Reco", "url": "https://www.reco.se/haninge-gravtjanst-ab-vasterhaninge" }
+  },
+  "_externalResourcesNote": "Utlänkar till oberoende, auktoritativa källor (myndigheter + Reco) för E-E-A-T — aldrig till konkurrenter. Renderas via templates/partials/sourceLink.js.",
+
+  "_servicesNote": "7 tjänster bekräftade av kund (ej nuvarande sajts 6-gruppering — 'Markanläggning & Kantsten' och 'Grävfirma – Markarbeten' är egna hubbar, inte sammanslagna). Slugs matchar där möjligt live-sajtens URL:er för enklare framtida redirect-mappning.",
+  "services": [
+    { "slug": "dranering", "name": "Dränering", "shortName": "Dränering", "icon": "fa-water", "hasPage": true, "relatedServices": ["husgrunder-markanlaggning", "markarbeten"] },
+    { "slug": "plattsattning-stensattning", "name": "Plattsättning & Stensättning", "shortName": "Plattsättning", "icon": "fa-border-all", "hasPage": true, "relatedServices": ["markanlaggning-kantsten", "finplanering-innergardsrenovering"] },
+    { "slug": "husgrunder-markanlaggning", "name": "Husgrunder & Markanläggning", "shortName": "Husgrunder", "icon": "fa-house-chimney", "hasPage": true, "relatedServices": ["dranering", "markarbeten"] },
+    { "slug": "finplanering-innergardsrenovering", "name": "Finplanering & Innergårdsrenovering", "shortName": "Finplanering", "icon": "fa-tree", "hasPage": true, "relatedServices": ["plattsattning-stensattning", "markanlaggning-kantsten"] },
+    { "slug": "markanlaggning-kantsten", "name": "Markanläggning & Kantsten", "shortName": "Kantsten", "icon": "fa-ruler-combined", "hasPage": true, "relatedServices": ["asfaltering", "plattsattning-stensattning"] },
+    { "slug": "asfaltering", "name": "Asfaltering", "shortName": "Asfaltering", "icon": "fa-road", "hasPage": true, "relatedServices": ["markanlaggning-kantsten", "markarbeten"] },
+    { "slug": "markarbeten", "name": "Grävfirma – Markarbeten", "shortName": "Markarbeten", "icon": "fa-truck-monster", "hasPage": true, "relatedServices": ["dranering", "husgrunder-markanlaggning"] }
+  ],
+
+  "process": [
+    { "step": 1, "title": "Du hör av dig", "description": "Ring, mejla eller fyll i formuläret. Berätta vad du behöver hjälp med och var fastigheten ligger." },
+    { "step": 2, "title": "Kostnadsfri bedömning", "description": "Vi bedömer omfattningen — vid behov besöker vi platsen — och tar fram en offert." },
+    { "step": 3, "title": "Vi utför arbetet", "description": "Vi genomför arbetet enligt överenskommen tidsplan, med löpande avstämning om något behöver justeras under arbetets gång." },
+    { "step": 4, "title": "Slutbesiktning", "description": "Vi går igenom det färdiga arbetet tillsammans med dig innan vi lämnar platsen." }
+  ],
+
+  "faq": [
+    {
+      "question": "Vilka tjänster erbjuder ni?",
+      "answer": "Vi erbjuder dränering, plattsättning & stensättning, husgrunder & markanläggning, finplanering & innergårdsrenovering, markanläggning & kantsten, asfaltering samt grävfirma/markarbeten för både privatpersoner, företag och BRF:er i Stockholmsområdet."
+    },
+    {
+      "question": "Arbetar ni i hela Stockholm?",
+      "answer": "Ja, vi arbetar i hela Stockholmsområdet med Haninge som hemort — bland annat i Bromma, Enskede, Farsta, Hägersten, Kungsholmen, Liljeholmen, Norrmalm, Östermalm, Södermalm och Vasastan."
+    },
+    {
+      "question": "Behöver jag ansöka om bygglov eller marklov för markarbeten?",
+      "answer": "Det beror på typ av arbete. Markarbete som förberedelse inför ett bygglovspliktigt bygge prövas oftast inom bygglovet, medan större schaktning eller fyllning som ändrar marknivån med mer än 0,5 meter kan kräva ett separat marklov. Vi hjälper till att bedöma vad som gäller för just ditt projekt, men den formella prövningen görs alltid av din kommun."
+    },
+    {
+      "question": "Hur lång tid tar ett projekt?",
+      "answer": "Ett mindre jobb, som en enklare dränering eller plattsättning, kan vara klart på några dagar. Större projekt som husgrundsarbete, markanläggning eller innergårdsrenovering tar ofta flera veckor. Du får alltid en tydlig tidsplan i samband med offerten."
+    },
+    {
+      "question": "Vilka garantier erbjuder ni?",
+      "answer": "Vi har ansvarsförsäkring och lämnar garanti på utfört arbete. Om något behöver justeras efter avslutat projekt åtgärdar vi det."
+    },
+    {
+      "question": "Kan jag få ROT-avdrag på arbetet?",
+      "answer": "Det beror på vilken typ av arbete det gäller. Reparation och underhåll av en befintlig del av bostaden — till exempel omdränering av en husgrund eller reparation av en gammal uppfart — kan ge rätt till ROT-avdrag på arbetskostnaden. Nyanläggning, till exempel en helt ny uteplats eller trädgårdsanläggning, räknas normalt som trädgårds-/markarbete och ger inte rätt till avdraget. Vi berättar vad som gäller för ditt projekt vid offert, men det slutgiltiga avgörandet görs alltid av Skatteverket."
+    },
+    {
+      "question": "Kostar det något att få en offert?",
+      "answer": "Nej, vi besöker platsen och ger en bedömning helt kostnadsfritt och utan förpliktelser. Du får en tydlig offert innan vi bokar in något arbete."
+    },
+    {
+      "question": "Kan ni kombinera flera tjänster i samma projekt?",
+      "answer": "Ja, det är vanligt. Många av våra kunder behöver till exempel dränering och husgrundsarbete i samma projekt, eller markarbete som avslutas med finplanering och kantsten. Vi planerar gärna in flera moment i en och samma tidsplan så du slipper samordna olika entreprenörer."
+    },
+    {
+      "question": "Tar ni uppdrag åt bostadsrättsföreningar och samfälligheter?",
+      "answer": "Ja, vi utför regelbundet arbete åt BRF:er och samfälligheter i Stockholmsområdet — allt från dränering av flerbostadshus till upprustning av gemensamma gårdar och parkeringsytor. Vi är vana vid att stämma av med styrelser och planera arbetet så att gården eller fastigheten hålls så tillgänglig som möjligt under tiden."
+    },
+    {
+      "question": "Skiljer sig markförhållandena mycket mellan olika delar av Stockholm?",
+      "answer": "Ja, betydligt. Vissa områden har berg nära ytan medan andra, ofta lägre liggande delar, har djup lerjord som rör sig mer med årstiderna. Det påverkar allt från bärlagrets uppbyggnad till hur en dränering behöver utformas. Vi bedömer alltid de faktiska förhållandena på just din fastighet innan vi lämnar offert, oavsett var i Stockholmsområdet den ligger."
+    }
+  ],
+
+  "_satelliteSitesNote": "Utlänkar till kundens sex satellitdomäner, samma mönster som på nuvarande sajt (t.ex. 'Läs mer på draneringarstockholm.nu' i tjänstekortens brödtext). Renderas via en återanvändbar komponent (templates/partials/satelliteLink.js), inte hårdkodad text per sida.",
+  "satelliteSites": {
+    "dranering": "https://draneringarstockholm.nu/",
+    "plattsattning-stensattning": "https://plattsattningochstansattningstockholm.se/",
+    "husgrunder-markanlaggning": "https://husgrunderstockholm.se/",
+    "finplanering-innergardsrenovering": "https://innegardsrenoveringstockholm.se/",
+    "markanlaggning-kantsten": "https://asfaltkantstenstockholm.se/",
+    "asfaltering": "https://asfaltkantstenstockholm.se/",
+    "markarbeten": "https://gravfirmastockholm.se/"
+  },
 
   "nav": [
     { "label": "Hem", "href": "/" },
     { "label": "Tjänster", "href": "/tjanster" },
+    { "label": "Områden", "href": "/omraden" },
     { "label": "Om oss", "href": "/om-oss" },
     { "label": "Kontakt", "href": "/kontakt" }
   ]

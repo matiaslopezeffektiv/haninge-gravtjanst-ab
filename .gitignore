@@ -3,3 +3,7 @@
 .DS_Store
 node_modules
 dist
+
+# Rå GSC-exportdata (sökordsprestanda) — intern analys, hör inte hemma i repot,
+# särskilt inte i ett publikt repo.
+GSC Data/

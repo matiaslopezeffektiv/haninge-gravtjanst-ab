@@ -1,5 +1,6 @@
 const { renderHeader } = require('./header');
 const { renderFooter } = require('./footer');
+const { renderFloatingCallButton } = require('./partials/floatingCallButton');
 const { escapeAttr } = require('../lib/html');
 
 /**
@@ -25,11 +26,11 @@ function renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extra
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   ${metaHtml}
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/haninge-logo-color.svg">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/haninge.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=DM+Serif+Display:ital@0;1&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap">
 
   <link rel="stylesheet" href="/assets/css/bootstrap.css">
   <link rel="stylesheet" href="/assets/css/animate.css">
@@ -47,6 +48,8 @@ function renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extra
   ${bodyContent}
 
   ${renderFooter(site)}
+
+  ${renderFloatingCallButton(site)}
 
   <script src="/assets/js/vendor/jquery.js"></script>
   <script src="/assets/js/bootstrap-bundle.js"></script>

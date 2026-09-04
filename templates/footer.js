@@ -17,7 +17,7 @@ function renderFooter(site) {
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="tpfooter-widget mb-40">
             <div class="tpfooter__logo mb-25">
-              <a href="/"><img src="/assets/img/logo/haninge-logo-white.svg" alt="${escapeAttr(site.name)}" style="height:50px;width:auto;"></a>
+              <a href="/"><img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" style="height:50px;width:auto;"></a>
             </div>
             <p style="color:rgba(255,255,255,0.65);line-height:1.7;">${escapeHtml(site.description)}</p>
           </div>
@@ -44,9 +44,9 @@ function renderFooter(site) {
           <div class="tpfooter-widget mb-40">
             <h4 class="tpfooter-widget__title mb-25">Kontakt</h4>
             <ul class="tpfooter__link">
-              <li><i class="fas fa-phone" style="color:#F47C20;margin-right:8px;"></i>${contactLinkOrTodo(site.phone, site.phoneHref)}</li>
-              <li><i class="fas fa-envelope" style="color:#F47C20;margin-right:8px;"></i>${contactLinkOrTodo(site.email, `mailto:${site.email}`)}</li>
-              <li><i class="fas fa-map-marker-alt" style="color:#F47C20;margin-right:8px;"></i><span>${escapeHtml(site.address.addressLocality)}, ${escapeHtml(site.address.addressRegion)}</span></li>
+              <li><i class="fas fa-phone" style="color:#F5B400;margin-right:8px;"></i>${contactLinkOrTodo(site.phone, site.phoneHref)}</li>
+              <li><i class="fas fa-envelope" style="color:#F5B400;margin-right:8px;"></i>${contactLinkOrTodo(site.email, `mailto:${site.email}`)}</li>
+              <li><i class="fas fa-map-marker-alt" style="color:#F5B400;margin-right:8px;"></i><span style="color:rgba(255,255,255,0.7);">${escapeHtml(site.address.addressLocality)}, ${escapeHtml(site.address.addressRegion)}</span></li>
             </ul>
           </div>
         </div>

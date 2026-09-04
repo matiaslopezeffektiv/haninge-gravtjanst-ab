@@ -1,4 +1,4 @@
-const { escapeHtml, escapeAttr, contactLinkOrTodo } = require('../lib/html');
+const { escapeHtml, escapeAttr, contactLinkOrTodo, isPlaceholder } = require('../lib/html');
 
 function serviceLinkDesktop(svc) {
   if (svc.hasPage) {
@@ -17,7 +17,7 @@ function serviceLinkMobile(svc) {
 /**
  * Renderar offcanvas (mobilmeny) + desktop-header/nav.
  * @param {object} site - data/site.json
- * @param {string} activePath - "/", "/tjanster", "/tjanster/dranering", "/om-oss", "/kontakt"
+ * @param {string} activePath -"/","/tjanster","/tjanster/dranering","/om-oss","/kontakt"
  */
 function renderHeader(site, activePath) {
   const isActive = (href) => (href === '/' ? activePath === '/' : activePath.startsWith(href)) ? ' active' : '';
@@ -54,15 +54,15 @@ function renderHeader(site, activePath) {
         <button class="close-btn" aria-label="Stäng meny"><i class="fal fa-times"></i></button>
       </div>
       <div class="tpoffcanvas__logo mb-30">
-        <a href="/"><img src="/assets/img/logo/haninge-logo-color.svg" alt="${escapeAttr(site.name)}" style="height:46px;width:auto;"></a>
+        <a href="/"><img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" style="height:46px;width:auto;"></a>
       </div>
       <div class="tp-offcanvas-menu mb-30">
         <nav><ul>${navLinks}</ul></nav>
       </div>
       <div class="tpoffcanvas__contact-info">
         <ul>
-          <li><i class="fas fa-phone" style="color:#F47C20;margin-right:10px;"></i>${contactLinkOrTodo(site.phone, site.phoneHref)}</li>
-          <li class="mt-10"><i class="fas fa-envelope" style="color:#F47C20;margin-right:10px;"></i>${contactLinkOrTodo(site.email, `mailto:${site.email}`)}</li>
+          <li><i class="fas fa-phone" style="color:#D99A00;margin-right:10px;"></i>${contactLinkOrTodo(site.phone, site.phoneHref)}</li>
+          <li class="mt-10"><i class="fas fa-envelope" style="color:#D99A00;margin-right:10px;"></i>${contactLinkOrTodo(site.email, `mailto:${site.email}`)}</li>
         </ul>
       </div>
       <div class="mt-30">
@@ -79,7 +79,10 @@ function renderHeader(site, activePath) {
       <div class="row align-items-center">
         <div class="col-xl-2 col-lg-3 col-6">
           <div class="tplogo">
-            <a href="/"><img src="/assets/img/logo/haninge-logo-color.svg" alt="${escapeAttr(site.name)}" style="height:52px;width:auto;"></a>
+            <a href="/" style="display:inline-block;">
+              <img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" style="height:52px;width:auto;display:block;">
+              <span style="display:block;width:34px;height:3px;background:#F5B400;border-radius:2px;margin:4px auto 0;"></span>
+            </a>
           </div>
         </div>
         <div class="col-xl-8 col-lg-7 d-none d-lg-block">
@@ -90,9 +93,10 @@ function renderHeader(site, activePath) {
           </div>
         </div>
         <div class="col-xl-2 col-lg-2 col-6 d-flex justify-content-end align-items-center gap-3">
+          ${isPlaceholder(site.phone) ? '' : `<a href="${escapeAttr(site.phoneHref)}" class="d-none d-xxl-inline-flex align-items-center" style="color:#1A1A1A;font-weight:700;font-size:.92rem;white-space:nowrap;text-decoration:none;"><i class="fas fa-phone" style="color:#D99A00;margin-right:6px;"></i>${escapeHtml(site.phone)}</a>`}
           <a href="/kontakt" class="tp-btn d-none d-lg-inline-flex">Begär offert</a>
           <button class="tp-offcanvas-open-btn tp-menu-bar d-lg-none" aria-label="Öppna meny">
-            <i class="fas fa-bars" style="font-size:1.4rem;color:#1C2E4A;"></i>
+            <i class="fas fa-bars" style="font-size:1.4rem;color:#1A1A1A;"></i>
           </button>
         </div>
       </div>

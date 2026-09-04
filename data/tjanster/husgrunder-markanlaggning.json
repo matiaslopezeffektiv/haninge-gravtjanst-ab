@@ -1,0 +1,142 @@
+{
+  "slug": "husgrunder-markanlaggning",
+  "name": "Husgrunder & Markanläggning",
+  "targetLocation": "Stockholm",
+  "h1": "Husgrunder & Markanläggning Stockholm",
+  "metaTitle": "Husgrunder & Markanläggning Stockholm — Haninge Grävtjänst AB",
+  "metaDescription": "Grundarbete och husgrunder i Stockholm av en grävfirma med över 10 års erfarenhet. Schaktning, dränering och markanläggning på rätt sätt inför nybygge eller tillbyggnad.",
+  "shortDescription": "Grundarbete och markanläggning inför husbygge, tillbyggnad eller ny grund i Stockholm.",
+  "longDescription": [
+    "En bra husgrund börjar långt innan betongen gjuts. Haninge Grävtjänst AB utför grundarbete och markanläggning inför nybygge, tillbyggnad och grundrenovering åt privatpersoner, företag och BRF:er i hela Stockholm, med Haninge som hemort.",
+    "Vi hjälper till med hela markdelen — schaktning, korrekt lutning, materialval och <a href=\"/tjanster/dranering\">dränering</a> — och samordnar gärna med andra yrkesgrupper i projektet (grundläggare, betongarbetare, VVS) så helheten blir rätt.",
+    "Med över 10 års erfarenhet av grundarbete i Stockholmsregionens varierande markförhållanden — allt från lera till berg — vet vi vilken förberedelse som krävs för att grunden ska hålla, oavsett om det gäller en platt- eller krypgrund. Behöver du även hjälp med <a href=\"/tjanster/markarbeten\">markarbete</a> runt den nya grunden, till exempel dikning eller schaktning för anslutningar, tar vi gärna hand om det i samma projekt — <a href=\"/kontakt\">kontakta oss</a> för en kostnadsfri bedömning."
+  ],
+  "icon": "fa-house-chimney",
+  "heroImage": "/assets/img/hero/husgrunder-projekt-1.webp",
+  "heroImageAlt": "Grundarbete med fuktisolering längs husgrund",
+  "introImage": "/assets/img/hero/husgrunder-projekt-3.jpeg",
+  "introImageAlt": "Flygbild över gjuten husgrund inför byggnation",
+
+  "benefits": [
+    "Markarbetet planeras utifrån markens bärighet, lutning och avvattning innan grunden läggs",
+    "Samordning med övriga yrkesgrupper i byggprojektet",
+    "Dränering och fuktskydd integreras redan i grundarbetet",
+    "Över 10 års erfarenhet av grundarbete i Stockholmsområdets varierande markförhållanden"
+  ],
+
+  "inclusions": [
+    "Markundersökning och bedömning av bärighet",
+    "Schaktning till rätt djup och nivå",
+    "Dränering och fuktskydd integrerat i grundarbetet",
+    "Materialval anpassat efter grundtyp (platt- eller krypgrund)",
+    "Samordning med grundläggare, betongarbetare och VVS",
+    "Återfyllning och grovplanering efter grundarbetet"
+  ],
+
+  "signs": {
+    "heading": "Tecken på att grunden behöver ses över",
+    "intro": "Problem med en husgrund utvecklas ofta under lång tid innan de blir synliga inomhus. Håll utkik efter följande tecken:",
+    "items": [
+      "Sprickor i grundmuren eller källarväggen",
+      "Fuktgenomslag eller mögellukt i krypgrunden",
+      "Golv som känns ojämna eller ger efter",
+      "Synliga sättningar runt husets utsida",
+      "Grunden är äldre än 40–50 år och aldrig omdränerad"
+    ],
+    "image": "/assets/img/hero/husgrunder-projekt-2.webp",
+    "imageAlt": "Fuktisolering monterad längs grundmur"
+  },
+
+  "whyImportant": [
+    "Grundarbetet är den del av ett byggprojekt som syns minst när allt är klart, men det är också den del som är svårast och dyrast att åtgärda i efterhand om den blir fel. Sättningar, sprickor och fuktproblem många år senare går ofta att spåra tillbaka till markarbete som gjordes för snabbt eller utan hänsyn till markens faktiska bärighet.",
+    "I Stockholmsregionen varierar markförhållandena mycket, ibland inom samma kommun — vissa tomter vilar på fast berg, andra på lerjord som kräver särskild hänsyn till sättningsrisk. Ett grundarbete som är rätt utfört från början är det som avgör om huset står stabilt i decennier."
+  ],
+
+  "whyUs": {
+    "intro": "Ett grundarbete går inte att göra om i efterhand utan stora kostnader — det är därför vi lägger extra vikt vid följande:",
+    "items": [
+      "Över 10 års erfarenhet av grundarbete i Stockholmsregionens skiftande markförhållanden, från berg till lera",
+      "Vi samordnar praktiskt med grundläggare, betongarbetare och VVS så inget faller mellan stolarna",
+      "Dränering och fuktskydd integreras i grundarbetet från start, inte som ett separat steg senare",
+      "Vi ger ett ärligt utlåtande om markens skick redan vid första besöket, inte bara en offert"
+    ]
+  },
+
+  "considerations": {
+    "intro": "Ett par saker är bra att ha tänkt igenom innan markarbetet inför grunden sätter igång:",
+    "items": [
+      "Beställ gärna en markundersökning tidigt i projektet, särskilt vid nybygge — det kan påverka både grundtyp och budget rejält",
+      "Klargör tidigt vem som ansvarar för samordningen mellan markarbete, grundläggning och byggnation",
+      "Tänk på grundvattennivån på tomten — den påverkar vilken grundtyp som är lämplig",
+      "Boka in markarbetet med marginal innan byggstart, då väder kan påverka tidsplanen för schaktning"
+    ]
+  },
+
+  "process": [
+    { "step": 1, "title": "Kostnadsfri bedömning", "description": "Vi går igenom ritningar och besöker platsen för att bedöma markförhållanden." },
+    { "step": 2, "title": "Offert", "description": "Du får en tydlig offert för markarbetet, utan bindningstid." },
+    { "step": 3, "title": "Schaktning och grundarbete", "description": "Schaktning, dränering och markförberedelse enligt plan." },
+    { "step": 4, "title": "Överlämning", "description": "Genomgång inför att grundläggning/betongarbete kan påbörjas." }
+  ],
+
+  "faq": [
+    {
+      "question": "Vad påverkar priset för markarbete inför en ny husgrund?",
+      "answer": "Priset beror på grundtyp, markförhållanden (till exempel berg eller lera) och tomtens tillgänglighet för maskiner. Vi ger en kostnadsfri bedömning innan vi lämnar offert."
+    },
+    {
+      "question": "Behöver jag bygglov för markarbete inför en ny grund?",
+      "answer": "Själva husbygget kräver oftast bygglov, och markarbetet prövas normalt inom det bygglovet. Större fristående schaktning eller höjdändringar av tomten kan istället kräva ett separat marklov. Kontrollera alltid med din kommun vad som gäller för ditt projekt."
+    },
+    {
+      "question": "Samordnar ni med andra hantverkare i byggprojektet?",
+      "answer": "Ja, vi samordnar gärna markarbetet med grundläggare, betongarbetare och andra yrkesgrupper som är inblandade i projektet."
+    },
+    {
+      "question": "Vilken grundtyp passar bäst för min tomt?",
+      "answer": "Det beror på markförhållanden, grundvattennivå och husets konstruktion — en platta på mark fungerar bra på fast mark, medan en krypgrund kan vara bättre vid sluttande tomt eller högt grundvatten. Vi ger vår rekommendation vid platsbesöket."
+    },
+    {
+      "question": "Kan ni hjälpa till även om jag redan anlitat en byggfirma?",
+      "answer": "Absolut. Vi tar gärna markarbetet som en fristående del av ett större byggprojekt och samordnar med byggfirman kring tidsplan och gränssnitt."
+    },
+    {
+      "question": "Gör ni markarbete även för garage eller Attefallshus?",
+      "answer": "Ja, vi utför grundarbete för komplementbyggnader som garage, förråd och Attefallshus, precis som för större huvudbyggnader — omfattningen är bara mindre."
+    },
+    {
+      "question": "Varför skiljer sig grundarbetet så mycket mellan olika tomter i Stockholmsområdet?",
+      "answer": "Det beror på att markförhållandena varierar kraftigt inom regionen — berg i dagen på vissa håll, lerjord på andra, och allt däremellan. Vad som fungerar på en tomt i ett område kan vara helt fel lösning några kilometer bort. Vi utgår alltid från en bedömning av just din tomt."
+    },
+    {
+      "question": "Behövs alltid en markundersökning innan grundarbetet börjar?",
+      "answer": "Inte alltid, men vid större eller osäkra markförhållanden rekommenderas en geoteknisk undersökning av en separat sakkunnig innan grundtyp bestäms. Vi hjälper till att bedöma om det behövs för just ditt projekt vid vårt första besök."
+    },
+    {
+      "question": "Hur lång tid tar ett grundarbete inför nybyggnation?",
+      "answer": "För ett normalstort villaprojekt tar markarbetet oftast mellan en och tre veckor beroende på markförhållanden och grundtyp. Vid tillbyggnader kan det gå snabbare. Du får en konkret tidsplan i offerten."
+    },
+    {
+      "question": "Kan ni gräva och förbereda mark för tillbyggnad på en redan bebyggd tomt?",
+      "answer": "Ja, tillbyggnader är ett vanligt uppdrag för oss — särskilt i äldre villaområden i Stockholm där ursprungshuset ofta är mindre än vad dagens familjer behöver. Vi anpassar arbetet efter den begränsade ytan som ofta finns kvar på redan bebyggda tomter."
+    }
+  ],
+
+  "referenceProjects": [
+    {
+      "title": "Grundarbete med fuktisolering",
+      "description": "Schaktning och montering av fuktisolering längs grundmur inför återfyllning.",
+      "image": "/assets/img/hero/husgrunder-projekt-1.webp"
+    },
+    {
+      "title": "Fuktisolering och dränering",
+      "description": "Montering av fuktisolerande skiva längs grundmur inför återfyllning.",
+      "image": "/assets/img/hero/husgrunder-projekt-2.webp"
+    }
+  ],
+
+  "sourceKeys": ["boverketMarklov", "stockholmBygglov", "haningeBygglov", "skatteverketFSkatt"],
+
+  "_orterSchemaNote": "Ort-objekt läggs till i nästa omgång — endast för stadsdelar med bekräftad sökefterfrågan (se data/site.json areasServed).",
+  "orter": []
+}

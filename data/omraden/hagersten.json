@@ -1,0 +1,19 @@
+{
+  "slug": "hagersten",
+  "name": "Hägersten",
+  "region": "Söderort / Västerort",
+  "h1": "Mark- och anläggningsarbeten i Hägersten",
+  "metaTitle": "Mark- och anläggningsarbeten i Hägersten — Haninge Grävtjänst AB",
+  "metaDescription": "Finplanering, husgrundsarbete och markanläggning i Hägersten — för både villor och flerbostadshus. Kostnadsfri bedömning.",
+  "shortDescription": "Blandad bebyggelse nära Liljeholmen — villor och flerbostadshus sida vid sida.",
+  "intro": [
+    "Hägersten ligger i gränslandet mellan söderort och västerort, nära Liljeholmen, och har en blandning av äldre villaområden och flerbostadshus. Det gör att vi möter allt från privata trädgårdsprojekt till gemensamma ytor åt bostadsrättsföreningar i samma stadsdel.",
+    "Vi utför finplanering, husgrundsarbete och markanläggning i Hägersten, och anpassar arbetet efter om det gäller en villatomt eller en gemensam gård."
+  ],
+  "whyUs": "Vi är vana vid att växla mellan villaprojekt och BRF-uppdrag inom samma område, vilket är typiskt för Hägerstens blandade bebyggelse.",
+  "relevantServices": [
+    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av både privata trädgårdar och gemensamma gårdar, vanligt i Hägerstens blandade bebyggelse." },
+    { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete inför tillbyggnad i de äldre villaområdena i Hägersten." },
+    { "slug": "markanlaggning-kantsten", "blurb": "Kantsten och markanläggning för uppfarter och gemensamma ytor i området." }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "slug": "vasastan",
+  "name": "Vasastan",
+  "region": "Innerstaden",
+  "h1": "Mark- och anläggningsarbeten i Vasastan",
+  "metaTitle": "Mark- och anläggningsarbeten i Vasastan — Haninge Grävtjänst AB",
+  "metaDescription": "Innergårdsrenovering, markanläggning och plattsättning i Vasastan — anpassat efter den rutnätsplanerade stenstadens gårdar. Kostnadsfri bedömning.",
+  "shortDescription": "Rutnätsplanerad stenstad med sekelskiftesfastigheter och gemensamma gårdar.",
+  "intro": [
+    "Vasastan är rutnätsplanerad och tätbebyggd, med sekelskiftesfastigheter där de gemensamma innergårdarna ofta är den enda utomhusytan de boende har tillgång till. Det gör att kvaliteten på gårdens skötsel och underhåll väger tungt för de flesta bostadsrättsföreningar i området.",
+    "Vi utför innergårdsrenovering, markanläggning och plattsättning i Vasastan, och planerar alltid arbetet med hänsyn till att gården ofta är den enda gemensamma utomhusmiljön i fastigheten."
+  ],
+  "whyUs": "Vi förstår vikten av en fungerande innergård i ett område som Vasastan, där den ofta är den enda utomhusytan de boende har — och planerar arbetet därefter.",
+  "relevantServices": [
+    { "slug": "finplanering-innergardsrenovering", "blurb": "Innergårdar som ofta är den enda gemensamma utomhusytan i fastigheten förtjänar extra omsorg vid renovering." },
+    { "slug": "markanlaggning-kantsten", "blurb": "Markanläggning och kantsten för gårdar och gångar i den rutnätsplanerade stenstaden." },
+    { "slug": "plattsattning-stensattning", "blurb": "Stensättning av gårdar och entréer mellan Vasastans sekelskiftesfastigheter." }
+  ]
+}

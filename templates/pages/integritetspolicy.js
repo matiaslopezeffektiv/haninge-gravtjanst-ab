@@ -7,7 +7,7 @@ const POLICY_STYLES = `<style>
     .nt-policy h2 { font-size: 1.5rem; font-weight: 700; color: var(--nt-navy); margin: 46px 0 16px; }
     .nt-policy h2:first-child { margin-top: 0; }
     .nt-policy ul { padding-left: 20px; margin-bottom: 16px; }
-    .nt-policy a { color: #F47C20; }
+    .nt-policy a { color: #1A1A1A; text-decoration: underline; }
     .nt-policy .nt-updated { color: var(--nt-gray); font-size: .9rem; margin-bottom: 40px; }
   </style>`;
 
@@ -60,7 +60,7 @@ function renderIntegritetspolicyPage(site) {
           <p class="nt-updated">Senast uppdaterad: ${escapeHtml(updated)}</p>
 
           <h2>1. Vem är personuppgiftsansvarig?</h2>
-          <p>${escapeHtml(site.name)} ("vi", "oss") är personuppgiftsansvarig för behandlingen av dina personuppgifter i samband med denna webbplats.</p>
+          <p>${escapeHtml(site.name)} ("vi","oss") är personuppgiftsansvarig för behandlingen av dina personuppgifter i samband med denna webbplats.</p>
           <p>Adress: <span class="${isPlaceholder(site.address.streetAddress) ? 'nt-todo' : ''}">${escapeHtml(site.address.streetAddress)}, ${escapeHtml(site.address.postalCode)} ${escapeHtml(site.address.addressLocality)}</span><br>E-post: ${email}<br>Telefon: ${phone}</p>
 
           <h2>2. Vilka uppgifter samlar vi in?</h2>
@@ -96,7 +96,7 @@ function renderIntegritetspolicyPage(site) {
             <li><strong>Statistik</strong> — Vercel Analytics, som ger oss anonymiserad, aggregerad besöksstatistik. Används endast om du aktivt samtycker.</li>
           </ul>
           <p>Du kan när som helst ändra ditt samtycke via knappen nedan.</p>
-          <p><button type="button" class="nt-cookie-settings-link" style="background:none;border:1.5px solid #F47C20;color:#F47C20;border-radius:8px;padding:10px 20px;font-weight:600;cursor:pointer;">Ändra cookie-inställningar</button></p>
+          <p><button type="button" class="nt-cookie-settings-link" style="background:none;border:1.5px solid #1A1A1A;color:#1A1A1A;border-radius:8px;padding:10px 20px;font-weight:600;cursor:pointer;">Ändra cookie-inställningar</button></p>
 
           <h2>7. Dina rättigheter</h2>
           <p>Enligt dataskyddsförordningen (GDPR) har du rätt att:</p>

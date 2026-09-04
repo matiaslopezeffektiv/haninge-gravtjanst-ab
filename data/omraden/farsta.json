@@ -1,0 +1,19 @@
+{
+  "slug": "farsta",
+  "name": "Farsta",
+  "region": "Söderort",
+  "h1": "Mark- och anläggningsarbeten i Farsta",
+  "metaTitle": "Mark- och anläggningsarbeten i Farsta — Haninge Grävtjänst AB",
+  "metaDescription": "Markarbeten, plattsättning och husgrundsarbete i Farsta — för både villaägare och BRF:er. Kostnadsfri bedömning av en lokal grävfirma.",
+  "shortDescription": "Blandad bebyggelse — från 1960-talets flerbostadshus till villaområden vid Farsta strand.",
+  "intro": [
+    "Farsta är en stadsdel med tydlig blandning av bebyggelse — dels flerbostadshus från 1950- och 60-talet kring Farsta centrum, dels villaområden som Farsta strand och Larsboda. Det gör att vi lika ofta arbetar åt BRF:er som åt privata villaägare i området.",
+    "Vi utför <a href=\"/tjanster/markarbeten/farsta\">markarbeten</a> och <a href=\"/tjanster/plattsattning-stensattning/farsta\">plattsättning</a> i Farsta, och anpassar alltid arbetet efter om det gäller en gemensam gård eller en enskild villatomt."
+  ],
+  "whyUs": "Vi har erfarenhet av båda sidorna av Farstas bebyggelse — stora gemensamma ytor åt bostadsrättsföreningar och mindre, mer personliga projekt på villatomter.",
+  "relevantServices": [
+    { "slug": "markarbeten", "blurb": "Schaktning och grävning både för villaprojekt och som del av större arbeten åt BRF:er i Farsta." },
+    { "slug": "plattsattning-stensattning", "blurb": "Uppfarter, gångar och uteplatser i Farstas villaområden, med rätt bärlager för svenska vintrar." },
+    { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete inför tillbyggnad eller renovering, vanligt i de äldre villaområdena i Farsta strand och Larsboda." }
+  ]
+}

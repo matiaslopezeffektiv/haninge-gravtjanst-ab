@@ -52,7 +52,7 @@ module.exports = async (req, res) => {
   try {
     const toEmails = process.env.CONTACT_TO_EMAIL
       ? process.env.CONTACT_TO_EMAIL.split(',').map((addr) => addr.trim())
-      : ['matias@effektivmedia.nu'];
+      : ['info@haningegravab.se', 'niklas@haningegravtjanstab.se'];
 
     const resend = new Resend(process.env.RESEND_API_KEY);
     const { error } = await resend.emails.send({

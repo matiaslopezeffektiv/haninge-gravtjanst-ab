@@ -10,12 +10,15 @@ const path = require('path');
 const ROOT = path.join(__dirname, '..');
 const DIST = path.join(ROOT, 'dist');
 
-const { validateTjanst } = require('../lib/types');
+const { validateTjanst, validateOmrade } = require('../lib/types');
 const { renderPage } = require('../templates/layout');
 const { renderHomePage } = require('../templates/pages/home');
 const { renderKontaktPage } = require('../templates/pages/kontakt');
 const { renderTjansterHubPage } = require('../templates/pages/tjansterHub');
 const { renderTjanstPage } = require('../templates/pages/tjanst');
+const { renderOrtPage } = require('../templates/pages/ort');
+const { renderOmradePage } = require('../templates/pages/omrade');
+const { renderOmradenHubPage } = require('../templates/pages/omradenHub');
 const { renderOmOssPage } = require('../templates/pages/omOss');
 const { renderIntegritetspolicyPage } = require('../templates/pages/integritetspolicy');
 
@@ -58,9 +61,22 @@ function loadTjanster() {
     });
 }
 
+function loadOmraden() {
+  const dir = path.join(ROOT, 'data', 'omraden');
+  return fs.readdirSync(dir)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => {
+      const data = readJson(path.join(dir, f));
+      validateOmrade(data, f);
+      return data;
+    });
+}
+
 function buildSitemap(site, routes) {
+  const lastmod = new Date().toISOString().slice(0, 10);
   const urls = routes.map(({ loc, priority, changefreq }) => `  <url>
     <loc>${site.url}${loc}</loc>
+    <lastmod>${lastmod}</lastmod>
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
   </url>`).join('\n');
@@ -79,23 +95,39 @@ function main() {
   const site = readJson(path.join(ROOT, 'data', 'site.json'));
   const tjanster = loadTjanster();
   const tjansterBySlug = Object.fromEntries(tjanster.map((t) => [t.slug, t]));
+  const omraden = loadOmraden();
+
+  // Bygger en global lista över alla tjänst×ort-kombinationer (från tjanst.orter)
+  // så att omrade.js kan länka en stadsdels "vanliga behov"-kort direkt till
+  // rätt /tjanster/[tjanst]/[ort]-sida när en sådan finns, annars till den
+  // generella Stockholm-sidan för tjänsten.
+  const allOrtMatches = [];
+  for (const tjanst of tjanster) {
+    for (const ort of tjanst.orter) {
+      allOrtMatches.push({ tjanstSlug: tjanst.slug, tjanstName: tjanst.name, ortSlug: ort.slug, ortName: ort.name });
+    }
+  }
 
   console.log('Kopierar statiska tillgångar ...');
   copyRecursive(path.join(ROOT, 'assets'), path.join(DIST, 'assets'));
 
   console.log('Renderar sidor ...');
-  writePage('index.html', site, '/', renderHomePage(site));
+  writePage('index.html', site, '/', renderHomePage(site, tjansterBySlug));
   writePage('kontakt.html', site, '/kontakt', renderKontaktPage(site));
-  writePage('tjanster.html', site, '/tjanster', renderTjansterHubPage(site));
+  writePage('tjanster.html', site, '/tjanster', renderTjansterHubPage(site, tjansterBySlug));
   writePage('om-oss.html', site, '/om-oss', renderOmOssPage(site));
   writePage('integritetspolicy.html', site, '/integritetspolicy', renderIntegritetspolicyPage(site));
+  writePage('omraden.html', site, '/omraden', renderOmradenHubPage(site, omraden));
 
+  // integritetspolicy.html är noindex (se templates/pages/integritetspolicy.js) och
+  // ska därför INTE ligga i sitemap.xml — en noindexad URL i sitemapen är en
+  // motsägande signal till Google och slösar crawlbudget.
   const routes = [
     { loc: '/', priority: '1.0', changefreq: 'weekly' },
     { loc: '/tjanster', priority: '0.9', changefreq: 'weekly' },
+    { loc: '/omraden', priority: '0.8', changefreq: 'weekly' },
     { loc: '/om-oss', priority: '0.6', changefreq: 'monthly' },
     { loc: '/kontakt', priority: '0.7', changefreq: 'monthly' },
-    { loc: '/integritetspolicy', priority: '0.3', changefreq: 'yearly' },
   ];
 
   for (const svc of site.services) {
@@ -106,13 +138,36 @@ function main() {
     }
     writePage(`tjanster/${tjanst.slug}.html`, site, `/tjanster/${tjanst.slug}`, renderTjanstPage(site, tjanst));
     routes.push({ loc: `/tjanster/${tjanst.slug}`, priority: '0.9', changefreq: 'monthly' });
+
+    for (const ort of tjanst.orter) {
+      const omradeForOrt = omraden.find((o) => o.slug === ort.slug);
+      writePage(
+        `tjanster/${tjanst.slug}/${ort.slug}.html`,
+        site,
+        `/tjanster/${tjanst.slug}/${ort.slug}`,
+        renderOrtPage(site, tjanst, ort, omradeForOrt),
+      );
+      routes.push({ loc: `/tjanster/${tjanst.slug}/${ort.slug}`, priority: '0.7', changefreq: 'monthly' });
+    }
+  }
+
+  for (const omrade of omraden) {
+    const ortMatches = allOrtMatches.filter((m) => m.ortSlug === omrade.slug);
+    const otherOmraden = omraden.filter((o) => o.slug !== omrade.slug);
+    writePage(
+      `omraden/${omrade.slug}.html`,
+      site,
+      `/omraden/${omrade.slug}`,
+      renderOmradePage(site, omrade, tjansterBySlug, ortMatches, otherOmraden),
+    );
+    routes.push({ loc: `/omraden/${omrade.slug}`, priority: '0.6', changefreq: 'monthly' });
   }
 
   console.log('Genererar sitemap.xml och robots.txt ...');
   writeFile('sitemap.xml', buildSitemap(site, routes));
   writeFile('robots.txt', buildRobots(site));
 
-  console.log(`\nKlart. ${tjanster.length} tjänst(er) i /data, ${routes.length} sidor i sitemap.`);
+  console.log(`\nKlart. ${tjanster.length} tjänst(er), ${omraden.length} område(n), ${allOrtMatches.length} tjänst×ort-sida(or), ${routes.length} sidor i sitemap.`);
 }
 
 main();

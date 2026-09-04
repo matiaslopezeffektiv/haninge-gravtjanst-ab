@@ -1,0 +1,199 @@
+{
+  "slug": "plattsattning-stensattning",
+  "name": "Plattsättning & Stensättning",
+  "targetLocation": "Stockholm",
+  "h1": "Plattsättning & Stensättning Stockholm",
+  "metaTitle": "Plattsättning & Stensättning Stockholm — Haninge Grävtjänst AB",
+  "metaDescription": "Plattsättning och stensättning i Stockholm av en grävfirma med över 10 års erfarenhet — uppfarter, gångar, trappor och uteplatser. Rätt grund under stenen så ytan håller.",
+  "shortDescription": "Plattsättning och stensättning av uppfarter, gångar, trappor och uteplatser i Stockholm och Haninge.",
+  "longDescription": [
+    "Snygga och hållbara stenytor börjar under stenen, inte på den. Haninge Grävtjänst AB utför plattsättning och stensättning åt privatpersoner, företag och BRF:er i hela Stockholm, med noggrant förarbete som grund — rätt bärlager, sättlager, dränering och fogning innan en enda platta läggs.",
+    "Vi hjälper till med allt från uppfarter och entréer till gångar, trappor och uteplatser. Vilken sten eller platta som passar bäst beror på användning, underlag och önskat utseende — vi går igenom alternativen tillsammans med dig innan arbetet börjar. Arbetet kombineras ofta med <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering</a> av omkringliggande ytor eller sätts i samband med <a href=\"/tjanster/markanlaggning-kantsten\">kantstensarbeten</a> för en helhetslösning på tomten.",
+    "Med över 10 års erfarenhet och 200+ genomförda projekt i Stockholmsområdet vet vi vilket bärlager och vilken typ av sten som håller bäst för just din yta, oavsett om det är en bilburen uppfart eller en gångväg i trädgården. Vi lämnar garanti på utfört arbete — <a href=\"/kontakt\">kontakta oss</a> för en kostnadsfri bedömning."
+  ],
+  "icon": "fa-border-all",
+  "heroImage": "/assets/img/hero/plattsattning-projekt-2.webp",
+  "heroImageAlt": "Nylagd uteplats med betongplattor och trappa vid villa",
+  "introImage": "/assets/img/hero/plattsattning-projekt-1.webp",
+  "introImageAlt": "Färdigställd stensättning med markplattor vid villa",
+
+  "benefits": [
+    "Rätt bärlager och sättlager under stenen för en yta som inte sjunker eller rör sig",
+    "Dränering och lutning planeras in så vatten leds bort istället för att bli stående",
+    "Eget maskinpark för schaktning och packning",
+    "Garanti på utfört arbete och över 10 års erfarenhet av stenläggning i Stockholmsområdet"
+  ],
+
+  "inclusions": [
+    "Bortforsling av gammal yta vid behov",
+    "Schaktning till rätt djup",
+    "Bärlager anpassat efter användning — gångyta eller körbar yta",
+    "Sättlager av stenmjöl eller grus",
+    "Läggning av vald sten eller platta",
+    "Fogning och kantstöd så ytan inte vandrar"
+  ],
+
+  "signs": {
+    "heading": "Tecken på att det är dags att lägga om plattorna",
+    "intro": "En stenlagd yta ger sällan varningssignaler förrän skadan redan är ett faktum, eftersom problemen ofta sitter i bärlagret under stenen. Håll utkik efter följande tecken:",
+    "items": [
+      "Plattorna lutar, gungar eller ligger ojämnt",
+      "Ogräs eller mossa tränger upp mellan fogarna",
+      "Vatten blir stående istället för att rinna undan",
+      "Enskilda plattor har spruckit eller flisat sig",
+      "Ytan är äldre än 20–25 år och aldrig lagts om"
+    ],
+    "image": "/assets/img/hero/plattsattning-projekt-3.webp",
+    "imageAlt": "Uteplats med markplattor under läggning"
+  },
+
+  "whyImportant": [
+    "En stenlagd yta är ofta det första man möter vid ett hus, och kvaliteten på arbetet syns snabbt — plattor som lagts direkt på jord utan bärlager börjar sjunka och luta redan efter en vinter eller två, medan en yta med rätt uppbyggnad kan hålla i decennier.",
+    "Rätt utfört ger plattsättning också en praktisk funktion utöver utseendet: en väl fungerande yta leder bort regnvatten istället för att bilda pölar, minskar halkrisk på vintern och gör det lättare att hålla rent och snöröja. En yta med bristfällig dränering under stenen riskerar dessutom att leda vatten mot husgrunden — läs mer om <a href=\"/tjanster/dranering\">dränering</a> om du är osäker på hur marken kring huset avvattnas."
+  ],
+
+  "whyUs": {
+    "intro": "Att lägga sten som håller handlar mest om det du inte ser — här är vad vi lägger extra vikt vid:",
+    "items": [
+      "Vi bedömer alltid det befintliga underlaget innan vi rekommenderar sten eller platta, istället för att sälja på förhand bestämda paketlösningar",
+      "Egen maskinpark för schaktning gör att vi kan hålla nere tidsåtgången även på större ytor",
+      "Vi hjälper till att välja material som fungerar med Stockholmsområdets vinterklimat — frostbeständighet är avgörande för fogar och plattor",
+      "Garanti på utfört arbete, inte bara på materialet"
+    ]
+  },
+
+  "considerations": {
+    "intro": "Innan arbetet startar är det några beslut som är bra att ha tagit ställning till:",
+    "items": [
+      "Bestäm om ytan ska tåla bilkörning — det påverkar bärlagrets uppbyggnad rejält och går inte att ändra i efterhand utan att göra om arbetet",
+      "Tänk på avvattningen redan i planeringsstadiet, särskilt om ytan ligger nära husgrunden",
+      "Fråga om vilken typ av fog som används — vissa fogmaterial kräver mer underhåll än andra över tid",
+      "Räkna med några dagars påverkan på tillgängligheten till uppfart eller entré under arbetets gång"
+    ]
+  },
+
+  "process": [
+    { "step": 1, "title": "Kostnadsfri bedömning", "description": "Vi tittar på ytan, underlaget och vad den ska användas till." },
+    { "step": 2, "title": "Offert", "description": "Du får en tydlig offert med val av sten/platta, utan bindningstid." },
+    { "step": 3, "title": "Grundarbete och läggning", "description": "Schaktning, bärlager, sättlager, läggning och fogning." },
+    { "step": 4, "title": "Slutbesiktning", "description": "Genomgång av den färdiga ytan tillsammans med dig." }
+  ],
+
+  "faq": [
+    {
+      "question": "Vad påverkar priset för plattsättning eller stensättning?",
+      "answer": "Priset beror på vilken sten eller platta du väljer, det befintliga underlagets skick och ytans storlek och tillgänglighet. Vi ger en kostnadsfri bedömning innan vi lämnar offert."
+    },
+    {
+      "question": "Vilken typ av sten eller platta passar bäst?",
+      "answer": "Det beror på var ytan ligger och hur den används — en uppfart för bil har andra krav på bärlager och materialtjocklek än en gångväg eller uteplats. Vi går igenom alternativen på plats."
+    },
+    {
+      "question": "Behöver den gamla ytan grävas bort innan ni lägger ny sten?",
+      "answer": "Oftast ja — ett fungerande bärlager är avgörande för att ytan ska hålla, så vi bedömer alltid det befintliga underlaget innan vi ger en offert."
+    },
+    {
+      "question": "Kan jag få ROT-avdrag på plattsättning?",
+      "answer": "Om arbetet är en reparation eller ombyggnad av en befintlig yta kan arbetskostnaden ge rätt till ROT-avdrag. Nyanläggning av en yta som inte fanns tidigare räknas normalt som trädgårds- eller markarbete och omfattas inte av avdraget. Vi berättar vad som gäller för ditt projekt vid offert."
+    },
+    {
+      "question": "Går det att lägga plattor på vintern?",
+      "answer": "Det går, men tjäle i marken gör arbetet svårare och resultatet mer osäkert. De flesta väljer att lägga stenytor under tjälfri period, ungefär april till november i Stockholmsområdet."
+    },
+    {
+      "question": "Hur länge håller en professionellt lagd stenyta?",
+      "answer": "Med rätt bärlager, dränering och underhåll håller en stenlagd yta i regel flera decennier. Det som oftast sviktar först är fogarna, som kan behöva fyllas i efter 10–15 år."
+    },
+    {
+      "question": "Passar samma typ av stenläggning i hela Stockholmsområdet?",
+      "answer": "Grundprincipen är densamma, men markförhållandena skiljer sig — tomter med lerjord i vissa lägre delar av Stockholm kräver ofta ett tjockare bärlager än tomter på fastare mark eller berg. Vi anpassar uppbyggnaden efter det som gäller för just din adress."
+    },
+    {
+      "question": "Kan ni lägga om en innergård åt en bostadsrättsförening?",
+      "answer": "Ja, vi tar gärna gemensamma ytor åt BRF:er — det är vanligt i flerbostadsområden runt om i Stockholm. Vi planerar arbetet så att gården är så tillgänglig som möjligt under tiden."
+    },
+    {
+      "question": "Vad är skillnaden på betongplattor, natursten och marksten?",
+      "answer": "Betongplattor är kostnadseffektiva och finns i många format, natursten (till exempel granit) är mer slitstark och åldras vackert men kostar mer, och marksten (smågatsten) ger en klassisk look som passar äldre villaområden. Vi hjälper dig väga för- och nackdelar mot budget."
+    },
+    {
+      "question": "Syns skarven mellan gammal och ny stenläggning om jag bara gör om en del av ytan?",
+      "answer": "Det kan synas, särskilt om den gamla stenen är blekt av sol och väder. Vi berättar ärligt om vad som är rimligt att förvänta sig innan vi startar, så du kan ta ett informerat beslut om du vill göra om hela ytan eller bara en del."
+    }
+  ],
+
+  "referenceProjects": [
+    {
+      "title": "Uteplats med betongplattor",
+      "description": "Ny uteplats och trappa vid entré.",
+      "image": "/assets/img/hero/plattsattning-projekt-2.webp"
+    },
+    {
+      "title": "Markplattor vid villa",
+      "description": "Nylagd yta med markplattor mellan uppfart och entré.",
+      "image": "/assets/img/hero/plattsattning-projekt-3.webp"
+    }
+  ],
+
+  "sourceKeys": ["skatteverketRot", "skatteverketFSkatt", "reco"],
+
+  "orter": [
+    {
+      "slug": "enskede",
+      "name": "Enskede",
+      "parentService": "plattsattning-stensattning",
+      "h1": "Plattsättning & Stensättning i Enskede",
+      "metaTitle": "Plattsättning & Stensättning i Enskede — Haninge Grävtjänst AB",
+      "metaDescription": "Plattsättning och stensättning i Enskede — anpassat efter trädgårdsstadens kompakta tomter. Kostnadsfri bedömning av en lokal grävfirma.",
+      "intro": [
+        "Enskedes trädgårdsstad kännetecknas av småhus och radhus på förhållandevis små, tätt placerade tomter. Det gör att varje kvadratmeter oftast räknas, och en väl genomtänkt stenläggning kan göra stor skillnad för hur en liten trädgård eller uppfart upplevs och används.",
+        "Vi utför <a href=\"/tjanster/plattsattning-stensattning\">plattsättning och stensättning</a> i Enskede och planerar alltid arbetet utifrån tomtens faktiska storlek och tillgänglighet — vilket ofta skiljer sig en hel del från en stor villatomt i andra delar av Stockholm."
+      ],
+      "localPoints": [
+        "Vana vid att arbeta på de kompakta tomter som är typiska för trädgårdsstaden",
+        "Vi planerar materialtransport och upplag med hänsyn till smala gator och begränsad plats",
+        "Många av Enskedes tomter har äldre bärlager som behöver bytas ut helt vid omläggning",
+        "Vi hjälper till att välja sten som passar den äldre, karaktäristiska bebyggelsen i området"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "haninge",
+      "name": "Haninge",
+      "parentService": "plattsattning-stensattning",
+      "h1": "Plattsättning & Stensättning i Haninge",
+      "metaTitle": "Plattsättning & Stensättning i Haninge — Haninge Grävtjänst AB",
+      "metaDescription": "Plattsättning och stensättning i Haninge — uppfarter, gångar och uteplatser utfört av den lokala grävfirman. Kostnadsfri bedömning.",
+      "intro": [
+        "Med vår bas i Tungelsta är Haninge kommun där vi utför flest plattsättnings- och stensättningsprojekt, allt från uppfarter i villaområden som Västerhaninge och Vendelsö till uteplatser närmare skärgården.",
+        "Vi utför <a href=\"/tjanster/plattsattning-stensattning\">plattsättning och stensättning</a> i hela kommunen och anpassar bärlager och materialval efter de markförhållanden som är vanliga just på din del av Haninge, oavsett om det är lerjord eller fastare mark."
+      ],
+      "localPoints": [
+        "Kort startsträcka och god lokalkännedom om kommunens olika markförhållanden",
+        "Vanligt med större uppfarter och garageinfarter på Haninges friliggande villatomter",
+        "Vi hjälper till med både nyanläggning och omläggning av äldre stenytor",
+        "Erfarenhet av att lägga stenytor som klarar tjällossning i kommunens mer lerhaltiga områden"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "farsta",
+      "name": "Farsta",
+      "parentService": "plattsattning-stensattning",
+      "h1": "Plattsättning & Stensättning i Farsta",
+      "metaTitle": "Plattsättning & Stensättning i Farsta — Haninge Grävtjänst AB",
+      "metaDescription": "Plattsättning och stensättning i Farsta — för villor och gemensamma ytor åt BRF:er. Kostnadsfri bedömning av en lokal grävfirma.",
+      "intro": [
+        "Farsta har en tydlig blandning av bebyggelse, med villaområden som Farsta strand och Larsboda sida vid sida med flerbostadshus kring Farsta centrum. Det gör att vi lika ofta lägger om en uppfart åt en villaägare som stensätter en gemensam gård åt en bostadsrättsförening.",
+        "Vi utför <a href=\"/tjanster/plattsattning-stensattning\">plattsättning och stensättning</a> i Farsta och anpassar arbetet efter om det gäller en privat tomt eller en gemensam yta som flera boende delar på."
+      ],
+      "localPoints": [
+        "Erfarenhet av både villaprojekt och gemensamma BRF-ytor i samma stadsdel",
+        "Vi bedömer alltid det befintliga bärlagret innan vi rekommenderar ny sten eller platta",
+        "Vanligt med omläggning av äldre uppfarter i villaområdena kring Farsta strand",
+        "Vi planerar gärna in arbetet i etapper vid större gemensamma ytor"
+      ],
+      "referenceProjects": []
+    }
+  ]
+}

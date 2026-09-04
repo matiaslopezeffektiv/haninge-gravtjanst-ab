@@ -203,13 +203,17 @@ html, body {
   color: var(--nt-orange);
   margin-bottom: 14px;
 }
-.nt-megamenu__col a {
+/* Specificity note: the dark header's ".main-menu ul li a" white-text rule
+   (0,1,3) outranks a bare ".nt-megamenu__col a" (0,1,1) despite !important
+   on both, so the dropdown text stayed white-on-white. Scope with an extra
+   ancestor class to beat it. */
+.main-menu .nt-megamenu__col a {
   display: flex;
   align-items: center;
   gap: 11px;
   padding: 8px 8px;
   border-radius: 8px;
-  color: var(--nt-navy);
+  color: var(--nt-navy) !important;
   text-decoration: none;
   font-size: .9rem;
   font-weight: 500;

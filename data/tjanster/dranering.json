@@ -180,6 +180,25 @@
         "Anpassning efter äldre, ofta putsade grundmurar som kräver försiktig hantering"
       ],
       "referenceProjects": []
+    },
+    {
+      "slug": "farsta",
+      "name": "Farsta",
+      "parentService": "dranering",
+      "h1": "Dränering i Farsta",
+      "metaTitle": "Dränering i Farsta — Haninge Grävtjänst AB",
+      "metaDescription": "Dränering av husgrund i Farsta — för både villor vid Farsta strand och fastigheter kring Farsta centrum. Kostnadsfri bedömning.",
+      "intro": [
+        "Farsta har en tydlig blandning av bebyggelse — flerbostadshus från 1950- och 60-talet kring Farsta centrum, och villaområden som Farsta strand och Larsboda. Dräneringsbehoven skiljer sig därför åt beroende på om det gäller en enskild villagrund eller en gemensam fastighet.",
+        "Vi utför <a href=\"/tjanster/dranering\">dränering</a> i Farsta åt både villaägare och bostadsrättsföreningar, och anpassar arbetet efter om det gäller en enskild tomt eller en gemensam gård kring flerbostadshusen."
+      ],
+      "localPoints": [
+        "Erfarenhet av både villagrunder i Farsta strand/Larsboda och flerbostadshus kring Farsta centrum",
+        "Vanligt med omdränering av villor från 1960–70-talet i de äldre delarna av Farsta strand",
+        "Vi bedömer om problemet sitter i dräneringen eller en gemensam avloppsledning vid flerbostadshus",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
     }
   ]
 }

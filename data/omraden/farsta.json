@@ -14,6 +14,7 @@
   "relevantServices": [
     { "slug": "markarbeten", "blurb": "Schaktning och grävning både för villaprojekt och som del av större arbeten åt BRF:er i Farsta." },
     { "slug": "plattsattning-stensattning", "blurb": "Uppfarter, gångar och uteplatser i Farstas villaområden, med rätt bärlager för svenska vintrar." },
-    { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete inför tillbyggnad eller renovering, vanligt i de äldre villaområdena i Farsta strand och Larsboda." }
+    { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete inför tillbyggnad eller renovering, vanligt i de äldre villaområdena i Farsta strand och Larsboda." },
+    { "slug": "dranering", "blurb": "Omdränering av äldre villor i Farsta strand och Larsboda, samt dränering vid flerbostadshus kring Farsta centrum." }
   ]
 }

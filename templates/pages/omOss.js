@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr } = require('../../lib/html');
 const { renderTrustBadges } = require('../partials/trustBadges');
 const { renderCtaBand } = require('../partials/ctaBand');
@@ -17,13 +17,10 @@ function renderOmOssPage(site) {
 
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'Om oss' },
-      ],
-    },
+    buildBreadcrumbSchema([
+      { name: 'Hem', url: `${site.url}/` },
+      { name: 'Om oss' },
+    ]),
   ]);
 
   const bodyContent = `

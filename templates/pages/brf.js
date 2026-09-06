@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, buildFaqSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildFaqSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml } = require('../../lib/html');
 const { renderProcessSteps } = require('../partials/processSteps');
 const { renderTrustBadges } = require('../partials/trustBadges');
@@ -44,13 +44,10 @@ function renderBrfPage(site, brf) {
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
     buildFaqSchema(brf.faq),
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'BRF' },
-      ],
-    },
+    buildBreadcrumbSchema([
+      { name: 'Hem', url: `${site.url}/` },
+      { name: 'BRF' },
+    ]),
   ]);
 
   const bodyContent = `

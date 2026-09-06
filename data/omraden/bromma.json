@@ -14,6 +14,7 @@
   "relevantServices": [
     { "slug": "dranering", "blurb": "Många villor i Bromma har originaldränering från 1930–50-talet som passerat sin förväntade livslängd." },
     { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete inför tillbyggnad eller renovering av äldre husgrunder, vanligt i Brommas etablerade villaområden." },
-    { "slug": "plattsattning-stensattning", "blurb": "Uppfarter och gångar anpassade efter tomtens ålder och befintliga bärlager." }
+    { "slug": "plattsattning-stensattning", "blurb": "Uppfarter och gångar anpassade efter tomtens ålder och befintliga bärlager." },
+    { "slug": "finplanering-innergardsrenovering", "blurb": "Finplanering av äldre villaträdgårdar i Bromma efter grävarbete, tillbyggnad eller dränering." }
   ]
 }

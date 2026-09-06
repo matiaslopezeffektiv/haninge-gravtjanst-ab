@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr } = require('../../lib/html');
 
 function guideCard(guide) {
@@ -26,13 +26,10 @@ function renderGuiderHubPage(site, guider) {
 
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'Guider' },
-      ],
-    },
+    buildBreadcrumbSchema([
+      { name: 'Hem', url: `${site.url}/` },
+      { name: 'Guider' },
+    ]),
   ]);
 
   const bodyContent = `

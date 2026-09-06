@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml } = require('../../lib/html');
 const { renderSatelliteLink } = require('../partials/satelliteLink');
 
@@ -40,13 +40,10 @@ function renderTjansterHubPage(site, tjansterBySlug) {
 
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'Tjänster' },
-      ],
-    },
+    buildBreadcrumbSchema([
+      { name: 'Hem', url: `${site.url}/` },
+      { name: 'Tjänster' },
+    ]),
   ]);
 
   const bodyContent = `

@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, buildFaqSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildFaqSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml } = require('../../lib/html');
 const { renderSourceLinks } = require('../partials/sourceLinks');
 const { renderCtaBand } = require('../partials/ctaBand');
@@ -33,14 +33,11 @@ function renderGuidePage(site, guide) {
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
     buildFaqSchema(guide.faq),
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'Guider', item: `${site.url}/guider` },
-        { '@type': 'ListItem', position: 3, name: guide.title },
-      ],
-    },
+    buildBreadcrumbSchema([
+      { name: 'Hem', url: `${site.url}/` },
+      { name: 'Guider', url: `${site.url}/guider` },
+      { name: guide.title },
+    ]),
   ]);
 
   // guide.intro/sections[].body renderas orenat — se motsvarande kommentar i templates/pages/tjanst.js.

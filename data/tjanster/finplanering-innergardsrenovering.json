@@ -156,6 +156,25 @@
         "Vi hjälper till att välja växter som klarar de lokala vinterförhållandena i Haninge"
       ],
       "referenceProjects": []
+    },
+    {
+      "slug": "bromma",
+      "name": "Bromma",
+      "parentService": "finplanering-innergardsrenovering",
+      "h1": "Finplanering & Innergårdsrenovering i Bromma",
+      "metaTitle": "Finplanering & Innergårdsrenovering i Bromma — Haninge Grävtjänst AB",
+      "metaDescription": "Finplanering och trädgårdsanläggning i Bromma — anpassat efter de äldre villaträdgårdarna i områden som Åkeshov och Riksby. Kostnadsfri bedömning.",
+      "intro": [
+        "Bromma är en av Stockholms mer etablerade villastadsdelar, med trädgårdar i områden som Åkeshov och Riksby som ofta anlagts samtidigt som husen på 1930-, 40- och 50-talet. Många av dem bär spår av flera decenniers tillbyggnader och omdräneringar som aldrig fått en ordentlig avslutande finplanering.",
+        "Vi utför <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering</a> i Bromma efter grävarbete, tillbyggnad eller dränering, och knyter ihop tomten med nya gångar, gräsytor och planteringar anpassade efter den äldre trädgårdens befintliga karaktär."
+      ],
+      "localPoints": [
+        "Erfarenhet av att finplanera efter dräneringsarbete i Brommas äldre villaträdgårdar",
+        "Vi anpassar nya ytor efter befintliga träd och planteringar som ofta är lika gamla som huset",
+        "Vanligt att kombinera finplanering med ny plattsättning av uppfarter i området",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
     }
   ]
 }

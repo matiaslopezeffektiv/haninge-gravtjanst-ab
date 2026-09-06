@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr, isPlaceholder } = require('../../lib/html');
 
 const POLICY_STYLES = `<style>
@@ -23,13 +23,10 @@ function renderIntegritetspolicyPage(site) {
 
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'Integritetspolicy' },
-      ],
-    },
+    buildBreadcrumbSchema([
+      { name: 'Hem', url: `${site.url}/` },
+      { name: 'Integritetspolicy' },
+    ]),
   ]);
 
   const phone = isPlaceholder(site.phone) ? site.phone : `<a href="${escapeAttr(site.phoneHref)}">${escapeHtml(site.phone)}</a>`;

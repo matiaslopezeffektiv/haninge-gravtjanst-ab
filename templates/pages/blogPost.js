@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr } = require('../../lib/html');
 const { renderCtaBand } = require('../partials/ctaBand');
 
@@ -55,14 +55,11 @@ function renderBlogPostPage(site, post) {
       publisher: { '@type': 'Organization', name: site.name, '@id': `${site.url}/#organization` },
       mainEntityOfPage: `${site.url}/blogg/${post.slug}`,
     },
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'Blogg', item: `${site.url}/blogg` },
-        { '@type': 'ListItem', position: 3, name: post.title },
-      ],
-    },
+    buildBreadcrumbSchema([
+      { name: 'Hem', url: `${site.url}/` },
+      { name: 'Blogg', url: `${site.url}/blogg` },
+      { name: post.title },
+    ]),
   ]);
 
   const relatedLinks = (post.relatedServiceSlugs || []).map((slug) => relatedServiceLink(site, slug)).join('');

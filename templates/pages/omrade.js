@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, buildServiceSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildServiceSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr } = require('../../lib/html');
 const { renderTrustBadges } = require('../partials/trustBadges');
 const { renderCtaBand } = require('../partials/ctaBand');
@@ -66,14 +66,11 @@ function renderOmradePage(site, omrade, tjansterBySlug, ortMatches, otherOmraden
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
     ...areaServiceSchemas,
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'Områden', item: `${site.url}/omraden` },
-        { '@type': 'ListItem', position: 3, name: omrade.name },
-      ],
-    },
+    buildBreadcrumbSchema([
+      { name: 'Hem', url: `${site.url}/` },
+      { name: 'Områden', url: `${site.url}/omraden` },
+      { name: omrade.name },
+    ]),
   ]);
 
   const otherAreasHtml = otherOmraden.map((o) => `<li><a href="/omraden/${escapeAttr(o.slug)}">${escapeHtml(o.name)}</a></li>`).join('');

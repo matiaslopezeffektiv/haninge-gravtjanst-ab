@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, buildServiceSchema, buildFaqSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildServiceSchema, buildFaqSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr } = require('../../lib/html');
 const { renderProcessSteps } = require('../partials/processSteps');
 const { renderCtaBand } = require('../partials/ctaBand');
@@ -51,14 +51,11 @@ function renderTjanstPage(site, tjanst) {
     buildLocalBusinessSchema(site),
     buildServiceSchema(site, tjanst),
     buildFaqSchema(tjanst.faq),
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'Tjänster', item: `${site.url}/tjanster` },
-        { '@type': 'ListItem', position: 3, name: tjanst.name },
-      ],
-    },
+    buildBreadcrumbSchema([
+      { name: 'Hem', url: `${site.url}/` },
+      { name: 'Tjänster', url: `${site.url}/tjanster` },
+      { name: tjanst.name },
+    ]),
   ]);
 
   const referenceProjectsBlock = tjanst.referenceProjects.length

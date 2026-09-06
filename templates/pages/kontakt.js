@@ -1,5 +1,5 @@
 const { buildMetaTags } = require('../../lib/metadata');
-const { buildLocalBusinessSchema, renderSchemaGraph } = require('../../lib/schema');
+const { buildLocalBusinessSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr, isPlaceholder, serviceOptions } = require('../../lib/html');
 const { renderTrustBadges } = require('../partials/trustBadges');
 const { renderProcessSteps } = require('../partials/processSteps');
@@ -18,7 +18,6 @@ const CONTACT_FORM_STYLES = `<style>
     }
     /* Mörk ikon på ljus gul tint — ren gul ikonfärg syns knappt mot en gul bakgrundston. */
     .nt-contact-info-box .icon i { color: #1A1A1A; font-size: 1.1rem; }
-    .nt-contact-info-box h5 { color: #1A1A1A; font-weight: 700; margin-bottom: 4px; font-size: 1rem; }
     .nt-contact-info-box p, .nt-contact-info-box a { color: #4A4A4A; margin: 0; font-size: .95rem; text-decoration: none; }
     .nt-contact-info-box a:hover { color: #D99A00; }
     .nt-phone-cta { background: #1A1A1A; border-radius: 12px; padding: 34px 30px; text-align: center; margin-bottom: 18px; }
@@ -40,13 +39,10 @@ function renderKontaktPage(site) {
 
   const schemaHtml = renderSchemaGraph([
     buildLocalBusinessSchema(site),
-    {
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Hem', item: `${site.url}/` },
-        { '@type': 'ListItem', position: 2, name: 'Kontakt' },
-      ],
-    },
+    buildBreadcrumbSchema([
+      { name: 'Hem', url: `${site.url}/` },
+      { name: 'Kontakt' },
+    ]),
   ]);
 
   const phoneBlock = isPlaceholder(site.phone)

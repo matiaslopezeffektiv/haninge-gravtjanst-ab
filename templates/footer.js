@@ -17,7 +17,7 @@ function renderFooter(site) {
         <div class="col-xl-4 col-lg-4 col-md-6">
           <div class="tpfooter-widget mb-40">
             <div class="tpfooter__logo mb-25">
-              <a href="/"><img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" class="nt-logo-on-dark" width="100" height="50" style="height:50px;width:auto;"></a>
+              <a href="/"><img src="/assets/img/logo/haninge.webp" alt="${escapeAttr(site.name)}" class="nt-logo-on-dark" width="100" height="50" style="height:50px;width:auto;"></a>
             </div>
             <p style="color:rgba(255,255,255,0.65);line-height:1.7;">${escapeHtml(site.description)}</p>
           </div>

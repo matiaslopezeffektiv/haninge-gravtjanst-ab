@@ -51,7 +51,7 @@ function renderHeader(site, activePath) {
   <div class="tpoffcanvas-area">
     <div class="tpoffcanvas">
       <div class="tpoffcanvas__close-btn">
-        <button class="close-btn" aria-label="Stäng meny"><i class="fal fa-times"></i></button>
+        <button class="close-btn" aria-label="Stäng meny"><i class="fas fa-times"></i></button>
       </div>
       <div class="tpoffcanvas__logo mb-30">
         <a href="/"><img src="/assets/img/logo/haninge.png" alt="${escapeAttr(site.name)}" width="92" height="46" style="height:46px;width:auto;"></a>

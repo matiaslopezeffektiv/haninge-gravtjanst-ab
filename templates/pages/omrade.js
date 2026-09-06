@@ -144,8 +144,8 @@ function renderOmradePage(site, omrade, tjansterBySlug, ortMatches, otherOmraden
       <a href="/omraden" class="tp-btn-xl mt-30 d-inline-block lh-0 tp-round-26 fs-16 border-full-1 ls-0 tp-btn-switch-animation fw-500">
         <span class="d-flex align-items-center justify-content-center">
           <span class="btn-text">Se alla områden</span>
-          <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-          <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+          <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+          <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
         </span>
       </a>
     </div>

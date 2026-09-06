@@ -91,8 +91,8 @@ function renderHomePage(site, tjansterBySlug) {
             <a href="/tjanster" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-common-white ls-0 tp-btn-switch-animation fw-500">
               <span class="d-flex align-items-center justify-content-center">
                 <span class="btn-text">Se våra tjänster</span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
               </span>
             </a>
           </div>
@@ -153,8 +153,8 @@ function renderHomePage(site, tjansterBySlug) {
             <a href="/om-oss" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500">
               <span class="d-flex align-items-center justify-content-center">
                 <span class="btn-text">Läs mer om oss</span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
               </span>
             </a>
           </div>
@@ -178,8 +178,8 @@ function renderHomePage(site, tjansterBySlug) {
             <a href="/tjanster" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 border-full-1 ls-0 tp-btn-switch-animation fw-500">
               <span class="d-flex align-items-center justify-content-center">
                 <span class="btn-text">Se alla tjänster</span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
               </span>
             </a>
           </div>
@@ -204,15 +204,15 @@ function renderHomePage(site, tjansterBySlug) {
             <a href="/omraden" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500">
               <span class="d-flex align-items-center justify-content-center">
                 <span class="btn-text">Se alla områden</span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
               </span>
             </a>
             <a href="/kontakt" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-common-white ls-0 tp-btn-switch-animation fw-500">
               <span class="d-flex align-items-center justify-content-center">
                 <span class="btn-text">Kontakta oss</span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
               </span>
             </a>
           </div>
@@ -277,8 +277,8 @@ function renderHomePage(site, tjansterBySlug) {
             <a href="/kontakt" class="tp-btn-xl mt-20 d-inline-block lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500">
               <span class="d-flex align-items-center justify-content-center">
                 <span class="btn-text">Begär offert</span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
-                <span class="btn-icon"><i class="fa-sharp fa-regular fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
               </span>
             </a>
           </div>

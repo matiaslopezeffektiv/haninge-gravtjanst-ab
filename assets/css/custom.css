@@ -147,6 +147,17 @@ html, body {
 .main-menu ul li a {
   color: var(--nt-white) !important;
 }
+/* main.css's dropdown-caret ::after uses font-weight:400, the one Font
+   Awesome weight this project doesn't ship (only solid/900 is loaded —
+   see font-awesome-pro.css). Force it to 900 so it renders instead of
+   silently falling through every other declared weight looking for a 400
+   match. It also inherits --tp-theme-primary (near-black) for color —
+   invisible now that the header is dark, same bug class as the dropdown
+   panel text fixed above, just dark-on-dark instead of white-on-white. */
+.tp-main-menu > nav > ul > li.has-dropdown > a::after {
+  font-weight: 900;
+  color: var(--nt-white) !important;
+}
 .main-menu ul li a:hover {
   color: var(--nt-orange) !important;
 }

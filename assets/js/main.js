@@ -175,7 +175,7 @@
 	// desktop-menyn hit med JS, vilket nu skulle ge en DUBBEL menylista.
 	var tpSideMenu = $('.tp-offcanvas-menu nav');
 	if ($(tpSideMenu).find('.tp-submenu').length != 0) {
-		$(tpSideMenu).find('.tp-submenu').parent().append('<button class="tp-menu-close"><i class="far fa-chevron-right"></i></button>');
+		$(tpSideMenu).find('.tp-submenu').parent().append('<button class="tp-menu-close"><i class="fas fa-chevron-right"></i></button>');
 	}
 	var sideMenuList = $('.tp-offcanvas-menu nav > ul > li button.tp-menu-close, .tp-offcanvas-menu nav > ul li.has-dropdown > a');
 	$(sideMenuList).on('click', function (e) {

@@ -66,8 +66,6 @@ function renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extra
   ${renderFloatingCallButton(site)}
 
   <script src="/assets/js/vendor/jquery.js"></script>
-  <script src="/assets/js/bootstrap-bundle.js"></script>
-  <script src="/assets/js/wow.js"></script>
   <script src="/assets/js/main.js"></script>
   <script src="/assets/js/cookie-consent.js"></script>
   <script src="/assets/js/floating-call-visibility.js"></script>

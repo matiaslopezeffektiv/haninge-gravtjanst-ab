@@ -116,11 +116,6 @@
 	}
 	
 	////////////////////////////////////////////////////
-	// 08. Wow Js
-	new WOW().init();
-
-
-	////////////////////////////////////////////////////
 	// 09. magnificPopup video view
 	// magnific-popup.js är inte inläst (samma skäl som punkt 02 ovan).
 	if ($(".popup-video").length > 0 && typeof $.fn.magnificPopup === 'function') {

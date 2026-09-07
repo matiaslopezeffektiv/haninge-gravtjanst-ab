@@ -4,7 +4,8 @@ const { escapeHtml, escapeAttr } = require('../../lib/html');
 const { renderProcessSteps } = require('../partials/processSteps');
 const { renderCtaBand } = require('../partials/ctaBand');
 const { renderSourceLinks } = require('../partials/sourceLinks');
-const { renderSidebarNav, renderSidebarContact, renderSidebarWhyUs } = require('../partials/sidebar');
+const { renderSidebarNav, renderSidebarWhyUs } = require('../partials/sidebar');
+const { renderLeadFormCard } = require('../partials/leadFormCard');
 
 function pointItem(text) {
   return `<li><i class="fa-sharp fa-solid fa-check"></i> ${escapeHtml(text)}</li>`;
@@ -109,7 +110,7 @@ function renderOrtPage(site, tjanst, ort, omrade) {
 
         <div class="col-lg-4">
           <div class="nt-side-sticky">
-            ${renderSidebarContact(site)}
+            ${renderLeadFormCard(site, { presetServiceName: tjanst.name, source: `ort-sidebar:${tjanst.slug}/${ort.slug}`, idPrefix: 'ort' })}
             ${renderSidebarWhyUs(site)}
             ${renderSidebarNav(site, tjanst.slug)}
           </div>
@@ -131,7 +132,9 @@ function renderOrtPage(site, tjanst, ort, omrade) {
     subtext: 'Berätta om ditt projekt så återkommer vi med en kostnadsfri bedömning och offert.',
   })}`;
 
-  return { metaHtml, schemaHtml, bodyContent, preloadImage: tjanst.heroImage };
+  const extraScripts = '<script src="/assets/js/lead-form.js"></script>';
+
+  return { metaHtml, schemaHtml, bodyContent, extraScripts, preloadImage: tjanst.heroImage };
 }
 
 module.exports = { renderOrtPage };

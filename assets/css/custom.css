@@ -941,6 +941,10 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
    oavsett källordning — .nt-side-card--navy h3 hade samma specificitet som
    .nt-side-card h3 och förlorade eftersom den kom först i filen. */
 .nt-side-card.nt-side-card--navy h3 { color: var(--nt-white); }
+/* .nt-contact-form label is dark text (#1A1A1A) by default for the white
+   hero/kontakt forms — invisible on this card's navy background, so it
+   needs its own override here, same reasoning as the h3 rule above. */
+.nt-side-card.nt-side-card--navy .nt-contact-form label { color: rgba(255,255,255,.85); }
 .nt-side-nav { list-style: none; padding: 0; margin: 0; }
 .nt-side-nav li { margin-bottom: 2px; }
 .nt-side-nav li a {

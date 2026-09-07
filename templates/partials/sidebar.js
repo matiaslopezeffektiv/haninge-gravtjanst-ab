@@ -16,17 +16,6 @@ function renderSidebarNav(site, currentSlug) {
         </div>`;
 }
 
-function renderSidebarContact(site) {
-  return `
-        <div class="nt-side-card nt-side-card--navy">
-          <h3>Kontakta oss direkt</h3>
-          <p style="color:rgba(255,255,255,.65);font-size:.85rem;margin-bottom:4px;">Ring oss</p>
-          <a href="${escapeAttr(site.phoneHref)}" style="color:#F5B400;font-weight:700;font-size:1.3rem;display:block;margin-bottom:16px;text-decoration:none;">${escapeHtml(site.phone)}</a>
-          <p style="color:rgba(255,255,255,.65);font-size:.85rem;margin-bottom:4px;">E-post</p>
-          <a href="mailto:${escapeAttr(site.email)}" style="color:#fff;font-weight:600;text-decoration:none;">${escapeHtml(site.email)}</a>
-        </div>`;
-}
-
 function renderSidebarWhyUs(site) {
   const t = site.trustSignals;
   return `
@@ -41,4 +30,4 @@ function renderSidebarWhyUs(site) {
         </div>`;
 }
 
-module.exports = { renderSidebarNav, renderSidebarContact, renderSidebarWhyUs };
+module.exports = { renderSidebarNav, renderSidebarWhyUs };

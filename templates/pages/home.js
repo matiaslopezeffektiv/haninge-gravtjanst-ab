@@ -107,7 +107,7 @@ function renderHomePage(site, tjansterBySlug) {
             <span class="nt-eyebrow">Vill du diskutera ditt projekt?</span>
             <h2>Kontakta oss</h2>
             <p>Fyll i dina uppgifter så ringer vi upp dig — helt kostnadsfritt och utan förpliktelser.</p>
-            <form class="nt-contact-form" id="hero-contact-form">
+            <form class="nt-contact-form nt-lead-form" id="hero-contact-form" data-source="hero">
               <label for="hero-name">Namn</label>
               <input type="text" id="hero-name" name="name" required placeholder="Ditt namn">
               <label for="hero-phone">Telefon</label>
@@ -329,7 +329,7 @@ function renderHomePage(site, tjansterBySlug) {
     subtext: 'Kontakta oss idag och få ett skräddarsytt förslag — snabbt och enkelt.',
   })}`;
 
-  const extraScripts = '<script src="/assets/js/hero-contact-form.js"></script>';
+  const extraScripts = '<script src="/assets/js/lead-form.js"></script>';
 
   return { metaHtml, schemaHtml, bodyContent, extraScripts, preloadImage: site.heroImage };
 }

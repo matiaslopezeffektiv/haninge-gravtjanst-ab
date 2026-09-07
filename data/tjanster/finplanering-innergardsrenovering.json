@@ -14,8 +14,6 @@
   "icon": "fa-tree",
   "heroImage": "/assets/img/hero/finplanering-projekt-1.webp",
   "heroImageAlt": "Finplanering med stensatt gångväg genom nyanlagd jord vid villa",
-  "introImage": "/assets/img/hero/finplanering-projekt-3.webp",
-  "introImageAlt": "Markförberedelse med grus inför finplanering vid husfasad",
 
   "benefits": [
     "Helhetslösning — stensättning, gräsytor, plantering, belysning och avvattning i samma projekt",
@@ -173,6 +171,139 @@
         "Vi anpassar nya ytor efter befintliga träd och planteringar som ofta är lika gamla som huset",
         "Vanligt att kombinera finplanering med ny plattsättning av uppfarter i området",
         "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "hagersten",
+      "name": "Hägersten",
+      "parentService": "finplanering-innergardsrenovering",
+      "h1": "Finplanering & Innergårdsrenovering i Hägersten",
+      "metaTitle": "Finplanering & Innergårdsrenovering i Hägersten — Haninge Grävtjänst AB",
+      "metaDescription": "Finplanering och innergårdsrenovering i Hägersten — för villaträdgårdar och gemensamma BRF-gårdar. Kostnadsfri bedömning.",
+      "intro": [
+        "Hägersten ligger i gränslandet mellan söderort och västerort, nära Liljeholmen, med en blandning av äldre villaområden och flerbostadshus. Det gör att vi lika ofta finplanerar en privat villaträdgård som en gemensam gård åt en bostadsrättsförening i samma stadsdel.",
+        "Vi utför <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering och innergårdsrenovering</a> i Hägersten och tar gärna hela kedjan från markarbete till färdig yta, oavsett om uppdraget kommer från en enskild villaägare eller en styrelse."
+      ],
+      "localPoints": [
+        "Vana vid både villaträdgårdar och gemensamma BRF-gårdar inom samma stadsdel",
+        "Vi planerar avvattningen som en del av finplaneringen",
+        "Vanligt att kombinera finplanering med husgrundsarbete i samma projekt",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "kungsholmen",
+      "name": "Kungsholmen",
+      "parentService": "finplanering-innergardsrenovering",
+      "h1": "Finplanering & Innergårdsrenovering på Kungsholmen",
+      "metaTitle": "Finplanering & Innergårdsrenovering på Kungsholmen — Haninge Grävtjänst AB",
+      "metaDescription": "Innergårdsrenovering på Kungsholmen — för bostadsrättsföreningars gemensamma gårdar. Kostnadsfri bedömning för styrelsen.",
+      "intro": [
+        "Kungsholmen är till stor del uppbyggt av flerbostadshus och bostadsrättsföreningar, med få privata trädgårdar men desto fler gemensamma innergårdar. Ett finplaneringsprojekt här handlar därför nästan alltid om att en hel förening, inte bara en enskild fastighetsägare, ska bli nöjd med resultatet.",
+        "Vi utför <a href=\"/tjanster/finplanering-innergardsrenovering\">innergårdsrenovering</a> på Kungsholmen åt BRF:er, från förslag och prisbild till färdig gård, och samordnar med styrelsen genom hela processen."
+      ],
+      "localPoints": [
+        "Erfarenhet av innergårdsrenovering åt bostadsrättsföreningar i tät stadsmiljö",
+        "Vi samordnar tidsplan och åtkomst med styrelsen och boende i fastigheten",
+        "Vana vid trånga transportvägar och portar in till gården",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "liljeholmen",
+      "name": "Liljeholmen",
+      "parentService": "finplanering-innergardsrenovering",
+      "h1": "Finplanering & Innergårdsrenovering i Liljeholmen",
+      "metaTitle": "Finplanering & Innergårdsrenovering i Liljeholmen — Haninge Grävtjänst AB",
+      "metaDescription": "Finplanering av gemensamma gårdar i Liljeholmen — anpassat efter nyare fastigheter och områdets markhistoria. Kostnadsfri bedömning.",
+      "intro": [
+        "Liljeholmen har genomgått en stor omvandling från industriområde till ett av Stockholms tätare bostadsområden, med många nybyggda flerbostadshus och bostadsrättsföreningar. Finplaneringsprojekt här är ofta kopplade till nyare byggprojekt eller upprustning av gemensamma ytor kring relativt nybyggda fastigheter.",
+        "Vi utför <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering och innergårdsrenovering</a> i Liljeholmen åt BRF:er och fastighetsägare, med kunskap om den industriella markhistorian som är bra att känna till vid markarbete i området."
+      ],
+      "localPoints": [
+        "Erfarenhet av finplanering kopplad till nyare byggprojekt i Liljeholmen",
+        "Kunskap om områdets industriella markhistoria vid schaktning inför ny yta",
+        "Vi samordnar med styrelsen genom hela processen vid BRF-uppdrag",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "norrmalm",
+      "name": "Norrmalm",
+      "parentService": "finplanering-innergardsrenovering",
+      "h1": "Finplanering & Innergårdsrenovering på Norrmalm",
+      "metaTitle": "Finplanering & Innergårdsrenovering på Norrmalm — Haninge Grävtjänst AB",
+      "metaDescription": "Innergårdsrenovering på Norrmalm — anpassat efter sekelskiftesfastigheternas gemensamma gårdar. Kostnadsfri bedömning för BRF.",
+      "intro": [
+        "Norrmalm är en av Stockholms mest centrala stadsdelar, präglad av tät stenstadsbebyggelse med fastigheter från sekelskiftet och framåt. De flesta finplaneringsprojekt här handlar om en gemensam innergård snarare än en privat trädgård, ofta i kombination med åtgärder mot fukt från äldre källare och grundmurar.",
+        "Vi utför <a href=\"/tjanster/finplanering-innergardsrenovering\">innergårdsrenovering</a> på Norrmalm åt bostadsrättsföreningar, och kombinerar gärna arbetet med dränering när grunden ändå behöver åtgärdas."
+      ],
+      "localPoints": [
+        "Erfarenhet av innergårdsrenovering vid äldre sekelskiftesfastigheter",
+        "Vanligt att finplanering kombineras med dränering i samma projekt",
+        "Vi samordnar tidsplan och åtkomst med styrelsen genom hela processen",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "ostermalm",
+      "name": "Östermalm",
+      "parentService": "finplanering-innergardsrenovering",
+      "h1": "Finplanering & Innergårdsrenovering på Östermalm",
+      "metaTitle": "Finplanering & Innergårdsrenovering på Östermalm — Haninge Grävtjänst AB",
+      "metaDescription": "Innergårdsrenovering på Östermalm — utfört med den kvalitetsnivå som förväntas i stadsdelens fastigheter. Kostnadsfri bedömning.",
+      "intro": [
+        "Östermalm kännetecknas av äldre, ofta påkostade fastigheter med gemensamma innergårdar som förvaltas noggrant av respektive bostadsrättsförening. Ett finplaneringsprojekt här ställer höga krav på både materialval och hur arbetsplatsen sköts under tiden.",
+        "Vi utför <a href=\"/tjanster/finplanering-innergardsrenovering\">innergårdsrenovering</a> på Östermalm åt fastighetsägare och BRF:er, med den kvalitetsnivå och det varsamma arbetssätt som förväntas i stadsdelens fastigheter."
+      ],
+      "localPoints": [
+        "Erfarenhet av innergårdsrenovering vid äldre, påkostade fastigheter",
+        "Vi anpassar materialval och arbetssätt efter fastighetens och styrelsens krav",
+        "Vana vid trånga transportvägar och portar in till gården",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "sodermalm",
+      "name": "Södermalm",
+      "parentService": "finplanering-innergardsrenovering",
+      "h1": "Finplanering & Innergårdsrenovering på Södermalm",
+      "metaTitle": "Finplanering & Innergårdsrenovering på Södermalm — Haninge Grävtjänst AB",
+      "metaDescription": "Innergårdsrenovering på Södermalm — anpassat efter berg i dagen och trånga innergårdar. Kostnadsfri bedömning för BRF.",
+      "intro": [
+        "Södermalm är en av Stockholms mest höglänta stadsdelar, med berg i dagen på flera håll och en tät, äldre bebyggelse där gårdar sällan är byggda för stora maskiner. Det påverkar både maskinval och tidsplan redan från start av ett finplaneringsprojekt.",
+        "Vi utför <a href=\"/tjanster/finplanering-innergardsrenovering\">innergårdsrenovering</a> på Södermalm åt bostadsrättsföreningar, med hänsyn till berggrund, trånga innergårdar och grannar genomgående i planeringen."
+      ],
+      "localPoints": [
+        "Erfarenhet av finplanering på tomter med berg i dagen",
+        "Vana vid trånga innergårdar som kräver mindre maskiner och noggrann logistik",
+        "Vi planerar arbetet med hänsyn till grannar och begränsad åtkomst",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "vasastan",
+      "name": "Vasastan",
+      "parentService": "finplanering-innergardsrenovering",
+      "h1": "Finplanering & Innergårdsrenovering i Vasastan",
+      "metaTitle": "Finplanering & Innergårdsrenovering i Vasastan — Haninge Grävtjänst AB",
+      "metaDescription": "Innergårdsrenovering i Vasastan — för rutnätskvarterens gemensamma utomhusyta. Kostnadsfri bedömning för BRF.",
+      "intro": [
+        "Vasastan är rutnätsplanerad och tätbebyggd, med sekelskiftesfastigheter där den gemensamma innergården ofta är den enda utomhusytan de boende har tillgång till. Det gör att kvaliteten på gårdens skötsel och underhåll väger tungt för de flesta bostadsrättsföreningar i området.",
+        "Vi utför <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering och innergårdsrenovering</a> i Vasastan med den enda gemensamma utomhusytan i fokus, och planerar alltid arbetet så gården kan användas så snart som möjligt efter avslutat projekt."
+      ],
+      "localPoints": [
+        "Erfarenhet av innergårdsrenovering i rutnätsplanerade sekelskifteskvarter",
+        "Vi planerar arbetet så gårdens funktion påverkas så lite som möjligt under tiden",
+        "Vana vid trånga transportvägar och portar in till gården",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
       ],
       "referenceProjects": []
     }

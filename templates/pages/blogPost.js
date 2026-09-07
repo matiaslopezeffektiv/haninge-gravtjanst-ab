@@ -88,12 +88,12 @@ function renderBlogPostPage(site, post) {
   // post.body[].paragraphs renderas orenat — se motsvarande kommentar i templates/pages/tjanst.js.
   const bodyContent = `
   <!-- =============== BREADCRUMB =============== -->
-  <div class="tp-breadcrumb-area tp-breadcrumb-spacing nt-dark-band pt-180 pb-90"${post.heroImage ? ` style="background-image:url('${escapeAttr(post.heroImage)}');"` : ''}>
+  <div class="tp-breadcrumb-area tp-breadcrumb-spacing nt-dark-band pt-180 pb-90"${post.heroImage ? ` style="background-image:url('${escapeAttr(post.heroImage)}');" role="img" aria-label="${escapeAttr(post.heroImageAlt || post.title)}"` : ''}>
     <div class="container">
       <div class="row">
         <div class="col-xl-9 col-lg-10">
           <div class="tp-breadcrumb-content">
-            <span class="nt-eyebrow nt-eyebrow-light" style="margin-bottom:14px;">${escapeHtml(formatDate(post.publishDate))}</span>
+            <span class="nt-eyebrow nt-eyebrow-light" style="margin-bottom:14px;">${escapeHtml(formatDate(post.publishDate))} · ${escapeHtml(site.name)}</span>
             <h1 class="tp-breadcrumb-title fw-600 fs-52 fs-xs-32 ls-m-3 tp-text-common-white lh-1 mb-20">${escapeHtml(post.title)}</h1>
             <div class="tp-breadcrumb-dvdr"><ul><li><a href="/">Hem</a></li><li class="dvdr">/</li><li><a href="/blogg">Blogg</a></li><li class="dvdr">/</li><li>${escapeHtml(post.title)}</li></ul></div>
           </div>

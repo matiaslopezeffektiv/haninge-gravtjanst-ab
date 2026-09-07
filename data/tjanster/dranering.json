@@ -14,8 +14,6 @@
   "icon": "fa-water",
   "heroImage": "/assets/img/hero/dranering-membran.webp",
   "heroImageAlt": "Dräneringsskiva monteras längs husgrund inför återfyllning",
-  "introImage": "/assets/img/hero/dranering-arbete.webp",
-  "introImageAlt": "Person i varselkläder monterar dräneringsduk och dräneringsrör i schakt",
 
   "benefits": [
     "Fukt- och vattensäker husgrund som skyddar källare och grund på lång sikt",
@@ -197,6 +195,44 @@
         "Vanligt med omdränering av villor från 1960–70-talet i de äldre delarna av Farsta strand",
         "Vi bedömer om problemet sitter i dräneringen eller en gemensam avloppsledning vid flerbostadshus",
         "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "bromma",
+      "name": "Bromma",
+      "parentService": "dranering",
+      "h1": "Dränering i Bromma",
+      "metaTitle": "Dränering i Bromma — Haninge Grävtjänst AB",
+      "metaDescription": "Dränering av husgrund i Bromma — anpassat efter villor från 1930–50-talet i områden som Åkeshov och Riksby. Kostnadsfri bedömning.",
+      "intro": [
+        "Bromma är en av Stockholms mer etablerade villastadsdelar, med områden som Åkeshov och Riksby där många hus byggdes under 1930-, 40- och 50-talet. En stor del av det ursprungliga dräneringssystemet i dessa hus börjar nu närma sig 70–80 år — betydligt längre än vad ett dräneringssystem normalt är dimensionerat för att hålla.",
+        "Vi utför <a href=\"/tjanster/dranering\">dränering</a> i Bromma med den åldern som utgångspunkt, och bedömer alltid skicket på plats innan vi lämnar offert. Ofta går det att kombinera omdräneringen med annat husgrundsarbete om grunden redan är öppnad."
+      ],
+      "localPoints": [
+        "Erfarenhet av det äldre dräneringsbeståndet i villaområden som Åkeshov och Riksby",
+        "Vanligt med tecken på fukt i källare hos hus byggda 1930–50, kopplat till uttjänt dränering",
+        "Vi bedömer om enbart dräneringen behöver bytas eller om husgrunden också kräver åtgärd",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "norrmalm",
+      "name": "Norrmalm",
+      "parentService": "dranering",
+      "h1": "Dränering på Norrmalm",
+      "metaTitle": "Dränering på Norrmalm — Haninge Grävtjänst AB",
+      "metaDescription": "Dränering vid äldre fastigheter på Norrmalm — anpassat efter sekelskiftesgrunder och gemensamma innergårdar. Kostnadsfri bedömning.",
+      "intro": [
+        "Norrmalm är en av Stockholms mest centrala stadsdelar, präglad av tät stenstadsbebyggelse med fastigheter från sekelskiftet och framåt. Äldre källare och grundmurar är vanliga, och de för ofta med sig fukt- och dräneringsproblem som kräver särskild försiktighet i den täta stadsmiljön.",
+        "Vi utför <a href=\"/tjanster/dranering\">dränering</a> på Norrmalm åt bostadsrättsföreningar och fastighetsägare, med arbete som ofta sker via en gemensam innergård snarare än en privat trädgård — det ställer andra krav på både åtkomst och hänsyn till grannar under arbetets gång."
+      ],
+      "localPoints": [
+        "Erfarenhet av sekelskiftesfastigheter med äldre källare och grundmurar",
+        "Arbete sker ofta via gemensam innergård — vi planerar åtkomst och materialhantering därefter",
+        "Vi bedömer om fukten beror på bristande dränering eller på annat, t.ex. otät källarvägg",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert till styrelsen"
       ],
       "referenceProjects": []
     }

@@ -14,8 +14,6 @@
   "icon": "fa-house-chimney",
   "heroImage": "/assets/img/hero/husgrunder-projekt-1.webp",
   "heroImageAlt": "Grundarbete med fuktisolering längs husgrund",
-  "introImage": "/assets/img/hero/husgrunder-projekt-3.jpeg",
-  "introImageAlt": "Flygbild över gjuten husgrund inför byggnation",
 
   "benefits": [
     "Markarbetet planeras utifrån markens bärighet, lutning och avvattning innan grunden läggs",
@@ -138,5 +136,101 @@
   "sourceKeys": ["boverketMarklov", "stockholmBygglov", "haningeBygglov", "skatteverketFSkatt"],
 
   "_orterSchemaNote": "Ort-objekt läggs till i nästa omgång — endast för stadsdelar med bekräftad sökefterfrågan (se data/site.json areasServed).",
-  "orter": []
+  "orter": [
+    {
+      "slug": "farsta",
+      "name": "Farsta",
+      "parentService": "husgrunder-markanlaggning",
+      "h1": "Husgrunder & Markanläggning i Farsta",
+      "metaTitle": "Husgrunder & Markanläggning i Farsta — Haninge Grävtjänst AB",
+      "metaDescription": "Grundarbete och markanläggning i Farsta — för villor vid Farsta strand och fastigheter kring Farsta centrum. Kostnadsfri bedömning.",
+      "intro": [
+        "Farsta rymmer både villaområden som Farsta strand och Larsboda och flerbostadshus från 1950- och 60-talet kring Farsta centrum. Grundförhållandena varierar därefter, och vi anpassar grundarbetet efter om det gäller en enskild villatomt eller en tillbyggnad vid en äldre fastighet.",
+        "Vi utför <a href=\"/tjanster/husgrunder-markanlaggning\">husgrunds- och markanläggningsarbete</a> i Farsta inför nybygge, tillbyggnad eller grundrenovering, och samordnar gärna med dränering av den befintliga husgrunden i samma projekt."
+      ],
+      "localPoints": [
+        "Erfarenhet av både villagrunder i Farsta strand/Larsboda och äldre fastigheter kring Farsta centrum",
+        "Vi bedömer markförhållandena på plats innan arbetet påbörjas",
+        "Samordning med dränering och markarbete i samma projekt där det behövs",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "bromma",
+      "name": "Bromma",
+      "parentService": "husgrunder-markanlaggning",
+      "h1": "Husgrunder & Markanläggning i Bromma",
+      "metaTitle": "Husgrunder & Markanläggning i Bromma — Haninge Grävtjänst AB",
+      "metaDescription": "Grundarbete och markanläggning i Bromma — anpassat efter villor från 1930–50-talet i områden som Åkeshov och Riksby. Kostnadsfri bedömning.",
+      "intro": [
+        "Bromma är en av Stockholms mer etablerade villastadsdelar, med hus byggda under 1930-, 40- och 50-talet i områden som Åkeshov och Riksby. Vid tillbyggnad eller grundrenovering av dessa hus möter vi ofta en husgrund som inte längre motsvarar dagens krav på fukt- och tjälsäkring.",
+        "Vi utför <a href=\"/tjanster/husgrunder-markanlaggning\">husgrunds- och markanläggningsarbete</a> i Bromma inför tillbyggnad, ny grund eller grundrenovering, och kombinerar gärna arbetet med omdränering när grunden ändå är öppnad."
+      ],
+      "localPoints": [
+        "Erfarenhet av äldre husgrunder i villaområden som Åkeshov och Riksby",
+        "Vanligt att grundrenovering kombineras med omdränering i samma projekt",
+        "Vi bedömer markförhållandena på plats innan vi lämnar offert",
+        "Samordning med grundläggare och andra yrkesgrupper vid tillbyggnad"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "hagersten",
+      "name": "Hägersten",
+      "parentService": "husgrunder-markanlaggning",
+      "h1": "Husgrunder & Markanläggning i Hägersten",
+      "metaTitle": "Husgrunder & Markanläggning i Hägersten — Haninge Grävtjänst AB",
+      "metaDescription": "Grundarbete och markanläggning i Hägersten — för villaprojekt och gemensamma ytor åt bostadsrättsföreningar. Kostnadsfri bedömning.",
+      "intro": [
+        "Hägersten ligger i gränslandet mellan söderort och västerort, nära Liljeholmen, med en blandning av äldre villaområden och flerbostadshus. Det gör att vi möter både privata grundprojekt och grundarbete i samband med upprustning av gemensamma ytor åt bostadsrättsföreningar.",
+        "Vi utför <a href=\"/tjanster/husgrunder-markanlaggning\">husgrunds- och markanläggningsarbete</a> i Hägersten inför tillbyggnad, ny grund eller grundrenovering, oavsett om det gäller en villatomt eller en fastighet med flera lägenheter."
+      ],
+      "localPoints": [
+        "Vana vid både villaprojekt och BRF-uppdrag inom samma stadsdel",
+        "Vi bedömer markförhållandena på plats innan arbetet påbörjas",
+        "Samordning med dränering och markanläggning i samma projekt där det behövs",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "liljeholmen",
+      "name": "Liljeholmen",
+      "parentService": "husgrunder-markanlaggning",
+      "h1": "Husgrunder & Markanläggning i Liljeholmen",
+      "metaTitle": "Husgrunder & Markanläggning i Liljeholmen — Haninge Grävtjänst AB",
+      "metaDescription": "Grundarbete och markanläggning i Liljeholmen — med kunskap om områdets industriella markhistoria. Kostnadsfri bedömning.",
+      "intro": [
+        "Liljeholmen har genomgått en stor omvandling från industriområde till ett av Stockholms tätare bostadsområden, med många nybyggda flerbostadshus och bostadsrättsföreningar. Marken har på flera håll tidigare använts industriellt, vilket är bra att känna till redan vid planering av grundarbete.",
+        "Vi utför <a href=\"/tjanster/husgrunder-markanlaggning\">husgrunds- och markanläggningsarbete</a> i Liljeholmen åt fastighetsägare och BRF:er, ofta kopplat till nyare byggprojekt eller upprustning i anslutning till relativt nybyggda fastigheter."
+      ],
+      "localPoints": [
+        "Kunskap om områdets industriella markhistoria vid schaktning och grundarbete",
+        "Erfarenhet av grundarbete kopplat till nyare byggprojekt i området",
+        "Vi bedömer markförhållandena på plats innan vi lämnar offert",
+        "Samordning med andra yrkesgrupper vid nybygge eller tillbyggnad"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "ostermalm",
+      "name": "Östermalm",
+      "parentService": "husgrunder-markanlaggning",
+      "h1": "Husgrunder & Markanläggning på Östermalm",
+      "metaTitle": "Husgrunder & Markanläggning på Östermalm — Haninge Grävtjänst AB",
+      "metaDescription": "Grundarbete och markanläggning på Östermalm — anpassat efter äldre, påkostade fastigheter och noggrant förvaltade innergårdar. Kostnadsfri bedömning.",
+      "intro": [
+        "Östermalm kännetecknas av äldre, ofta påkostade fastigheter med gemensamma innergårdar som förvaltas noggrant av respektive bostadsrättsförening. Grundarbete här ställer höga krav på både utförande och hur arbetsplatsen sköts under tiden.",
+        "Vi utför <a href=\"/tjanster/husgrunder-markanlaggning\">husgrunds- och markanläggningsarbete</a> på Östermalm åt fastighetsägare och BRF:er, med den kvalitetsnivå och det varsamma arbetssätt som förväntas i stadsdelens fastigheter."
+      ],
+      "localPoints": [
+        "Erfarenhet av grundarbete vid äldre, påkostade fastigheter med gemensam innergård",
+        "Vi anpassar arbetsplatsens skötsel efter fastighetens och styrelsens krav",
+        "Vi bedömer markförhållandena på plats innan vi lämnar offert",
+        "Samordning med andra yrkesgrupper vid grundrenovering eller tillbyggnad"
+      ],
+      "referenceProjects": []
+    }
+  ]
 }

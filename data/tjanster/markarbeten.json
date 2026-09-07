@@ -14,8 +14,6 @@
   "icon": "fa-truck-monster",
   "heroImage": "/assets/img/hero/markarbeten-projekt-1.webp",
   "heroImageAlt": "Grävarbete vid schakt längs husgrund",
-  "introImage": "/assets/img/hero/markarbeten-projekt-3.jpeg",
-  "introImageAlt": "Grävmaskin i arbete vid solnedgång",
 
   "benefits": [
     "Tar både fristående grävjobb och markarbete som del av ett större projekt",
@@ -210,6 +208,25 @@
         "Vi planerar tillfällig upplagsplats för massor innan arbetet påbörjas",
         "Vanligt med schaktning inför omdränering av de äldre husen i området",
         "Vi informerar gärna grannar i förväg när arbetet sker nära tomtgräns i tät bebyggelse"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "kungsholmen",
+      "name": "Kungsholmen",
+      "parentService": "markarbeten",
+      "h1": "Grävfirma på Kungsholmen — Markarbeten",
+      "metaTitle": "Grävfirma på Kungsholmen — Haninge Grävtjänst AB",
+      "metaDescription": "Markarbeten på Kungsholmen — schaktning och ledningsgrävning åt bostadsrättsföreningar i tät stadsmiljö. Kostnadsfri bedömning.",
+      "intro": [
+        "Kungsholmen är till stor del uppbyggt av flerbostadshus och bostadsrättsföreningar, med få privata trädgårdar men desto fler gemensamma innergårdar. Ett markarbete här handlar därför oftast om ledningsgrävning eller förberedande schaktning inför en större innergårdsrenovering, snarare än ett enskilt villaprojekt.",
+        "Vi utför <a href=\"/tjanster/markarbeten\">markarbeten</a> på Kungsholmen åt BRF:er och fastighetsägare, med den samordning och det tålamod som krävs mitt i en tät stadsmiljö."
+      ],
+      "localPoints": [
+        "Erfarenhet av markarbete i tät stadsmiljö med gemensamma innergårdar",
+        "Vi gör alltid en ledningskoll innan grävning nära befintlig infrastruktur",
+        "Vana vid trånga transportvägar och portar in till gården",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
       ],
       "referenceProjects": []
     }

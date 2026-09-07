@@ -14,8 +14,6 @@
   "icon": "fa-border-all",
   "heroImage": "/assets/img/hero/plattsattning-projekt-2.webp",
   "heroImageAlt": "Nylagd uteplats med betongplattor och trappa vid villa",
-  "introImage": "/assets/img/hero/plattsattning-projekt-1.webp",
-  "introImageAlt": "Färdigställd stensättning med markplattor vid villa",
 
   "benefits": [
     "Rätt bärlager och sättlager under stenen för en yta som inte sjunker eller rör sig",
@@ -192,6 +190,44 @@
         "Vi bedömer alltid det befintliga bärlagret innan vi rekommenderar ny sten eller platta",
         "Vanligt med omläggning av äldre uppfarter i villaområdena kring Farsta strand",
         "Vi planerar gärna in arbetet i etapper vid större gemensamma ytor"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "bromma",
+      "name": "Bromma",
+      "parentService": "plattsattning-stensattning",
+      "h1": "Plattsättning & Stensättning i Bromma",
+      "metaTitle": "Plattsättning & Stensättning i Bromma — Haninge Grävtjänst AB",
+      "metaDescription": "Plattsättning och stensättning i Bromma — uppfarter, gångar och uteplatser hos villor i Åkeshov och Riksby. Kostnadsfri bedömning.",
+      "intro": [
+        "Bromma är en av Stockholms mer etablerade villastadsdelar, med hus från 1930-, 40- och 50-talet i områden som Åkeshov och Riksby. Många av trädgårdarna har uppfarter och gångar som lagts på ett bärlager som inte längre håller måttet, vilket syns som sättningar och ojämnheter i plattorna.",
+        "Vi utför <a href=\"/tjanster/plattsattning-stensattning\">plattsättning och stensättning</a> i Bromma — allt från uppfarter och gångar till uteplatser — och bygger alltid upp ett nytt, korrekt uppbyggt bärlager istället för att bara lägga om de gamla plattorna på samma underlag."
+      ],
+      "localPoints": [
+        "Erfarenhet av uppfarter och gångar hos villor från 1930–50-talet i Åkeshov och Riksby",
+        "Vi bygger alltid upp bärlagret på nytt istället för att lägga om på ett uttjänt underlag",
+        "Vana vid de ofta kuperade tomterna som är vanliga i Brommas villaområden",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "vasastan",
+      "name": "Vasastan",
+      "parentService": "plattsattning-stensattning",
+      "h1": "Plattsättning & Stensättning i Vasastan",
+      "metaTitle": "Plattsättning & Stensättning i Vasastan — Haninge Grävtjänst AB",
+      "metaDescription": "Plattsättning på innergårdar i Vasastan — anpassat efter rutnätskvarterens gemensamma utomhusytor. Kostnadsfri bedömning för BRF.",
+      "intro": [
+        "Vasastan är rutnätsplanerad och tätbebyggd, med sekelskiftesfastigheter där den gemensamma innergården ofta är den enda utomhusytan de boende har tillgång till. Det gör att kvaliteten på plattsättningen väger tungt för hur gården upplevs året runt.",
+        "Vi utför <a href=\"/tjanster/plattsattning-stensattning\">plattsättning och stensättning</a> på innergårdar i Vasastan åt bostadsrättsföreningar, med hänsyn till trånga transportvägar in på gården och till att gården ska fungera för de boende under hela byggtiden."
+      ],
+      "localPoints": [
+        "Erfarenhet av plattsättning på innergårdar i rutnätsplanerade sekelskifteskvarter",
+        "Vana vid trånga transportvägar och portar in till gården",
+        "Vi planerar arbetet så gårdens funktion påverkas så lite som möjligt under tiden",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
       ],
       "referenceProjects": []
     }

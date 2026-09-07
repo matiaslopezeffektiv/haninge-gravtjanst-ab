@@ -21,7 +21,7 @@ function renderProcessSteps({ eyebrow, heading, steps }) {
 
   return `
   <!-- =============== SÅ GÅR DET TILL =============== -->
-  <div class="tp-process-area bg-position pt-130 pb-130" style="background-color:#FDF3EA;background-image:url('/assets/img/process/process-band.jpg');background-size:cover;background-position:right center;">
+  <div class="tp-process-area bg-position pt-130 pb-130" style="background-color:#FDF3EA;background-image:url('/assets/img/process/process-band.webp');background-size:cover;background-position:right center;">
     <div class="container">
       <div class="row justify-content-center mb-70">
         <div class="col-xl-7 text-center">

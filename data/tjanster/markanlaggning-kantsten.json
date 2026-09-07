@@ -14,8 +14,6 @@
   "icon": "fa-ruler-combined",
   "heroImage": "/assets/img/hero/markanlaggning-projekt-1.webp",
   "heroImageAlt": "Grusad markyta med ny uppfart vid villa",
-  "introImage": "/assets/img/hero/markanlaggning-projekt-2.webp",
-  "introImageAlt": "Nyanlagd grusyta vid vit villa",
 
   "benefits": [
     "Rätt bärighet, dränering och lutning i marken under kantstenen",
@@ -137,5 +135,139 @@
   "sourceKeys": ["boverketMarklov", "haningeBygglov", "skatteverketFSkatt"],
 
   "_orterSchemaNote": "Ort-objekt läggs till i nästa omgång — endast för stadsdelar med bekräftad sökefterfrågan (se data/site.json areasServed).",
-  "orter": []
+  "orter": [
+    {
+      "slug": "hagersten",
+      "name": "Hägersten",
+      "parentService": "markanlaggning-kantsten",
+      "h1": "Markanläggning & Kantsten i Hägersten",
+      "metaTitle": "Markanläggning & Kantsten i Hägersten — Haninge Grävtjänst AB",
+      "metaDescription": "Markanläggning och kantstenssättning i Hägersten — för villatomter och gemensamma ytor åt bostadsrättsföreningar. Kostnadsfri bedömning.",
+      "intro": [
+        "Hägersten ligger i gränslandet mellan söderort och västerort, nära Liljeholmen, med en blandning av äldre villaområden och flerbostadshus. Behovet av kantsten och markanläggning skiljer sig därför åt — från en villauppfart till en gemensam gång kring en BRF-fastighet.",
+        "Vi utför <a href=\"/tjanster/markanlaggning-kantsten\">markanläggning och kantstenssättning</a> i Hägersten, med rätt bärighet och lutning under kantstenen oavsett om det gäller en privat tomt eller en gemensam yta."
+      ],
+      "localPoints": [
+        "Vana vid både villaprojekt och BRF-uppdrag inom samma stadsdel",
+        "Vi bygger alltid upp bärlagret korrekt innan kantstenen sätts",
+        "Kombineras ofta med finplanering av de omkringliggande ytorna",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "kungsholmen",
+      "name": "Kungsholmen",
+      "parentService": "markanlaggning-kantsten",
+      "h1": "Markanläggning & Kantsten på Kungsholmen",
+      "metaTitle": "Markanläggning & Kantsten på Kungsholmen — Haninge Grävtjänst AB",
+      "metaDescription": "Markanläggning och kantstenssättning på Kungsholmen — för bostadsrättsföreningars gemensamma gångar och gårdar. Kostnadsfri bedömning.",
+      "intro": [
+        "Kungsholmen är till stor del uppbyggt av flerbostadshus och bostadsrättsföreningar, med gemensamma innergårdar snarare än privata trädgårdar. Kantsten och markanläggning används här ofta för att strukturera upp gångar och planteringar på en gård som delas av många boende.",
+        "Vi utför <a href=\"/tjanster/markanlaggning-kantsten\">markanläggning och kantstenssättning</a> på Kungsholmen åt BRF:er, med samordning med styrelsen genom hela processen."
+      ],
+      "localPoints": [
+        "Erfarenhet av markanläggning på gemensamma innergårdar i tät stadsmiljö",
+        "Vi bygger alltid upp bärlagret korrekt innan kantstenen sätts",
+        "Vana vid trånga transportvägar och portar in till gården",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "liljeholmen",
+      "name": "Liljeholmen",
+      "parentService": "markanlaggning-kantsten",
+      "h1": "Markanläggning & Kantsten i Liljeholmen",
+      "metaTitle": "Markanläggning & Kantsten i Liljeholmen — Haninge Grävtjänst AB",
+      "metaDescription": "Markanläggning och kantstenssättning i Liljeholmen — anpassat efter områdets nyare fastigheter. Kostnadsfri bedömning.",
+      "intro": [
+        "Liljeholmen har genomgått en stor omvandling från industriområde till ett av Stockholms tätare bostadsområden, med många nybyggda flerbostadshus och bostadsrättsföreningar. Markanläggning här är ofta kopplad till nyare byggprojekt eller upprustning av gemensamma ytor.",
+        "Vi utför <a href=\"/tjanster/markanlaggning-kantsten\">markanläggning och kantstenssättning</a> i Liljeholmen åt BRF:er och fastighetsägare, med kunskap om vad som kan ligga i marken från områdets industriella historia."
+      ],
+      "localPoints": [
+        "Erfarenhet av markanläggning kopplad till nyare byggprojekt i Liljeholmen",
+        "Kunskap om områdets industriella markhistoria vid schaktning",
+        "Vi bygger alltid upp bärlagret korrekt innan kantstenen sätts",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "norrmalm",
+      "name": "Norrmalm",
+      "parentService": "markanlaggning-kantsten",
+      "h1": "Markanläggning & Kantsten på Norrmalm",
+      "metaTitle": "Markanläggning & Kantsten på Norrmalm — Haninge Grävtjänst AB",
+      "metaDescription": "Markanläggning och kantstenssättning på Norrmalm — för sekelskiftesfastigheters gemensamma gårdar. Kostnadsfri bedömning för BRF.",
+      "intro": [
+        "Norrmalm är en av Stockholms mest centrala stadsdelar, präglad av tät stenstadsbebyggelse med fastigheter från sekelskiftet och framåt. De flesta markprojekt här handlar om gemensamma innergårdar snarare än privata trädgårdar.",
+        "Vi utför <a href=\"/tjanster/markanlaggning-kantsten\">markanläggning och kantstenssättning</a> på Norrmalm åt bostadsrättsföreningar, och kombinerar gärna arbetet med dränering eller finplanering av samma gård."
+      ],
+      "localPoints": [
+        "Erfarenhet av markanläggning på gemensamma innergårdar vid sekelskiftesfastigheter",
+        "Vi bygger alltid upp bärlagret korrekt innan kantstenen sätts",
+        "Kombineras ofta med dränering eller finplanering i samma projekt",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "ostermalm",
+      "name": "Östermalm",
+      "parentService": "markanlaggning-kantsten",
+      "h1": "Markanläggning & Kantsten på Östermalm",
+      "metaTitle": "Markanläggning & Kantsten på Östermalm — Haninge Grävtjänst AB",
+      "metaDescription": "Markanläggning och kantstenssättning på Östermalm — utfört med den kvalitetsnivå som förväntas i stadsdelens fastigheter. Kostnadsfri bedömning.",
+      "intro": [
+        "Östermalm kännetecknas av äldre, ofta påkostade fastigheter med gemensamma innergårdar som förvaltas noggrant av respektive bostadsrättsförening. Markanläggning och kantsten här ställer höga krav på både material och utförande.",
+        "Vi utför <a href=\"/tjanster/markanlaggning-kantsten\">markanläggning och kantstenssättning</a> på Östermalm åt fastighetsägare och BRF:er, med den kvalitetsnivå som förväntas i stadsdelens fastigheter."
+      ],
+      "localPoints": [
+        "Erfarenhet av markanläggning vid äldre, påkostade fastigheter",
+        "Vi anpassar materialval efter fastighetens och styrelsens krav",
+        "Vana vid trånga transportvägar och portar in till gården",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "sodermalm",
+      "name": "Södermalm",
+      "parentService": "markanlaggning-kantsten",
+      "h1": "Markanläggning & Kantsten på Södermalm",
+      "metaTitle": "Markanläggning & Kantsten på Södermalm — Haninge Grävtjänst AB",
+      "metaDescription": "Markanläggning och kantstenssättning på Södermalm — anpassat efter berg i dagen och trånga innergårdar. Kostnadsfri bedömning.",
+      "intro": [
+        "Södermalm är en av Stockholms mest höglänta stadsdelar, med berg i dagen på flera håll och en tät, äldre bebyggelse. Det påverkar hur bärlager och kantsten behöver byggas upp, särskilt där schaktdjupet är begränsat av berget.",
+        "Vi utför <a href=\"/tjanster/markanlaggning-kantsten\">markanläggning och kantstenssättning</a> på Södermalm, med hänsyn till berggrund och de trånga innergårdar som är typiska för stadsdelen."
+      ],
+      "localPoints": [
+        "Erfarenhet av markanläggning på tomter med berg i dagen",
+        "Vi anpassar bärlagrets uppbyggnad efter begränsat schaktdjup där berg ligger nära ytan",
+        "Vana vid trånga innergårdar som kräver mindre maskiner",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "vasastan",
+      "name": "Vasastan",
+      "parentService": "markanlaggning-kantsten",
+      "h1": "Markanläggning & Kantsten i Vasastan",
+      "metaTitle": "Markanläggning & Kantsten i Vasastan — Haninge Grävtjänst AB",
+      "metaDescription": "Markanläggning och kantstenssättning i Vasastan — för rutnätskvarterens gemensamma innergårdar. Kostnadsfri bedömning för BRF.",
+      "intro": [
+        "Vasastan är rutnätsplanerad och tätbebyggd, med sekelskiftesfastigheter där den gemensamma innergården ofta är den enda utomhusytan de boende har tillgång till. Kantsten och markanläggning används här för att strukturera upp gångar och planteringar på en yta som ska fungera för många.",
+        "Vi utför <a href=\"/tjanster/markanlaggning-kantsten\">markanläggning och kantstenssättning</a> i Vasastan, med den enda gemensamma utomhusytan i fokus genom hela processen."
+      ],
+      "localPoints": [
+        "Erfarenhet av markanläggning i rutnätsplanerade sekelskifteskvarter",
+        "Vi bygger alltid upp bärlagret korrekt innan kantstenen sätts",
+        "Vana vid trånga transportvägar och portar in till gården",
+        "Kostnadsfri bedömning på plats för styrelsen innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    }
+  ]
 }

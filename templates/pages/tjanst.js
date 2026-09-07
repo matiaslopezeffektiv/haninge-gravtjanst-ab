@@ -102,7 +102,7 @@ function renderTjanstPage(site, tjanst) {
 
   const bodyContent = `
   <!-- =============== BREADCRUMB =============== -->
-  <div class="tp-breadcrumb-area tp-breadcrumb-spacing nt-dark-band pt-180 pb-90"${tjanst.heroImage ? ` style="background-image:url('${escapeAttr(tjanst.heroImage)}');"` : ''}>
+  <div class="tp-breadcrumb-area tp-breadcrumb-spacing nt-dark-band pt-180 pb-90"${tjanst.heroImage ? ` style="background-image:url('${escapeAttr(tjanst.heroImage)}');" role="img" aria-label="${escapeAttr(tjanst.heroImageAlt || tjanst.name)}"` : ''}>
     <div class="container">
       <div class="row">
         <div class="col-xl-8 col-lg-9">

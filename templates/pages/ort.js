@@ -1,6 +1,7 @@
 const { buildMetaTags } = require('../../lib/metadata');
 const { buildLocalBusinessSchema, buildServiceSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr } = require('../../lib/html');
+const { v } = require('../../lib/assetVersion');
 const { renderProcessSteps } = require('../partials/processSteps');
 const { renderCtaBand } = require('../partials/ctaBand');
 const { renderSourceLinks } = require('../partials/sourceLinks');
@@ -132,7 +133,7 @@ function renderOrtPage(site, tjanst, ort, omrade) {
     subtext: 'Berätta om ditt projekt så återkommer vi med en kostnadsfri bedömning och offert.',
   })}`;
 
-  const extraScripts = '<script src="/assets/js/lead-form.js"></script>';
+  const extraScripts = `<script src="${v('/assets/js/lead-form.js')}"></script>`;
 
   return { metaHtml, schemaHtml, bodyContent, extraScripts, preloadImage: tjanst.heroImage };
 }

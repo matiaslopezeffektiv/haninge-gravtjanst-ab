@@ -1,6 +1,7 @@
 const { buildMetaTags } = require('../../lib/metadata');
 const { buildLocalBusinessSchema, buildFaqSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr, serviceOptions } = require('../../lib/html');
+const { v } = require('../../lib/assetVersion');
 const { renderTrustBadges } = require('../partials/trustBadges');
 const { renderProcessSteps } = require('../partials/processSteps');
 const { renderCtaBand } = require('../partials/ctaBand');
@@ -329,7 +330,7 @@ function renderHomePage(site, tjansterBySlug) {
     subtext: 'Kontakta oss idag och få ett skräddarsytt förslag — snabbt och enkelt.',
   })}`;
 
-  const extraScripts = '<script src="/assets/js/lead-form.js"></script>';
+  const extraScripts = `<script src="${v('/assets/js/lead-form.js')}"></script>`;
 
   return { metaHtml, schemaHtml, bodyContent, extraScripts, preloadImage: site.heroImage };
 }

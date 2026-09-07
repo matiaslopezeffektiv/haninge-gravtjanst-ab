@@ -1,6 +1,7 @@
 const { buildMetaTags } = require('../../lib/metadata');
 const { buildLocalBusinessSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
 const { escapeHtml, escapeAttr, isPlaceholder, serviceOptions } = require('../../lib/html');
+const { v } = require('../../lib/assetVersion');
 const { renderTrustBadges } = require('../partials/trustBadges');
 const { renderProcessSteps } = require('../partials/processSteps');
 const { renderCtaBand } = require('../partials/ctaBand');
@@ -155,7 +156,7 @@ function renderKontaktPage(site) {
     subtext: `Ring oss så pratar vi igenom ditt projekt direkt.`,
   })}`;
 
-  const extraScripts = '<script src="/assets/js/contact-form.js"></script>';
+  const extraScripts = `<script src="${v('/assets/js/contact-form.js')}"></script>`;
 
   return { metaHtml, schemaHtml, bodyContent, extraStyles: CONTACT_FORM_STYLES, extraScripts };
 }

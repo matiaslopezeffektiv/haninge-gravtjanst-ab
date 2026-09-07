@@ -2,6 +2,7 @@ const { renderHeader } = require('./header');
 const { renderFooter } = require('./footer');
 const { renderFloatingCallButton } = require('./partials/floatingCallButton');
 const { escapeAttr } = require('../lib/html');
+const { v } = require('../lib/assetVersion');
 
 /**
  * Sidskal som slår ihop <head>-taggar (metadata + schema) med header,
@@ -41,18 +42,18 @@ function renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extra
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&amp;family=Barlow:wght@400;500;600;700&amp;display=swap"></noscript>
 
-  <link rel="stylesheet" href="/assets/css/bootstrap.css">
-  <link rel="stylesheet" href="/assets/css/spacing.css">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/custom.css">
+  <link rel="stylesheet" href="${v('/assets/css/bootstrap.css')}">
+  <link rel="stylesheet" href="${v('/assets/css/spacing.css')}">
+  <link rel="stylesheet" href="${v('/assets/css/main.css')}">
+  <link rel="stylesheet" href="${v('/assets/css/custom.css')}">
   ${extraStyles}
 
   <!-- Icon font and scroll-entrance animations are decorative and not
        needed for first paint; load both without blocking rendering. -->
-  <link rel="preload" href="/assets/css/font-awesome-pro.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/assets/css/font-awesome-pro.css"></noscript>
-  <link rel="preload" href="/assets/css/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="/assets/css/animate.css"></noscript>
+  <link rel="preload" href="${v('/assets/css/font-awesome-pro.css')}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="${v('/assets/css/font-awesome-pro.css')}"></noscript>
+  <link rel="preload" href="${v('/assets/css/animate.css')}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="${v('/assets/css/animate.css')}"></noscript>
 
   ${schemaHtml}
 </head><body class="tp-bg-common-white-2">
@@ -65,10 +66,10 @@ function renderPage({ site, metaHtml, schemaHtml, activePath, bodyContent, extra
 
   ${renderFloatingCallButton(site)}
 
-  <script src="/assets/js/vendor/jquery.js"></script>
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/cookie-consent.js"></script>
-  <script src="/assets/js/floating-call-visibility.js"></script>
+  <script src="${v('/assets/js/vendor/jquery.js')}"></script>
+  <script src="${v('/assets/js/main.js')}"></script>
+  <script src="${v('/assets/js/cookie-consent.js')}"></script>
+  <script src="${v('/assets/js/floating-call-visibility.js')}"></script>
   ${extraScripts}
 </body>
 </html>

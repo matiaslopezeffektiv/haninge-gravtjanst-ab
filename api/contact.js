@@ -18,9 +18,9 @@ module.exports = async (req, res) => {
 
   const { name, phone, email, address, service, message, imageBase64, imageFilename, imageType, source } = req.body || {};
 
-  // Namn + telefon krävs alltid. E-post/adress/beskrivning krävs bara för det
-  // fullständiga kontaktformuläret — hero-minformuläret (namn/telefon/tjänst)
-  // skickar till samma endpoint men utan dessa fält.
+  // Namn + telefon krävs alltid. E-post/adress krävs bara för det
+  // fullständiga kontaktformuläret — hero-minformuläret (namn/telefon/tjänst/
+  // meddelande) skickar till samma endpoint men utan e-post/adress.
   if (!name || !phone) {
     res.status(400).json({ error: 'Namn och telefon krävs.' });
     return;

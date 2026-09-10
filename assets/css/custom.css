@@ -1377,7 +1377,8 @@ body:has(#nt-cookie-banner.nt-show) .back-to-top-wrapper.back-to-top-btn-show {
 .nt-hero-form-card h2 { color: var(--nt-navy); font-size: 1.5rem; font-weight: 700; margin-bottom: 10px; }
 .nt-hero-form-card > p { color: var(--nt-gray); font-size: .92rem; margin-bottom: 22px; }
 .nt-hero-form-card .nt-contact-form input,
-.nt-hero-form-card .nt-contact-form select { margin-bottom: 14px; }
+.nt-hero-form-card .nt-contact-form select,
+.nt-hero-form-card .nt-contact-form textarea { margin-bottom: 14px; }
 .nt-hero-form-card .nt-form-message { display: none; margin-top: 14px; padding: 12px 16px; border-radius: 8px; font-size: .88rem; }
 @media (max-width: 991.98px) {
   .nt-hero-form-card { margin-top: 40px; }

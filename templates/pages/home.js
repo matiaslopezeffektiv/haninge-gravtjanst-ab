@@ -117,6 +117,8 @@ function renderHomePage(site, tjansterBySlug) {
               <select id="hero-service" name="service" required>
                 <option value="">— Välj tjänst —</option>${serviceOptions(site.services)}
               </select>
+              <label for="hero-message">Meddelande</label>
+              <textarea id="hero-message" name="message" required placeholder="Berätta kort om ditt projekt..."></textarea>
               <button type="submit" class="tp-btn-xl d-block w-100 lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500" style="border:none;padding:16px;">
                 Kontakta oss &rarr;
               </button>

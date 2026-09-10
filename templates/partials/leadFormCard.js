@@ -1,8 +1,8 @@
 const { escapeHtml, escapeAttr, serviceOptions } = require('../../lib/html');
 
 /**
- * Sidopanelens formulärkort — samma lågtröskel-formulär (namn/telefon/tjänst)
- * som startsidans hero-kort, se assets/js/lead-form.js. Används på tjänste-
+ * Sidopanelens formulärkort — samma lågtröskel-formulär (namn/telefon/tjänst/
+ * meddelande) som startsidans hero-kort, se assets/js/lead-form.js. Används på tjänste-
  * och tjänst×ort-sidor där en besökare redan visat intresse för en specifik
  * tjänst; dropdownen förvals till den men går att ändra.
  * @param {object} site - data/site.json
@@ -25,6 +25,8 @@ function renderLeadFormCard(site, { presetServiceName, source, idPrefix }) {
             <select id="${escapeAttr(idPrefix)}-lead-service" name="service" required>
               <option value="">— Välj tjänst —</option>${serviceOptions(site.services, presetServiceName)}
             </select>
+            <label for="${escapeAttr(idPrefix)}-lead-message">Meddelande</label>
+            <textarea id="${escapeAttr(idPrefix)}-lead-message" name="message" required placeholder="Berätta kort om ditt projekt..."></textarea>
             <button type="submit" class="tp-btn-xl d-block w-100 lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500" style="border:none;padding:16px;">
               Skicka förfrågan &rarr;
             </button>

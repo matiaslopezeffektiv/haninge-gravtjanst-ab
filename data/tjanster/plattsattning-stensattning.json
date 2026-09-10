@@ -133,6 +133,25 @@
     }
   ],
 
+  "beforeAfter": [
+    {
+      "title": "Uppfart omlagd med marksten",
+      "description": "Sliten, sprucken asfaltsuppfart ersatt med tvåfärgad marksten och ny kantsten.",
+      "beforeImage": "/assets/img/hero/plattsattning-uppfart-fore.webp",
+      "beforeAlt": "Sprucken och sliten asfaltsuppfart vid villa innan omläggning",
+      "afterImage": "/assets/img/hero/plattsattning-uppfart-efter.webp",
+      "afterAlt": "Samma uppfart efter omläggning med ljus marksten och ny kantsten"
+    },
+    {
+      "title": "Mossbelupen gångväg vid husgrund",
+      "description": "Mossig, ojämn asfaltgång längs husgrunden ersatt med marksten och dränerande kantsten.",
+      "beforeImage": "/assets/img/hero/plattsattning-gangvag-fore.webp",
+      "beforeAlt": "Mossbelupen och ojämn asfaltgång längs husgrund innan omläggning",
+      "afterImage": "/assets/img/hero/plattsattning-gangvag-efter.webp",
+      "afterAlt": "Samma gångväg efter omläggning med tvåfärgad marksten och kantsten"
+    }
+  ],
+
   "sourceKeys": ["skatteverketRot", "skatteverketFSkatt", "reco"],
 
   "orter": [

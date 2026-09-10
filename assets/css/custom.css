@@ -846,6 +846,36 @@ h2.tp-text-common-white .text-italic { color: var(--nt-orange-light); }
 .nt-icon-card__link i { color: var(--nt-orange-dark); transition: transform .25s ease; }
 .nt-icon-card__link:hover i { transform: translateX(4px); }
 
+/* Före/efter-jämförelse (referensprojekt) — se templates/partials/beforeAfter.js */
+.nt-before-after {
+  background: var(--nt-white);
+  border: 1px solid #e6eaf0;
+  border-radius: 12px;
+  overflow: hidden;
+  height: 100%;
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.nt-before-after:hover {
+  transform: translateY(-6px);
+  border-color: var(--nt-orange);
+  box-shadow: 0 16px 40px rgba(28,46,74,0.12);
+}
+.nt-before-after__images { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #e6eaf0; }
+.nt-before-after__img-wrap { position: relative; }
+.nt-before-after__badge {
+  position: absolute; top: 12px; left: 12px; z-index: 1;
+  padding: 4px 12px; border-radius: 20px;
+  font-size: .78rem; font-weight: 700; letter-spacing: .02em;
+  color: var(--nt-white); background: rgba(20,30,48,0.75);
+}
+.nt-before-after__badge--after { background: var(--nt-orange); color: var(--nt-navy); }
+.nt-before-after__caption { padding: 22px 26px; }
+.nt-before-after__caption h3 { font-size: 1.1rem; font-weight: 700; color: var(--nt-navy); margin-bottom: 6px; }
+.nt-before-after__caption p { color: var(--nt-gray); font-size: .92rem; margin: 0; }
+@media (max-width: 575.98px) {
+  .nt-before-after__images { grid-template-columns: 1fr; }
+}
+
 /* Numbered step (process / how it works) */
 .nt-step {
   position: relative;

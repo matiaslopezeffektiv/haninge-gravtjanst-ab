@@ -4,6 +4,7 @@ const { escapeHtml, escapeAttr } = require('../../lib/html');
 const { v } = require('../../lib/assetVersion');
 const { renderProcessSteps } = require('../partials/processSteps');
 const { renderCtaBand } = require('../partials/ctaBand');
+const { renderBeforeAfterSection } = require('../partials/beforeAfter');
 const { renderRelatedServices } = require('../partials/relatedServices');
 const { renderSourceLinks } = require('../partials/sourceLinks');
 const { renderSidebarNav, renderSidebarWhyUs } = require('../partials/sidebar');
@@ -181,6 +182,8 @@ function renderTjanstPage(site, tjanst) {
     </div>
   </div>
   <!-- =============== /REFERENSPROJEKT =============== -->
+
+  ${renderBeforeAfterSection({ heading: `Före och efter — ${tjanst.name.toLowerCase()}`, pairs: tjanst.beforeAfter || [] })}
 
   <!-- =============== FAQ =============== -->
   <div class="pt-30 pb-130" style="background:var(--nt-white);">

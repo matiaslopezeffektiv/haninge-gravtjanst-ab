@@ -132,6 +132,17 @@
     }
   ],
 
+  "beforeAfter": [
+    {
+      "title": "Grusuppfart asfalterad",
+      "description": "Ojämn, dammig grusuppfart ersatt med en jämn, hållbar asfaltyta.",
+      "beforeImage": "/assets/img/hero/asfaltering-uppfart-fore.webp",
+      "beforeAlt": "Ojämn grusuppfart vid villa innan asfaltering",
+      "afterImage": "/assets/img/hero/asfaltering-uppfart-efter.webp",
+      "afterAlt": "Samma uppfart efter asfaltering, jämn svart asfaltyta"
+    }
+  ],
+
   "sourceKeys": ["skatteverketRot", "skatteverketFSkatt", "reco"],
 
   "_orterSchemaNote": "Ort-objekt läggs till i nästa omgång — endast för stadsdelar med bekräftad sökefterfrågan (se data/site.json areasServed).",

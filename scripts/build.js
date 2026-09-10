@@ -27,6 +27,7 @@ const { renderBlogPostPage } = require('../templates/pages/blogPost');
 const { renderBloggHubPage } = require('../templates/pages/bloggHub');
 const { renderOmOssPage } = require('../templates/pages/omOss');
 const { renderIntegritetspolicyPage } = require('../templates/pages/integritetspolicy');
+const { renderNotFoundPage } = require('../templates/pages/notFound');
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, 'utf8'));
@@ -189,6 +190,7 @@ function main() {
   writePage('tjanster.html', site, '/tjanster', renderTjansterHubPage(site, tjansterBySlug));
   writePage('om-oss.html', site, '/om-oss', renderOmOssPage(site));
   writePage('integritetspolicy.html', site, '/integritetspolicy', renderIntegritetspolicyPage(site));
+  writePage('404.html', site, '/404', renderNotFoundPage(site));
   writePage('omraden.html', site, '/omraden', renderOmradenHubPage(site, omraden));
   writePage('brf.html', site, '/brf', renderBrfPage(site, brf));
   writePage('guider.html', site, '/guider', renderGuiderHubPage(site, guider));

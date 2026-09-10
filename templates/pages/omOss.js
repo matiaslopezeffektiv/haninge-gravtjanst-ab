@@ -54,6 +54,7 @@ function renderOmOssPage(site) {
             <li><i class="fa-sharp fa-solid fa-check"></i> Verksamma i hela ${escapeHtml(site.primaryLocation)}, hemort ${escapeHtml(site.homeBase)}</li>
             <li><i class="fa-sharp fa-solid fa-check"></i> ${escapeHtml(String(t.reviews.averageRating))}/5 i snittbetyg på <a href="${escapeAttr(t.reviews.url)}" target="_blank" rel="noopener">Reco</a> (${escapeHtml(String(t.reviews.count))} recensioner)</li>
           </ul>
+          <p class="mt-30 mb-0" style="color:var(--nt-navy);font-weight:600;">— ${escapeHtml(site.name)}</p>
           <a href="/kontakt" class="tp-btn-xl mt-30 d-inline-block lh-0 tp-round-26 fs-16 tp-bg-theme-primary ls-0 tp-btn-switch-animation tp-text-common-white fw-500">
             <span class="d-flex align-items-center justify-content-center">
               <span class="btn-text">Kontakta oss</span>

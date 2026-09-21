@@ -156,17 +156,8 @@
     }
   ],
 
-  "_satelliteSitesNote": "Utlänkar till kundens sex satellitdomäner, samma mönster som på nuvarande sajt (t.ex. 'Läs mer på draneringarstockholm.nu' i tjänstekortens brödtext). Renderas via en återanvändbar komponent (templates/partials/satelliteLink.js), inte hårdkodad text per sida.",
-  "satelliteSites": {
-    "dranering": "https://draneringarstockholm.nu/",
-    "plattsattning-stensattning": "https://plattsattningochstansattningstockholm.se/",
-    "husgrunder-markanlaggning": "https://husgrunderstockholm.se/",
-    "finplanering": "https://innegardsrenoveringstockholm.se/",
-    "innergardsrenovering": "https://innegardsrenoveringstockholm.se/",
-    "markanlaggning-kantsten": "https://asfaltkantstenstockholm.se/",
-    "asfaltering": "https://asfaltkantstenstockholm.se/",
-    "markarbeten": "https://gravfirmastockholm.se/"
-  },
+  "_satelliteSitesNote": "TÖMD 2026-09-21: samtliga sex satellitdomäner löpte ut 2026-09-02/03 (state: deactivated hos registraren) — länkarna gick till döda domäner. Lägg tillbaka en rad här först när en domän är förnyad och svarar. Ursprunglig notering: Utlänkar till kundens sex satellitdomäner, samma mönster som på nuvarande sajt (t.ex. 'Läs mer på draneringarstockholm.nu' i tjänstekortens brödtext). Renderas via en återanvändbar komponent (templates/partials/satelliteLink.js), inte hårdkodad text per sida.",
+  "satelliteSites": {},
 
   "nav": [
     { "label": "Hem", "href": "/" },

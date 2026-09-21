@@ -92,14 +92,14 @@
 
   "_servicesNote": "7 tjänster bekräftade av kund (ej nuvarande sajts 6-gruppering — 'Markanläggning & Kantsten' och 'Grävfirma – Markarbeten' är egna hubbar, inte sammanslagna). Slugs matchar där möjligt live-sajtens URL:er för enklare framtida redirect-mappning.",
   "services": [
-    { "slug": "dranering", "name": "Dränering", "shortName": "Dränering", "icon": "fa-water", "hasPage": true, "relatedServices": ["husgrunder-markanlaggning", "markarbeten"] },
-    { "slug": "plattsattning-stensattning", "name": "Plattsättning & Stensättning", "shortName": "Plattsättning", "icon": "fa-border-all", "hasPage": true, "relatedServices": ["markanlaggning-kantsten", "finplanering"] },
-    { "slug": "husgrunder-markanlaggning", "name": "Husgrunder & Markanläggning", "shortName": "Husgrunder", "icon": "fa-house-chimney", "hasPage": true, "relatedServices": ["dranering", "markarbeten"] },
-    { "slug": "finplanering", "name": "Finplanering", "shortName": "Finplanering", "icon": "fa-tree", "hasPage": true, "relatedServices": ["dranering", "plattsattning-stensattning"] },
-    { "slug": "innergardsrenovering", "name": "Innergårdsrenovering", "shortName": "Innergård", "icon": "fa-tree", "hasPage": true, "relatedServices": ["plattsattning-stensattning", "dranering"] },
-    { "slug": "markanlaggning-kantsten", "name": "Markanläggning & Kantsten", "shortName": "Kantsten", "icon": "fa-ruler-combined", "hasPage": true, "relatedServices": ["asfaltering", "plattsattning-stensattning"] },
+    { "slug": "dranering", "name": "Dränering", "shortName": "Dränering", "icon": "fa-water", "hasPage": true, "relatedServices": ["husgrunder-markanlaggning", "markarbeten"], "priceGuide": { "slug": "vad-kostar-dranering-stockholm", "label": "Vad kostar dränering i Stockholm?" } },
+    { "slug": "plattsattning-stensattning", "name": "Plattsättning & Stensättning", "shortName": "Plattsättning", "icon": "fa-border-all", "hasPage": true, "relatedServices": ["markanlaggning-kantsten", "finplanering"], "priceGuide": { "slug": "vad-kostar-plattsattning-stensattning-stockholm", "label": "Vad kostar plattsättning och stensättning?" } },
+    { "slug": "husgrunder-markanlaggning", "name": "Husgrunder & Markanläggning", "shortName": "Husgrunder", "icon": "fa-house-chimney", "hasPage": true, "relatedServices": ["dranering", "markarbeten"], "priceGuide": { "slug": "vad-kostar-husgrund-stockholm", "label": "Vad kostar en ny husgrund i Stockholm?" } },
+    { "slug": "finplanering", "name": "Finplanering", "shortName": "Finplanering", "icon": "fa-tree", "hasPage": true, "relatedServices": ["dranering", "plattsattning-stensattning"], "priceGuide": { "slug": "vad-kostar-markarbete-stockholm", "label": "Vad kostar markarbete i Stockholm?" } },
+    { "slug": "innergardsrenovering", "name": "Innergårdsrenovering", "shortName": "Innergård", "icon": "fa-tree", "hasPage": true, "relatedServices": ["plattsattning-stensattning", "dranering"], "priceGuide": { "slug": "vad-kostar-innergardsrenovering-stockholm", "label": "Vad kostar det att renovera en innergård?" } },
+    { "slug": "markanlaggning-kantsten", "name": "Markanläggning & Kantsten", "shortName": "Kantsten", "icon": "fa-ruler-combined", "hasPage": true, "relatedServices": ["asfaltering", "plattsattning-stensattning"], "priceGuide": { "slug": "vad-kostar-kantsten-stockholm", "label": "Vad kostar kantsten per meter?" } },
     { "slug": "asfaltering", "name": "Asfaltering", "shortName": "Asfaltering", "icon": "fa-road", "hasPage": true, "relatedServices": ["markanlaggning-kantsten", "markarbeten"] },
-    { "slug": "markarbeten", "name": "Markarbeten & Grävarbeten", "shortName": "Markarbeten", "icon": "fa-truck-monster", "hasPage": true, "relatedServices": ["dranering", "husgrunder-markanlaggning"] }
+    { "slug": "markarbeten", "name": "Markarbeten & Grävarbeten", "shortName": "Markarbeten", "icon": "fa-truck-monster", "hasPage": true, "relatedServices": ["dranering", "husgrunder-markanlaggning"], "priceGuide": { "slug": "vad-kostar-markarbete-stockholm", "label": "Vad kostar markarbete i Stockholm?" } }
   ],
 
   "process": [

@@ -23,6 +23,7 @@ function pointItem(text) {
  * @param {import('../../lib/types').Omrade} [omrade] - för länk till stadsdelens hubbsida, om den finns
  */
 function renderOrtPage(site, tjanst, ort, omrade) {
+  const priceGuide = (site.services.find((s) => s.slug === tjanst.slug) || {}).priceGuide;
   const metaHtml = buildMetaTags({
     site,
     title: ort.metaTitle,
@@ -104,7 +105,7 @@ function renderOrtPage(site, tjanst, ort, omrade) {
           <div class="nt-highlight mt-40" style="max-width:640px;">
             <p style="color:var(--nt-gray);line-height:1.8;margin:0;">
               Vill du läsa mer om hela processen, vad som ingår och vanliga frågor kring ${escapeHtml(tjanst.name.toLowerCase())}?
-              Besök vår huvudsida för <a href="/tjanster/${tjanst.slug}">${escapeHtml(tjanst.name.toLowerCase())} i Stockholm</a>${omrade ? ` eller se alla tjänster vi erbjuder i <a href="/omraden/${escapeAttr(omrade.slug)}">${escapeHtml(omrade.name)}</a>` : ''}.
+              Besök vår huvudsida för <a href="/tjanster/${tjanst.slug}">${escapeHtml(tjanst.name.toLowerCase())} i Stockholm</a>${omrade ? ` eller se alla tjänster vi erbjuder i <a href="/omraden/${escapeAttr(omrade.slug)}">${escapeHtml(omrade.name)}</a>` : ''}.${priceGuide ? ` Undrar du över kostnaden? Läs <a href="/guider/${escapeAttr(priceGuide.slug)}">vad som påverkar priset</a>.` : ''}
             </p>
           </div>
         </div>

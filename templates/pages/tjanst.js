@@ -28,6 +28,18 @@ function faqItem(item) {
         </details>`;
 }
 
+// Synlig länk till tjänstens prisguide (site.json services[].priceGuide) —
+// prisguiderna fångar "vad kostar ..."-sökningar och behöver interna länkar
+// från sidorna med mest auktoritet, inte bara från en FAQ längre ner.
+function priceGuideCallout(site, slug) {
+  const svc = site.services.find((s) => s.slug === slug);
+  if (!svc || !svc.priceGuide) return '';
+  return `
+          <div class="nt-highlight mb-30">
+            <p style="color:var(--nt-gray);line-height:1.8;margin:0;"><strong style="color:var(--nt-navy);">${escapeHtml(svc.priceGuide.label)}</strong> Varje projekt är olika, så vi anger inget fast pris — men i vår guide går vi igenom <a href="/guider/${escapeAttr(svc.priceGuide.slug)}">vad som påverkar priset</a>. Du får alltid en kostnadsfri bedömning och offert.</p>
+          </div>`;
+}
+
 function inclusionCard(text) {
   return `
         <div class="col-md-6">
@@ -127,6 +139,7 @@ function renderTjanstPage(site, tjanst) {
           <span class="nt-eyebrow">Tjänst</span>
           <h2 class="mb-25 fs-xl-40 fs-sm-36" style="color:var(--nt-navy);">${escapeHtml(tjanst.name)} i ${escapeHtml(tjanst.targetLocation)}</h2>
           ${tjanst.longDescription.map((p) => `<p style="color:var(--nt-gray);line-height:1.8;" class="mb-20">${p}</p>`).join('')}
+          ${priceGuideCallout(site, tjanst.slug)}
 
           <div class="row g-3 mb-10">
             <div class="col-md-6">

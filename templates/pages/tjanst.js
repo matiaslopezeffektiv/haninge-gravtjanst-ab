@@ -1,6 +1,6 @@
 const { buildMetaTags } = require('../../lib/metadata');
 const { buildLocalBusinessSchema, buildServiceSchema, buildFaqSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
-const { escapeHtml, escapeAttr } = require('../../lib/html');
+const { escapeHtml, escapeAttr, renderToc } = require('../../lib/html');
 const { v } = require('../../lib/assetVersion');
 const { renderProcessSteps } = require('../partials/processSteps');
 const { renderCtaBand } = require('../partials/ctaBand');
@@ -28,15 +28,21 @@ function faqItem(item) {
         </details>`;
 }
 
-// Synlig länk till tjänstens prisguide (site.json services[].priceGuide) —
-// prisguiderna fångar "vad kostar ..."-sökningar och behöver interna länkar
-// från sidorna med mest auktoritet, inte bara från en FAQ längre ner.
-function priceGuideCallout(site, slug) {
-  const svc = site.services.find((s) => s.slug === slug);
-  if (!svc || !svc.priceGuide) return '';
+// "Vad kostar X i Stockholm?" som egen sektion på tjänstesidan — samma
+// mönster som de konkurrenter som rankar för tjänsten. Prisfaktorerna hämtas
+// från tjänstens prisguide (site.json services[].priceGuide -> data/guider)
+// så att de bara underhålls på ett ställe; hela genomgången finns i guiden.
+function priceSection(site, tjanst, guidesBySlug) {
+  const svc = site.services.find((s) => s.slug === tjanst.slug);
+  const guide = svc && svc.priceGuide && guidesBySlug[svc.priceGuide.slug];
+  if (!guide) return '';
+  const factors = (guide.sections.find((s) => s.heading.startsWith('Det här påverkar')) || {}).list || [];
   return `
-          <div class="nt-highlight mb-30">
-            <p style="color:var(--nt-gray);line-height:1.8;margin:0;"><strong style="color:var(--nt-navy);">${escapeHtml(svc.priceGuide.label)}</strong> Varje projekt är olika, så vi anger inget fast pris — men i vår guide går vi igenom <a href="/guider/${escapeAttr(svc.priceGuide.slug)}">vad som påverkar priset</a>. Du får alltid en kostnadsfri bedömning och offert.</p>
+          <h3 id="pris" class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">Vad kostar ${escapeHtml(tjanst.name.toLowerCase())} i ${escapeHtml(tjanst.targetLocation)}?</h3>
+          <p style="color:var(--nt-gray);line-height:1.8;" class="mb-16">Varje projekt är olika, så vi anger inget fast pris på webben — ett schablonpris blir antingen för högt för de enkla jobben eller en överraskning för de svårare. Det som oftast avgör kostnaden är:</p>
+          ${checkList(factors.slice(0, 5))}
+          <div class="nt-highlight mt-20 mb-10">
+            <p style="color:var(--nt-gray);line-height:1.8;margin:0;">Läs hela genomgången i vår guide <a href="/guider/${escapeAttr(guide.slug)}">${escapeHtml(guide.title)}</a> — eller <a href="/kontakt">kontakta oss</a> för en kostnadsfri bedömning och offert på just ditt projekt.</p>
           </div>`;
 }
 
@@ -54,7 +60,7 @@ function inclusionCard(text) {
  * @param {object} site - data/site.json
  * @param {import('../../lib/types').Tjanst} tjanst
  */
-function renderTjanstPage(site, tjanst) {
+function renderTjanstPage(site, tjanst, guidesBySlug = {}) {
   const metaHtml = buildMetaTags({
     site,
     title: tjanst.metaTitle,
@@ -88,7 +94,7 @@ function renderTjanstPage(site, tjanst) {
     : `<div class="nt-todo-block">[TODO: referensprojekt för ${escapeHtml(tjanst.name)} i ${escapeHtml(tjanst.targetLocation)} läggs in här när kunden tillhandahåller exempel/bilder.]</div>`;
 
   const inclusionsBlock = (tjanst.inclusions && tjanst.inclusions.length) ? `
-          <h3 class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">Vad ingår i ${escapeHtml(tjanst.name.toLowerCase())}?</h3>
+          <h3 id="vad-ingar" class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">Vad ingår i ${escapeHtml(tjanst.name.toLowerCase())}?</h3>
           <div class="row g-3 mb-10">${tjanst.inclusions.map(inclusionCard).join('')}
           </div>` : '';
 
@@ -97,23 +103,36 @@ function renderTjanstPage(site, tjanst) {
   // länkar (<a href="/tjanster/...">) för intern länkning. Håll den datan fri från HTML
   // utöver dessa länkar.
   const whyImportantBlock = (tjanst.whyImportant && tjanst.whyImportant.length) ? `
-          <h3 class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">Varför är ${escapeHtml(tjanst.name.toLowerCase())} viktigt?</h3>
+          <h3 id="varfor" class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">Varför är ${escapeHtml(tjanst.name.toLowerCase())} viktigt?</h3>
           ${tjanst.whyImportant.map((p) => `<p style="color:var(--nt-gray);line-height:1.8;" class="mb-16">${p}</p>`).join('')}` : '';
 
   const signsBlockInline = tjanst.signs ? `
-          <h3 class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">${escapeHtml(tjanst.signs.heading)}</h3>
+          <h3 id="tecken" class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">${escapeHtml(tjanst.signs.heading)}</h3>
           ${tjanst.signs.intro ? `<p style="color:var(--nt-gray);line-height:1.8;" class="mb-16">${tjanst.signs.intro}</p>` : ''}
           ${checkList(tjanst.signs.items)}` : '';
 
   const whyUsBlock = (tjanst.whyUs && tjanst.whyUs.items && tjanst.whyUs.items.length) ? `
-          <h3 class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">Varför välja Haninge Grävtjänst för ${escapeHtml(tjanst.name.toLowerCase())}?</h3>
+          <h3 id="varfor-oss" class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">Varför välja Haninge Grävtjänst för ${escapeHtml(tjanst.name.toLowerCase())}?</h3>
           ${tjanst.whyUs.intro ? `<p style="color:var(--nt-gray);line-height:1.8;" class="mb-16">${tjanst.whyUs.intro}</p>` : ''}
           ${checkList(tjanst.whyUs.items)}` : '';
 
   const considerationsBlock = (tjanst.considerations && tjanst.considerations.items && tjanst.considerations.items.length) ? `
-          <h3 class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">Vad bör du tänka på?</h3>
+          <h3 id="tank-pa" class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">Vad bör du tänka på?</h3>
           ${tjanst.considerations.intro ? `<p style="color:var(--nt-gray);line-height:1.8;" class="mb-16">${tjanst.considerations.intro}</p>` : ''}
           ${checkList(tjanst.considerations.items)}` : '';
+
+  const priceBlock = priceSection(site, tjanst, guidesBySlug);
+  const n = tjanst.name.toLowerCase();
+  const toc = renderToc([
+    inclusionsBlock && { id: 'vad-ingar', label: `Vad ingår i ${n}?` },
+    whyImportantBlock && { id: 'varfor', label: `Varför är ${n} viktigt?` },
+    signsBlockInline && { id: 'tecken', label: tjanst.signs.heading },
+    priceBlock && { id: 'pris', label: `Vad kostar ${n}?` },
+    considerationsBlock && { id: 'tank-pa', label: 'Vad bör du tänka på?' },
+    { id: 'sa-gar-det-till', label: 'Så går det till' },
+    tjanst.referenceProjects.length && { id: 'referenser', label: 'Exempel från våra uppdrag' },
+    { id: 'vanliga-fragor', label: 'Vanliga frågor' },
+  ]);
 
   const bodyContent = `
   <!-- =============== BREADCRUMB =============== -->
@@ -139,7 +158,7 @@ function renderTjanstPage(site, tjanst) {
           <span class="nt-eyebrow">Tjänst</span>
           <h2 class="mb-25 fs-xl-40 fs-sm-36" style="color:var(--nt-navy);">${escapeHtml(tjanst.name)} i ${escapeHtml(tjanst.targetLocation)}</h2>
           ${tjanst.longDescription.map((p) => `<p style="color:var(--nt-gray);line-height:1.8;" class="mb-20">${p}</p>`).join('')}
-          ${priceGuideCallout(site, tjanst.slug)}
+          ${toc}
 
           <div class="row g-3 mb-10">
             <div class="col-md-6">
@@ -168,6 +187,7 @@ function renderTjanstPage(site, tjanst) {
 
           ${whyImportantBlock}
           ${signsBlockInline}
+          ${priceBlock}
           ${whyUsBlock}
           ${considerationsBlock}
         </div>
@@ -184,10 +204,10 @@ function renderTjanstPage(site, tjanst) {
   </div>
   <!-- =============== /HUVUDINNEHÅLL + SIDOPANEL =============== -->
 
-  ${renderProcessSteps({ eyebrow: 'Så går det till', heading: `${tjanst.name} steg för steg`, steps: tjanst.process })}
+  ${renderProcessSteps({ eyebrow: 'Så går det till', heading: `${tjanst.name} steg för steg`, steps: tjanst.process, id: 'sa-gar-det-till' })}
 
   <!-- =============== REFERENSPROJEKT =============== -->
-  <div class="pt-130 pb-100" style="background:var(--nt-white);">
+  <div id="referenser" class="pt-130 pb-100" style="background:var(--nt-white);">
     <div class="container">
       <span class="nt-eyebrow">Referensprojekt</span>
       <h2 class="fs-xl-40 fs-sm-36 mb-40">${escapeHtml(tjanst.name)} i ${escapeHtml(tjanst.targetLocation)} — exempel från våra uppdrag</h2>
@@ -199,7 +219,7 @@ function renderTjanstPage(site, tjanst) {
   ${renderBeforeAfterSection({ heading: `Före och efter — ${tjanst.name.toLowerCase()}`, pairs: tjanst.beforeAfter || [] })}
 
   <!-- =============== FAQ =============== -->
-  <div class="pt-30 pb-130" style="background:var(--nt-white);">
+  <div id="vanliga-fragor" class="pt-30 pb-130" style="background:var(--nt-white);">
     <div class="container">
       <div class="row justify-content-center mb-50">
         <div class="col-xl-7 text-center">

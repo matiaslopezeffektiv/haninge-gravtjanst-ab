@@ -168,6 +168,7 @@ function main() {
   const omraden = loadOmraden();
   const brf = readJson(path.join(ROOT, 'data', 'brf.json'));
   const guider = loadJsonDir('guider');
+  const guidesBySlug = Object.fromEntries(guider.map((g) => [g.slug, g]));
   const bloggPosts = loadJsonDir('blogg').sort((a, b) => (a.publishDate < b.publishDate ? 1 : -1));
 
   // Bygger en global lista över alla tjänst×ort-kombinationer (från tjanst.orter)
@@ -229,7 +230,7 @@ function main() {
       throw new Error(`site.json listar tjänsten "${svc.slug}" som hasPage:true men data/tjanster/${svc.slug}.json saknas`);
     }
     const tjanstFile = path.join(ROOT, 'data', 'tjanster', `${tjanst.slug}.json`);
-    writePage(`tjanster/${tjanst.slug}.html`, site, `/tjanster/${tjanst.slug}`, renderTjanstPage(site, tjanst));
+    writePage(`tjanster/${tjanst.slug}.html`, site, `/tjanster/${tjanst.slug}`, renderTjanstPage(site, tjanst, guidesBySlug));
     routes.push({ loc: `/tjanster/${tjanst.slug}`, file: tjanstFile });
 
     for (const ort of tjanst.orter) {

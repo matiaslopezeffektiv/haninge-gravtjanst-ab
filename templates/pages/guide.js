@@ -1,6 +1,6 @@
 const { buildMetaTags } = require('../../lib/metadata');
 const { buildLocalBusinessSchema, buildFaqSchema, buildBreadcrumbSchema, renderSchemaGraph } = require('../../lib/schema');
-const { escapeHtml } = require('../../lib/html');
+const { escapeHtml, slugify, renderToc } = require('../../lib/html');
 const { renderSourceLinks } = require('../partials/sourceLinks');
 const { renderCtaBand } = require('../partials/ctaBand');
 
@@ -10,7 +10,7 @@ function listItem(text) {
 
 function section(s) {
   return `
-          <h3 class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">${escapeHtml(s.heading)}</h3>
+          <h3 id="${slugify(s.heading)}" class="fs-24 fw-700 mt-40 mb-20" style="color:var(--nt-navy);">${escapeHtml(s.heading)}</h3>
           ${s.body.map((p) => `<p style="color:var(--nt-gray);line-height:1.8;" class="mb-16">${p}</p>`).join('')}
           ${(s.list && s.list.length) ? `<div class="tp-about-bottom-feature mb-10"><ul>${s.list.map(listItem).join('')}</ul></div>` : ''}`;
 }
@@ -65,6 +65,7 @@ function renderGuidePage(site, guide) {
           <span class="nt-eyebrow">Guide &middot; Uppdaterad ${escapeHtml(guide.updated)}</span>
           <h2 class="mb-25 fs-xl-40 fs-sm-36" style="color:var(--nt-navy);">${escapeHtml(guide.title)}</h2>
           ${guide.intro.map((p) => `<p style="color:var(--nt-gray);line-height:1.8;" class="mb-20">${p}</p>`).join('')}
+          ${renderToc([...guide.sections.map((s) => ({ id: slugify(s.heading), label: s.heading })), { id: 'vanliga-fragor', label: 'Vanliga frågor' }], 'Innehåll')}
           ${guide.sections.map(section).join('')}
         </div>
       </div>
@@ -73,7 +74,7 @@ function renderGuidePage(site, guide) {
   <!-- =============== /GUIDE-INNEHÅLL =============== -->
 
   <!-- =============== FAQ =============== -->
-  <div class="pt-30 pb-130" style="background:var(--nt-white);">
+  <div id="vanliga-fragor" class="pt-30 pb-130" style="background:var(--nt-white);">
     <div class="container">
       <div class="row justify-content-center mb-50">
         <div class="col-xl-7 text-center">

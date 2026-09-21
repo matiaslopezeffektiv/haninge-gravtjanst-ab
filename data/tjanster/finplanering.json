@@ -113,6 +113,14 @@
     {
       "question": "Behöver jag bygglov eller marklov för finplanering?",
       "answer": "Vanlig finplanering kräver oftast inte lov, men större förändringar av marknivån kan i vissa fall kräva marklov. Vi hjälper till att reda ut vad som gäller för just din tomt — se även vår <a href=\"/guider/bygglov-marklov\">guide till bygglov och marklov</a>."
+    },
+    {
+      "question": "Vad är skillnaden mellan grovplanering och finplanering?",
+      "answer": "Grovplanering är när marken formas i stora drag — massor flyttas, fylls på och packas så att tomten får rätt nivåer och lutning. Finplanering är det sista steget: ytan jämnas av noggrant, matjord läggs ut och gräsytor, gångar och planteringsytor iordningställs så att tomten blir klar att använda."
+    },
+    {
+      "question": "Kan finplanering göras året om?",
+      "answer": "Markarbetet går att göra under stora delar av året, så länge marken inte är frusen. Sådd av gräs och plantering görs däremot bäst under vår, försommar eller tidig höst, när det finns värme och fukt nog för att det ska etablera sig."
     }
   ],
   "referenceProjects": [

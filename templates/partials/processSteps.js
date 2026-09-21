@@ -9,7 +9,7 @@ const { escapeHtml } = require('../../lib/html');
  * @param {string} params.heading
  * @param {import('../../lib/types').ProcessStep[]} params.steps
  */
-function renderProcessSteps({ eyebrow, heading, steps }) {
+function renderProcessSteps({ eyebrow, heading, steps, id }) {
   const stepHtml = steps.map((step) => `
         <div class="col-xl-3 col-md-6">
           <div class="nt-step h-100">
@@ -21,7 +21,7 @@ function renderProcessSteps({ eyebrow, heading, steps }) {
 
   return `
   <!-- =============== SÅ GÅR DET TILL =============== -->
-  <div class="tp-process-area bg-position pt-130 pb-130" style="background-color:#FDF3EA;background-image:url('/assets/img/process/process-band.webp');background-size:cover;background-position:right center;">
+  <div${id ? ` id="${id}"` : ''} class="tp-process-area bg-position pt-130 pb-130" style="background-color:#FDF3EA;background-image:url('/assets/img/process/process-band.webp');background-size:cover;background-position:right center;">
     <div class="container">
       <div class="row justify-content-center mb-70">
         <div class="col-xl-7 text-center">

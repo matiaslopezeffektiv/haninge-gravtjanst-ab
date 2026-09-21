@@ -156,7 +156,7 @@
     }
   ],
 
-  "_satelliteSitesNote": "TÖMD 2026-09-21: samtliga sex satellitdomäner löpte ut 2026-09-02/03 (state: deactivated hos registraren) — länkarna gick till döda domäner. Lägg tillbaka en rad här först när en domän är förnyad och svarar. Ursprunglig notering: Utlänkar till kundens sex satellitdomäner, samma mönster som på nuvarande sajt (t.ex. 'Läs mer på draneringarstockholm.nu' i tjänstekortens brödtext). Renderas via en återanvändbar komponent (templates/partials/satelliteLink.js), inte hårdkodad text per sida.",
+  "_satelliteSitesNote": "TÖMD 2026-09-21 och ska förbli tom: satellitdomänerna konsolideras in i huvudsajten (medvetet beslut mot kannibalisering). De sex domänerna 301-redirectas via host-regler överst i vercel.json till motsvarande sida här, så en länk dit skulle bara gå i cirkel. Ursprunglig notering: Utlänkar till kundens sex satellitdomäner, samma mönster som på nuvarande sajt (t.ex. 'Läs mer på draneringarstockholm.nu' i tjänstekortens brödtext). Renderas via en återanvändbar komponent (templates/partials/satelliteLink.js), inte hårdkodad text per sida.",
   "satelliteSites": {},
 
   "nav": [

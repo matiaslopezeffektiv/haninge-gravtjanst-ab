@@ -24,8 +24,10 @@
   "_addressNote": "Tungelsta är en tätort inom Haninge kommun — den fysiska/juridiska adressen (LocalBusiness-schema) anger Tungelsta, medan 'homeBase' nedan används i marknadsföringstext ('Haninge' är mer igenkännbart för målgruppen än Tungelsta).",
   "geo": { "latitude": 59.1084265, "longitude": 18.0516218 },
   "sameAs": [
+    "https://www.google.com/maps?cid=13865072442421253599",
     "https://www.reco.se/haninge-gravtjanst-ab-vasterhaninge"
   ],
+  "_sameAsNote": "Google Business Profile i CID-form (stabil, till skillnad från maps.app.goo.gl-delningslänkar som bär vy-/sessionsparametrar). CID = decimalformen av andra hex-delen i place-id 0x61fba1766e2ce423:0xc06aa1ed139395df, verifierad mot profilen 2026-09-21.",
   "priceRange": "$$",
 
   "primaryLocation": "Stockholm",

@@ -12,7 +12,7 @@
   ],
   "whyUs": "Vi är vana vid att hålla en hög standard genom hela arbetet, vilket är en förutsättning när man arbetar med de äldre, välskötta fastigheterna som är vanliga på Östermalm.",
   "relevantServices": [
-    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av representativa innergårdar mellan äldre, påkostade fastigheter." },
+    { "slug": "innergardsrenovering", "blurb": "Renovering av representativa innergårdar mellan äldre, påkostade fastigheter." },
     { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete vid renovering av äldre fastigheter, med försiktig hantering av befintlig grund." },
     { "slug": "markanlaggning-kantsten", "blurb": "Markanläggning och kantsten anpassad efter stadsdelens höga standard." }
   ]

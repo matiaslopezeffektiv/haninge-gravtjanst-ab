@@ -13,7 +13,7 @@
     "Svårt att få en leverantör att engagera sig i en mindre insats, inte bara stora totalentreprenader"
   ],
   "relevantServices": [
-    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av gemensamma innergårdar — den vanligaste typen av markprojekt hos våra BRF-kunder." },
+    { "slug": "innergardsrenovering", "blurb": "Renovering av gemensamma innergårdar — den vanligaste typen av markprojekt hos våra BRF-kunder." },
     { "slug": "dranering", "blurb": "Omdränering av flerbostadshus, ofta aktuellt när äldre fastigheter börjar få fuktproblem i källaren." },
     { "slug": "markanlaggning-kantsten", "blurb": "Kantsten och markanläggning för gemensamma uppfarter, parkeringsytor och gångar." },
     { "slug": "markarbeten", "blurb": "Schaktning och ledningsgrävning i tät bebyggelse, med hänsyn till åtkomst och grannar." }

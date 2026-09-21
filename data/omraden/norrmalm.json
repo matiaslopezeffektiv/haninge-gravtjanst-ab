@@ -12,7 +12,7 @@
   ],
   "whyUs": "Vi har erfarenhet av äldre sekelskiftesfastigheter och de källar- och fuktproblem som ofta hör till dem, samt av att samordna arbete i trånga innergårdar mitt i city.",
   "relevantServices": [
-    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av gemensamma innergårdar mellan äldre fastigheter, med hänsyn till begränsat utrymme." },
+    { "slug": "innergardsrenovering", "blurb": "Renovering av gemensamma innergårdar mellan äldre fastigheter, med hänsyn till begränsat utrymme." },
     { "slug": "markanlaggning-kantsten", "blurb": "Markanläggning och kantsten för gårdar och gångar i den centrala stenstaden." },
     { "slug": "dranering", "blurb": "Äldre källare i sekelskiftesfastigheter har ofta bristfällig eller obefintlig ursprunglig dränering." }
   ]

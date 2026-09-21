@@ -12,7 +12,7 @@
   ],
   "whyUs": "Vi har erfarenhet av att arbeta åt bostadsrättsföreningar i tät innerstadsmiljö, med allt vad det innebär av samordning med styrelser och hänsyn till boende under arbetets gång.",
   "relevantServices": [
-    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av gemensamma innergårdar är den vanligaste formen av markprojekt på Kungsholmen." },
+    { "slug": "innergardsrenovering", "blurb": "Renovering av gemensamma innergårdar är den vanligaste formen av markprojekt på Kungsholmen." },
     { "slug": "markarbeten", "blurb": "Schaktning och ledningsgrävning i en tät stadsmiljö med begränsad åtkomst för maskiner." },
     { "slug": "markanlaggning-kantsten", "blurb": "Kantsten och markanläggning för gemensamma gårdar och gångar mellan fastigheter." }
   ]

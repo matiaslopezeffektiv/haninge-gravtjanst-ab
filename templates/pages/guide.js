@@ -78,7 +78,7 @@ function renderGuidePage(site, guide) {
       <div class="row justify-content-center mb-50">
         <div class="col-xl-7 text-center">
           <span class="nt-eyebrow" style="justify-content:center;">Vanliga frågor</span>
-          <h2 class="fs-xl-40 fs-sm-36">Om ${escapeHtml(guide.title.toLowerCase())}</h2>
+          <h2 class="fs-xl-40 fs-sm-36">${escapeHtml(guide.faqHeading || `Om ${guide.title.toLowerCase()}`)}</h2>
         </div>
       </div>
       <div class="row justify-content-center">
@@ -91,7 +91,7 @@ function renderGuidePage(site, guide) {
 
   ${renderSourceLinks(site, guide.sourceKeys || [])}
 
-  ${renderCtaBand(site, {
+  ${renderCtaBand(site, guide.cta || {
     eyebrow: 'Har du fler frågor?',
     heading: 'Vi hjälper dig gärna med ditt projekt',
     subtext: 'Kontakta oss för en kostnadsfri bedömning — vi berättar vad som gäller för just ditt projekt.',

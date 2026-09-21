@@ -12,7 +12,7 @@
   ],
   "whyUs": "Vi är vana vid att växla mellan villaprojekt och BRF-uppdrag inom samma område, vilket är typiskt för Hägerstens blandade bebyggelse.",
   "relevantServices": [
-    { "slug": "finplanering-innergardsrenovering", "blurb": "Renovering av både privata trädgårdar och gemensamma gårdar, vanligt i Hägerstens blandade bebyggelse." },
+    { "slug": "finplanering", "blurb": "Finplanering av villatomter efter dränering, husgrundsarbete eller tillbyggnad i Hägerstens villaområden." },
     { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete inför tillbyggnad i de äldre villaområdena i Hägersten." },
     { "slug": "markanlaggning-kantsten", "blurb": "Kantsten och markanläggning för uppfarter och gemensamma ytor i området." }
   ]

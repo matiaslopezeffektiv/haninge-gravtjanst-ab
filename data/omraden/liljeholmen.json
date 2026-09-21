@@ -13,7 +13,7 @@
   "whyUs": "Vi känner till de särskilda förutsättningar som gäller vid markarbete på tidigare industrimark, vilket är vanligt i Liljeholmens nyare bostadsområden.",
   "relevantServices": [
     { "slug": "husgrunder-markanlaggning", "blurb": "Grundarbete som tar hänsyn till att marken i delar av Liljeholmen tidigare använts industriellt." },
-    { "slug": "finplanering-innergardsrenovering", "blurb": "Finplanering av nyanlagda gårdar och gemensamma ytor kring nybyggda flerbostadshus." },
+    { "slug": "innergardsrenovering", "blurb": "Finplanering av nyanlagda gårdar och gemensamma ytor kring nybyggda flerbostadshus." },
     { "slug": "markanlaggning-kantsten", "blurb": "Markanläggning och kantsten för uppfarter och gårdar i områdets nyare bebyggelse." }
   ]
 }

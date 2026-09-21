@@ -47,7 +47,7 @@ function renderOmOssPage(site) {
           <h2 class="mb-30 fs-xl-40 fs-sm-36">Din lokala grävfirma i ${escapeHtml(site.primaryLocation)}</h2>
           <p class="mb-20">${escapeHtml(site.name)} är en grävfirma baserad i ${escapeHtml(site.address.addressLocality)} i ${escapeHtml(site.homeBase)} kommun, med över ${escapeHtml(String(t.yearsExperience))} års erfarenhet av mark- och anläggningsarbete. Vi utför uppdrag i hela Stockholmsområdet — från villaträdgårdar i innerstaden till större markarbeten och BRF-gårdar i förorten.</p>
           <p class="mb-20">Med ${escapeHtml(String(t.projectsCompleted))}+ genomförda projekt har vi byggt upp praktisk erfarenhet av de flesta markförhållanden som förekommer i regionen — lerjord, morän och berg — och vet vad som krävs för att ett arbete ska hålla över tid, inte bara se bra ut vid leverans.</p>
-          <p class="mb-20">Vi arbetar med dränering, plattsättning & stensättning, husgrunder & markanläggning, finplanering & innergårdsrenovering, markanläggning & kantsten, asfaltering och grävtjänster/markarbeten — åt privatpersoner, företag och bostadsrättsföreningar. Läs mer om <a href="/tjanster">våra tjänster</a>.</p>
+          <p class="mb-20">Vi arbetar med dränering, plattsättning & stensättning, husgrunder & markanläggning, finplanering, innergårdsrenovering, markanläggning & kantsten, asfaltering samt markarbeten och grävarbeten — åt privatpersoner, företag och bostadsrättsföreningar. Läs mer om <a href="/tjanster">våra tjänster</a>.</p>
           <ul class="tp-about-bottom-feature mt-30">
             <li><i class="fa-sharp fa-solid fa-check"></i> ${escapeHtml(t.fSkatt.value)}</li>
             <li><i class="fa-sharp fa-solid fa-check"></i> ${escapeHtml(t.insurance.value)}</li>

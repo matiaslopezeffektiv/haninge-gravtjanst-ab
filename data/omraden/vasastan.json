@@ -12,7 +12,7 @@
   ],
   "whyUs": "Vi förstår vikten av en fungerande innergård i ett område som Vasastan, där den ofta är den enda utomhusytan de boende har — och planerar arbetet därefter.",
   "relevantServices": [
-    { "slug": "finplanering-innergardsrenovering", "blurb": "Innergårdar som ofta är den enda gemensamma utomhusytan i fastigheten förtjänar extra omsorg vid renovering." },
+    { "slug": "innergardsrenovering", "blurb": "Innergårdar som ofta är den enda gemensamma utomhusytan i fastigheten förtjänar extra omsorg vid renovering." },
     { "slug": "markanlaggning-kantsten", "blurb": "Markanläggning och kantsten för gårdar och gångar i den rutnätsplanerade stenstaden." },
     { "slug": "plattsattning-stensattning", "blurb": "Stensättning av gårdar och entréer mellan Vasastans sekelskiftesfastigheter." }
   ]

@@ -66,8 +66,8 @@ function statBlock(icon, label, value) {
 function renderHomePage(site, tjansterBySlug) {
   const metaHtml = buildMetaTags({
     site,
-    title: `Grävfirma i ${site.primaryLocation} — ${site.name}`,
-    description: `${site.name} utför dränering, plattsättning, husgrunder och finplanering i ${site.primaryLocation} och ${site.homeBase}. Över ${site.trustSignals.yearsExperience} års erfarenhet, ${site.trustSignals.projectsCompleted}+ projekt.`,
+    title: `Grävfirma Stockholm — erfarna grävare | ${site.name}`,
+    description: `Grävfirma i ${site.primaryLocation} med erfarna grävare — dränering, markarbeten, husgrunder och finplanering i ${site.primaryLocation} och ${site.homeBase}. Över ${site.trustSignals.yearsExperience} års erfarenhet, ${site.trustSignals.projectsCompleted}+ projekt.`,
     path: '/',
   });
 
@@ -87,7 +87,7 @@ function renderHomePage(site, tjansterBySlug) {
         <div class="col-lg-7">
           <span class="nt-eyebrow nt-eyebrow-light">Mark &amp; anläggning i ${escapeHtml(site.primaryLocation)}</span>
           <h1>Grävfirma i <span>${escapeHtml(site.primaryLocation)}</span> — från dränering till färdig mark</h1>
-          <p>${escapeHtml(site.tagline)}. ${escapeHtml(site.name)} utför mark- och anläggningsarbeten åt privatpersoner, företag och BRF:er i hela ${escapeHtml(site.primaryLocation)}, med ${escapeHtml(site.homeBase)} som hemort.</p>
+          <p>${escapeHtml(site.tagline)}. ${escapeHtml(site.name)} utför mark- och anläggningsarbeten åt privatpersoner, företag och BRF:er i hela ${escapeHtml(site.primaryLocation)}, med ${escapeHtml(site.homeBase)} som hemort. Behöver du en grävare för ett mindre jobb eller en grävfirma för hela projektet? Vi hjälper dig med båda.</p>
           <div class="d-flex flex-wrap gap-3 mb-45">
             <a href="/tjanster" class="tp-btn-xl d-inline-block lh-0 tp-round-26 fs-16 tp-bg-common-white ls-0 tp-btn-switch-animation fw-500">
               <span class="d-flex align-items-center justify-content-center">
@@ -145,7 +145,7 @@ function renderHomePage(site, tjansterBySlug) {
         <div class="col-lg-6 mb-40">
           <div class="tp-about-2-content tp-about-4-content ml-30">
             <span class="nt-eyebrow">Om ${escapeHtml(site.shortName)}</span>
-            <h2 class="mb-25 fs-xl-40 fs-sm-36">Lokal grävfirma med ${escapeHtml(site.primaryLocation)} som arbetsfält</h2>
+            <h2 class="mb-25 fs-xl-40 fs-sm-36">Lokal grävfirma och erfarna grävare i ${escapeHtml(site.primaryLocation)}</h2>
             <p class="mb-20">Med över ${escapeHtml(String(t.yearsExperience))} års erfarenhet och ${escapeHtml(String(t.projectsCompleted))}+ genomförda projekt har vi sett de flesta typer av markförhållanden som Stockholmsområdet har att erbjuda — från lerjord i lägre liggande områden till berg i dagen på höjderna. Vi specialiserar oss på <a href="/tjanster/dranering">dränering</a>, mark- och anläggningsarbete, och tar hela projekt från första spadtag till färdig yta.</p>
             <p class="mb-20">Som lokal grävfirma med hemort i ${escapeHtml(site.homeBase)} känner vi till de markförhållanden som är vanliga i olika delar av regionen, vilket gör att vi kan planera rätt uppbyggnad — bärlager, dränering och lutning — redan från start istället för att behöva göra om arbetet i efterhand. Vi tar både fristående uppdrag och helhetsprojekt där flera <a href="/tjanster">tjänster</a> kombineras, till exempel dränering i samband med ny finplanering.</p>
             <div class="tp-about-bottom-feature mb-40 mt-30"><ul>
@@ -174,7 +174,7 @@ function renderHomePage(site, tjansterBySlug) {
         <div class="col-lg-8">
           <span class="nt-eyebrow">Våra tjänster</span>
           <h2 class="mb-20 fs-xl-40 fs-sm-36">Mark- och anläggningsarbete från grund till finplanering</h2>
-          <p style="color:var(--nt-gray);line-height:1.8;max-width:640px;">Vi tar hela kedjan i ett mark- eller anläggningsprojekt — från <a href="/tjanster/markarbeten">schaktning och grävning</a> och <a href="/tjanster/dranering">dränering</a> av husgrunden, till <a href="/tjanster/plattsattning-stensattning">stensättning</a>, <a href="/tjanster/markanlaggning-kantsten">kantsten</a> och <a href="/tjanster/finplanering-innergardsrenovering">finplanering</a> av den färdiga ytan. Behöver du bara en av delarna hjälper vi till med det också.</p>
+          <p style="color:var(--nt-gray);line-height:1.8;max-width:640px;">Vi tar hela kedjan i ett mark- eller anläggningsprojekt — från <a href="/tjanster/markarbeten">schaktning och grävning</a> och <a href="/tjanster/dranering">dränering</a> av husgrunden, till <a href="/tjanster/plattsattning-stensattning">stensättning</a>, <a href="/tjanster/markanlaggning-kantsten">kantsten</a> och <a href="/tjanster/finplanering">finplanering</a> av den färdiga ytan — eller en helt <a href="/tjanster/innergardsrenovering">renoverad innergård</a>. Behöver du bara en av delarna hjälper vi till med det också.</p>
         </div>
         <div class="col-lg-4">
           <div class="text-lg-end mt-25">

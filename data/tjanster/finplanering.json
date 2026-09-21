@@ -1,0 +1,194 @@
+{
+  "slug": "finplanering",
+  "name": "Finplanering",
+  "targetLocation": "Stockholm",
+  "h1": "Finplanering Stockholm",
+  "metaTitle": "Finplanering Stockholm — Haninge Grävtjänst AB",
+  "metaDescription": "Finplanering i Stockholm och Haninge — vi gör tomten klar efter grävning, dränering eller nybygge: avjämning, lutning, gräsytor, gångar och avvattning. Kostnadsfri bedömning.",
+  "shortDescription": "Finplanering av villatomter och trädgårdar efter grävning, dränering eller nybygge i Stockholm.",
+  "longDescription": [
+    "Finplanering är det sista steget i ett markprojekt — det som gör att en tomt faktiskt blir klar att använda. Efter en dränering, en tillbyggnad eller ett nybygge ser tomten ofta ut som en byggarbetsplats. Vi jämnar av, ger marken rätt lutning bort från huset och lägger tillbaka gräsytor, gångar och planteringsytor så att tomten blir hel igen.",
+    "Arbetet kan omfatta avjämning och lutning, matjord och gräsytor, gångar i <a href=\"/tjanster/plattsattning-stensattning\">sten eller plattor</a>, <a href=\"/tjanster/markanlaggning-kantsten\">kantsten</a>, planteringsytor och avvattning. Ofta gör vi finplaneringen direkt efter vårt eget <a href=\"/tjanster/dranering\">dräneringsarbete</a> eller <a href=\"/tjanster/markarbeten\">markarbete</a>, så att du slipper samordna flera entreprenörer.",
+    "Vi har genomfört 200+ mark- och anläggningsprojekt i Stockholmsområdet och vet att en bra finplanering handlar lika mycket om det som inte syns — rätt lutning och avvattning — som om den färdiga ytan. Gäller det en gemensam gård i en bostadsrättsförening, läs mer om vår <a href=\"/tjanster/innergardsrenovering\">innergårdsrenovering</a>. <a href=\"/kontakt\">Kontakta oss</a> för en kostnadsfri bedömning av din tomt."
+  ],
+  "icon": "fa-tree",
+  "heroImage": "/assets/img/hero/finplanering-projekt-1.webp",
+  "heroImageAlt": "Finplanering med stensatt gångväg genom nyanlagd jord vid villa",
+  "benefits": [
+    "Vi tar hela kedjan från grävning och dränering till färdig tomt",
+    "Rätt lutning och avvattning planeras in från start, inte i efterhand",
+    "Tydlig tidsplan så tomten inte står som en byggarbetsplats längre än nödvändigt",
+    "200+ genomförda mark- och anläggningsprojekt i Stockholmsområdet"
+  ],
+  "inclusions": [
+    "Avjämning och grovplanering",
+    "Lutning bort från huset och avvattning",
+    "Matjord och iordningställande av gräsytor",
+    "Gångar och ytor i sten eller plattor",
+    "Kantsten och planteringsytor",
+    "Slutstädning av tomten"
+  ],
+  "signs": {
+    "heading": "Tecken på att tomten behöver finplaneras",
+    "intro": "Efter ett markprojekt, eller när en äldre trädgård börjat sätta sig, är det här vanliga tecken:",
+    "items": [
+      "Tomten ser fortfarande uppgrävd ut efter dränering eller bygge",
+      "Vatten blir stående vid huset eller i gräsmattan",
+      "Marken lutar in mot husgrunden istället för bort från den",
+      "Ojämna gräsytor och gångar som satt sig",
+      "Oklar gräns mellan gräs, rabatter och hårdgjorda ytor"
+    ],
+    "image": "/assets/img/hero/finplanering-projekt-2.webp",
+    "imageAlt": "Markförberedelse inför finplanering av rabatt längs husgrund"
+  },
+  "whyImportant": [
+    "Finplanering är det som avgör om ett markprojekt faktiskt känns färdigt eller bara ser ihopgrävt ut. Men det handlar inte bara om utseende — marken närmast huset ska luta bort från grunden så att regn- och smältvatten leds undan. En tomt som lutar åt fel håll kan göra en ny dränering mindre effektiv.",
+    "En noggrann finplanering gör också tomten lättare att sköta: jämna gräsytor som går att klippa, gångar som inte sätter sig och tydliga kanter mot rabatter. Det är de detaljerna som gör skillnad år efter år."
+  ],
+  "whyUs": {
+    "intro": "En bra finplanering handlar om det som inte syns lika mycket som det som syns — därför prioriterar vi följande:",
+    "items": [
+      "Vi tar hela kedjan från markarbete och dränering till färdig tomt, så du slipper samordna flera entreprenörer",
+      "Vi planerar lutning och avvattning som en del av finplaneringen, inte som en eftertanke",
+      "Vi anpassar nya ytor efter befintliga träd och planteringar",
+      "200+ genomförda mark- och anläggningsprojekt i Stockholmsområdet"
+    ]
+  },
+  "considerations": {
+    "intro": "Några beslut är enklare att ta innan arbetet startar än att ändra i efterhand:",
+    "items": [
+      "Bestäm tidigt om du vill ha belysning i trädgården — det är enklare och billigare att dra kabel innan ytorna läggs",
+      "Tänk igenom var gångar, uteplats och parkering ska ligga innan gräset sås",
+      "Planera för hur vatten från stuprör och hårdgjorda ytor ska ledas bort",
+      "Välj växter som klarar Stockholmsområdets klimat och den skötselnivå du faktiskt kan hålla över tid"
+    ]
+  },
+  "process": [
+    {
+      "step": 1,
+      "title": "Kostnadsfri bedömning",
+      "description": "Vi besöker tomten och går igenom vad som ska ingå i finplaneringen."
+    },
+    {
+      "step": 2,
+      "title": "Offert",
+      "description": "Du får en tydlig offert och tidsplan, utan bindningstid."
+    },
+    {
+      "step": 3,
+      "title": "Utförande",
+      "description": "Avjämning, lutning, gräsytor, gångar och övriga moment enligt plan."
+    },
+    {
+      "step": 4,
+      "title": "Slutbesiktning",
+      "description": "Genomgång av den färdiga tomten tillsammans med dig."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Vad ingår i finplanering?",
+      "answer": "Vanligtvis avjämning och lutning, matjord och gräsytor, gångar i sten eller plattor, kantsten, planteringsytor och avvattning — men omfattningen anpassas alltid efter tomten och vad som redan finns på plats."
+    },
+    {
+      "question": "Vad påverkar priset för finplanering?",
+      "answer": "Priset beror på tomtens storlek, hur mycket som behöver jämnas av och fyllas på, vilka ytor som ska anläggas och hur lätt det är att komma åt med maskiner. Varje tomt är olika — vi ger en kostnadsfri bedömning innan vi lämnar offert. Läs mer i vår guide om <a href=\"/guider/vad-kostar-markarbete-stockholm\">vad markarbete kostar i Stockholm</a>."
+    },
+    {
+      "question": "Kan ni göra finplaneringen direkt efter en dränering?",
+      "answer": "Ja, det gör vi gärna. När maskinerna ändå är på plats är det effektivt att knyta ihop tomten direkt efter dräneringen, så att du slipper ta in en ny entreprenör."
+    },
+    {
+      "question": "Ger finplanering rätt till ROT-avdrag?",
+      "answer": "Återställning av en befintlig yta i samband med till exempel omdränering kan ge rätt till ROT-avdrag på arbetskostnaden. Nyanläggning av trädgård, plantering och helt nya ytor räknas normalt som trädgårdsarbete och omfattas inte. Läs mer i vår <a href=\"/guider/rot-avdrag\">guide till ROT-avdrag</a>."
+    },
+    {
+      "question": "Vilka växter fungerar bäst för finplantering i Stockholmsområdet?",
+      "answer": "Vi rekommenderar normalt växter som klarar svenska vintrar utan extra skydd och som passar den skötselnivå ni faktiskt kan hålla — perenner och buskar som är vanliga i svenska trädgårdar brukar vara ett säkert val. Vid skuggiga innergårdar mellan flerbostadshus, vanligt i tätbebyggda delar av Stockholm, väljer vi växter som klarar mindre solljus."
+    },
+    {
+      "question": "Hur lång tid tar en finplanering?",
+      "answer": "En vanlig villatomt kan ofta vara klar på några dagar till ett par veckor, beroende på omfattning. Du får en konkret tidsplan i offerten."
+    },
+    {
+      "question": "Behöver jag bygglov eller marklov för finplanering?",
+      "answer": "Vanlig finplanering kräver oftast inte lov, men större förändringar av marknivån kan i vissa fall kräva marklov. Vi hjälper till att reda ut vad som gäller för just din tomt — se även vår <a href=\"/guider/bygglov-marklov\">guide till bygglov och marklov</a>."
+    }
+  ],
+  "referenceProjects": [
+    {
+      "title": "Finplanering med stensatt gångväg",
+      "description": "Gångväg av stenplattor genom nyanlagd jord vid entré.",
+      "image": "/assets/img/hero/finplanering-projekt-1.webp"
+    },
+    {
+      "title": "Markförberedelse längs husfasad",
+      "description": "Dränering och makadambädd inför finplanering av rabatt längs husgrund.",
+      "image": "/assets/img/hero/finplanering-projekt-2.webp"
+    }
+  ],
+  "sourceKeys": [
+    "skatteverketRot",
+    "boverketMarklov",
+    "reco"
+  ],
+  "orter": [
+    {
+      "slug": "haninge",
+      "name": "Haninge",
+      "parentService": "finplanering",
+      "h1": "Finplanering i Haninge",
+      "metaTitle": "Finplanering i Haninge — Haninge Grävtjänst AB",
+      "metaDescription": "Finplanering i Haninge — avjämning, gräsytor, gångar och avvattning efter grävning, dränering eller nybygge, utfört av den lokala grävfirman. Kostnadsfri bedömning.",
+      "intro": [
+        "Med vår bas i Tungelsta är Haninge kommun där vi utför flest finplaneringsprojekt — ofta villatomter i Västerhaninge och Vendelsö som behöver knytas ihop efter dränering, tillbyggnad eller nybygge.",
+        "Vi utför <a href=\"/tjanster/finplanering\">finplanering</a> i hela Haninge och tar gärna hela kedjan från markarbete till färdig tomt, med god kännedom om de markförhållanden som är vanliga i kommunens olika delar. Gäller det en gemensam gård åt en förening, se vår <a href=\"/tjanster/innergardsrenovering\">innergårdsrenovering</a>."
+      ],
+      "localPoints": [
+        "Kort startsträcka och god lokalkännedom om Haninges olika bostadsområden",
+        "Erfarenhet av både villatomter och radhusträdgårdar i kommunens olika bostadsområden",
+        "Vi planerar avvattningen som en del av finplaneringen, viktigt i kommunens mer lerhaltiga områden",
+        "Vi hjälper till att välja växter som klarar de lokala vinterförhållandena i Haninge"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "bromma",
+      "name": "Bromma",
+      "parentService": "finplanering",
+      "h1": "Finplanering i Bromma",
+      "metaTitle": "Finplanering i Bromma — Haninge Grävtjänst AB",
+      "metaDescription": "Finplanering och trädgårdsanläggning i Bromma — anpassat efter de äldre villaträdgårdarna i områden som Åkeshov och Riksby. Kostnadsfri bedömning.",
+      "intro": [
+        "Bromma är en av Stockholms mer etablerade villastadsdelar, med trädgårdar i områden som Åkeshov och Riksby som ofta anlagts samtidigt som husen på 1930-, 40- och 50-talet. Många av dem bär spår av flera decenniers tillbyggnader och omdräneringar som aldrig fått en ordentlig avslutande finplanering.",
+        "Vi utför <a href=\"/tjanster/finplanering\">finplanering</a> i Bromma efter grävarbete, tillbyggnad eller dränering, och knyter ihop tomten med nya gångar, gräsytor och planteringar anpassade efter den äldre trädgårdens befintliga karaktär."
+      ],
+      "localPoints": [
+        "Erfarenhet av att finplanera efter dräneringsarbete i Brommas äldre villaträdgårdar",
+        "Vi anpassar nya ytor efter befintliga träd och planteringar som ofta är lika gamla som huset",
+        "Vanligt att kombinera finplanering med ny plattsättning av uppfarter i området",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    },
+    {
+      "slug": "hagersten",
+      "name": "Hägersten",
+      "parentService": "finplanering",
+      "h1": "Finplanering i Hägersten",
+      "metaTitle": "Finplanering i Hägersten — Haninge Grävtjänst AB",
+      "metaDescription": "Finplanering i Hägersten — för villatomter och trädgårdar efter grävning, dränering eller tillbyggnad. Kostnadsfri bedömning.",
+      "intro": [
+        "Hägersten ligger i gränslandet mellan söderort och västerort, nära Liljeholmen, med en blandning av äldre villaområden och flerbostadshus. I villaområdena handlar finplanering ofta om att knyta ihop tomten efter dränering, husgrundsarbete eller tillbyggnad.",
+        "Vi utför <a href=\"/tjanster/finplanering\">finplanering</a> i Hägersten och tar gärna hela kedjan från markarbete till färdig tomt. Gäller det en gemensam gård åt en bostadsrättsförening, se vår <a href=\"/tjanster/innergardsrenovering\">innergårdsrenovering</a>."
+      ],
+      "localPoints": [
+        "Erfarenhet av villatomter i Hägerstens äldre villaområden",
+        "Vi planerar avvattningen som en del av finplaneringen",
+        "Vanligt att kombinera finplanering med husgrundsarbete i samma projekt",
+        "Kostnadsfri bedömning på plats innan vi lämnar offert"
+      ],
+      "referenceProjects": []
+    }
+  ]
+}

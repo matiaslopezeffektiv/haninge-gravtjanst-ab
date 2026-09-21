@@ -91,12 +91,13 @@
   "_servicesNote": "7 tjänster bekräftade av kund (ej nuvarande sajts 6-gruppering — 'Markanläggning & Kantsten' och 'Grävfirma – Markarbeten' är egna hubbar, inte sammanslagna). Slugs matchar där möjligt live-sajtens URL:er för enklare framtida redirect-mappning.",
   "services": [
     { "slug": "dranering", "name": "Dränering", "shortName": "Dränering", "icon": "fa-water", "hasPage": true, "relatedServices": ["husgrunder-markanlaggning", "markarbeten"] },
-    { "slug": "plattsattning-stensattning", "name": "Plattsättning & Stensättning", "shortName": "Plattsättning", "icon": "fa-border-all", "hasPage": true, "relatedServices": ["markanlaggning-kantsten", "finplanering-innergardsrenovering"] },
+    { "slug": "plattsattning-stensattning", "name": "Plattsättning & Stensättning", "shortName": "Plattsättning", "icon": "fa-border-all", "hasPage": true, "relatedServices": ["markanlaggning-kantsten", "finplanering"] },
     { "slug": "husgrunder-markanlaggning", "name": "Husgrunder & Markanläggning", "shortName": "Husgrunder", "icon": "fa-house-chimney", "hasPage": true, "relatedServices": ["dranering", "markarbeten"] },
-    { "slug": "finplanering-innergardsrenovering", "name": "Finplanering & Innergårdsrenovering", "shortName": "Finplanering", "icon": "fa-tree", "hasPage": true, "relatedServices": ["plattsattning-stensattning", "markanlaggning-kantsten"] },
+    { "slug": "finplanering", "name": "Finplanering", "shortName": "Finplanering", "icon": "fa-tree", "hasPage": true, "relatedServices": ["dranering", "plattsattning-stensattning"] },
+    { "slug": "innergardsrenovering", "name": "Innergårdsrenovering", "shortName": "Innergård", "icon": "fa-tree", "hasPage": true, "relatedServices": ["plattsattning-stensattning", "dranering"] },
     { "slug": "markanlaggning-kantsten", "name": "Markanläggning & Kantsten", "shortName": "Kantsten", "icon": "fa-ruler-combined", "hasPage": true, "relatedServices": ["asfaltering", "plattsattning-stensattning"] },
     { "slug": "asfaltering", "name": "Asfaltering", "shortName": "Asfaltering", "icon": "fa-road", "hasPage": true, "relatedServices": ["markanlaggning-kantsten", "markarbeten"] },
-    { "slug": "markarbeten", "name": "Grävfirma – Markarbeten", "shortName": "Markarbeten", "icon": "fa-truck-monster", "hasPage": true, "relatedServices": ["dranering", "husgrunder-markanlaggning"] }
+    { "slug": "markarbeten", "name": "Markarbeten & Grävarbeten", "shortName": "Markarbeten", "icon": "fa-truck-monster", "hasPage": true, "relatedServices": ["dranering", "husgrunder-markanlaggning"] }
   ],
 
   "process": [
@@ -109,7 +110,7 @@
   "faq": [
     {
       "question": "Vilka tjänster erbjuder ni?",
-      "answer": "Vi erbjuder dränering, plattsättning & stensättning, husgrunder & markanläggning, finplanering & innergårdsrenovering, markanläggning & kantsten, asfaltering samt grävfirma/markarbeten för både privatpersoner, företag och BRF:er i Stockholmsområdet."
+      "answer": "Vi erbjuder dränering, plattsättning & stensättning, husgrunder & markanläggning, finplanering, innergårdsrenovering, markanläggning & kantsten, asfaltering samt markarbeten och grävarbeten för både privatpersoner, företag och BRF:er i Stockholmsområdet."
     },
     {
       "question": "Arbetar ni i hela Stockholm?",
@@ -118,6 +119,10 @@
     {
       "question": "Behöver jag ansöka om bygglov eller marklov för markarbeten?",
       "answer": "Det beror på typ av arbete. Markarbete som förberedelse inför ett bygglovspliktigt bygge prövas oftast inom bygglovet, medan större schaktning eller fyllning som ändrar marknivån med mer än 0,5 meter kan kräva ett separat marklov. Vi hjälper till att bedöma vad som gäller för just ditt projekt, men den formella prövningen görs alltid av din kommun. Läs mer i vår <a href=\"/guider/bygglov-marklov\">guide till bygglov och marklov</a>."
+    },
+    {
+      "question": "Behöver du en grävare i Stockholm för ett mindre jobb?",
+      "answer": "Vi tar allt från en enskild schaktning, ledningsgrävning eller grävning för pool och förråd till kompletta markprojekt — du behöver inte ha ett stort projekt för att anlita oss. Läs mer om våra <a href=\"/tjanster/markarbeten\">markarbeten och grävarbeten</a> eller se <a href=\"/guider/vad-kostar-markarbete-stockholm\">vad som påverkar priset på markarbete</a>."
     },
     {
       "question": "Hur lång tid tar ett projekt?",
@@ -133,7 +138,7 @@
     },
     {
       "question": "Kostar det något att få en offert?",
-      "answer": "Nej, vi besöker platsen och ger en bedömning helt kostnadsfritt och utan förpliktelser. Du får en tydlig offert innan vi bokar in något arbete."
+      "answer": "Nej, vi besöker platsen och ger en bedömning helt kostnadsfritt och utan förpliktelser. Du får en tydlig offert innan vi bokar in något arbete. Vill du veta mer om vad som påverkar priset? Läs våra <a href=\"/guider\">prisguider</a>."
     },
     {
       "question": "Kan ni kombinera flera tjänster i samma projekt?",
@@ -154,7 +159,8 @@
     "dranering": "https://draneringarstockholm.nu/",
     "plattsattning-stensattning": "https://plattsattningochstansattningstockholm.se/",
     "husgrunder-markanlaggning": "https://husgrunderstockholm.se/",
-    "finplanering-innergardsrenovering": "https://innegardsrenoveringstockholm.se/",
+    "finplanering": "https://innegardsrenoveringstockholm.se/",
+    "innergardsrenovering": "https://innegardsrenoveringstockholm.se/",
     "markanlaggning-kantsten": "https://asfaltkantstenstockholm.se/",
     "asfaltering": "https://asfaltkantstenstockholm.se/",
     "markarbeten": "https://gravfirmastockholm.se/"

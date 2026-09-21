@@ -20,7 +20,7 @@ function guideCard(guide) {
  */
 function renderGuiderHubPage(site, guider) {
   const title = `Guider — ${site.name}`;
-  const description = `Guider om ROT-avdrag, bygglov och marklov för mark- och anläggningsarbete i ${site.primaryLocation} och ${site.homeBase}.`;
+  const description = `Guider om vad dränering, husgrund, stensättning och markarbete kostar — och om ROT-avdrag, bygglov och marklov i ${site.primaryLocation} och ${site.homeBase}.`;
 
   const metaHtml = buildMetaTags({ site, title, description, path: '/guider' });
 
@@ -39,7 +39,7 @@ function renderGuiderHubPage(site, guider) {
       <div class="row">
         <div class="col-xl-8 col-lg-9">
           <div class="tp-breadcrumb-content">
-            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Guider om ROT-avdrag, bygglov och markarbete</h1>
+            <h1 class="tp-breadcrumb-title fw-600 fs-60 fs-xs-40 ls-m-3 tp-text-common-white lh-1 mb-20">Guider om priser, ROT-avdrag och bygglov för markarbete</h1>
             <div class="tp-breadcrumb-dvdr"><ul><li><a href="/">Hem</a></li><li class="dvdr">/</li><li>Guider</li></ul></div>
           </div>
         </div>
@@ -52,7 +52,7 @@ function renderGuiderHubPage(site, guider) {
     <div class="container">
       <div class="row justify-content-center mb-60">
         <div class="col-xl-8 text-center">
-          <p style="color:var(--nt-gray);font-size:1.05rem;">Praktiska guider som reder ut vanliga frågor kring regler och ekonomi vid mark- och anläggningsarbete — baserade på Skatteverkets och kommunernas egna riktlinjer.</p>
+          <p style="color:var(--nt-gray);font-size:1.05rem;">Praktiska guider som reder ut vanliga frågor kring kostnader, regler och ekonomi vid mark- och anläggningsarbete — vad som påverkar priset, och vad Skatteverket och kommunerna säger om ROT-avdrag och lov.</p>
         </div>
       </div>
       <div class="row g-4">${guider.map(guideCard).join('')}

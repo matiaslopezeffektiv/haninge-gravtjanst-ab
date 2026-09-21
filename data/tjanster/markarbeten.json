@@ -1,14 +1,14 @@
 {
   "slug": "markarbeten",
-  "name": "Grävfirma – Markarbeten",
+  "name": "Markarbeten & Grävarbeten",
   "targetLocation": "Stockholm",
-  "h1": "Grävfirma Stockholm — Markarbeten",
-  "metaTitle": "Grävfirma Stockholm — Markarbeten | Haninge Grävtjänst AB",
-  "metaDescription": "Grävfirma i Stockholm med över 10 års erfarenhet — schaktning, ledningsgrävning och markförberedelse inför bygg-, dränerings- och anläggningsprojekt.",
-  "shortDescription": "Grävfirma för markarbeten, schaktning och ledningsgrävning i Stockholm och Haninge.",
+  "h1": "Markarbeten & grävarbeten i Stockholm",
+  "metaTitle": "Markarbeten & grävarbeten Stockholm — Haninge Grävtjänst AB",
+  "metaDescription": "Markarbeten och grävarbeten i Stockholm — schaktning, ledningsgrävning och markförberedelse inför bygg-, dränerings- och anläggningsprojekt. Över 10 års erfarenhet, kostnadsfri bedömning.",
+  "shortDescription": "Markarbeten, grävarbeten, schaktning och ledningsgrävning i Stockholm och Haninge.",
   "longDescription": [
     "Haninge Grävtjänst AB är en grävfirma som utför markarbeten i hela Stockholm — allt från mindre schaktningsjobb till förberedande markarbete inför större bygg- och anläggningsprojekt.",
-    "Markarbete är ofta grunden som våra andra tjänster (<a href=\"/tjanster/dranering\">dränering</a>, <a href=\"/tjanster/husgrunder-markanlaggning\">husgrund</a>, <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering</a>, <a href=\"/tjanster/markanlaggning-kantsten\">kantsten</a>, <a href=\"/tjanster/asfaltering\">asfaltering</a>) bygger på. Behöver du bara gräva — till exempel för en ledning, en pool eller en enklare schaktning — hjälper vi till med det också, utan att det behöver vara del av ett större projekt.",
+    "Markarbete är ofta grunden som våra andra tjänster (<a href=\"/tjanster/dranering\">dränering</a>, <a href=\"/tjanster/husgrunder-markanlaggning\">husgrund</a>, <a href=\"/tjanster/finplanering\">finplanering</a>, <a href=\"/tjanster/markanlaggning-kantsten\">kantsten</a>, <a href=\"/tjanster/asfaltering\">asfaltering</a>) bygger på. Behöver du bara gräva — till exempel för en ledning, en pool eller en enklare schaktning — hjälper vi till med det också, utan att det behöver vara del av ett större projekt.",
     "Med över 10 års erfarenhet och 200+ genomförda projekt i Stockholmsområdet har vi den maskinpark och kunskap om lokala markförhållanden som krävs för att arbetet ska gå säkert och effektivt, oavsett om det gäller lera, morän eller berg. <a href=\"/kontakt\">Kontakta oss</a> för en kostnadsfri bedömning av ditt projekt."
   ],
   "icon": "fa-truck-monster",
@@ -46,7 +46,7 @@
 
   "whyImportant": [
     "Markarbete är den del av nästan alla mark- och byggprojekt som sker först och syns minst — men fel utfört blir det dyrt att rätta till i efterhand, särskilt om en ledning grävts av eller om schaktningen inte tagit hänsyn till markens bärighet. Fundera på skillnaden mellan en <a href=\"/blogg/gravfirma-markentreprenor-skillnad\">grävfirma och en markentreprenör</a>? Vi reder ut begreppen på vår blogg.",
-    "Många av våra andra tjänster — <a href=\"/tjanster/dranering\">dränering</a>, <a href=\"/tjanster/husgrunder-markanlaggning\">husgrund</a>, <a href=\"/tjanster/finplanering-innergardsrenovering\">finplanering</a> — bygger på att markarbetet är korrekt utfört från början. Ett bra grävjobb är osynligt i slutresultatet, men det är det som avgör om resten av projektet blir bra."
+    "Många av våra andra tjänster — <a href=\"/tjanster/dranering\">dränering</a>, <a href=\"/tjanster/husgrunder-markanlaggning\">husgrund</a>, <a href=\"/tjanster/finplanering\">finplanering</a> — bygger på att markarbetet är korrekt utfört från början. Ett bra grävjobb är osynligt i slutresultatet, men det är det som avgör om resten av projektet blir bra."
   ],
 
   "whyUs": {
@@ -83,7 +83,7 @@
     },
     {
       "question": "Vad påverkar priset för markarbete?",
-      "answer": "Priset beror på omfattning, markförhållanden (till exempel lera, morän eller berg) och tillgänglighet för maskiner. Vi ger en kostnadsfri bedömning innan vi lämnar offert."
+      "answer": "Priset beror på omfattning, markförhållanden (till exempel lera, morän eller berg) och tillgänglighet för maskiner. Vi ger en kostnadsfri bedömning innan vi lämnar offert. Läs mer i vår guide om <a href=\"/guider/vad-kostar-markarbete-stockholm\">vad markarbete kostar i Stockholm</a>."
     },
     {
       "question": "Behöver jag ansöka om tillstånd innan ni gräver?",
